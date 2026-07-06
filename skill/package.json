@@ -1,0 +1,15 @@
+{
+  "name": "jp-learner-skill",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "JP-Learner content skill: local whisper.cpp transcription -> Claude structuring -> ajv validation -> deterministic write + git commit. Depends ONLY on the frozen content/schema/content.schema.json.",
+  "scripts": {
+    "validate": "node validate.mjs",
+    "commit-class": "node commit-class.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

@@ -74,11 +74,11 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Skill / pipeline de contenido (SKILL)
 
-- [ ] **SKILL-01**: Una skill de Claude Code transcribe el audio de clase en local con whisper.cpp (large-v3), sin API key
-- [ ] **SKILL-02**: La skill estructura la transcripción en JSON válido según el esquema, desambiguando la mezcla ES/JA en su paso de razonamiento LLM
-- [ ] **SKILL-03**: La skill valida su salida contra `content.schema.json` (ajv) antes de escribir
-- [ ] **SKILL-04**: La skill escribe/comitea el JSON de contenido con IDs deterministas y tags de clase/fecha, siguiendo un proceso rígido y repetible
-- [ ] **SKILL-05**: La skill se ejecuta siempre igual bajo un contrato fijo y documentado
+- [x] **SKILL-01**: Una skill de Claude Code transcribe el audio de clase en local con whisper.cpp (large-v3), sin API key
+- [x] **SKILL-02**: La skill estructura la transcripción en JSON válido según el esquema, desambiguando la mezcla ES/JA en su paso de razonamiento LLM
+- [x] **SKILL-03**: La skill valida su salida contra `content.schema.json` (ajv) antes de escribir
+- [x] **SKILL-04**: La skill escribe/comitea el JSON de contenido con IDs deterministas y tags de clase/fecha, siguiendo un proceso rígido y repetible
+- [x] **SKILL-05**: La skill se ejecuta siempre igual bajo un contrato fijo y documentado
 
 ## v2 Requirements
 
@@ -161,11 +161,11 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | UI-01 | Phase 1 | Complete |
 | UI-02 | Phase 1 | Complete |
 | UI-03 | Phase 1 | Pending |
-| SKILL-01 | Phase 1 | Pending |
-| SKILL-02 | Phase 1 | Pending |
-| SKILL-03 | Phase 1 | Pending |
-| SKILL-04 | Phase 1 | Pending |
-| SKILL-05 | Phase 1 | Pending |
+| SKILL-01 | Phase 1 | Complete |
+| SKILL-02 | Phase 1 | Complete |
+| SKILL-03 | Phase 1 | Complete |
+| SKILL-04 | Phase 1 | Complete |
+| SKILL-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 43 total

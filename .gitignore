@@ -1,0 +1,11 @@
+# Raw class audio (never committed — processed locally by the skill)
+audio-src/
+
+# Dependencies
+node_modules/
+
+# Generated copies of content/ for local serving (CI re-copies at build; see skill/commit-class.mjs)
+app/public/content/
+
+# OS noise
+.DS_Store
