@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sync:content": "node scripts/sync-content.mjs",
+    "prebuild": "npm run sync:content",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
