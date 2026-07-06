@@ -39,8 +39,8 @@ Plans:
 - [x] 01-01-PLAN.md — Content Schema + Contract (freeze content.schema.json, gen TS types, sample class, validate.mjs) [Wave 1]
 
 **Wave 2** *(blocked on Wave 1 completion)*
-- [ ] 01-02-PLAN.md — App Shell + Deploy Skeleton (Vite 8/React 19/TS 5.9/Tailwind 4 CSS-first + PWA + HashRouter + bottom nav + ContentStore) [Wave 2]
-- [ ] 01-03-PLAN.md — Content Skill (whisper.cpp large-v3 transcribe + structure prompt + ajv validate + deterministic commit + SKILL.md) [Wave 2]
+- [x] 01-02-PLAN.md — App Shell + Deploy Skeleton (Vite 8/React 19/TS 5.9/Tailwind 4 CSS-first + PWA + HashRouter + bottom nav + ContentStore) [Wave 2]
+- [x] 01-03-PLAN.md — Content Skill (whisper.cpp large-v3 transcribe + structure prompt + ajv validate + deterministic commit + SKILL.md) [Wave 2]
 
 **Wave 3** *(blocked on Wave 2 completion)*
 - [ ] 01-04-PLAN.md — Persistence + SRS (idb stores + migrations + ts-fsrs wrapper + verified export/import + persist() + day-boundary + scope×sub-mode) [Wave 3]
