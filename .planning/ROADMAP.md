@@ -35,11 +35,20 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 6 plans in 5 waves (mandatory dependency-ordered internal build order)
 
 Plans:
+**Wave 1**
 - [ ] 01-01-PLAN.md — Content Schema + Contract (freeze content.schema.json, gen TS types, sample class, validate.mjs) [Wave 1]
+
+**Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 01-02-PLAN.md — App Shell + Deploy Skeleton (Vite 8/React 19/TS 5.9/Tailwind 4 CSS-first + PWA + HashRouter + bottom nav + ContentStore) [Wave 2]
 - [ ] 01-03-PLAN.md — Content Skill (whisper.cpp large-v3 transcribe + structure prompt + ajv validate + deterministic commit + SKILL.md) [Wave 2]
+
+**Wave 3** *(blocked on Wave 2 completion)*
 - [ ] 01-04-PLAN.md — Persistence + SRS (idb stores + migrations + ts-fsrs wrapper + verified export/import + persist() + day-boundary + scope×sub-mode) [Wave 3]
+
+**Wave 4** *(blocked on Wave 3 completion)*
 - [ ] 01-05-PLAN.md — Display Modes + Exercise Engine (ruby A/B/C + Mode B substitution + 5 bidirectional exercises + tolerant checker + session frame) [Wave 4]
+
+**Wave 5** *(blocked on Wave 4 completion)*
 - [ ] 01-06-PLAN.md — TTS + Gamification + Home Dashboard + Deploy Hardening (Web Speech ja-JP + streak/progress%/points + dashboard + GitHub Actions + live-URL verify) [Wave 5]
 
 **Phase notes (internal build order & guardrails — inputs for `/gsd-plan-phase`):**
