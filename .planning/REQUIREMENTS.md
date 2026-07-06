@@ -9,9 +9,9 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### App PWA y despliegue (PWA)
 
-- [ ] **PWA-01**: El usuario puede instalar la app en móvil y escritorio desde el navegador (PWA instalable con manifest)
-- [ ] **PWA-02**: El usuario puede usar la app completamente offline tras la primera carga (service worker cachea app + contenido)
-- [ ] **PWA-03**: El contenido de una clase recién añadida aparece tras refrescar (network-first para HTML y JSON de contenido; cache-first solo para assets con hash)
+- [x] **PWA-01**: El usuario puede instalar la app en móvil y escritorio desde el navegador (PWA instalable con manifest)
+- [x] **PWA-02**: El usuario puede usar la app completamente offline tras la primera carga (service worker cachea app + contenido)
+- [x] **PWA-03**: El contenido de una clase recién añadida aparece tras refrescar (network-first para HTML y JSON de contenido; cache-first solo para assets con hash)
 - [ ] **PWA-04**: La app está publicada y accesible en una URL pública de GitHub Pages (base path configurado y fallback SPA vía 404.html o HashRouter)
 
 ### Esquema de contenido y contrato (CONT)
@@ -21,7 +21,7 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 - [ ] **CONT-03**: Los ítems de vocabulario incluyen kanji, kana, romaji, traducción al español y una frase de ejemplo
 - [ ] **CONT-04**: Los ítems de vocabulario incluyen segmentos de lectura por palabra y por kanji (`tokens[]`) para que la app renderice los 3 modos sin ningún análisis de japonés en cliente
 - [ ] **CONT-05**: El esquema representa puntos de gramática (patrón + explicación + ejemplos) y notas de clase, etiquetados por clase/fecha
-- [ ] **CONT-06**: La app carga el contenido desde JSON en el repo (índice + ficheros por clase) en modo solo lectura
+- [x] **CONT-06**: La app carga el contenido desde JSON en el repo (índice + ficheros por clase) en modo solo lectura
 
 ### Progreso y persistencia (PROG)
 
@@ -68,8 +68,8 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Interfaz y diseño (UI)
 
-- [ ] **UI-01**: UI mobile-first en el estilo índigo/morado + pastel de las referencias (tarjetas redondeadas, barra inferior, pantallas de ejercicio con progreso arriba y botón grande abajo)
-- [ ] **UI-02**: Barra de navegación inferior (Inicio · Glosario/Biblioteca · Guardados · Perfil/Ajustes)
+- [x] **UI-01**: UI mobile-first en el estilo índigo/morado + pastel de las referencias (tarjetas redondeadas, barra inferior, pantallas de ejercicio con progreso arriba y botón grande abajo)
+- [x] **UI-02**: Barra de navegación inferior (Inicio · Glosario/Biblioteca · Guardados · Perfil/Ajustes)
 - [ ] **UI-03**: Dashboard de inicio con saludo, racha/puntos y accesos a "continuar" y a practicar por ámbito (Hoy/Semana/Total)
 
 ### Skill / pipeline de contenido (SKILL)
@@ -123,16 +123,16 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PWA-01 | Phase 1 | Pending |
-| PWA-02 | Phase 1 | Pending |
-| PWA-03 | Phase 1 | Pending |
+| PWA-01 | Phase 1 | Complete |
+| PWA-02 | Phase 1 | Complete |
+| PWA-03 | Phase 1 | Complete |
 | PWA-04 | Phase 1 | Pending |
 | CONT-01 | Phase 1 | Pending |
 | CONT-02 | Phase 1 | Pending |
 | CONT-03 | Phase 1 | Pending |
 | CONT-04 | Phase 1 | Pending |
 | CONT-05 | Phase 1 | Pending |
-| CONT-06 | Phase 1 | Pending |
+| CONT-06 | Phase 1 | Complete |
 | PROG-01 | Phase 1 | Pending |
 | PROG-02 | Phase 1 | Pending |
 | PROG-03 | Phase 1 | Pending |
@@ -158,8 +158,8 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | GAM-01 | Phase 1 | Pending |
 | GAM-02 | Phase 1 | Pending |
 | GAM-03 | Phase 1 | Pending |
-| UI-01 | Phase 1 | Pending |
-| UI-02 | Phase 1 | Pending |
+| UI-01 | Phase 1 | Complete |
+| UI-02 | Phase 1 | Complete |
 | UI-03 | Phase 1 | Pending |
 | SKILL-01 | Phase 1 | Pending |
 | SKILL-02 | Phase 1 | Pending |
