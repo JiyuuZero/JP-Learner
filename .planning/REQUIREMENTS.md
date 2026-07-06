@@ -119,17 +119,59 @@ Orden de recorte explícito, de menos a más crítico: **gamificación (GAM-*) �
 
 ## Traceability
 
-Qué fase cubre qué requisitos. Se rellena durante la creación del roadmap.
+Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase** (restricción dura del usuario: tiempo limitado + ejecución autónoma en Fable 5 de una vez). El orden de construcción del research (esquema → shell → persistencia/SRS → display/ejercicios → TTS/gamificación/skill) es el orden interno de esa fase (planes/olas en `/gsd-plan-phase`), no fases separadas.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (pendiente de mapeo por el roadmapper) | — | Pending |
+| PWA-01 | Phase 1 | Pending |
+| PWA-02 | Phase 1 | Pending |
+| PWA-03 | Phase 1 | Pending |
+| PWA-04 | Phase 1 | Pending |
+| CONT-01 | Phase 1 | Pending |
+| CONT-02 | Phase 1 | Pending |
+| CONT-03 | Phase 1 | Pending |
+| CONT-04 | Phase 1 | Pending |
+| CONT-05 | Phase 1 | Pending |
+| CONT-06 | Phase 1 | Pending |
+| PROG-01 | Phase 1 | Pending |
+| PROG-02 | Phase 1 | Pending |
+| PROG-03 | Phase 1 | Pending |
+| PROG-04 | Phase 1 | Pending |
+| PROG-05 | Phase 1 | Pending |
+| SRS-01 | Phase 1 | Pending |
+| SRS-02 | Phase 1 | Pending |
+| SRS-03 | Phase 1 | Pending |
+| SRS-04 | Phase 1 | Pending |
+| SRS-05 | Phase 1 | Pending |
+| DISP-01 | Phase 1 | Pending |
+| DISP-02 | Phase 1 | Pending |
+| DISP-03 | Phase 1 | Pending |
+| DISP-04 | Phase 1 | Pending |
+| EXER-01 | Phase 1 | Pending |
+| EXER-02 | Phase 1 | Pending |
+| EXER-03 | Phase 1 | Pending |
+| EXER-04 | Phase 1 | Pending |
+| EXER-05 | Phase 1 | Pending |
+| EXER-06 | Phase 1 | Pending |
+| TTS-01 | Phase 1 | Pending |
+| TTS-02 | Phase 1 | Pending |
+| GAM-01 | Phase 1 | Pending |
+| GAM-02 | Phase 1 | Pending |
+| GAM-03 | Phase 1 | Pending |
+| UI-01 | Phase 1 | Pending |
+| UI-02 | Phase 1 | Pending |
+| UI-03 | Phase 1 | Pending |
+| SKILL-01 | Phase 1 | Pending |
+| SKILL-02 | Phase 1 | Pending |
+| SKILL-03 | Phase 1 | Pending |
+| SKILL-04 | Phase 1 | Pending |
+| SKILL-05 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 37 total
-- Mapped to phases: 0 (pendiente)
-- Unmapped: 37 ⚠️
+- Mapped to phases: 37 (all → Phase 1) ✓
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-07-06*
-*Last updated: 2026-07-06 after initial definition*
+*Last updated: 2026-07-06 after roadmap creation (single-phase mapping)*
