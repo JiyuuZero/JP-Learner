@@ -1,0 +1,14 @@
+{
+  "contentVersion": 1,
+  "generatedAt": "2026-07-06T22:05:21Z",
+  "classes": [
+    {
+      "id": "2026-04-14",
+      "date": "2026-04-14",
+      "label": "Clase 1 — presentaciones y verbos -masu",
+      "file": "classes/2026-04-14.json",
+      "contentHash": "sha256-c426c47378e14858aabd107e78bff3ac5c757e9345a6473ad19ae4944a5fb873",
+      "counts": { "vocab": 5, "grammar": 1, "kanji": 3, "notes": 2 }
+    }
+  ]
+}
