@@ -32,7 +32,15 @@ Decimal phases appear between their surrounding integers in numeric order.
   8. **Light, non-punitive gamification in a mobile-first indigo/pastel UI**: The app shows a daily streak, a global progress %, and a non-punitive points counter within the mobile-first indigo/pastel interface (rounded cards, bottom nav: Inicio · Glosario/Biblioteca · Guardados · Perfil/Ajustes; exercise screens with progress on top and a large action button), and the home dashboard greets the user and offers "continue" plus practice-by-scope entry points. *(GAM-01/02/03, UI-01/02/03)*
   9. **The content skill produces valid content under a fixed contract**: A Claude Code skill transcribes class audio locally with `whisper.cpp` (large-v3, no API key), structures the transcription into schema-valid JSON — disambiguating the mixed ES/JA in its LLM reasoning step — validates its output against `content.schema.json` with `ajv` before writing, and writes/commits content with deterministic IDs and class/date tags, always running the same way under one fixed, documented contract; a hand-authored realistic class JSON exists so the app is usable before the skill runs. *(SKILL-01/02/03/04/05)*
 
-**Plans**: TBD (decomposed during `/gsd-plan-phase` into the mandatory internal build order — see notes)
+**Plans**: 6 plans in 5 waves (mandatory dependency-ordered internal build order)
+
+Plans:
+- [ ] 01-01-PLAN.md — Content Schema + Contract (freeze content.schema.json, gen TS types, sample class, validate.mjs) [Wave 1]
+- [ ] 01-02-PLAN.md — App Shell + Deploy Skeleton (Vite 8/React 19/TS 5.9/Tailwind 4 CSS-first + PWA + HashRouter + bottom nav + ContentStore) [Wave 2]
+- [ ] 01-03-PLAN.md — Content Skill (whisper.cpp large-v3 transcribe + structure prompt + ajv validate + deterministic commit + SKILL.md) [Wave 2]
+- [ ] 01-04-PLAN.md — Persistence + SRS (idb stores + migrations + ts-fsrs wrapper + verified export/import + persist() + day-boundary + scope×sub-mode) [Wave 3]
+- [ ] 01-05-PLAN.md — Display Modes + Exercise Engine (ruby A/B/C + Mode B substitution + 5 bidirectional exercises + tolerant checker + session frame) [Wave 4]
+- [ ] 01-06-PLAN.md — TTS + Gamification + Home Dashboard + Deploy Hardening (Web Speech ja-JP + streak/progress%/points + dashboard + GitHub Actions + live-URL verify) [Wave 5]
 
 **Phase notes (internal build order & guardrails — inputs for `/gsd-plan-phase`):**
 - **Single phase by hard constraint.** All 37 v1 requirements ship here. The five items below are the *internal build order* (waves/plans), NOT separate roadmap phases. Order is dependency-strict so nothing is built against a moving target.
@@ -53,4 +61,4 @@ Single phase — Phase 1 only.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. JP-Learner v1 (complete PWA + content skill) | 0/TBD | Not started | - |
+| 1. JP-Learner v1 (complete PWA + content skill) | 0/6 | Planned | - |
