@@ -168,8 +168,8 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | SKILL-05 | Phase 1 | Pending |
 
 **Coverage:**
-- v1 requirements: 37 total
-- Mapped to phases: 37 (all → Phase 1) ✓
+- v1 requirements: 43 total
+- Mapped to phases: 43 (all → Phase 1) ✓
 - Unmapped: 0
 
 ---
