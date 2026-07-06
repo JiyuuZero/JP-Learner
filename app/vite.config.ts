@@ -13,6 +13,7 @@ export default defineConfig({
       manifest: {
         name: 'JP-Learner',
         short_name: 'JP-Learner',
+        lang: 'es',
         start_url: '.', // relative → resolves under /JP-Learner/
         scope: '.',
         display: 'standalone',
