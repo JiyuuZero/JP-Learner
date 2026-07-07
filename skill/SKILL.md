@@ -24,11 +24,13 @@ everything runs locally on the Mac, with no API keys and no cloud services.
 
 ## Ejecutar la skill con clase.py
 
-La forma recomendada de procesar una clase: deja los audios (m4a/mp3/wav/aac/ogg) y las
-notas opcionales (.txt/.md) en `audio-src/` y ejecuta `python3 clase.py` desde la raíz del
-repo. El launcher hace el preflight de dependencias, transcribe en local lo pendiente
-(incremental — no re-transcribe lo que ya tiene su `.json`) y lanza Claude interactivo con
-el contrato desde el paso 3. Flags opcionales: `--fecha YYYY-MM-DD`, `--notas "texto"`, `--modelo <m>`.
+La forma recomendada de procesar una clase: ejecuta `python3 clase.py` desde la raíz del
+repo y **arrastra los ficheros a la ventana del terminal** — los audios (m4a/mp3/wav/aac/ogg)
+y las notas opcionales (.txt/.md) — bien después de `python3 clase.py ` en la línea de
+comandos, bien en el prompt interactivo; el launcher los copia a `audio-src/`. Después hace
+el preflight de dependencias, transcribe en local lo pendiente (incremental — no
+re-transcribe lo que ya tiene su `.json`) y lanza Claude interactivo con el contrato desde
+el paso 3. Flags opcionales: `--fecha YYYY-MM-DD`, `--notas "texto"`, `--modelo <m>`.
 
 ## The 6 steps (invariant sequence)
 
