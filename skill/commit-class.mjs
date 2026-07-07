@@ -2,6 +2,8 @@
 // Fail-closed: validateClass runs FIRST; nothing is written on any validation failure.
 // Idempotent: re-processing a class REPLACES its index entry (never duplicates) and
 // re-produces byte-identical class files (canonical pretty-print, deterministic IDs).
+// Phase 2 (D-09): the class commit also carries this class's pre-generated audio
+// (content/audio/<classId>/ + content/audio/index.json) via explicit git pathspec.
 //
 // Usage: node skill/commit-class.mjs <candidate-class.json>
 import { validateClass } from './validate.mjs';
@@ -43,6 +45,11 @@ const contentHash = 'sha256-' + createHash('sha256').update(classBytes).digest('
 // 4. Upsert content/index.json — REPLACE the entry if the classId already exists (idempotent).
 const indexRel = 'content/index.json';
 const indexAbs = join(ROOT, indexRel);
+// Phase 2 (D-09): the class commit also carries this class's pre-generated audio + the
+// audio manifest — explicit pathspec only, guarded by existence (audio is optional).
+const audioDirRel = `content/audio/${doc.classId}`;
+const audioIndexRel = 'content/audio/index.json';
+const audioPaths = [audioDirRel, audioIndexRel].filter((p) => existsSync(join(ROOT, p)));
 const index = existsSync(indexAbs)
   ? JSON.parse(readFileSync(indexAbs, 'utf8'))
   : { contentVersion: 1, generatedAt: '', classes: [] };
@@ -78,18 +85,20 @@ copyFileSync(indexAbs, join(pubDir, 'index.json'));
 
 // 6. git add + git commit with the fixed message convention. Guard: only commit if staged changes exist.
 const git = (...args) => execFileSync('git', args, { cwd: ROOT, stdio: ['ignore', 'pipe', 'inherit'] });
-git('add', classRel, indexRel);
+git('add', classRel, indexRel, ...audioPaths);
 let staged = true;
 try {
-  git('diff', '--cached', '--quiet', '--', classRel, indexRel);
+  git('diff', '--cached', '--quiet', '--', classRel, indexRel,
+    ...audioPaths);
   staged = false; // exit 0 -> nothing staged for these paths
 } catch {
   staged = true; // non-zero exit -> staged changes exist
 }
 if (staged) {
-  // Explicit pathspec: commit ONLY the two content files, so anything the
-  // user had staged beforehand is never swept into this commit.
-  git('commit', '-m', `content(${doc.classId}): add/update class ${doc.label}`, '--', classRel, indexRel);
+  // Explicit pathspec: commit ONLY the class JSON, content index, and this class's
+  // audio dir + audio manifest, so anything the user had staged beforehand is never
+  // swept into this commit.
+  git('commit', '-m', `content(${doc.classId}): add/update class ${doc.label}`, '--', classRel, indexRel, ...audioPaths);
   console.log(`COMMITTED ${doc.classId} (${contentHash})`);
 } else {
   console.log(`NO CHANGES ${doc.classId} (already up to date)`);
