@@ -5,6 +5,7 @@ import { useRef, useState } from 'react'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import { useProgress } from '../progress/ProgressContext'
+import { useTts } from '../tts/TtsContext'
 import type { ProgressMeta } from '../progress/db'
 
 const MODES: { id: ProgressMeta['displayMode']; label: string; hint: string }[] = [
@@ -22,6 +23,7 @@ export default function Perfil() {
     setDisplayMode,
     setRomajiVisible,
   } = useProgress()
+  const { hasVoice } = useTts()
   const fileRef = useRef<HTMLInputElement>(null)
   const [pendingImport, setPendingImport] = useState<unknown | null>(null)
   const [message, setMessage] = useState<string | null>(null)
@@ -85,6 +87,19 @@ export default function Perfil() {
               onChange={(e) => void setRomajiVisible(e.target.checked)}
             />
           </label>
+        </Card>
+      </section>
+
+      {/* TTS status (TTS-02, UI-SPEC §4): with no ja-JP voice the speaker
+          buttons are hidden app-wide; this line explains why. */}
+      <section className="mt-6">
+        <h2 className="mb-3 text-[18px] font-bold">Pronunciación</h2>
+        <Card padding="compact">
+          <p className="text-[14px] text-muted">
+            {hasVoice
+              ? 'Voz japonesa disponible en este dispositivo.'
+              : 'Pronunciación no disponible en este dispositivo.'}
+          </p>
         </Card>
       </section>
 
