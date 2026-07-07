@@ -11,6 +11,7 @@ import Home from './views/Home'
 import Glosario from './views/Glosario'
 import Guardados from './views/Guardados'
 import Perfil from './views/Perfil'
+import Session from './views/Session'
 
 function ErrorState({ onRetry }: { onRetry: () => void }) {
   return (
@@ -57,6 +58,7 @@ export default function App() {
               <Route path="/glosario" element={<Glosario />} />
               <Route path="/guardados" element={<Guardados />} />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/session" element={<Session />} />
             </Routes>
           )}
         </div>
