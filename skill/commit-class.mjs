@@ -85,6 +85,34 @@ copyFileSync(indexAbs, join(pubDir, 'index.json'));
 
 // 6. git add + git commit with the fixed message convention. Guard: only commit if staged changes exist.
 const git = (...args) => execFileSync('git', args, { cwd: ROOT, stdio: ['ignore', 'pipe', 'inherit'] });
+
+// 6a. Manifest/binary consistency gate (WR-05). The audio manifest is GLOBAL
+// across classes but this commit's pathspec only carries THIS class's audio
+// dir — committing the manifest while another class's .m4a files are still
+// uncommitted would publish entries that 404 on a fresh checkout (a silent
+// speaker button, see IN-01). Fail closed BEFORE staging: every manifest entry
+// must resolve to a file that exists on disk AND is either part of this
+// commit (under this class's audio dir) or already tracked in git.
+// Classes without audio still commit fine (check only runs when the manifest exists).
+if (audioPaths.includes(audioIndexRel)) {
+  const audioManifest = JSON.parse(readFileSync(join(ROOT, audioIndexRel), 'utf8'));
+  const tracked = new Set(
+    git('ls-files', '--', 'content/audio').toString().split('\n').filter(Boolean),
+  );
+  for (const [key, relPath] of Object.entries(audioManifest.files ?? {})) {
+    const contentRel = `content/${relPath}`;
+    if (!existsSync(join(ROOT, contentRel))) {
+      console.error(`REFUSED: audio manifest entry "${key}" -> ${contentRel} does not exist on disk (re-run generate-audio for its class)`);
+      process.exit(1);
+    }
+    const inThisCommit = contentRel.startsWith(`${audioDirRel}/`);
+    if (!inThisCommit && !tracked.has(contentRel)) {
+      console.error(`REFUSED: audio manifest entry "${key}" -> ${contentRel} is not committed and not part of this commit (run commit-class for its class first)`);
+      process.exit(1);
+    }
+  }
+}
+
 git('add', classRel, indexRel, ...audioPaths);
 let staged = true;
 try {
