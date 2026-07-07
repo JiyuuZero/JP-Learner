@@ -87,7 +87,9 @@ try {
   staged = true; // non-zero exit -> staged changes exist
 }
 if (staged) {
-  git('commit', '-m', `content(${doc.classId}): add/update class ${doc.label}`);
+  // Explicit pathspec: commit ONLY the two content files, so anything the
+  // user had staged beforehand is never swept into this commit.
+  git('commit', '-m', `content(${doc.classId}): add/update class ${doc.label}`, '--', classRel, indexRel);
   console.log(`COMMITTED ${doc.classId} (${contentHash})`);
 } else {
   console.log(`NO CHANGES ${doc.classId} (already up to date)`);
