@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "sync:content": "node scripts/sync-content.mjs",
-    "prebuild": "npm run sync:content",
-    "build": "tsc -b && vite build",
+    "copy:content": "npm run sync:content",
+    "build": "npm run gen:types && npm run copy:content && tsc -b && vite build",
     "lint": "oxlint",
     "test": "vitest run",
     "preview": "vite preview",
