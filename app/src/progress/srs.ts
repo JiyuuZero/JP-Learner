@@ -60,3 +60,7 @@ export function serialize(
 export function gradeForAnswer(correct: boolean): Grade {
   return correct ? Rating.Good : Rating.Again
 }
+
+// Session building lives in session.ts; re-exported here so srs.ts is the
+// single entry point for scheduling logic (gradeItem + buildSession).
+export { buildSession } from './session'
