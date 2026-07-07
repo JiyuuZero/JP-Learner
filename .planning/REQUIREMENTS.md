@@ -25,19 +25,19 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Progreso y persistencia (PROG)
 
-- [ ] **PROG-01**: El progreso del usuario (estado SRS, set de kanji aprendidos, racha/puntos) persiste en local entre sesiones en IndexedDB
-- [ ] **PROG-02**: El usuario puede exportar todo su progreso a un fichero JSON de backup
-- [ ] **PROG-03**: El usuario puede importar un fichero de backup y restaurar el estado completo (round-trip verificado)
-- [ ] **PROG-04**: El progreso referencia el contenido solo por ID y nunca lo embebe, de modo que reprocesar una clase no corrompe el historial
-- [ ] **PROG-05**: La app solicita almacenamiento persistente (`navigator.storage.persist()`) y versiona el store con migraciones (`appVersion`)
+- [x] **PROG-01**: El progreso del usuario (estado SRS, set de kanji aprendidos, racha/puntos) persiste en local entre sesiones en IndexedDB
+- [x] **PROG-02**: El usuario puede exportar todo su progreso a un fichero JSON de backup
+- [x] **PROG-03**: El usuario puede importar un fichero de backup y restaurar el estado completo (round-trip verificado)
+- [x] **PROG-04**: El progreso referencia el contenido solo por ID y nunca lo embebe, de modo que reprocesar una clase no corrompe el historial
+- [x] **PROG-05**: La app solicita almacenamiento persistente (`navigator.storage.persist()`) y versiona el store con migraciones (`appVersion`)
 
 ### Repetición espaciada (SRS)
 
-- [ ] **SRS-01**: Cada ítem tiene un único estado de programación FSRS (vía `ts-fsrs`), compartido por todos los tipos de ejercicio
-- [ ] **SRS-02**: El usuario califica su recuerdo y FSRS programa el siguiente repaso
-- [ ] **SRS-03**: El usuario puede practicar por ámbito de repaso: Hoy (lo nuevo del día), Esta semana, o Total
-- [ ] **SRS-04**: "Hoy/Esta semana" y la racha usan límites de día por calendario local (no restas de timestamp)
-- [ ] **SRS-05**: La entrada diaria de tarjetas nuevas está limitada para que las pausas no generen un backlog inabarcable
+- [x] **SRS-01**: Cada ítem tiene un único estado de programación FSRS (vía `ts-fsrs`), compartido por todos los tipos de ejercicio
+- [x] **SRS-02**: El usuario califica su recuerdo y FSRS programa el siguiente repaso
+- [x] **SRS-03**: El usuario puede practicar por ámbito de repaso: Hoy (lo nuevo del día), Esta semana, o Total
+- [x] **SRS-04**: "Hoy/Esta semana" y la racha usan límites de día por calendario local (no restas de timestamp)
+- [x] **SRS-05**: La entrada diaria de tarjetas nuevas está limitada para que las pausas no generen un backlog inabarcable
 
 ### Visualización del japonés (DISP)
 
@@ -133,16 +133,16 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | CONT-04 | Phase 1 | Pending |
 | CONT-05 | Phase 1 | Pending |
 | CONT-06 | Phase 1 | Complete |
-| PROG-01 | Phase 1 | Pending |
-| PROG-02 | Phase 1 | Pending |
-| PROG-03 | Phase 1 | Pending |
-| PROG-04 | Phase 1 | Pending |
-| PROG-05 | Phase 1 | Pending |
-| SRS-01 | Phase 1 | Pending |
-| SRS-02 | Phase 1 | Pending |
-| SRS-03 | Phase 1 | Pending |
-| SRS-04 | Phase 1 | Pending |
-| SRS-05 | Phase 1 | Pending |
+| PROG-01 | Phase 1 | Complete |
+| PROG-02 | Phase 1 | Complete |
+| PROG-03 | Phase 1 | Complete |
+| PROG-04 | Phase 1 | Complete |
+| PROG-05 | Phase 1 | Complete |
+| SRS-01 | Phase 1 | Complete |
+| SRS-02 | Phase 1 | Complete |
+| SRS-03 | Phase 1 | Complete |
+| SRS-04 | Phase 1 | Complete |
+| SRS-05 | Phase 1 | Complete |
 | DISP-01 | Phase 1 | Pending |
 | DISP-02 | Phase 1 | Pending |
 | DISP-03 | Phase 1 | Pending |

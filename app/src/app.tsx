@@ -3,6 +3,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import { ContentContext } from './content/context'
 import { loadContent } from './content/store'
 import type { ContentStore } from './content/store'
+import { ProgressProvider } from './progress/ProgressContext'
 import BottomNav from './components/BottomNav'
 import Button from './components/Button'
 import Card from './components/Card'
@@ -45,7 +46,8 @@ export default function App() {
 
   return (
     <ContentContext.Provider value={{ store, loading, error, reload }}>
-      <HashRouter>
+      <ProgressProvider>
+        <HashRouter>
         <div className="mx-auto min-h-dvh w-full max-w-[480px] px-4 pt-8 pb-24">
           {error !== null ? (
             <ErrorState onRetry={reload} />
@@ -58,8 +60,9 @@ export default function App() {
             </Routes>
           )}
         </div>
-        <BottomNav />
-      </HashRouter>
+          <BottomNav />
+        </HashRouter>
+      </ProgressProvider>
     </ContentContext.Provider>
   )
 }
