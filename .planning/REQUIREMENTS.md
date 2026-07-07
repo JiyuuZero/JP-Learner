@@ -12,7 +12,7 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 - [x] **PWA-01**: El usuario puede instalar la app en móvil y escritorio desde el navegador (PWA instalable con manifest)
 - [x] **PWA-02**: El usuario puede usar la app completamente offline tras la primera carga (service worker cachea app + contenido)
 - [x] **PWA-03**: El contenido de una clase recién añadida aparece tras refrescar (network-first para HTML y JSON de contenido; cache-first solo para assets con hash)
-- [ ] **PWA-04**: La app está publicada y accesible en una URL pública de GitHub Pages (base path configurado y fallback SPA vía 404.html o HashRouter)
+- [x] **PWA-04**: La app está publicada y accesible en una URL pública de GitHub Pages (base path configurado y fallback SPA vía 404.html o HashRouter)
 
 ### Esquema de contenido y contrato (CONT)
 
@@ -57,20 +57,21 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Pronunciación (TTS)
 
-- [ ] **TTS-01**: El usuario puede oír la pronunciación japonesa a demanda vía Web Speech API (botón, nunca auto-play)
-- [ ] **TTS-02**: El TTS degrada con gracia si no hay voz `ja-JP` (nunca bloquea ni usa una voz no japonesa)
+- [x] **TTS-01**: El usuario puede oír la pronunciación japonesa a demanda vía Web Speech API (botón, nunca auto-play)
+- [x] **TTS-02**: El TTS degrada con gracia si no hay voz `ja-JP` (nunca bloquea ni usa una voz no japonesa)
+  - *Nota: implementado y verificado en build/unit; la verificación en dispositivo real queda pendiente (el usuario aún no tiene voz ja-JP instalada en su Android — checkpoint 01-06 Task 3, item 6).*
 
 ### Gamificación ligera (GAM)
 
-- [ ] **GAM-01**: La app muestra una racha diaria
-- [ ] **GAM-02**: La app muestra el % de progreso global
-- [ ] **GAM-03**: La app muestra un contador de puntos (no punitivo)
+- [x] **GAM-01**: La app muestra una racha diaria
+- [x] **GAM-02**: La app muestra el % de progreso global
+- [x] **GAM-03**: La app muestra un contador de puntos (no punitivo)
 
 ### Interfaz y diseño (UI)
 
 - [x] **UI-01**: UI mobile-first en el estilo índigo/morado + pastel de las referencias (tarjetas redondeadas, barra inferior, pantallas de ejercicio con progreso arriba y botón grande abajo)
 - [x] **UI-02**: Barra de navegación inferior (Inicio · Glosario/Biblioteca · Guardados · Perfil/Ajustes)
-- [ ] **UI-03**: Dashboard de inicio con saludo, racha/puntos y accesos a "continuar" y a practicar por ámbito (Hoy/Semana/Total)
+- [x] **UI-03**: Dashboard de inicio con saludo, racha/puntos y accesos a "continuar" y a practicar por ámbito (Hoy/Semana/Total)
 
 ### Skill / pipeline de contenido (SKILL)
 
@@ -126,7 +127,7 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | PWA-01 | Phase 1 | Complete |
 | PWA-02 | Phase 1 | Complete |
 | PWA-03 | Phase 1 | Complete |
-| PWA-04 | Phase 1 | Pending |
+| PWA-04 | Phase 1 | Complete |
 | CONT-01 | Phase 1 | Pending |
 | CONT-02 | Phase 1 | Pending |
 | CONT-03 | Phase 1 | Pending |
@@ -153,14 +154,14 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | EXER-04 | Phase 1 | Complete |
 | EXER-05 | Phase 1 | Complete |
 | EXER-06 | Phase 1 | Complete |
-| TTS-01 | Phase 1 | Pending |
-| TTS-02 | Phase 1 | Pending |
-| GAM-01 | Phase 1 | Pending |
-| GAM-02 | Phase 1 | Pending |
-| GAM-03 | Phase 1 | Pending |
+| TTS-01 | Phase 1 | Complete |
+| TTS-02 | Phase 1 | Complete |
+| GAM-01 | Phase 1 | Complete |
+| GAM-02 | Phase 1 | Complete |
+| GAM-03 | Phase 1 | Complete |
 | UI-01 | Phase 1 | Complete |
 | UI-02 | Phase 1 | Complete |
-| UI-03 | Phase 1 | Pending |
+| UI-03 | Phase 1 | Complete |
 | SKILL-01 | Phase 1 | Complete |
 | SKILL-02 | Phase 1 | Complete |
 | SKILL-03 | Phase 1 | Complete |
