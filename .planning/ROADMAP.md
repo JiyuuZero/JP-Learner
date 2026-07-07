@@ -75,9 +75,11 @@ Single phase — Phase 1 only.
 ### Phase 2: TTS por audio pre-generado en la skill
 
 **Goal:** Sustituir la dependencia de voces del dispositivo: la skill genera audio japonés localmente (say -v Kyoko en macOS) por ítem al procesar cada clase y lo committea como ficheros estáticos; la app reproduce ese audio (offline, idéntico en todos los dispositivos) con Web Speech como fallback para contenido sin audio, sin romper el schema congelado (manifiesto sidecar por convención de IDs). Además, el contrato de la skill se extiende a entrada flexible: varios audios por clase (fusión multi-transcript en un único JSON) y texto complementario o standalone como fuente (apuntes del usuario, autoritativos), sin cambios de schema.
-**Requirements**: TBD
+**Requirements**: TTS-01, TTS-02, SKILL-02, SKILL-05 (requisitos v1 existentes reforzados — sin IDs nuevos)
 **Depends on:** Phase 1
-**Plans:** 0 plans
+**Plans:** 3 plans
 
 Plans:
-- [ ] TBD (run /gsd-plan-phase 2 to break down)
+- [ ] 02-01-PLAN.md — Skill: generate-audio.mjs (say -v Kyoko → ffmpeg M4A), manifiesto sidecar, commit con pathspec de audio, audio de la clase 2026-04-14, contrato 6 pasos + entrada flexible (multi-audio/texto) [Wave 1]
+- [ ] 02-02-PLAN.md — App: cadena de fallback audio → Web Speech → oculto (audio.ts + tests, TtsContext con manifiesto en boot, SpeakerButton audioKey, callsites Flashcard/Glosario, Perfil combinado) [Wave 2]
+- [ ] 02-03-PLAN.md — Build/cache: sync-content copia audio, CacheFirst .m4a antes de NetworkFirst /content/, build verificado + checkpoint humano de reproducción [Wave 3]
