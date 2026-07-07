@@ -74,11 +74,18 @@ for (const item of doc.vocab ?? []) {
 //    (":" folds into "_", and a slug ending in ":example" collides with a real
 //    example key), so duplicate keys or duplicate derived filenames would make
 //    one item silently play another item's audio. Fail closed BEFORE any write.
+//    Filenames are content-addressed with a short kana-hash fragment (WR-04):
+//    a kana correction changes the URL, so the app's CacheFirst SW cache can
+//    never keep serving the old (wrong) pronunciation for 30 days — the app is
+//    fully manifest-driven and orphan cleanup (step 7) removes the old file.
+//    Separator is "-" (not "."): both this FILENAME_RE and the app's
+//    AUDIO_PATH_RE structurally exclude dots inside names (anti-traversal).
 const FILENAME_RE = /^[A-Za-z0-9_-]+\.m4a$/;
 const seenKeys = new Map();
 const seenFiles = new Map();
 const plan = entries.map(([key, kana]) => {
-  const filename = key.replaceAll(':', '_') + '.m4a';
+  const kanaHash = 'sha256-' + createHash('sha256').update(kana, 'utf8').digest('hex');
+  const filename = `${key.replaceAll(':', '_')}-${kanaHash.slice(7, 15)}.m4a`;
   if (!FILENAME_RE.test(filename)) {
     console.error(`REFUSED: derived filename "${filename}" fails the allowlist (key ${key})`);
     process.exit(1);
@@ -94,7 +101,6 @@ const plan = entries.map(([key, kana]) => {
   seenKeys.set(key, true);
   seenFiles.set(filename, key);
   const relPath = `audio/${doc.classId}/${filename}`;
-  const kanaHash = 'sha256-' + createHash('sha256').update(kana, 'utf8').digest('hex');
   return { key, kana, filename, relPath, kanaHash };
 });
 
