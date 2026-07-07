@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { Heart, Search, Star, X } from 'lucide-react'
 import Card from '../components/Card'
 import JapaneseText from '../display/JapaneseText'
-import SpeakerSlot from '../display/SpeakerSlot'
+import SpeakerButton from '../components/SpeakerButton'
 import { useContent } from '../content/context'
 import { useProgress } from '../progress/ProgressContext'
 import { kanjiCharsOf } from '../progress/kanji'
@@ -99,7 +99,7 @@ function VocabDetail({ item, onClose }: { item: Vocab; onClose: () => void }) {
         </p>
         <p className="text-[15px] text-muted">{item.romaji}</p>
         <p className="mt-2 text-[18px] font-bold">{item.es}</p>
-        <SpeakerSlot text={item.kana} />
+        <SpeakerButton text={item.kana} label="Pronunciación" />
 
         {item.example && (
           <div className="mt-4 rounded-2xl bg-lavender/40 p-4">
@@ -112,7 +112,7 @@ function VocabDetail({ item, onClose }: { item: Vocab; onClose: () => void }) {
               />
             </p>
             <p className="mt-1 text-[14px] text-muted">{item.example.es}</p>
-            <SpeakerSlot text={item.example.kana} />
+            <SpeakerButton text={item.example.kana} />
           </div>
         )}
 

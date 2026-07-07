@@ -4,6 +4,7 @@ import { ContentContext } from './content/context'
 import { loadContent } from './content/store'
 import type { ContentStore } from './content/store'
 import { ProgressProvider } from './progress/ProgressContext'
+import { TtsProvider } from './tts/TtsContext'
 import BottomNav from './components/BottomNav'
 import Button from './components/Button'
 import Card from './components/Card'
@@ -48,6 +49,7 @@ export default function App() {
   return (
     <ContentContext.Provider value={{ store, loading, error, reload }}>
       <ProgressProvider>
+        <TtsProvider>
         <HashRouter>
         <div className="mx-auto min-h-dvh w-full max-w-[480px] px-4 pt-8 pb-24">
           {error !== null ? (
@@ -64,6 +66,7 @@ export default function App() {
         </div>
           <BottomNav />
         </HashRouter>
+        </TtsProvider>
       </ProgressProvider>
     </ContentContext.Provider>
   )

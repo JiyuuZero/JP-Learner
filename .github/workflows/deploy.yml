@@ -1,0 +1,73 @@
+# Build & deploy the PWA to GitHub Pages (PWA-04).
+#
+# Pipeline (per 01-RESEARCH.md):
+#   npm ci -> npm run build (gen:types -> copy:content -> tsc -> vite build,
+#   base '/JP-Learner/') -> cp index.html 404.html (SPA fallback,
+#   belt-and-suspenders even with HashRouter) -> upload + deploy Pages artifact.
+#
+# gen:types regenerates src/content/content.ts from the FROZEN schema, so the
+# build fails if schema and types ever drift; copy:content ships canonical
+# content/ inside dist/ (app/public/content/ is gitignored).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# T-06-03: least privilege — read code, write Pages, OIDC token for deploy-pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One Pages deployment at a time; let in-flight production deploys finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install dependencies
+        working-directory: app
+        run: npm ci
+
+      - name: Validate every class JSON against the frozen schema
+        working-directory: app
+        run: |
+          for f in ../content/classes/*.json; do
+            node src/content/validate.mjs "$f"
+          done
+
+      - name: Build (gen:types -> copy:content -> vite build, base /JP-Learner/)
+        working-directory: app
+        run: npm run build
+
+      - name: SPA 404 fallback
+        run: cp app/dist/index.html app/dist/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
