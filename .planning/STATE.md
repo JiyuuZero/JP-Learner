@@ -4,14 +4,14 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Phase 1 UI-SPEC approved
-last_updated: "2026-07-07T07:53:26.906Z"
-last_activity: 2026-07-07
+last_updated: "2026-07-07T09:21:37.493Z"
+last_activity: 2026-07-07 -- Phase 02 execution started
 progress:
-  total_phases: 1
+  total_phases: 2
   completed_phases: 1
-  total_plans: 6
+  total_plans: 9
   completed_plans: 6
-  percent: 100
+  percent: 67
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-06)
 
 **Core value:** Practicar de forma efectiva (repetición espaciada + recuerdo activo) exactamente el contenido dado en clase, con la mínima fricción para expandirlo clase a clase.
-**Current focus:** Phase 01 — jp-learner-v1-complete-pwa-content-skill
+**Current focus:** Phase 02 — tts-por-audio-pre-generado-en-la-skill
 
 ## Current Position
 
-Phase: 01
-Plan: Not started
-Status: Executing Phase 01
-Last activity: 2026-07-07
+Phase: 02 (tts-por-audio-pre-generado-en-la-skill) — EXECUTING
+Plan: 1 of 3
+Status: Executing Phase 02
+Last activity: 2026-07-07 -- Phase 02 execution started
 
 Progress: [░░░░░░░░░░] 0%
 
