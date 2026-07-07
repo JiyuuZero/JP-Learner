@@ -3,7 +3,7 @@ status: partial
 phase: 01-jp-learner-v1-complete-pwa-content-skill
 source: [01-VERIFICATION.md]
 started: 2026-07-07T07:53:02Z
-updated: 2026-07-07T07:53:02Z
+updated: 2026-07-07T11:45:00Z
 ---
 
 ## Current Test
@@ -18,14 +18,14 @@ result: [pending]
 
 ### 2. TTS en dispositivo con voz ja-JP (TTS-01/02)
 expected: Con una voz japonesa instalada en Android (Ajustes → Salida de texto a voz → instalar datos de voz japonés, y reabrir la PWA), tocar un botón de Pronunciación (flashcard o detalle de Glosario) habla japonés con voz ja-JP. En un dispositivo sin voz ja-JP los botones quedan ocultos y Perfil muestra "Pronunciación no disponible en este dispositivo." — nunca habla con una voz incorrecta. Los code paths están verificados por tests/build; falta la comprobación en dispositivo.
-result: [pending]
+result: passed — superseded por la Fase 2 (audio pre-generado en la skill): el 2026-07-07 el usuario verificó audiblemente en su Android SIN voz ja-JP instalada que los botones de Pronunciación reproducen los .m4a de Kyoko (palabra y ejemplo, clips distintos, sin auto-play). Web Speech queda como fallback secundario para contenido sin audio; el requisito de "nunca voz incorrecta" se mantiene por diseño en ambas ramas.
 
 ## Summary
 
 total: 2
-passed: 0
+passed: 1
 issues: 0
-pending: 2
+pending: 1
 skipped: 0
 blocked: 0
 
