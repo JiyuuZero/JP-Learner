@@ -29,6 +29,20 @@ export default defineConfig({
         navigateFallback: 'index.html', // SPA shell
         runtimeCaching: [
           {
+            // Phase 2 audio: .m4a binaries are cache-first — cheap offline replays, no 3s
+            // network wait per tap. MUST be first: Workbox picks the FIRST matching rule and
+            // the generic /content/ rule below also matches these paths. audio/index.json does
+            // NOT end in .m4a, so the manifest falls through and stays network-first (fresh
+            // audio map on refresh, PWA-03 spirit). Precache is NOT used for audio (globPatterns
+            // unchanged) — binaries load on demand only.
+            urlPattern: ({ url }) => url.pathname.includes('/content/audio/') && url.pathname.endsWith('.m4a'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'content-audio',
+              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 }, // T-02-11: bounded staleness
+            },
+          },
+          {
             // content JSON: a NEW class must appear on refresh (PWA-03) → network-first
             urlPattern: ({ url }) => url.pathname.includes('/content/'),
             handler: 'NetworkFirst',
