@@ -1,6 +1,9 @@
 # Raw class audio (never committed — processed locally by the skill)
 audio-src/
 
+# Whisper model (~3GB, downloaded locally — never committed)
+models/
+
 # Dependencies
 node_modules/
 
