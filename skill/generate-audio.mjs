@@ -69,14 +69,30 @@ for (const item of doc.vocab ?? []) {
   if (item.example?.kana) entries.push([`${item.id}:example`, item.example.kana]);
 }
 
-// 4. Derive filenames (D-02) with a hard allowlist guard (T-02-02).
+// 4. Derive filenames (D-02) with a hard allowlist guard (T-02-02) and
+//    collision guards (WR-02): the key -> filename mapping is not injective
+//    (":" folds into "_", and a slug ending in ":example" collides with a real
+//    example key), so duplicate keys or duplicate derived filenames would make
+//    one item silently play another item's audio. Fail closed BEFORE any write.
 const FILENAME_RE = /^[A-Za-z0-9_-]+\.m4a$/;
+const seenKeys = new Map();
+const seenFiles = new Map();
 const plan = entries.map(([key, kana]) => {
   const filename = key.replaceAll(':', '_') + '.m4a';
   if (!FILENAME_RE.test(filename)) {
     console.error(`REFUSED: derived filename "${filename}" fails the allowlist (key ${key})`);
     process.exit(1);
   }
+  if (seenKeys.has(key)) {
+    console.error(`REFUSED: duplicate audio key "${key}" — an item id ending in ":example" collides with another item's example key`);
+    process.exit(1);
+  }
+  if (seenFiles.has(filename)) {
+    console.error(`REFUSED: keys "${seenFiles.get(filename)}" and "${key}" derive the same file "${filename}" — make the ids distinguishable`);
+    process.exit(1);
+  }
+  seenKeys.set(key, true);
+  seenFiles.set(filename, key);
   const relPath = `audio/${doc.classId}/${filename}`;
   const kanaHash = 'sha256-' + createHash('sha256').update(kana, 'utf8').digest('hex');
   return { key, kana, filename, relPath, kanaHash };
