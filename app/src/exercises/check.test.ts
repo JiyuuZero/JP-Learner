@@ -30,8 +30,12 @@ describe('isAnswerCorrect (tolerant typing checker, EXER-03)', () => {
     ).toBe(true)
   })
 
-  it('ignores the long-vowel dash and doubled vowels', () => {
+  it('expands the long-vowel dash to the doubled vowel', () => {
     expect(isAnswerCorrect('ra-men', ['らーめん', 'raamen'])).toBe(true)
+  })
+
+  it('treats bi-ru as biiru (dash = long vowel, not deletion)', () => {
+    expect(isAnswerCorrect('bi-ru', ['びーる', 'biiru'])).toBe(true)
   })
 
   it('unifies full-width and half-width input via NFKC', () => {
@@ -48,6 +52,24 @@ describe('isAnswerCorrect (tolerant typing checker, EXER-03)', () => {
 
   it('returns false for a clearly wrong answer', () => {
     expect(isAnswerCorrect('nomimasu', ['たべます', 'tabemasu'])).toBe(false)
+  })
+
+  // WR-01 regressions: long-vowel minimal pairs and kana doubling must stay
+  // DISTINCT — the doubling collapse only applies to ASCII consonants.
+  it('does NOT fold biru (building) into biiru (beer)', () => {
+    expect(isAnswerCorrect('biru', ['びーる', 'biiru'])).toBe(false)
+  })
+
+  it('does NOT fold obasan (aunt) into obaasan (grandmother)', () => {
+    expect(isAnswerCorrect('obasan', ['おばあさん', 'obaasan'])).toBe(false)
+  })
+
+  it('does NOT fold kana ころ into こころ', () => {
+    expect(isAnswerCorrect('ころ', ['こころ', 'kokoro'])).toBe(false)
+  })
+
+  it('does NOT fold kana ち into ちち', () => {
+    expect(isAnswerCorrect('ち', ['ちち', 'chichi'])).toBe(false)
   })
 })
 
@@ -66,5 +88,18 @@ describe('isEsAnswerCorrect (loose ES match, JA_ES direction)', () => {
 
   it('rejects empty input', () => {
     expect(isEsAnswerCorrect('   ', 'comer (cortés)')).toBe(false)
+  })
+
+  // WR-01 regressions: the ES path must NOT apply romaji foldings or the
+  // doubling collapse — Spanish minimal pairs stay distinct.
+  it('does NOT fold pero into perro', () => {
+    expect(isEsAnswerCorrect('pero', 'perro')).toBe(false)
+  })
+
+  // NOTE: 'lamar' vs 'llamar' still matches via the >=3-char containment rule
+  // ('llamar'.includes('lamar')) — that looseness is IN-01, tracked separately.
+  it('keeps normalized ES text unfolded (llamar keeps its ll)', () => {
+    expect(isEsAnswerCorrect('llamar', 'llamar')).toBe(true)
+    expect(isEsAnswerCorrect('lamas', 'llamar')).toBe(false)
   })
 })
