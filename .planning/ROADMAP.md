@@ -74,7 +74,7 @@ Single phase — Phase 1 only.
 
 ### Phase 2: TTS por audio pre-generado en la skill
 
-**Goal:** Sustituir la dependencia de voces del dispositivo: la skill genera audio japonés localmente (say -v Kyoko en macOS) por ítem al procesar cada clase y lo committea como ficheros estáticos; la app reproduce ese audio (offline, idéntico en todos los dispositivos) con Web Speech como fallback para contenido sin audio, sin romper el schema congelado (manifiesto sidecar por convención de IDs).
+**Goal:** Sustituir la dependencia de voces del dispositivo: la skill genera audio japonés localmente (say -v Kyoko en macOS) por ítem al procesar cada clase y lo committea como ficheros estáticos; la app reproduce ese audio (offline, idéntico en todos los dispositivos) con Web Speech como fallback para contenido sin audio, sin romper el schema congelado (manifiesto sidecar por convención de IDs). Además, el contrato de la skill se extiende a entrada flexible: varios audios por clase (fusión multi-transcript en un único JSON) y texto complementario o standalone como fuente (apuntes del usuario, autoritativos), sin cambios de schema.
 **Requirements**: TBD
 **Depends on:** Phase 1
 **Plans:** 0 plans

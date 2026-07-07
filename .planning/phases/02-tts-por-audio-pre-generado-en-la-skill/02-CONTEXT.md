@@ -27,6 +27,12 @@ El TTS actual (Web Speech API) depende de que el dispositivo tenga una voz ja-JP
 8. **Build/deploy**: `sync-content` / `copy:content` debe copiar también `content/audio/` a `app/public/content/audio/` (misma fuente canónica única).
 9. **Skill contract**: `skill/SKILL.md` gana un paso fijo de generación de audio (idempotente: solo genera ficheros que faltan o cuyo texto kana cambió; borra huérfanos). El commit de clase incluye los audios con pathspec explícito.
 
+## Decisiones adicionales — flexibilidad de entrada de la skill (LOCKED, añadido por el usuario)
+
+10. **Multi-audio por clase**: una clase puede grabarse en varios ficheros. `transcribe.sh` ya es por-fichero (se ejecuta N veces); el contrato de `SKILL.md` y `prompts/structure.md` debe documentar que el paso Structure lee **todos** los transcripts de la clase (los N JSON de whisper en `audio-src/` que el usuario indique) y produce UN único candidate JSON fusionado. Deduplicación de ítems repetidos entre segmentos: mismo slug determinista → un solo ítem (los IDs deterministas ya lo garantizan).
+11. **Entrada de texto complementaria o standalone**: el usuario puede aportar texto (apuntes escritos, fotos ya transcritas, correcciones) además de — o en lugar de — audio. El paso Structure acepta ese texto como fuente adicional con la misma autoridad que el transcript (las notas del usuario son autoritativas sobre Whisper en caso de conflicto). Una clase puede crearse solo desde texto (sin audio), siguiendo el mismo pipeline desde el paso 3 (Structure → Validate → Write+commit).
+12. **Sin cambios** en schema, validador ni commit-class — son extensiones de contrato/documentación del paso Structure. El human-in-the-loop sigue siendo obligatorio en todos los casos.
+
 ## Restricciones heredadas (siguen vigentes)
 
 - Sin backend, sin API keys, GitHub Pages estático, mobile-first.
