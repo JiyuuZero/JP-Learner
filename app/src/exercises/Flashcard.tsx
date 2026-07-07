@@ -6,6 +6,7 @@ import { Heart } from 'lucide-react'
 import { Rating, type Grade } from 'ts-fsrs'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
+import { exampleKey } from '../tts/audio'
 import { useProgress } from '../progress/ProgressContext'
 import type { FlashcardExercise } from './generators'
 import type { Kanji, Vocab } from '../content/content'
@@ -102,8 +103,15 @@ export default function Flashcard({ exercise, classId, onNext }: FlashcardProps)
         <div className="mt-3 min-h-16">
           {front ? <JaFace item={item} /> : <p className="text-[28px] font-extrabold leading-tight">{item.es}</p>}
         </div>
-        {/* Pronunciación bar (TTS) — tap only, never auto-play on card load */}
-        {front && <SpeakerButton text={jaSpeechText(item)} label="Pronunciación" />}
+        {/* Pronunciación bar (TTS) — tap only, never auto-play on card load.
+            Only vocab has pre-generated audio (D-04); kanji/grammar keep Web Speech. */}
+        {front && (
+          <SpeakerButton
+            text={jaSpeechText(item)}
+            label="Pronunciación"
+            audioKey={item.type === 'vocab' ? item.id : undefined}
+          />
+        )}
 
         {revealed ? (
           <div className="mt-5 border-t border-ink/10 pt-4">
@@ -115,7 +123,13 @@ export default function Flashcard({ exercise, classId, onNext }: FlashcardProps)
                 <JaFace item={item} />
               )}
             </div>
-            {!front && <SpeakerButton text={jaSpeechText(item)} label="Pronunciación" />}
+            {!front && (
+              <SpeakerButton
+                text={jaSpeechText(item)}
+                label="Pronunciación"
+                audioKey={item.type === 'vocab' ? item.id : undefined}
+              />
+            )}
             {example && (
               <p className="mt-3 text-[16px] leading-normal">
                 <JapaneseText
@@ -127,7 +141,14 @@ export default function Flashcard({ exercise, classId, onNext }: FlashcardProps)
                 <span className="mt-1 block text-[14px] text-muted">{example.es}</span>
               </p>
             )}
-            {example && <SpeakerButton text={example.kana} />}
+            {/* grammar examples[0] has no pre-generated audio (D-04); only vocab
+                examples map to the `<itemId>:example` manifest key */}
+            {example && (
+              <SpeakerButton
+                text={example.kana}
+                audioKey={item.type === 'vocab' ? exampleKey(item.id) : undefined}
+              />
+            )}
           </div>
         ) : (
           <p className="mt-5 text-[14px] text-muted">Toca la tarjeta para ver la respuesta</p>

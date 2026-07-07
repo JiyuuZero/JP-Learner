@@ -23,7 +23,7 @@ export default function Perfil() {
     setDisplayMode,
     setRomajiVisible,
   } = useProgress()
-  const { hasVoice } = useTts()
+  const { hasVoice, audioReady } = useTts()
   const fileRef = useRef<HTMLInputElement>(null)
   const [pendingImport, setPendingImport] = useState<unknown | null>(null)
   const [message, setMessage] = useState<string | null>(null)
@@ -100,15 +100,20 @@ export default function Perfil() {
         </Card>
       </section>
 
-      {/* TTS status (TTS-02, UI-SPEC §4): with no ja-JP voice the speaker
-          buttons are hidden app-wide; this line explains why. */}
+      {/* Pronunciation status (TTS-02, UI-SPEC §4, Phase 2 D-05): with
+          pre-generated audio shipped alongside the content, a missing ja-JP
+          voice no longer means no pronunciation — this line reflects the
+          combined chain state (audio incluido / voz del sistema / nada, in
+          which case the speaker buttons stay hidden app-wide). */}
       <section className="mt-6">
         <h2 className="mb-3 text-[18px] font-bold">Pronunciación</h2>
         <Card padding="compact">
           <p className="text-[14px] text-muted">
-            {hasVoice
-              ? 'Voz japonesa disponible en este dispositivo.'
-              : 'Pronunciación no disponible en este dispositivo.'}
+            {audioReady
+              ? 'Audio de pronunciación incluido con el contenido de clase.'
+              : hasVoice
+                ? 'Voz japonesa disponible en este dispositivo.'
+                : 'Pronunciación no disponible en este dispositivo.'}
           </p>
         </Card>
       </section>

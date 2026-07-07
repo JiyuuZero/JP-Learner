@@ -1,28 +1,33 @@
 // Speaker button (TTS-01/02) — speaks Japanese ON TAP only (never auto-play).
-// HIDDEN (returns null — never disabled) when no ja-JP voice exists (UI-SPEC
-// no-voice rule). speak() runs inside the tap handler itself, satisfying the
-// iOS user-gesture requirement. Rendered as span[role=button] because some
-// hosts are themselves <button> elements (the Flashcard reveal card) — nested
-// native buttons are invalid HTML.
+// Phase 2 fallback chain: pre-generated .m4a (audioKey in the manifest) ->
+// Web Speech ja-JP -> HIDDEN (returns null — never disabled) when neither
+// capability exists (UI-SPEC no-voice rule). speak() runs inside the tap
+// handler itself, satisfying the iOS user-gesture requirement. Rendered as
+// span[role=button] because some hosts are themselves <button> elements (the
+// Flashcard reveal card) — nested native buttons are invalid HTML.
 import type { KeyboardEvent, SyntheticEvent } from 'react'
 import { Volume2 } from 'lucide-react'
 import { useTts } from '../tts/TtsContext'
 
 interface SpeakerButtonProps {
   text: string
+  // Manifest key — item.id for the word, exampleKey(item.id) for its example
+  // sentence; omitted for grammar/kanji -> Web Speech only.
+  audioKey?: string
   // With a label ("Pronunciación") renders the bar variant (UI-SPEC flashcard);
   // without it, a plain 44px icon button.
   label?: string
   className?: string
 }
 
-export default function SpeakerButton({ text, label, className = '' }: SpeakerButtonProps) {
-  const { hasVoice, speak } = useTts()
-  if (!hasVoice) return null // hide, never disable (TTS-02)
+export default function SpeakerButton({ text, audioKey, label, className = '' }: SpeakerButtonProps) {
+  const { hasVoice, hasAudio, speak } = useTts()
+  const canSpeak = (audioKey !== undefined && hasAudio(audioKey)) || hasVoice
+  if (!canSpeak) return null // hide, never disable (TTS-02)
 
   const onActivate = (e: SyntheticEvent) => {
     e.stopPropagation() // don't flip the flashcard / open the row underneath
-    speak(text) // inside the tap gesture (iOS requirement, TTS-01)
+    speak(text, audioKey) // inside the tap gesture (iOS requirement, TTS-01)
   }
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
