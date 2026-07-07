@@ -56,6 +56,10 @@ Progress: [░░░░░░░░░░] 0%
 
 ## Accumulated Context
 
+### Roadmap Evolution
+
+- Phase 2 added: TTS por audio pre-generado en la skill (2026-07-07)
+
 ### Decisions
 
 Decisions are logged in PROJECT.md Key Decisions table.

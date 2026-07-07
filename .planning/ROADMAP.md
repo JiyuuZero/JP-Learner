@@ -71,3 +71,13 @@ Single phase — Phase 1 only.
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. JP-Learner v1 (complete PWA + content skill) | 0/6 | Planned | - |
+
+### Phase 2: TTS por audio pre-generado en la skill
+
+**Goal:** Sustituir la dependencia de voces del dispositivo: la skill genera audio japonés localmente (say -v Kyoko en macOS) por ítem al procesar cada clase y lo committea como ficheros estáticos; la app reproduce ese audio (offline, idéntico en todos los dispositivos) con Web Speech como fallback para contenido sin audio, sin romper el schema congelado (manifiesto sidecar por convención de IDs).
+**Requirements**: TBD
+**Depends on:** Phase 1
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd-plan-phase 2 to break down)
