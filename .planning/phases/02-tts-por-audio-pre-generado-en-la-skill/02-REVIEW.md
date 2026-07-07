@@ -156,3 +156,19 @@ const filename = `${key.replaceAll(':', '_')}-${kanaHash.slice(7, 15)}.m4a`;
 _Reviewed: 2026-07-07T10:04:33Z_
 _Reviewer: Claude (gsd-code-reviewer)_
 _Depth: standard_
+
+## Fix Results
+
+**Fixed at:** 2026-07-07T10:32:00Z — scope: Critical + Warning (0 CR, 5 WR). All 5 fixed; Info findings intentionally not addressed.
+
+| Finding | Outcome | Commit(s) | Notes |
+|---------|---------|-----------|-------|
+| WR-01 | FIXED | 676efa2 | `stopAudio()` wired into TtsContext's speak path before the `speakJa` fallback (never-overlap invariant now bidirectional). Unit tests added for playAudio/stopAudio via a stubbed `Audio` global. |
+| WR-02 | FIXED | 4656745 | generate-audio.mjs fails closed on duplicate plan keys AND duplicate derived filenames before any write. Both collision cases (`o_kane`/`o:kane` filename fold, `kau:example` key clash) verified to REFUSE with exit 1 and nothing written. Frozen schema and validate.mjs untouched. |
+| WR-03 | FIXED | 0e7feb7 | `Object.hasOwn` guards in `playAudio` (audio.ts) and `hasAudio` (TtsContext.tsx); regression test asserts `toString`/`constructor` never resolve. |
+| WR-04 | FIXED | 5f0554d + c53e16d | Filenames now content-addressed: `<key underscores>-<kanaHash8>.m4a`. Dash separator (not dot, as REVIEW.md's own snippet suggests) so both frozen allowlists (skill `FILENAME_RE`, app `AUDIO_PATH_RE` — dots structurally excluded) stay unchanged; verified all 10 new manifest paths pass the app allowlist. 10 sample files regenerated + re-committed via the real skill flow (`generate-audio` then `commit-class`, commit c53e16d = clean renames + manifest path updates); orphan cleanup deleted the old un-hashed files. No app change needed (fully manifest-driven), confirmed by tests/build. |
+| WR-05 | FIXED | 8bab611 | commit-class.mjs refuses (before staging) if any manifest entry points at a file missing on disk or not committed/not part of this commit. Both refusal paths verified (missing file; existing-but-untracked other-class file). Classes without audio still commit (existsSync-guarded optionality kept). |
+
+**Post-fix verification:** `npm test` 78/78 green (5 new tests) — `tsc -b` clean — `npm run build` green (PWA precache OK) — `node skill/validate.mjs content/classes/2026-04-14.json` VALID — `generate-audio` second run idempotent (`generated=0 skipped=10 deleted=0`) — `commit-class` re-run `NO CHANGES`.
+
+_Fixer: Claude (gsd-code-fixer)_
