@@ -57,8 +57,14 @@ export function downloadBackup(backup: ProgressBackup): void {
   const a = document.createElement('a')
   a.href = url
   a.download = `jp-learner-backup-${localDayKey()}.json`
+  // iOS/Safari (the primary platform, and the one whose IndexedDB eviction
+  // makes this export the only backup): the anchor must be attached to the
+  // DOM and the blob URL must outlive the click, or the download silently
+  // aborts. Revoke after a grace period instead of synchronously.
+  document.body.appendChild(a)
   a.click()
-  URL.revokeObjectURL(url)
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 10_000)
 }
 
 // ---- shape validation (fail-closed, T-04-02) --------------------------------
