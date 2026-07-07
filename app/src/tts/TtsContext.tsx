@@ -63,7 +63,8 @@ export function TtsProvider({ children }: { children: ReactNode }) {
     [manifest],
   )
 
-  const hasAudio = useCallback((key: string) => key in manifest, [manifest])
+  // Object.hasOwn (not `in`): never resolve keys from Object.prototype (WR-03).
+  const hasAudio = useCallback((key: string) => Object.hasOwn(manifest, key), [manifest])
   const audioReady = Object.keys(manifest).length > 0
 
   return (

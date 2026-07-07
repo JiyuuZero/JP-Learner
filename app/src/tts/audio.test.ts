@@ -110,6 +110,12 @@ describe('playAudio / stopAudio (never-overlap invariant, WR-01)', () => {
     expect(FakeAudio.instances).toHaveLength(0)
   })
 
+  it('never resolves keys from Object.prototype (WR-03)', () => {
+    expect(playAudio(manifest, 'toString')).toBe(false)
+    expect(playAudio({}, 'constructor')).toBe(false)
+    expect(FakeAudio.instances).toHaveLength(0)
+  })
+
   it('plays a manifest hit and cancels any Web Speech utterance first', () => {
     expect(playAudio(manifest, 'a:vocab:x')).toBe(true)
     expect(FakeAudio.instances).toHaveLength(1)

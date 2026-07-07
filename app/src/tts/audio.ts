@@ -57,7 +57,10 @@ let current: HTMLAudioElement | null = null
 // back to Web Speech. A rejected play() (uncached file offline, autoplay
 // policy) degrades SILENTLY: it never falls through to a wrong voice (TTS-02).
 export function playAudio(manifest: AudioManifest, key: string): boolean {
-  const path = manifest[key]
+  // Own-property lookup only: the manifest is a plain object parsed from
+  // remote JSON, so `manifest[key]` alone would walk the prototype chain
+  // (e.g. key "toString" resolving to a function) — WR-03.
+  const path = Object.hasOwn(manifest, key) ? manifest[key] : undefined
   if (path === undefined) return false
   // Never overlap voices: cancel any Web Speech utterance and any playing file
   // (the speechSynthesis.cancel() analog for audio) before starting.
