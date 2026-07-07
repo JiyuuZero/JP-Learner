@@ -105,7 +105,9 @@ function isProgressMeta(v: unknown): v is ProgressMeta {
     isBool(v.romajiVisible) &&
     isNum(v.newCardsToday) &&
     isStr(v.newCardsDay) &&
-    isNum(v.appVersion)
+    isNum(v.appVersion) &&
+    // favorites is additive+optional (item-id strings only, PROG-04)
+    (v.favorites === undefined || (Array.isArray(v.favorites) && v.favorites.every(isStr)))
   )
 }
 

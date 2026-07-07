@@ -40,6 +40,9 @@ export interface ProgressMeta {
   newCardsToday: number
   newCardsDay: string // YYYY-MM-DD, for the daily cap (SRS-05)
   appVersion: number // schema version stamp for export/migration
+  // Favorited item ids (UI-02) — content referenced BY ID ONLY (PROG-04).
+  // Additive field: pre-existing meta records read it as undefined -> [].
+  favorites?: string[]
 }
 
 export interface JPDB extends DBSchema {
@@ -92,5 +95,6 @@ export function createDefaultMeta(now = new Date()): ProgressMeta {
     newCardsToday: 0,
     newCardsDay: today,
     appVersion: APP_VERSION,
+    favorites: [],
   }
 }
