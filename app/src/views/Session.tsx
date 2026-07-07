@@ -116,6 +116,11 @@ export default function Session() {
   const [manualKind, setManualKind] = useState<ExerciseKind | null>(null)
   const [queue, setQueue] = useState<SessionItem[] | null>(null)
   const [index, setIndex] = useState(0)
+  // Rotation cursor: increments once per EXERCISE shown (not per item
+  // consumed). Rotating on the queue index degenerates into matching-only:
+  // a 5-item matching round advances the index by 5 ≡ 0 (mod ROTATION.length),
+  // landing on 'matching' again (WR-02).
+  const [step, setStep] = useState(0)
   const [phase, setPhase] = useState<'answer' | 'feedback'>('answer')
   const [canCheck, setCanCheck] = useState(false)
   const checkFnRef = useRef<(() => boolean) | null>(null)
@@ -131,6 +136,7 @@ export default function Session() {
     // Reviews-before-new ordering + the SRS-05 daily new-card cap live in buildSession.
     setQueue(buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined))
     setIndex(0)
+    setStep(0)
     setPhase('answer')
     setCanCheck(false)
   }
@@ -148,7 +154,7 @@ export default function Session() {
       if (queue[i].item.type === 'vocab') run.push(queue[i])
       else break
     }
-    const preferred = manualKind ?? ROTATION[index % ROTATION.length]
+    const preferred = manualKind ?? ROTATION[step % ROTATION.length]
     const kind = resolveKind(si, preferred, pool, run.length)
     let exercise: Exercise
     switch (kind) {
@@ -173,11 +179,12 @@ export default function Session() {
         exercise = flashcard(si.item, pool, direction)
     }
     return { exercise, si, run: exercise.kind === 'matching' ? run : [si], direction }
-  }, [store, queue, index, manualKind])
+  }, [store, queue, index, step, manualKind])
 
   const advance = useCallback(
     (by: number) => {
       setIndex((i) => i + by)
+      setStep((s) => s + 1) // one rotation step per exercise, regardless of items consumed
       setPhase('answer')
       setCanCheck(false)
       checkFnRef.current = null
