@@ -49,7 +49,7 @@ Plans:
 - [x] 01-05-PLAN.md — Display Modes + Exercise Engine (ruby A/B/C + Mode B substitution + 5 bidirectional exercises + tolerant checker + session frame) [Wave 4]
 
 **Wave 5** *(blocked on Wave 4 completion)*
-- [ ] 01-06-PLAN.md — TTS + Gamification + Home Dashboard + Deploy Hardening (Web Speech ja-JP + streak/progress%/points + dashboard + GitHub Actions + live-URL verify) [Wave 5]
+- [x] 01-06-PLAN.md — TTS + Gamification + Home Dashboard + Deploy Hardening (Web Speech ja-JP + streak/progress%/points + dashboard + GitHub Actions + live-URL verify) [Wave 5]
 
 **Phase notes (internal build order & guardrails — inputs for `/gsd-plan-phase`):**
 - **Single phase by hard constraint.** All 37 v1 requirements ship here. The five items below are the *internal build order* (waves/plans), NOT separate roadmap phases. Order is dependency-strict so nothing is built against a moving target.
