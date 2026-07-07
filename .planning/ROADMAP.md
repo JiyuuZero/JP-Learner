@@ -82,4 +82,4 @@ Single phase — Phase 1 only.
 Plans:
 - [x] 02-01-PLAN.md — Skill: generate-audio.mjs (say -v Kyoko → ffmpeg M4A), manifiesto sidecar, commit con pathspec de audio, audio de la clase 2026-04-14, contrato 6 pasos + entrada flexible (multi-audio/texto) [Wave 1]
 - [x] 02-02-PLAN.md — App: cadena de fallback audio → Web Speech → oculto (audio.ts + tests, TtsContext con manifiesto en boot, SpeakerButton audioKey, callsites Flashcard/Glosario, Perfil combinado) [Wave 2]
-- [ ] 02-03-PLAN.md — Build/cache: sync-content copia audio, CacheFirst .m4a antes de NetworkFirst /content/, build verificado + checkpoint humano de reproducción [Wave 3]
+- [x] 02-03-PLAN.md — Build/cache: sync-content copia audio, CacheFirst .m4a antes de NetworkFirst /content/, build verificado + checkpoint humano de reproducción [Wave 3]
