@@ -16,11 +16,11 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Esquema de contenido y contrato (CONT)
 
-- [ ] **CONT-01**: El contenido se define con un esquema JSON versionado (`content.schema.json`) que es el único contrato skill↔app, con tipos TypeScript generados desde él
-- [ ] **CONT-02**: Cada ítem de contenido tiene un ID estable y determinista (`<classId>:<type>:<slug>`) y está etiquetado con su clase y fecha
-- [ ] **CONT-03**: Los ítems de vocabulario incluyen kanji, kana, romaji, traducción al español y una frase de ejemplo
-- [ ] **CONT-04**: Los ítems de vocabulario incluyen segmentos de lectura por palabra y por kanji (`tokens[]`) para que la app renderice los 3 modos sin ningún análisis de japonés en cliente
-- [ ] **CONT-05**: El esquema representa puntos de gramática (patrón + explicación + ejemplos) y notas de clase, etiquetados por clase/fecha
+- [x] **CONT-01**: El contenido se define con un esquema JSON versionado (`content.schema.json`) que es el único contrato skill↔app, con tipos TypeScript generados desde él
+- [x] **CONT-02**: Cada ítem de contenido tiene un ID estable y determinista (`<classId>:<type>:<slug>`) y está etiquetado con su clase y fecha
+- [x] **CONT-03**: Los ítems de vocabulario incluyen kanji, kana, romaji, traducción al español y una frase de ejemplo
+- [x] **CONT-04**: Los ítems de vocabulario incluyen segmentos de lectura por palabra y por kanji (`tokens[]`) para que la app renderice los 3 modos sin ningún análisis de japonés en cliente
+- [x] **CONT-05**: El esquema representa puntos de gramática (patrón + explicación + ejemplos) y notas de clase, etiquetados por clase/fecha
 - [x] **CONT-06**: La app carga el contenido desde JSON en el repo (índice + ficheros por clase) en modo solo lectura
 
 ### Progreso y persistencia (PROG)
@@ -128,11 +128,11 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | PWA-02 | Phase 1 | Complete |
 | PWA-03 | Phase 1 | Complete |
 | PWA-04 | Phase 1 | Complete |
-| CONT-01 | Phase 1 | Pending |
-| CONT-02 | Phase 1 | Pending |
-| CONT-03 | Phase 1 | Pending |
-| CONT-04 | Phase 1 | Pending |
-| CONT-05 | Phase 1 | Pending |
+| CONT-01 | Phase 1 | Complete |
+| CONT-02 | Phase 1 | Complete |
+| CONT-03 | Phase 1 | Complete |
+| CONT-04 | Phase 1 | Complete |
+| CONT-05 | Phase 1 | Complete |
 | CONT-06 | Phase 1 | Complete |
 | PROG-01 | Phase 1 | Complete |
 | PROG-02 | Phase 1 | Complete |
