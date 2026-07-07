@@ -14,26 +14,28 @@ Practicar de forma efectiva (repetición espaciada + recuerdo activo) **exactame
 
 <!-- Shipped and confirmed valuable. -->
 
-(Nada aún — se valida al enviar)
+Validated in Phase 1: JP-Learner v1 (2026-07-07) — deployed live at https://jiyuuzero.github.io/JP-Learner/
+
+- [x] App PWA instalable en móvil y abrible en web, funcional offline
+- [x] Skill/agente de Claude que procesa el audio de clase (ES/JA) → contenido JSON con esquema rígido y repetible
+- [x] Transcripción local con Whisper (sin API key), capaz de discriminar castellano y japonés
+- [x] Glosario de vocabulario: kanji · kana · romaji · traducción ES · frase de ejemplo, etiquetado por clase/fecha
+- [x] Contenido de gramática (patrón + explicación + ejemplos) y notas de clase, etiquetados por clase/fecha
+- [x] 5 tipos de ejercicio: flashcards+SRS, opción múltiple, rellenar/escribir, completar frase con banco de palabras, emparejar ES↔JA
+- [x] Motor de repetición espaciada (SRS) con estado por ítem
+- [x] Selector de ámbito de repaso: Hoy / Esta semana / Total
+- [x] 3 modos de visualización del japonés (A: kana+kanji con romaji encima · B: kana con kanji progresivo y furigana kana · C: solo kanji), con sustitución paulatina de kanji aprendidos en el modo B
+- [x] Pronunciación por TTS (voz japonesa del navegador, Web Speech API) — código verificado; check en dispositivo con voz ja-JP pendiente (01-HUMAN-UAT.md)
+- [x] Progreso local en IndexedDB + exportar/importar backup JSON
+- [x] Gamificación ligera: racha diaria, % de progreso y contador de puntos
+- [x] UI índigo/morado + acentos pastel, mobile-first, siguiendo las referencias de `references/`
+- [x] Publicación de la PWA en GitHub Pages
 
 ### Active
 
 <!-- Current scope. Building toward these. -->
 
-- [ ] App PWA instalable en móvil y abrible en web, funcional offline
-- [ ] Skill/agente de Claude que procesa el audio de clase (ES/JA) → contenido JSON con esquema rígido y repetible
-- [ ] Transcripción local con Whisper (sin API key), capaz de discriminar castellano y japonés
-- [ ] Glosario de vocabulario: kanji · kana · romaji · traducción ES · frase de ejemplo, etiquetado por clase/fecha
-- [ ] Contenido de gramática (patrón + explicación + ejemplos) y notas de clase, etiquetados por clase/fecha
-- [ ] 5 tipos de ejercicio: flashcards+SRS, opción múltiple, rellenar/escribir, completar frase con banco de palabras, emparejar ES↔JA
-- [ ] Motor de repetición espaciada (SRS) con estado por ítem
-- [ ] Selector de ámbito de repaso: Hoy / Esta semana / Total
-- [ ] 3 modos de visualización del japonés (A: kana+kanji con romaji encima · B: kana con kanji progresivo y furigana kana · C: solo kanji), con sustitución paulatina de kanji aprendidos en el modo B
-- [ ] Pronunciación por TTS (voz japonesa del navegador, Web Speech API)
-- [ ] Progreso local en IndexedDB + exportar/importar backup JSON
-- [ ] Gamificación ligera: racha diaria, % de progreso y contador de puntos
-- [ ] UI índigo/morado + acentos pastel, mobile-first, siguiendo las referencias de `references/`
-- [ ] Publicación de la PWA en GitHub Pages
+(Nada — v1 completa; el siguiente milestone definirá el nuevo scope)
 
 ### Out of Scope
 
