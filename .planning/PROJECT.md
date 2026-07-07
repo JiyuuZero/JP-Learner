@@ -25,7 +25,7 @@ Validated in Phase 1: JP-Learner v1 (2026-07-07) — deployed live at https://ji
 - [x] Motor de repetición espaciada (SRS) con estado por ítem
 - [x] Selector de ámbito de repaso: Hoy / Esta semana / Total
 - [x] 3 modos de visualización del japonés (A: kana+kanji con romaji encima · B: kana con kanji progresivo y furigana kana · C: solo kanji), con sustitución paulatina de kanji aprendidos en el modo B
-- [x] Pronunciación por TTS (voz japonesa del navegador, Web Speech API) — código verificado; check en dispositivo con voz ja-JP pendiente (01-HUMAN-UAT.md)
+- [x] Pronunciación incluida con el contenido: audio pre-generado por la skill (say -v Kyoko) reproducido en la app, con Web Speech como fallback — verificado audiblemente en dispositivo sin voz ja-JP (Fase 2, 2026-07-07)
 - [x] Progreso local en IndexedDB + exportar/importar backup JSON
 - [x] Gamificación ligera: racha diaria, % de progreso y contador de puntos
 - [x] UI índigo/morado + acentos pastel, mobile-first, siguiendo las referencias de `references/`
@@ -35,7 +35,7 @@ Validated in Phase 1: JP-Learner v1 (2026-07-07) — deployed live at https://ji
 
 <!-- Current scope. Building toward these. -->
 
-(Nada — v1 completa; el siguiente milestone definirá el nuevo scope)
+(Nada — v1 + Fase 2 (audio TTS pre-generado + entrada flexible de la skill) completas; el siguiente milestone definirá el nuevo scope)
 
 ### Out of Scope
 
