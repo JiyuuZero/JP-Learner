@@ -172,16 +172,19 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     [ensurePersistence, putMeta],
   )
 
+  // WR-08: export/import must FAIL VISIBLY when the DB never opened (the boot
+  // catch continues with ready=true and no db) — a silent no-op here would let
+  // Perfil report a successful import/export that never happened.
   const exportBackup = useCallback(async () => {
     const db = dbRef.current
-    if (!db) return
+    if (!db) throw new Error('Almacenamiento no disponible en este dispositivo.')
     void ensurePersistence()
     downloadBackup(await exportProgress(db))
   }, [ensurePersistence])
 
   const importBackup = useCallback(async (parsed: unknown) => {
     const db = dbRef.current
-    if (!db) return
+    if (!db) throw new Error('Almacenamiento no disponible en este dispositivo.')
     // Validates first; throws WITHOUT clearing anything on a bad backup.
     await importProgress(db, parsed)
     const [m, set, all] = await Promise.all([

@@ -51,6 +51,16 @@ export default function Perfil() {
     }
   }
 
+  const onExport = async () => {
+    setMessage(null)
+    try {
+      await exportBackup()
+    } catch (e: unknown) {
+      // e.g. storage unavailable (the context throws instead of no-oping).
+      setMessage(e instanceof Error ? e.message : 'No se pudo exportar el progreso.')
+    }
+  }
+
   return (
     <main>
       <h1 className="text-[28px] font-extrabold leading-tight">Perfil</h1>
@@ -111,7 +121,7 @@ export default function Perfil() {
             perderlo.
           </p>
           <div className="flex flex-col gap-3">
-            <Button onClick={() => void exportBackup()}>Exportar progreso</Button>
+            <Button onClick={() => void onExport()}>Exportar progreso</Button>
             <Button variant="secondary" onClick={() => fileRef.current?.click()}>
               Importar progreso
             </Button>
