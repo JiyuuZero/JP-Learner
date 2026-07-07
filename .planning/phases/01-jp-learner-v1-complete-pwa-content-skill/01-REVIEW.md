@@ -228,6 +228,28 @@ setTimeout(() => URL.revokeObjectURL(url), 10_000)
 
 ---
 
+## Fix Results
+
+**Fixed at:** 2026-07-07T10:07:00Z
+**Scope:** Critical + Warning (0 Critical, 8 Warnings). Info findings intentionally NOT fixed.
+**Verification after all fixes:** 65/65 vitest tests pass (7 new WR-01 regression tests), `tsc --noEmit -p tsconfig.app.json` clean under the newly enabled `strict`, `npm run build` (content sync + PWA) green.
+
+| Finding | Status | Commit | Notes |
+|---------|--------|--------|-------|
+| WR-01 | fixed | `77a69ee` | Doubling collapse restricted to ASCII consonants (small-っ tolerance kept); long-vowel dash now EXPANDS to the doubled vowel (`ra-men` ≡ `raamen` ≠ `ramen`); ES checker uses a mild base normalizer (no foldings/collapse). Regression tests added: `biiru≠biru`, `obaasan≠obasan`, `こころ≠ころ`, `ちち≠ち`, `perro≠pero`, `bi-ru≡biiru`. Note: `lamar` vs `llamar` still matches — via the ≥3-char containment rule, which is IN-01 (out of scope), not the folding fixed here. |
+| WR-02 | fixed | `0e798ce` | Rotation now uses a `step` counter incremented once per exercise shown (reset in `start`), decoupled from items consumed by matching. No new tests: the rotation lives in the Session view and no component-test harness exists; `buildSession` tests unaffected. |
+| WR-03 | fixed | `d240c83` | `grade()` executions serialized through a promise chain (`gradeChainRef`); rejections still propagate to the caller while the chain self-heals. |
+| WR-04 | fixed | `eab0e72` | `loadContent` fetches routed through a `fetchJson` helper that throws `"<path>: HTTP <status>"` on `!res.ok` for both index.json and every class file. |
+| WR-05 | fixed | `5a2c146` | `"strict": true` added to `app/tsconfig.app.json`; codebase type-checks clean under strict as the review predicted. |
+| WR-06 | fixed | `171772c` | `git commit` now passes an explicit `-- <classRel> <indexRel>` pathspec; pre-staged unrelated files are no longer swept in. |
+| WR-07 | fixed | `f49fce3` | Anchor appended to `document.body` for the click, removed after, and `URL.revokeObjectURL` deferred 10s via `setTimeout`. |
+| WR-08 | fixed | `0bf53e5` | `exportBackup`/`importBackup` throw `"Almacenamiento no disponible en este dispositivo."` when the DB never opened; `Perfil` export button gained a catch handler that surfaces the message (import already had one). |
+
+_Fixed: 2026-07-07T10:07:00Z_
+_Fixer: Claude (gsd-code-fixer)_
+
+---
+
 _Reviewed: 2026-07-07T07:42:00Z_
 _Reviewer: Claude (gsd-code-reviewer)_
 _Depth: standard_
