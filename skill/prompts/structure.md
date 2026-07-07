@@ -1,17 +1,24 @@
 # Structure prompt — SKILL-02 (rigid, always applied the same way)
 
-You are the structuring step of the JP-Learner content skill. Your input is a whisper.cpp
-JSON transcript of one in-person Japanese class (produced by `skill/transcribe.sh`). Your
-output is EXACTLY ONE candidate class JSON document that validates against the FROZEN
-schema at `content/schema/content.schema.json` (JSON Schema draft 2020-12,
-`additionalProperties: false` everywhere — any extra field is a validation failure).
+You are the structuring step of the JP-Learner content skill. Your input is
+one or more whisper.cpp JSON transcripts of the SAME in-person Japanese class (produced
+by `skill/transcribe.sh`, once per recording), and/or user-provided text (written notes,
+corrections, transcribed photos). Your output is EXACTLY ONE candidate class JSON document
+that validates against the FROZEN schema at `content/schema/content.schema.json`
+(JSON Schema draft 2020-12, `additionalProperties: false` everywhere — any extra field is
+a validation failure).
 
 Output ONLY the JSON document. It will be checked by `node skill/validate.mjs <file>`
 before anything is written; if it fails, you fix it and re-emit.
 
-## 1. Read the transcript
+## 1. Read the sources
 
-- The input JSON carries `segments[]` with text and a per-segment `detected_language`.
+- Read ALL the transcripts of the class (a class recorded in N files has N transcript
+  JSONs) plus any user-provided text, and treat them as ONE class.
+- User-provided text is AUTHORITATIVE over the transcript on any conflict.
+- A class may be built from text only (no transcripts at all) — the same rules apply
+  from here on.
+- Each input JSON carries `segments[]` with text and a per-segment `detected_language`.
 - The class is MOSTLY Spanish (the teacher explaining) with embedded Japanese target
   material (words, patterns, example sentences).
 - Whisper does NOT code-switch reliably — a segment tagged `es` may still contain Japanese
@@ -110,6 +117,10 @@ Every item `id` = `<classId>:<type>:<slug>`, with `type` ∈ `vocab|grammar|kanj
 Re-running the skill on the same class MUST produce identical IDs — SRS history attaches
 to IDs and must survive re-processing.
 
+**Dedupe rule (multi-source classes):** the same item appearing in several recordings or
+segments yields ONE item — an identical deterministic slug means it IS the same item;
+merge the information, never emit duplicates (validate.mjs rejects duplicate ids).
+
 `tags[]`: EVERY item's tags MUST include the `classId`. Add a few useful Spanish topic
 tags ("verbo", "-masu", "tiempo", "gramática", …).
 
@@ -117,5 +128,6 @@ tags ("verbo", "-masu", "tiempo", "gramática", …).
 
 Present the candidate JSON to the user BEFORE validation/commit and ask them to verify the
 readings, translations and items — the user attended the class and is the authority on
-what was taught. Apply their corrections, then run `node skill/validate.mjs <file>` and
-only proceed to `node skill/commit-class.mjs <file>` once it prints `VALID <classId>`.
+what was taught. Apply their corrections, then run, in order: `node skill/validate.mjs
+<file>` (must print `VALID <classId>`), then `node skill/generate-audio.mjs <file>`, and
+only then `node skill/commit-class.mjs <file>`.
