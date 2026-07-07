@@ -93,6 +93,12 @@ Items acknowledged and carried forward from previous milestone close:
 |----------|------|--------|-------------|
 | *(none)* | | | |
 
+## Quick Tasks Completed
+
+| Date | Task | Directory | Commits |
+|------|------|-----------|---------|
+| 2026-07-07 | clase.py launcher (CLI drag & drop + GUI tkinter + Procesar Clase.app) | .planning/quick/260707-hnz-crear-clase-py-launcher-para-procesar-cl/ | 77708f1, b70f3c1, e7e707a, eefefb2, 0e660d8 |
+
 ## Session Continuity
 
 Last session: 2026-07-06T21:01:38.025Z
