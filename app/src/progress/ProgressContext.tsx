@@ -121,37 +121,53 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     setMeta(m)
   }, [])
 
+  // WR-03: grade() is a multi-await read-modify-write over the meta singleton,
+  // and Matching fires up to 5 grades in rapid succession. Interleaved
+  // executions would read the same points/newCardsToday baseline and the last
+  // write would win, silently dropping increments — so executions are
+  // serialized through this promise chain.
+  const gradeChainRef = useRef<Promise<void>>(Promise.resolve())
+
   const grade = useCallback<ProgressContextValue['grade']>(
-    async (itemId, itemType, classId, g, item) => {
-      const db = dbRef.current
-      if (!db) return
-      void ensurePersistence()
-      const now = new Date()
+    (itemId, itemType, classId, g, item) => {
+      const doGrade = async () => {
+        const db = dbRef.current
+        if (!db) return
+        void ensurePersistence()
+        const now = new Date()
 
-      const prev = await db.get('srs', itemId)
-      const { record, graduatedToReview } = gradeItem(prev, itemId, itemType, classId, g, now)
-      await db.put('srs', record)
-      setSrsByItem((map) => new Map(map).set(itemId, record))
+        const prev = await db.get('srs', itemId)
+        const { record, graduatedToReview } = gradeItem(prev, itemId, itemType, classId, g, now)
+        await db.put('srs', record)
+        setSrsByItem((map) => new Map(map).set(itemId, record))
 
-      let m = (await db.get('meta', 'singleton')) ?? createDefaultMeta(now)
-      m = bumpStreak(m, now)
-      // Non-punitive points (GAM-03): +1 per correct answer, never decrement.
-      if (g !== Rating.Again) m = { ...m, points: m.points + 1 }
-      if (!prev) {
-        // SRS-05 intake accounting: this item consumed one new-card slot today.
-        const today = localDayKey(now)
-        m =
-          m.newCardsDay === today
-            ? { ...m, newCardsToday: m.newCardsToday + 1 }
-            : { ...m, newCardsDay: today, newCardsToday: 1 }
+        let m = (await db.get('meta', 'singleton')) ?? createDefaultMeta(now)
+        m = bumpStreak(m, now)
+        // Non-punitive points (GAM-03): +1 per correct answer, never decrement.
+        if (g !== Rating.Again) m = { ...m, points: m.points + 1 }
+        if (!prev) {
+          // SRS-05 intake accounting: this item consumed one new-card slot today.
+          const today = localDayKey(now)
+          m =
+            m.newCardsDay === today
+              ? { ...m, newCardsToday: m.newCardsToday + 1 }
+              : { ...m, newCardsDay: today, newCardsToday: 1 }
+        }
+        await putMeta(m)
+
+        // D-03 Mode B auto-learn: graduation to Review marks the item's kanji learned.
+        if (graduatedToReview && item) {
+          await autoLearnFromGraduation(db, item)
+          setLearnedSet(await loadLearnedSet(db))
+        }
       }
-      await putMeta(m)
-
-      // D-03 Mode B auto-learn: graduation to Review marks the item's kanji learned.
-      if (graduatedToReview && item) {
-        await autoLearnFromGraduation(db, item)
-        setLearnedSet(await loadLearnedSet(db))
-      }
+      const task = gradeChainRef.current.then(doGrade)
+      // Keep the chain alive after a rejection; the caller still sees it via `task`.
+      gradeChainRef.current = task.then(
+        () => undefined,
+        () => undefined,
+      )
+      return task
     },
     [ensurePersistence, putMeta],
   )
