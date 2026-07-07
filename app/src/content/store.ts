@@ -35,8 +35,16 @@ export interface ContentStore {
 
 const BASE = import.meta.env.BASE_URL // e.g. "/JP-Learner/"
 
+// fetch() resolves on HTTP errors; without this check a 404 (e.g. the GitHub
+// Pages SPA fallback serving HTML) would surface as a cryptic JSON SyntaxError.
+async function fetchJson<T>(path: string): Promise<T> {
+  const res = await fetch(`${BASE}${path}`)
+  if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`)
+  return (await res.json()) as T
+}
+
 export async function loadContent(): Promise<ContentStore> {
-  const index: ContentIndex = await (await fetch(`${BASE}content/index.json`)).json()
+  const index = await fetchJson<ContentIndex>('content/index.json')
   const store: ContentStore = {
     index,
     classes: index.classes,
@@ -48,7 +56,7 @@ export async function loadContent(): Promise<ContentStore> {
   }
   for (const c of index.classes) {
     // ClassMeta.file is relative to the content/ root (e.g. "classes/2026-04-14.json")
-    const data: ClassContent = await (await fetch(`${BASE}content/${c.file}`)).json()
+    const data = await fetchJson<ClassContent>(`content/${c.file}`)
     const bucket = {
       vocab: data.vocab ?? [],
       grammar: data.grammar ?? [],
