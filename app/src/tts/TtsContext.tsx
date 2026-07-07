@@ -9,7 +9,7 @@
 // The default value is a safe no-op so nothing crashes outside the provider.
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 import { initTTS, speakJa } from './tts'
-import { loadAudioManifest, playAudio, type AudioManifest } from './audio'
+import { loadAudioManifest, playAudio, stopAudio, type AudioManifest } from './audio'
 
 export interface TtsContextValue {
   hasVoice: boolean
@@ -51,10 +51,13 @@ export function TtsProvider({ children }: { children: ReactNode }) {
 
   // Fallback chain (D-05): pre-generated audio first, else Web Speech.
   // speakJa already no-ops with no ja-JP voice, so the chain can never end in
-  // a wrong voice (TTS-02).
+  // a wrong voice (TTS-02). stopAudio() is the other half of the never-overlap
+  // invariant: playAudio cancels Web Speech before playing a file, and here we
+  // stop any playing file before speaking a Web Speech utterance.
   const speak = useCallback(
     (text: string, audioKey?: string) => {
       if (audioKey && playAudio(manifest, audioKey)) return
+      stopAudio() // never speak Web Speech over a playing .m4a
       speakJa(text)
     },
     [manifest],
