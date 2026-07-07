@@ -8,6 +8,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
@@ -53,6 +54,9 @@ export interface ProgressContextValue {
   unmarkLearned: (char: string) => Promise<void>
   setDisplayMode: (mode: ProgressMeta['displayMode']) => Promise<void>
   setRomajiVisible: (visible: boolean) => Promise<void>
+  // Favorites (UI-02): item ids only (PROG-04), persisted in meta.favorites.
+  favoriteSet: Set<string>
+  toggleFavorite: (itemId: string) => Promise<void>
 }
 
 export const ProgressContext = createContext<ProgressContextValue | null>(null)
@@ -214,6 +218,25 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     [meta, putMeta],
   )
 
+  // Favorites (UI-02): derived from the persisted meta.favorites id array.
+  // A pre-favorites meta record reads the field as undefined -> empty set.
+  const favoriteSet = useMemo(() => new Set(meta?.favorites ?? []), [meta])
+
+  const toggleFavorite = useCallback(
+    async (itemId: string) => {
+      const db = dbRef.current
+      if (!db) return
+      void ensurePersistence()
+      const m = (await db.get('meta', 'singleton')) ?? meta ?? createDefaultMeta()
+      const list = m.favorites ?? []
+      const favorites = list.includes(itemId)
+        ? list.filter((id) => id !== itemId)
+        : [...list, itemId]
+      await putMeta({ ...m, favorites })
+    },
+    [ensurePersistence, meta, putMeta],
+  )
+
   return (
     <ProgressContext.Provider
       value={{
@@ -229,6 +252,8 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         unmarkLearned,
         setDisplayMode,
         setRomajiVisible,
+        favoriteSet,
+        toggleFavorite,
       }}
     >
       {children}

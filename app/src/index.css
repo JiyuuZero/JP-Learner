@@ -30,3 +30,17 @@ body {
   font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
 }
+
+/* Japanese content (UI-SPEC ruby contract): CJK stack for base glyphs,
+   line-height >= 1.5 so furigana never overlaps adjacent lines, rt at ~58%
+   size in muted color with a 4px gap to the base. */
+.jp-text {
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+
+.jp-text rt {
+  font-size: 58%;
+  color: var(--color-muted);
+  padding-bottom: 4px;
+}

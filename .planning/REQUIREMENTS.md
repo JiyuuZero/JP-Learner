@@ -41,19 +41,19 @@ Requisitos para la primera versión. Se implementan en una sola fase (restricci�
 
 ### Visualización del japonés (DISP)
 
-- [ ] **DISP-01**: El usuario puede cambiar el modo de visualización del japonés en ajustes: (A) kana+kanji con furigana romaji, (B) kanji progresivo, (C) solo kanji
-- [ ] **DISP-02**: La furigana se renderiza con `<ruby>` nativo a partir de los datos del esquema
-- [ ] **DISP-03**: En el Modo B, las palabras salen por defecto en kana y pasan a kanji-con-furigana-kana a medida que el usuario marca sus kanji como aprendidos (sustitución paulatina)
-- [ ] **DISP-04**: El usuario puede marcar kanji/palabras como aprendidos, actualizando el set de kanji aprendidos que alimenta el Modo B
+- [x] **DISP-01**: El usuario puede cambiar el modo de visualización del japonés en ajustes: (A) kana+kanji con furigana romaji, (B) kanji progresivo, (C) solo kanji
+- [x] **DISP-02**: La furigana se renderiza con `<ruby>` nativo a partir de los datos del esquema
+- [x] **DISP-03**: En el Modo B, las palabras salen por defecto en kana y pasan a kanji-con-furigana-kana a medida que el usuario marca sus kanji como aprendidos (sustitución paulatina)
+- [x] **DISP-04**: El usuario puede marcar kanji/palabras como aprendidos, actualizando el set de kanji aprendidos que alimenta el Modo B
 
 ### Ejercicios (EXER)
 
-- [ ] **EXER-01**: Flashcards con recuerdo activo (muestra → revela → autoevalúa), alimentando el estado SRS compartido
-- [ ] **EXER-02**: Preguntas de opción múltiple
-- [ ] **EXER-03**: Rellenar/escribir con comprobación tolerante de respuesta (variantes romaji/kana, n/nn)
-- [ ] **EXER-04**: Completar la frase con banco de palabras (frase en japonés con huecos + fichas de palabras japonesas)
-- [ ] **EXER-05**: Emparejar parejas español↔japonés
-- [ ] **EXER-06**: Los ejercicios pueden practicarse en ambos sentidos (JA→ES y ES→JA)
+- [x] **EXER-01**: Flashcards con recuerdo activo (muestra → revela → autoevalúa), alimentando el estado SRS compartido
+- [x] **EXER-02**: Preguntas de opción múltiple
+- [x] **EXER-03**: Rellenar/escribir con comprobación tolerante de respuesta (variantes romaji/kana, n/nn)
+- [x] **EXER-04**: Completar la frase con banco de palabras (frase en japonés con huecos + fichas de palabras japonesas)
+- [x] **EXER-05**: Emparejar parejas español↔japonés
+- [x] **EXER-06**: Los ejercicios pueden practicarse en ambos sentidos (JA→ES y ES→JA)
 
 ### Pronunciación (TTS)
 
@@ -143,16 +143,16 @@ Qué fase cubre qué requisitos. Todos los v1 se implementan en **una sola fase*
 | SRS-03 | Phase 1 | Complete |
 | SRS-04 | Phase 1 | Complete |
 | SRS-05 | Phase 1 | Complete |
-| DISP-01 | Phase 1 | Pending |
-| DISP-02 | Phase 1 | Pending |
-| DISP-03 | Phase 1 | Pending |
-| DISP-04 | Phase 1 | Pending |
-| EXER-01 | Phase 1 | Pending |
-| EXER-02 | Phase 1 | Pending |
-| EXER-03 | Phase 1 | Pending |
-| EXER-04 | Phase 1 | Pending |
-| EXER-05 | Phase 1 | Pending |
-| EXER-06 | Phase 1 | Pending |
+| DISP-01 | Phase 1 | Complete |
+| DISP-02 | Phase 1 | Complete |
+| DISP-03 | Phase 1 | Complete |
+| DISP-04 | Phase 1 | Complete |
+| EXER-01 | Phase 1 | Complete |
+| EXER-02 | Phase 1 | Complete |
+| EXER-03 | Phase 1 | Complete |
+| EXER-04 | Phase 1 | Complete |
+| EXER-05 | Phase 1 | Complete |
+| EXER-06 | Phase 1 | Complete |
 | TTS-01 | Phase 1 | Pending |
 | TTS-02 | Phase 1 | Pending |
 | GAM-01 | Phase 1 | Pending |
