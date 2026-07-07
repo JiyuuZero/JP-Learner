@@ -4,6 +4,9 @@ audio-src/
 # Whisper model (~3GB, downloaded locally — never committed)
 models/
 
+# Double-click launcher app (local build artifact — regenerate with `sh skill/make-app.sh`)
+Procesar Clase.app/
+
 # Dependencies
 node_modules/
 

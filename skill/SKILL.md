@@ -32,6 +32,11 @@ el preflight de dependencias, transcribe en local lo pendiente (incremental — 
 re-transcribe lo que ya tiene su `.json`) y lanza Claude interactivo con el contrato desde
 el paso 3. Flags opcionales: `--fecha YYYY-MM-DD`, `--notas "texto"`, `--modelo <m>`.
 
+Sin terminal: doble clic en **"Procesar Clase.app"** (regenerable con `sh skill/make-app.sh`;
+el .app está gitignorado) → se abre la GUI (`python3 clase.py --gui`) → arrastra o añade los
+ficheros, escribe apuntes si quieres y pulsa "Procesar clase" → la sesión interactiva de
+Claude se abre sola en Terminal para la revisión humana.
+
 ## The 6 steps (invariant sequence)
 
 ### 1. Capture
