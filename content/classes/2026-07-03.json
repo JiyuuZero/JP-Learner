@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-03",
+  "date": "2026-07-03",
+  "label": "Duolingo — colores, pertenencias y partículas は・の・か・です",
+  "vocab": [
+    {
+      "id": "2026-07-03:vocab:sushi",
+      "type": "vocab",
+      "kanji": "寿司",
+      "kana": "すし",
+      "romaji": "sushi",
+      "es": "sushi",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "寿司",
+          "reading": "すし",
+          "isKanji": true,
+          "kanji": [
+            "寿",
+            "司"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "寿司です。",
+        "kana": "すしです。",
+        "romaji": "Sushi desu.",
+        "es": "Es sushi."
+      },
+      "tags": [
+        "2026-07-03",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:ocha",
+      "type": "vocab",
+      "kanji": "お茶",
+      "kana": "おちゃ",
+      "romaji": "ocha",
+      "es": "té",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "お",
+          "reading": "お",
+          "isKanji": false
+        },
+        {
+          "surface": "茶",
+          "reading": "ちゃ",
+          "isKanji": true,
+          "kanji": [
+            "茶"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "お茶です。",
+        "kana": "おちゃです。",
+        "romaji": "Ocha desu.",
+        "es": "Es té."
+      },
+      "tags": [
+        "2026-07-03",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:mizu",
+      "type": "vocab",
+      "kanji": "水",
+      "kana": "みず",
+      "romaji": "mizu",
+      "es": "agua",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "水",
+          "reading": "みず",
+          "isKanji": true,
+          "kanji": [
+            "水"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "水です。",
+        "kana": "みずです。",
+        "romaji": "Mizu desu.",
+        "es": "Es agua."
+      },
+      "tags": [
+        "2026-07-03",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:gohan",
+      "type": "vocab",
+      "kanji": "ご飯",
+      "kana": "ごはん",
+      "romaji": "gohan",
+      "es": "arroz / comida",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ご",
+          "reading": "ご",
+          "isKanji": false
+        },
+        {
+          "surface": "飯",
+          "reading": "はん",
+          "isKanji": true,
+          "kanji": [
+            "飯"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "ご飯です。",
+        "kana": "ごはんです。",
+        "romaji": "Gohan desu.",
+        "es": "Es arroz."
+      },
+      "tags": [
+        "2026-07-03",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kudasai",
+      "type": "vocab",
+      "kanji": "ください",
+      "kana": "ください",
+      "romaji": "kudasai",
+      "es": "por favor (al pedir algo)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "ください",
+          "reading": "ください",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "水をください。",
+        "kana": "みずをください。",
+        "romaji": "Mizu o kudasai.",
+        "es": "Agua, por favor."
+      },
+      "tags": [
+        "2026-07-03",
+        "expresión"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:ao",
+      "type": "vocab",
+      "kanji": "青",
+      "kana": "あお",
+      "romaji": "ao",
+      "es": "azul",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "青",
+          "reading": "あお",
+          "isKanji": true,
+          "kanji": [
+            "青"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "青です。",
+        "kana": "あおです。",
+        "romaji": "Ao desu.",
+        "es": "Es azul."
+      },
+      "tags": [
+        "2026-07-03",
+        "color"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:akai",
+      "type": "vocab",
+      "kanji": "赤い",
+      "kana": "あかい",
+      "romaji": "akai",
+      "es": "rojo",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "赤",
+          "reading": "あか",
+          "isKanji": true,
+          "kanji": [
+            "赤"
+          ]
+        },
+        {
+          "surface": "い",
+          "reading": "い",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "私のコートは赤いです。",
+        "kana": "わたしのコートはあかいです。",
+        "romaji": "Watashi no kooto wa akai desu.",
+        "es": "Mi abrigo es rojo."
+      },
+      "tags": [
+        "2026-07-03",
+        "color",
+        "adjetivo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:shiroi",
+      "type": "vocab",
+      "kanji": "白い",
+      "kana": "しろい",
+      "romaji": "shiroi",
+      "es": "blanco (adjetivo)",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "白",
+          "reading": "しろ",
+          "isKanji": true,
+          "kanji": [
+            "白"
+          ]
+        },
+        {
+          "surface": "い",
+          "reading": "い",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "白い手袋はどこですか。",
+        "kana": "しろいてぶくろはどこですか。",
+        "romaji": "Shiroi tebukuro wa doko desu ka.",
+        "es": "¿Dónde está el guante blanco?"
+      },
+      "tags": [
+        "2026-07-03",
+        "color",
+        "adjetivo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:yasashii",
+      "type": "vocab",
+      "kanji": "やさしい",
+      "kana": "やさしい",
+      "romaji": "yasashii",
+      "es": "amable / gentil",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "やさしい",
+          "reading": "やさしい",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "先生はやさしいです。",
+        "kana": "せんせいはやさしいです。",
+        "romaji": "Sensei wa yasashii desu.",
+        "es": "El profesor es amable."
+      },
+      "tags": [
+        "2026-07-03",
+        "adjetivo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kakkoii",
+      "type": "vocab",
+      "kanji": "かっこいい",
+      "kana": "かっこいい",
+      "romaji": "kakkoii",
+      "es": "guay / molón",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "かっこいい",
+          "reading": "かっこいい",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "田中さんはかっこいいです。",
+        "kana": "たなかさんはかっこいいです。",
+        "romaji": "Tanaka-san wa kakkoii desu.",
+        "es": "El señor Tanaka es guay."
+      },
+      "tags": [
+        "2026-07-03",
+        "adjetivo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kooto",
+      "type": "vocab",
+      "kanji": "コート",
+      "kana": "コート",
+      "romaji": "kooto",
+      "es": "abrigo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "コート",
+          "reading": "コート",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはコートです。",
+        "kana": "これはコートです。",
+        "romaji": "Kore wa kooto desu.",
+        "es": "Esto es un abrigo."
+      },
+      "tags": [
+        "2026-07-03",
+        "ropa"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:tebukuro",
+      "type": "vocab",
+      "kanji": "手袋",
+      "kana": "てぶくろ",
+      "romaji": "tebukuro",
+      "es": "guante(s)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "手",
+          "reading": "て",
+          "isKanji": true,
+          "kanji": [
+            "手"
+          ]
+        },
+        {
+          "surface": "袋",
+          "reading": "ぶくろ",
+          "isKanji": true,
+          "kanji": [
+            "袋"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "これは私の手袋です。",
+        "kana": "これはわたしのてぶくろです。",
+        "romaji": "Kore wa watashi no tebukuro desu.",
+        "es": "Estos son mis guantes."
+      },
+      "tags": [
+        "2026-07-03",
+        "ropa"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kutsu",
+      "type": "vocab",
+      "kanji": "靴",
+      "kana": "くつ",
+      "romaji": "kutsu",
+      "es": "zapato(s)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "isKanji": true,
+          "kanji": [
+            "靴"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "靴です。",
+        "kana": "くつです。",
+        "romaji": "Kutsu desu.",
+        "es": "Es un zapato."
+      },
+      "tags": [
+        "2026-07-03",
+        "ropa"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kaban",
+      "type": "vocab",
+      "kanji": "かばん",
+      "kana": "かばん",
+      "romaji": "kaban",
+      "es": "bolsa / bolso / maletín",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かばん",
+          "reading": "かばん",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "かばんはここです。",
+        "kana": "かばんはここです。",
+        "romaji": "Kaban wa koko desu.",
+        "es": "El bolso está aquí."
+      },
+      "tags": [
+        "2026-07-03",
+        "objeto"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:tomodachi",
+      "type": "vocab",
+      "kanji": "友達",
+      "kana": "ともだち",
+      "romaji": "tomodachi",
+      "es": "amigo / amiga",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "友",
+          "reading": "とも",
+          "isKanji": true,
+          "kanji": [
+            "友"
+          ]
+        },
+        {
+          "surface": "達",
+          "reading": "だち",
+          "isKanji": true,
+          "kanji": [
+            "達"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "友達です。",
+        "kana": "ともだちです。",
+        "romaji": "Tomodachi desu.",
+        "es": "Es un amigo."
+      },
+      "tags": [
+        "2026-07-03",
+        "personas"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:kore",
+      "type": "vocab",
+      "kanji": "これ",
+      "kana": "これ",
+      "romaji": "kore",
+      "es": "esto / esta cosa",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "これ",
+          "reading": "これ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これは私の手袋です。",
+        "kana": "これはわたしのてぶくろです。",
+        "romaji": "Kore wa watashi no tebukuro desu.",
+        "es": "Estos son mis guantes."
+      },
+      "tags": [
+        "2026-07-03",
+        "demostrativo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:koko",
+      "type": "vocab",
+      "kanji": "ここ",
+      "kana": "ここ",
+      "romaji": "koko",
+      "es": "aquí",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "ここ",
+          "reading": "ここ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "かばんはここです。",
+        "kana": "かばんはここです。",
+        "romaji": "Kaban wa koko desu.",
+        "es": "El bolso está aquí."
+      },
+      "tags": [
+        "2026-07-03",
+        "demostrativo"
+      ]
+    },
+    {
+      "id": "2026-07-03:vocab:doko",
+      "type": "vocab",
+      "kanji": "どこ",
+      "kana": "どこ",
+      "romaji": "doko",
+      "es": "dónde",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "どこ",
+          "reading": "どこ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "手袋はどこですか。",
+        "kana": "てぶくろはどこですか。",
+        "romaji": "Tebukuro wa doko desu ka.",
+        "es": "¿Dónde está el guante?"
+      },
+      "tags": [
+        "2026-07-03",
+        "interrogativo"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-03:grammar:desu",
+      "type": "grammar",
+      "pattern": "〜です",
+      "es": "Cópula cortés «ser/estar». Se añade al final de la frase para afirmar que algo es X.",
+      "examples": [
+        {
+          "kanji": "水です。",
+          "kana": "みずです。",
+          "romaji": "Mizu desu.",
+          "es": "Es agua."
+        },
+        {
+          "kanji": "これはコートです。",
+          "kana": "これはコートです。",
+          "romaji": "Kore wa kooto desu.",
+          "es": "Esto es un abrigo."
+        }
+      ],
+      "tags": [
+        "2026-07-03",
+        "gramática",
+        "partícula"
+      ]
+    },
+    {
+      "id": "2026-07-03:grammar:no-posesivo",
+      "type": "grammar",
+      "pattern": "AのB",
+      "es": "La partícula の une dos nombres e indica posesión o pertenencia: «AのB» = «el B de A».",
+      "examples": [
+        {
+          "kanji": "私のコート",
+          "kana": "わたしのコート",
+          "romaji": "watashi no kooto",
+          "es": "mi abrigo"
+        },
+        {
+          "kanji": "私のコートは赤いです。",
+          "kana": "わたしのコートはあかいです。",
+          "romaji": "Watashi no kooto wa akai desu.",
+          "es": "Mi abrigo es rojo."
+        }
+      ],
+      "tags": [
+        "2026-07-03",
+        "gramática",
+        "partícula"
+      ]
+    },
+    {
+      "id": "2026-07-03:grammar:wa-tema",
+      "type": "grammar",
+      "pattern": "〜は〜です",
+      "es": "La partícula は (se pronuncia «wa») marca el tema de la frase: «en cuanto a ~».",
+      "examples": [
+        {
+          "kanji": "田中さんはかっこいいです。",
+          "kana": "たなかさんはかっこいいです。",
+          "romaji": "Tanaka-san wa kakkoii desu.",
+          "es": "El señor Tanaka es guay."
+        },
+        {
+          "kanji": "かばんはここです。",
+          "kana": "かばんはここです。",
+          "romaji": "Kaban wa koko desu.",
+          "es": "El bolso está aquí."
+        }
+      ],
+      "tags": [
+        "2026-07-03",
+        "gramática",
+        "partícula"
+      ]
+    },
+    {
+      "id": "2026-07-03:grammar:ka-interrogativa",
+      "type": "grammar",
+      "pattern": "〜ですか",
+      "es": "La partícula か al final de la frase la convierte en pregunta.",
+      "examples": [
+        {
+          "kanji": "白い手袋はどこですか。",
+          "kana": "しろいてぶくろはどこですか。",
+          "romaji": "Shiroi tebukuro wa doko desu ka.",
+          "es": "¿Dónde está el guante blanco?"
+        }
+      ],
+      "tags": [
+        "2026-07-03",
+        "gramática",
+        "partícula"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-03:note:1",
+      "type": "note",
+      "es": "コート (abrigo) se escribe en katakana por ser un préstamo del inglés «coat».",
+      "tags": [
+        "2026-07-03"
+      ]
+    },
+    {
+      "id": "2026-07-03:note:2",
+      "type": "note",
+      "es": "La partícula de tema は se escribe con la sílaba «ha» pero se pronuncia «wa».",
+      "tags": [
+        "2026-07-03"
+      ]
+    }
+  ]
+}
