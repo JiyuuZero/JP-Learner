@@ -366,18 +366,104 @@ def run_gui(args):
     except Exception:
         root = tk.Tk()
     root.title("JP-Learner — Procesar clase")
-    root.geometry("580x660")
+    root.geometry("620x720")
+    root.minsize(560, 640)
+
+    # --- Paleta (a juego con el icono y el theme-color de la app) ---
+    BG = "#EEF0FB"        # lavanda muy claro (fondo)
+    CARD = "#FFFFFF"      # tarjetas / campos
+    INK = "#1E1B4B"       # texto índigo oscuro
+    MUTED = "#6B7280"     # texto secundario
+    ACCENT = "#5A5AE6"    # índigo de marca
+    ACCENT_DK = "#4744C9"
+    BORDER = "#D6D9F0"
+    base_font = "SF Pro Text" if sys.platform == "darwin" else ""
+
+    root.configure(bg=BG)
+
+    style = ttk.Style()
+    try:
+        style.theme_use("clam")  # 'aqua' ignora colores; 'clam' permite tematizar
+    except Exception:
+        pass
+    style.configure(
+        "Accent.TButton", background=ACCENT, foreground="white",
+        font=(base_font, 14, "bold"), padding=(14, 12), borderwidth=0, focuscolor=ACCENT,
+    )
+    style.map(
+        "Accent.TButton",
+        background=[("pressed", ACCENT_DK), ("active", ACCENT_DK), ("disabled", "#B9BAE6")],
+        foreground=[("disabled", "#EEF0FB")],
+    )
+    style.configure(
+        "Ghost.TButton", background=CARD, foreground=INK,
+        font=(base_font, 12), padding=(12, 7), borderwidth=1, relief="flat",
+    )
+    style.map(
+        "Ghost.TButton",
+        background=[("active", "#E5E7FB"), ("pressed", "#DADCF7")],
+        bordercolor=[("!disabled", BORDER)],
+    )
+    style.configure(
+        "Clase.TCombobox", fieldbackground=CARD, background=CARD,
+        bordercolor=BORDER, arrowcolor=ACCENT, padding=4,
+    )
+
+    # Imágenes del icono (dock/ventana + cabecera); se conservan como refs en root.
+    _icon_dir = Path(__file__).resolve().parent / "skill" / "clase-icon.png"
+    if _icon_dir.exists():
+        try:
+            root._icono = tk.PhotoImage(file=str(_icon_dir))
+            root.iconphoto(True, root._icono.subsample(8))   # ~128px dock/ventana
+            root._icono_hdr = root._icono.subsample(19)        # ~54px cabecera
+        except Exception:
+            root._icono_hdr = None
+    else:
+        root._icono_hdr = None
+
+    # --- Cabecera índigo con icono + título ---
+    header = tk.Frame(root, bg=ACCENT)
+    header.pack(fill="x")
+    hbox = tk.Frame(header, bg=ACCENT)
+    hbox.pack(padx=18, pady=16, anchor="w", fill="x")
+    if root._icono_hdr is not None:
+        tk.Label(hbox, image=root._icono_hdr, bg=ACCENT).pack(side="left", padx=(0, 12))
+    htext = tk.Frame(hbox, bg=ACCENT)
+    htext.pack(side="left", anchor="w")
+    tk.Label(
+        htext, text="JP-Learner", bg=ACCENT, fg="white",
+        font=(base_font, 20, "bold"), anchor="w",
+    ).pack(anchor="w")
+    tk.Label(
+        htext, text="Procesa la clase de hoy en un solo paso", bg=ACCENT,
+        fg="#DFE0FB", font=(base_font, 12), anchor="w",
+    ).pack(anchor="w")
+
+    # --- Cuerpo ---
+    body = tk.Frame(root, bg=BG)
+    body.pack(fill="both", expand=True, padx=18, pady=16)
+
+    def _seccion(texto, pady=(0, 4)):
+        tk.Label(
+            body, text=texto, bg=BG, fg=INK, anchor="w",
+            font=(base_font, 12, "bold"),
+        ).pack(fill="x", pady=pady)
 
     # a. Lista de ficheros + botones
+    _seccion("Ficheros de la clase")
     tk.Label(
-        root,
-        text="Ficheros de la clase (audio m4a/mp3/wav/aac/ogg y notas .txt/.md):",
-        anchor="w",
-    ).pack(fill="x", padx=10, pady=(10, 2))
-    lista = tk.Listbox(root, selectmode="extended", height=7)
-    lista.pack(fill="x", padx=10)
-    hint = tk.Label(root, text="", anchor="w", fg="#666666")
-    hint.pack(fill="x", padx=10)
+        body, text="Audio m4a/mp3/wav/aac/ogg y notas .txt/.md",
+        bg=BG, fg=MUTED, anchor="w", font=(base_font, 11),
+    ).pack(fill="x", pady=(0, 6))
+    lista = tk.Listbox(
+        body, selectmode="extended", height=6, bg=CARD, fg=INK,
+        relief="flat", highlightthickness=1, highlightbackground=BORDER,
+        highlightcolor=ACCENT, selectbackground=ACCENT, selectforeground="white",
+        activestyle="none", borderwidth=0,
+    )
+    lista.pack(fill="x", ipady=4)
+    hint = tk.Label(body, text="", anchor="w", bg=BG, fg=MUTED, font=(base_font, 11))
+    hint.pack(fill="x", pady=(4, 0))
 
     def anadir_rutas(rutas):
         ficheros, errores = clasificar_rutas(rutas)
@@ -404,10 +490,16 @@ def run_gui(args):
             staged.pop(idx)
             lista.delete(idx)
 
-    fila_botones = tk.Frame(root)
-    fila_botones.pack(fill="x", padx=10, pady=4)
-    tk.Button(fila_botones, text="Añadir ficheros…", command=anadir_dialogo).pack(side="left")
-    tk.Button(fila_botones, text="Quitar selección", command=quitar_seleccion).pack(side="left", padx=6)
+    fila_botones = tk.Frame(body, bg=BG)
+    fila_botones.pack(fill="x", pady=8)
+    ttk.Button(
+        fila_botones, text="Añadir ficheros…", style="Ghost.TButton",
+        command=anadir_dialogo,
+    ).pack(side="left")
+    ttk.Button(
+        fila_botones, text="Quitar selección", style="Ghost.TButton",
+        command=quitar_seleccion,
+    ).pack(side="left", padx=8)
 
     # b. Drop de ficheros best-effort (tkinterdnd2 si existe; si no, Tk >= 9 nativo)
     def _al_soltar(data):
@@ -431,33 +523,49 @@ def run_gui(args):
                 dnd_activo = True
         except Exception:
             dnd_activo = False
-    if dnd_activo:
-        hint.config(text="Arrastra ficheros aquí o usa Añadir ficheros…")
+    hint.config(
+        text="Arrastra ficheros aquí o usa «Añadir ficheros…»"
+        if dnd_activo else "Usa «Añadir ficheros…» para elegir los de la clase"
+    )
 
     # c. Apuntes de la clase
-    tk.Label(root, text="Apuntes de la clase (opcional):", anchor="w").pack(
-        fill="x", padx=10, pady=(8, 2)
+    _seccion("Apuntes de la clase (opcional)", pady=(14, 4))
+    apuntes = tk.Text(
+        body, height=4, bg=CARD, fg=INK, relief="flat", highlightthickness=1,
+        highlightbackground=BORDER, highlightcolor=ACCENT, borderwidth=0,
+        padx=8, pady=6, font=(base_font, 12), insertbackground=INK, wrap="word",
     )
-    apuntes = tk.Text(root, height=5)
-    apuntes.pack(fill="x", padx=10)
+    apuntes.pack(fill="x")
 
     # d. Fecha + modelo
-    fila = tk.Frame(root)
-    fila.pack(fill="x", padx=10, pady=8)
-    tk.Label(fila, text="Fecha:").pack(side="left")
+    fila = tk.Frame(body, bg=BG)
+    fila.pack(fill="x", pady=14)
+    tk.Label(fila, text="Fecha", bg=BG, fg=INK, font=(base_font, 12)).pack(side="left")
     fecha_var = tk.StringVar(value=args.fecha)
-    tk.Entry(fila, textvariable=fecha_var, width=12).pack(side="left", padx=(4, 16))
-    tk.Label(fila, text="Modelo:").pack(side="left")
+    tk.Entry(
+        fila, textvariable=fecha_var, width=12, bg=CARD, fg=INK, relief="flat",
+        highlightthickness=1, highlightbackground=BORDER, highlightcolor=ACCENT,
+        insertbackground=INK, font=(base_font, 12),
+    ).pack(side="left", padx=(8, 20), ipady=3)
+    tk.Label(fila, text="Modelo", bg=BG, fg=INK, font=(base_font, 12)).pack(side="left")
     modelo_var = tk.StringVar(value=args.modelo if args.modelo in MODELOS_GUI else "opus")
     ttk.Combobox(
-        fila, textvariable=modelo_var, values=MODELOS_GUI, state="readonly", width=10
-    ).pack(side="left", padx=4)
+        fila, textvariable=modelo_var, values=MODELOS_GUI, state="readonly",
+        width=10, style="Clase.TCombobox",
+    ).pack(side="left", padx=8)
 
     # e. Procesar + log
-    boton = tk.Button(root, text="Procesar clase", font=("", 14, "bold"))
-    boton.pack(fill="x", padx=10, pady=(4, 6))
-    log = tk.Text(root, height=12, state="disabled", bg="#111111", fg="#dddddd")
-    log.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+    boton = ttk.Button(body, text="Procesar clase", style="Accent.TButton")
+    boton.pack(fill="x", pady=(4, 10))
+    tk.Label(
+        body, text="Registro", bg=BG, fg=MUTED, anchor="w", font=(base_font, 11),
+    ).pack(fill="x", pady=(0, 4))
+    log = tk.Text(
+        body, height=9, state="disabled", bg="#1E1B4B", fg="#E5E7FB",
+        relief="flat", highlightthickness=0, borderwidth=0, padx=10, pady=8,
+        font=("SF Mono" if sys.platform == "darwin" else "monospace", 11), wrap="word",
+    )
+    log.pack(fill="both", expand=True)
 
     def log_linea(texto):
         def _append():
