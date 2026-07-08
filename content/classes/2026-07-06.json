@@ -2,28 +2,25 @@
   "schemaVersion": 1,
   "classId": "2026-07-06",
   "date": "2026-07-06",
-  "label": "Clase presencial — vocabulario, números (0–99) y sufijos たち・さい",
+  "label": "Clase presencial — vocabulario (colores, objetos, comida) y plural たち",
   "vocab": [
     {
       "id": "2026-07-06:vocab:ao",
       "type": "vocab",
-      "kanji": "青",
+      "kanji": "あお",
       "kana": "あお",
       "romaji": "ao",
       "es": "azul",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "青",
+          "surface": "あお",
           "reading": "あお",
-          "isKanji": true,
-          "kanji": [
-            "青"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "青です。",
+        "kanji": "あおです。",
         "kana": "あおです。",
         "romaji": "Ao desu.",
         "es": "Es azul."
@@ -36,23 +33,20 @@
     {
       "id": "2026-07-06:vocab:shiro",
       "type": "vocab",
-      "kanji": "白",
+      "kanji": "しろ",
       "kana": "しろ",
       "romaji": "shiro",
       "es": "blanco (color)",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "白",
+          "surface": "しろ",
           "reading": "しろ",
-          "isKanji": true,
-          "kanji": [
-            "白"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "白です。",
+        "kanji": "しろです。",
         "kana": "しろです。",
         "romaji": "Shiro desu.",
         "es": "Es blanco."
@@ -65,24 +59,20 @@
     {
       "id": "2026-07-06:vocab:kiiro",
       "type": "vocab",
-      "kanji": "黄色",
+      "kanji": "きいろ",
       "kana": "きいろ",
       "romaji": "kiiro",
       "es": "amarillo",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "黄色",
+          "surface": "きいろ",
           "reading": "きいろ",
-          "isKanji": true,
-          "kanji": [
-            "黄",
-            "色"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "黄色です。",
+        "kanji": "きいろです。",
         "kana": "きいろです。",
         "romaji": "Kiiro desu.",
         "es": "Es amarillo."
@@ -95,23 +85,20 @@
     {
       "id": "2026-07-06:vocab:midori",
       "type": "vocab",
-      "kanji": "緑",
+      "kanji": "みどり",
       "kana": "みどり",
       "romaji": "midori",
       "es": "verde",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "緑",
+          "surface": "みどり",
           "reading": "みどり",
-          "isKanji": true,
-          "kanji": [
-            "緑"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "緑です。",
+        "kanji": "みどりです。",
         "kana": "みどりです。",
         "romaji": "Midori desu.",
         "es": "Es verde."
@@ -124,23 +111,20 @@
     {
       "id": "2026-07-06:vocab:ie",
       "type": "vocab",
-      "kanji": "家",
+      "kanji": "いえ",
       "kana": "いえ",
       "romaji": "ie",
       "es": "casa",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "家",
+          "surface": "いえ",
           "reading": "いえ",
-          "isKanji": true,
-          "kanji": [
-            "家"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "家です。",
+        "kanji": "いえです。",
         "kana": "いえです。",
         "romaji": "Ie desu.",
         "es": "Es una casa."
@@ -153,23 +137,20 @@
     {
       "id": "2026-07-06:vocab:ue",
       "type": "vocab",
-      "kanji": "上",
+      "kanji": "うえ",
       "kana": "うえ",
       "romaji": "ue",
       "es": "arriba / encima",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "上",
+          "surface": "うえ",
           "reading": "うえ",
-          "isKanji": true,
-          "kanji": [
-            "上"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "上です。",
+        "kanji": "うえです。",
         "kana": "うえです。",
         "romaji": "Ue desu.",
         "es": "Está arriba."
@@ -182,26 +163,23 @@
     {
       "id": "2026-07-06:vocab:en",
       "type": "vocab",
-      "kanji": "円",
+      "kanji": "えん",
       "kana": "えん",
       "romaji": "en",
       "es": "yen (moneda)",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "円",
+          "surface": "えん",
           "reading": "えん",
-          "isKanji": true,
-          "kanji": [
-            "円"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "十円です。",
-        "kana": "じゅうえんです。",
-        "romaji": "Juu en desu.",
-        "es": "Son diez yenes."
+        "kanji": "えんです。",
+        "kana": "えんです。",
+        "romaji": "En desu.",
+        "es": "Es un yen."
       },
       "tags": [
         "2026-07-06",
@@ -211,24 +189,20 @@
     {
       "id": "2026-07-06:vocab:ongaku",
       "type": "vocab",
-      "kanji": "音楽",
+      "kanji": "おんがく",
       "kana": "おんがく",
       "romaji": "ongaku",
       "es": "música",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "音楽",
+          "surface": "おんがく",
           "reading": "おんがく",
-          "isKanji": true,
-          "kanji": [
-            "音",
-            "楽"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "音楽です。",
+        "kanji": "おんがくです。",
         "kana": "おんがくです。",
         "romaji": "Ongaku desu.",
         "es": "Es música."
@@ -241,23 +215,20 @@
     {
       "id": "2026-07-06:vocab:kasa",
       "type": "vocab",
-      "kanji": "傘",
+      "kanji": "かさ",
       "kana": "かさ",
       "romaji": "kasa",
       "es": "paraguas",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "傘",
+          "surface": "かさ",
           "reading": "かさ",
-          "isKanji": true,
-          "kanji": [
-            "傘"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "傘です。",
+        "kanji": "かさです。",
         "kana": "かさです。",
         "romaji": "Kasa desu.",
         "es": "Es un paraguas."
@@ -270,23 +241,20 @@
     {
       "id": "2026-07-06:vocab:koe",
       "type": "vocab",
-      "kanji": "声",
+      "kanji": "こえ",
       "kana": "こえ",
       "romaji": "koe",
       "es": "voz",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "声",
+          "surface": "こえ",
           "reading": "こえ",
-          "isKanji": true,
-          "kanji": [
-            "声"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "声です。",
+        "kanji": "こえです。",
         "kana": "こえです。",
         "romaji": "Koe desu.",
         "es": "Es una voz."
@@ -325,23 +293,20 @@
     {
       "id": "2026-07-06:vocab:kuchi",
       "type": "vocab",
-      "kanji": "口",
+      "kanji": "くち",
       "kana": "くち",
       "romaji": "kuchi",
       "es": "boca",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "口",
+          "surface": "くち",
           "reading": "くち",
-          "isKanji": true,
-          "kanji": [
-            "口"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "口です。",
+        "kanji": "くちです。",
         "kana": "くちです。",
         "romaji": "Kuchi desu.",
         "es": "Es la boca."
@@ -354,23 +319,20 @@
     {
       "id": "2026-07-06:vocab:te",
       "type": "vocab",
-      "kanji": "手",
+      "kanji": "て",
       "kana": "て",
       "romaji": "te",
       "es": "mano",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "手",
+          "surface": "て",
           "reading": "て",
-          "isKanji": true,
-          "kanji": [
-            "手"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "手です。",
+        "kanji": "てです。",
         "kana": "てです。",
         "romaji": "Te desu.",
         "es": "Es la mano."
@@ -383,23 +345,20 @@
     {
       "id": "2026-07-06:vocab:tsuki",
       "type": "vocab",
-      "kanji": "月",
+      "kanji": "つき",
       "kana": "つき",
       "romaji": "tsuki",
       "es": "luna",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "月",
+          "surface": "つき",
           "reading": "つき",
-          "isKanji": true,
-          "kanji": [
-            "月"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "月です。",
+        "kanji": "つきです。",
         "kana": "つきです。",
         "romaji": "Tsuki desu.",
         "es": "Es la luna."
@@ -464,24 +423,20 @@
     {
       "id": "2026-07-06:vocab:kudamono",
       "type": "vocab",
-      "kanji": "果物",
+      "kanji": "くだもの",
       "kana": "くだもの",
       "romaji": "kudamono",
       "es": "fruta",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "果物",
+          "surface": "くだもの",
           "reading": "くだもの",
-          "isKanji": true,
-          "kanji": [
-            "果",
-            "物"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "果物です。",
+        "kanji": "くだものです。",
         "kana": "くだものです。",
         "romaji": "Kudamono desu.",
         "es": "Es fruta."
@@ -520,24 +475,20 @@
     {
       "id": "2026-07-06:vocab:sensei",
       "type": "vocab",
-      "kanji": "先生",
+      "kanji": "せんせい",
       "kana": "せんせい",
       "romaji": "sensei",
       "es": "profesor / profesora",
       "pos": "sustantivo",
       "tokens": [
         {
-          "surface": "先生",
+          "surface": "せんせい",
           "reading": "せんせい",
-          "isKanji": true,
-          "kanji": [
-            "先",
-            "生"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "先生です。",
+        "kanji": "せんせいです。",
         "kana": "せんせいです。",
         "romaji": "Sensei desu.",
         "es": "Es profesor."
@@ -550,23 +501,20 @@
     {
       "id": "2026-07-06:vocab:watashi",
       "type": "vocab",
-      "kanji": "私",
+      "kanji": "わたし",
       "kana": "わたし",
       "romaji": "watashi",
       "es": "yo",
       "pos": "pronombre",
       "tokens": [
         {
-          "surface": "私",
+          "surface": "わたし",
           "reading": "わたし",
-          "isKanji": true,
-          "kanji": [
-            "私"
-          ]
+          "isKanji": false
         }
       ],
       "example": {
-        "kanji": "私です。",
+        "kanji": "わたしです。",
         "kana": "わたしです。",
         "romaji": "Watashi desu.",
         "es": "Soy yo."
@@ -634,10 +582,10 @@
       "id": "2026-07-06:grammar:tachi-plural",
       "type": "grammar",
       "pattern": "〜たち",
-      "es": "El sufijo 〜たち forma el plural de personas y pronombres.",
+      "es": "Añade たち para el plural de personas. Ej.: わたし (yo) → わたしたち (nosotros).",
       "examples": [
         {
-          "kanji": "私たち",
+          "kanji": "わたしたち",
           "kana": "わたしたち",
           "romaji": "watashitachi",
           "es": "nosotros"
@@ -652,50 +600,6 @@
       "tags": [
         "2026-07-06",
         "gramática"
-      ]
-    },
-    {
-      "id": "2026-07-06:grammar:numeros",
-      "type": "grammar",
-      "pattern": "Números 0–99",
-      "es": "Base 1–10: いち(1), に(2), さん(3), よん(4), ご(5), ろく(6), なな(7), はち(8), きゅう(9), じゅう(10); 0 = れい / ゼロ. Las decenas se forman con じゅう: 11 = じゅういち, 20 = にじゅう, 99 = きゅうじゅうきゅう.",
-      "examples": [
-        {
-          "kanji": "十",
-          "kana": "じゅう",
-          "romaji": "juu",
-          "es": "diez (10)"
-        },
-        {
-          "kanji": "九十九",
-          "kana": "きゅうじゅうきゅう",
-          "romaji": "kyuujuukyuu",
-          "es": "noventa y nueve (99)"
-        }
-      ],
-      "tags": [
-        "2026-07-06",
-        "gramática",
-        "números"
-      ]
-    },
-    {
-      "id": "2026-07-06:grammar:sai-edad",
-      "type": "grammar",
-      "pattern": "número + さい",
-      "es": "El contador 〜歳（さい）indica la edad; se coloca tras el número.",
-      "examples": [
-        {
-          "kanji": "十二歳",
-          "kana": "じゅうにさい",
-          "romaji": "juuni sai",
-          "es": "doce años"
-        }
-      ],
-      "tags": [
-        "2026-07-06",
-        "gramática",
-        "números"
       ]
     }
   ],
