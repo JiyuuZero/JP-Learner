@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-06",
+  "date": "2026-07-06",
+  "label": "Clase presencial — vocabulario, números (0–99) y sufijos たち・さい",
+  "vocab": [
+    {
+      "id": "2026-07-06:vocab:ao",
+      "type": "vocab",
+      "kanji": "青",
+      "kana": "あお",
+      "romaji": "ao",
+      "es": "azul",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "青",
+          "reading": "あお",
+          "isKanji": true,
+          "kanji": [
+            "青"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "青です。",
+        "kana": "あおです。",
+        "romaji": "Ao desu.",
+        "es": "Es azul."
+      },
+      "tags": [
+        "2026-07-06",
+        "color"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:shiro",
+      "type": "vocab",
+      "kanji": "白",
+      "kana": "しろ",
+      "romaji": "shiro",
+      "es": "blanco (color)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "白",
+          "reading": "しろ",
+          "isKanji": true,
+          "kanji": [
+            "白"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "白です。",
+        "kana": "しろです。",
+        "romaji": "Shiro desu.",
+        "es": "Es blanco."
+      },
+      "tags": [
+        "2026-07-06",
+        "color"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:kiiro",
+      "type": "vocab",
+      "kanji": "黄色",
+      "kana": "きいろ",
+      "romaji": "kiiro",
+      "es": "amarillo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "黄色",
+          "reading": "きいろ",
+          "isKanji": true,
+          "kanji": [
+            "黄",
+            "色"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "黄色です。",
+        "kana": "きいろです。",
+        "romaji": "Kiiro desu.",
+        "es": "Es amarillo."
+      },
+      "tags": [
+        "2026-07-06",
+        "color"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:midori",
+      "type": "vocab",
+      "kanji": "緑",
+      "kana": "みどり",
+      "romaji": "midori",
+      "es": "verde",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "緑",
+          "reading": "みどり",
+          "isKanji": true,
+          "kanji": [
+            "緑"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "緑です。",
+        "kana": "みどりです。",
+        "romaji": "Midori desu.",
+        "es": "Es verde."
+      },
+      "tags": [
+        "2026-07-06",
+        "color"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:ie",
+      "type": "vocab",
+      "kanji": "家",
+      "kana": "いえ",
+      "romaji": "ie",
+      "es": "casa",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "家",
+          "reading": "いえ",
+          "isKanji": true,
+          "kanji": [
+            "家"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "家です。",
+        "kana": "いえです。",
+        "romaji": "Ie desu.",
+        "es": "Es una casa."
+      },
+      "tags": [
+        "2026-07-06",
+        "sustantivo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:ue",
+      "type": "vocab",
+      "kanji": "上",
+      "kana": "うえ",
+      "romaji": "ue",
+      "es": "arriba / encima",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "上",
+          "reading": "うえ",
+          "isKanji": true,
+          "kanji": [
+            "上"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "上です。",
+        "kana": "うえです。",
+        "romaji": "Ue desu.",
+        "es": "Está arriba."
+      },
+      "tags": [
+        "2026-07-06",
+        "posición"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:en",
+      "type": "vocab",
+      "kanji": "円",
+      "kana": "えん",
+      "romaji": "en",
+      "es": "yen (moneda)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "円",
+          "reading": "えん",
+          "isKanji": true,
+          "kanji": [
+            "円"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "十円です。",
+        "kana": "じゅうえんです。",
+        "romaji": "Juu en desu.",
+        "es": "Son diez yenes."
+      },
+      "tags": [
+        "2026-07-06",
+        "dinero"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:ongaku",
+      "type": "vocab",
+      "kanji": "音楽",
+      "kana": "おんがく",
+      "romaji": "ongaku",
+      "es": "música",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "isKanji": true,
+          "kanji": [
+            "音",
+            "楽"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "音楽です。",
+        "kana": "おんがくです。",
+        "romaji": "Ongaku desu.",
+        "es": "Es música."
+      },
+      "tags": [
+        "2026-07-06",
+        "sustantivo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:kasa",
+      "type": "vocab",
+      "kanji": "傘",
+      "kana": "かさ",
+      "romaji": "kasa",
+      "es": "paraguas",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "傘",
+          "reading": "かさ",
+          "isKanji": true,
+          "kanji": [
+            "傘"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "傘です。",
+        "kana": "かさです。",
+        "romaji": "Kasa desu.",
+        "es": "Es un paraguas."
+      },
+      "tags": [
+        "2026-07-06",
+        "objeto"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:koe",
+      "type": "vocab",
+      "kanji": "声",
+      "kana": "こえ",
+      "romaji": "koe",
+      "es": "voz",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "声",
+          "reading": "こえ",
+          "isKanji": true,
+          "kanji": [
+            "声"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "声です。",
+        "kana": "こえです。",
+        "romaji": "Koe desu.",
+        "es": "Es una voz."
+      },
+      "tags": [
+        "2026-07-06",
+        "sustantivo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:kega",
+      "type": "vocab",
+      "kanji": "けが",
+      "kana": "けが",
+      "romaji": "kega",
+      "es": "herida / lesión",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "けが",
+          "reading": "けが",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "けがです。",
+        "kana": "けがです。",
+        "romaji": "Kega desu.",
+        "es": "Es una herida."
+      },
+      "tags": [
+        "2026-07-06",
+        "sustantivo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:kuchi",
+      "type": "vocab",
+      "kanji": "口",
+      "kana": "くち",
+      "romaji": "kuchi",
+      "es": "boca",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "口",
+          "reading": "くち",
+          "isKanji": true,
+          "kanji": [
+            "口"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "口です。",
+        "kana": "くちです。",
+        "romaji": "Kuchi desu.",
+        "es": "Es la boca."
+      },
+      "tags": [
+        "2026-07-06",
+        "cuerpo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:te",
+      "type": "vocab",
+      "kanji": "手",
+      "kana": "て",
+      "romaji": "te",
+      "es": "mano",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "手",
+          "reading": "て",
+          "isKanji": true,
+          "kanji": [
+            "手"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "手です。",
+        "kana": "てです。",
+        "romaji": "Te desu.",
+        "es": "Es la mano."
+      },
+      "tags": [
+        "2026-07-06",
+        "cuerpo"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:tsuki",
+      "type": "vocab",
+      "kanji": "月",
+      "kana": "つき",
+      "romaji": "tsuki",
+      "es": "luna",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "月",
+          "reading": "つき",
+          "isKanji": true,
+          "kanji": [
+            "月"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "月です。",
+        "kana": "つきです。",
+        "romaji": "Tsuki desu.",
+        "es": "Es la luna."
+      },
+      "tags": [
+        "2026-07-06",
+        "naturaleza"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:ika",
+      "type": "vocab",
+      "kanji": "いか",
+      "kana": "いか",
+      "romaji": "ika",
+      "es": "calamar",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "いか",
+          "reading": "いか",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "いかです。",
+        "kana": "いかです。",
+        "romaji": "Ika desu.",
+        "es": "Es un calamar."
+      },
+      "tags": [
+        "2026-07-06",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:tako",
+      "type": "vocab",
+      "kanji": "たこ",
+      "kana": "たこ",
+      "romaji": "tako",
+      "es": "pulpo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "たこ",
+          "reading": "たこ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "たこです。",
+        "kana": "たこです。",
+        "romaji": "Tako desu.",
+        "es": "Es un pulpo."
+      },
+      "tags": [
+        "2026-07-06",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:kudamono",
+      "type": "vocab",
+      "kanji": "果物",
+      "kana": "くだもの",
+      "romaji": "kudamono",
+      "es": "fruta",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "果物",
+          "reading": "くだもの",
+          "isKanji": true,
+          "kanji": [
+            "果",
+            "物"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "果物です。",
+        "kana": "くだものです。",
+        "romaji": "Kudamono desu.",
+        "es": "Es fruta."
+      },
+      "tags": [
+        "2026-07-06",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:soba",
+      "type": "vocab",
+      "kanji": "そば",
+      "kana": "そば",
+      "romaji": "soba",
+      "es": "soba (fideos de trigo sarraceno)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "そば",
+          "reading": "そば",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "そばです。",
+        "kana": "そばです。",
+        "romaji": "Soba desu.",
+        "es": "Son fideos soba."
+      },
+      "tags": [
+        "2026-07-06",
+        "comida"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:sensei",
+      "type": "vocab",
+      "kanji": "先生",
+      "kana": "せんせい",
+      "romaji": "sensei",
+      "es": "profesor / profesora",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "先生",
+          "reading": "せんせい",
+          "isKanji": true,
+          "kanji": [
+            "先",
+            "生"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "先生です。",
+        "kana": "せんせいです。",
+        "romaji": "Sensei desu.",
+        "es": "Es profesor."
+      },
+      "tags": [
+        "2026-07-06",
+        "personas"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:watashi",
+      "type": "vocab",
+      "kanji": "私",
+      "kana": "わたし",
+      "romaji": "watashi",
+      "es": "yo",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "私",
+          "reading": "わたし",
+          "isKanji": true,
+          "kanji": [
+            "私"
+          ]
+        }
+      ],
+      "example": {
+        "kanji": "私です。",
+        "kana": "わたしです。",
+        "romaji": "Watashi desu.",
+        "es": "Soy yo."
+      },
+      "tags": [
+        "2026-07-06",
+        "pronombre"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:anata",
+      "type": "vocab",
+      "kanji": "あなた",
+      "kana": "あなた",
+      "romaji": "anata",
+      "es": "tú / usted",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "あなた",
+          "reading": "あなた",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "あなたです。",
+        "kana": "あなたです。",
+        "romaji": "Anata desu.",
+        "es": "Eres tú."
+      },
+      "tags": [
+        "2026-07-06",
+        "pronombre"
+      ]
+    },
+    {
+      "id": "2026-07-06:vocab:sugoi",
+      "type": "vocab",
+      "kanji": "すごい",
+      "kana": "すごい",
+      "romaji": "sugoi",
+      "es": "increíble / genial",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "すごい",
+          "reading": "すごい",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "すごいです。",
+        "kana": "すごいです。",
+        "romaji": "Sugoi desu.",
+        "es": "Es increíble."
+      },
+      "tags": [
+        "2026-07-06",
+        "adjetivo"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-06:grammar:tachi-plural",
+      "type": "grammar",
+      "pattern": "〜たち",
+      "es": "El sufijo 〜たち forma el plural de personas y pronombres.",
+      "examples": [
+        {
+          "kanji": "私たち",
+          "kana": "わたしたち",
+          "romaji": "watashitachi",
+          "es": "nosotros"
+        },
+        {
+          "kanji": "あなたたち",
+          "kana": "あなたたち",
+          "romaji": "anatatachi",
+          "es": "vosotros / ustedes"
+        }
+      ],
+      "tags": [
+        "2026-07-06",
+        "gramática"
+      ]
+    },
+    {
+      "id": "2026-07-06:grammar:numeros",
+      "type": "grammar",
+      "pattern": "Números 0–99",
+      "es": "Base 1–10: いち(1), に(2), さん(3), よん(4), ご(5), ろく(6), なな(7), はち(8), きゅう(9), じゅう(10); 0 = れい / ゼロ. Las decenas se forman con じゅう: 11 = じゅういち, 20 = にじゅう, 99 = きゅうじゅうきゅう.",
+      "examples": [
+        {
+          "kanji": "十",
+          "kana": "じゅう",
+          "romaji": "juu",
+          "es": "diez (10)"
+        },
+        {
+          "kanji": "九十九",
+          "kana": "きゅうじゅうきゅう",
+          "romaji": "kyuujuukyuu",
+          "es": "noventa y nueve (99)"
+        }
+      ],
+      "tags": [
+        "2026-07-06",
+        "gramática",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-06:grammar:sai-edad",
+      "type": "grammar",
+      "pattern": "número + さい",
+      "es": "El contador 〜歳（さい）indica la edad; se coloca tras el número.",
+      "examples": [
+        {
+          "kanji": "十二歳",
+          "kana": "じゅうにさい",
+          "romaji": "juuni sai",
+          "es": "doce años"
+        }
+      ],
+      "tags": [
+        "2026-07-06",
+        "gramática",
+        "números"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-06:note:1",
+      "type": "note",
+      "es": "Primera clase presencial: se ha visto gran parte del hiragana (sin terminarlo) y se ha repasado el katakana.",
+      "tags": [
+        "2026-07-06"
+      ]
+    }
+  ]
+}

@@ -27,6 +27,19 @@
         "kanji": 0,
         "notes": 2
       }
+    },
+    {
+      "id": "2026-07-06",
+      "date": "2026-07-06",
+      "label": "Clase presencial — vocabulario, números (0–99) y sufijos たち・さい",
+      "file": "classes/2026-07-06.json",
+      "contentHash": "sha256-55dcb49191baef3336493ea42cb89e0e0796d43ea58704b32bbe49ec024818ca",
+      "counts": {
+        "vocab": 22,
+        "grammar": 3,
+        "kanji": 0,
+        "notes": 1
+      }
     }
   ]
 }
