@@ -3,19 +3,6 @@
   "generatedAt": "2026-07-08T09:45:28Z",
   "classes": [
     {
-      "id": "2026-04-14",
-      "date": "2026-04-14",
-      "label": "Clase 1 — presentaciones y verbos -masu",
-      "file": "classes/2026-04-14.json",
-      "contentHash": "sha256-0a1cd5dbd83809ecc66044f2bd2e68e1e6cca213b9e98c1935fefd2032d318c4",
-      "counts": {
-        "vocab": 5,
-        "grammar": 1,
-        "kanji": 3,
-        "notes": 2
-      }
-    },
-    {
       "id": "2026-07-03",
       "date": "2026-07-03",
       "label": "Duolingo — colores, pertenencias y partículas は・の・か・です",
