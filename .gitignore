@@ -15,3 +15,7 @@ app/public/content/
 
 # OS noise
 .DS_Store
+
+# Python bytecode cache
+__pycache__/
+*.pyc
