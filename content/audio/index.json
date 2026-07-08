@@ -1,6 +1,6 @@
 {
   "audioVersion": 1,
-  "generatedAt": "2026-07-08T10:24:42Z",
+  "generatedAt": "2026-07-08T10:24:43Z",
   "files": {
     "2026-07-03:vocab:akai": "audio/2026-07-03/2026-07-03_vocab_akai-260ee821.m4a",
     "2026-07-03:vocab:akai:example": "audio/2026-07-03/2026-07-03_vocab_akai_example-eadc410d.m4a",
@@ -43,7 +43,7 @@
     "2026-07-06:vocab:ao": "audio/2026-07-06/2026-07-06_vocab_ao-4f75c773.m4a",
     "2026-07-06:vocab:ao:example": "audio/2026-07-06/2026-07-06_vocab_ao_example-f2398be0.m4a",
     "2026-07-06:vocab:en": "audio/2026-07-06/2026-07-06_vocab_en-c41917af.m4a",
-    "2026-07-06:vocab:en:example": "audio/2026-07-06/2026-07-06_vocab_en_example-db65bc18.m4a",
+    "2026-07-06:vocab:en:example": "audio/2026-07-06/2026-07-06_vocab_en_example-715588d7.m4a",
     "2026-07-06:vocab:ie": "audio/2026-07-06/2026-07-06_vocab_ie-cef7e4b1.m4a",
     "2026-07-06:vocab:ie:example": "audio/2026-07-06/2026-07-06_vocab_ie_example-fdf83c33.m4a",
     "2026-07-06:vocab:ika": "audio/2026-07-06/2026-07-06_vocab_ika-ddfe8897.m4a",
@@ -125,7 +125,7 @@
     "2026-07-06:vocab:ao": "sha256-4f75c7738f7053232a7f5c268c73d2488b34e0b955a279e59464eb084628197b",
     "2026-07-06:vocab:ao:example": "sha256-f2398be08ad4d5bef832f5a55f893900caa5c345b044a06eb7b921b4624a5015",
     "2026-07-06:vocab:en": "sha256-c41917af7e10f7c2b70133f9e17e7d4fa40c2914657b04686badebb152e8f395",
-    "2026-07-06:vocab:en:example": "sha256-db65bc18699a9a4b1c1f7176bd0f28737db83093459de2cc58df9bf7a4959db1",
+    "2026-07-06:vocab:en:example": "sha256-715588d7f330e843568b79003550eef2e8e61d5f6110e70fd9f1c93c0e844566",
     "2026-07-06:vocab:ie": "sha256-cef7e4b1dd35429cb99e930929fbfe9cf4a5cb2dc1db33e664c25afd489a70dc",
     "2026-07-06:vocab:ie:example": "sha256-fdf83c33602513ee4b6e94577f7e81c11a5031a95e84cd365db105d7f7b3bdfb",
     "2026-07-06:vocab:ika": "sha256-ddfe88974d92c4c9098f6246d3415a932ab4acd7c2e51b288bf4ac4bb3731aee",
