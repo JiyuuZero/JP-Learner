@@ -39,6 +39,35 @@ MODEL = Path("models/ggml-large-v3.bin")
 MODELOS_GUI = ("opus", "sonnet", "haiku")
 
 
+def augmentar_path():
+    """Añade al PATH las ubicaciones típicas de binarios en macOS.
+
+    Una app lanzada desde Finder o la GUI (doble clic en Procesar Clase.app)
+    hereda un PATH mínimo que NO incluye /opt/homebrew/bin ni ~/.local/bin
+    (donde vive `claude`), así que shutil.which() no encontraría ffmpeg,
+    whisper-cli ni claude aunque estén instalados. Esto lo corrige para el
+    preflight y para los subprocess (transcribe.sh -> ffmpeg/whisper-cli).
+    """
+    home = Path.home()
+    extra = [
+        "/opt/homebrew/bin",
+        "/opt/homebrew/sbin",
+        "/usr/local/bin",
+        str(home / ".local" / "bin"),
+    ]
+    # nvm: bin de cada versión de node instalada (claude/npm globals viven ahí)
+    nvm = home / ".nvm" / "versions" / "node"
+    if nvm.is_dir():
+        for d in sorted(nvm.iterdir(), reverse=True):
+            extra.append(str(d / "bin"))
+    actual = os.environ.get("PATH", "").split(os.pathsep)
+    # Las rutas del usuario van primero; las extra se añaden si existen y faltan.
+    combinado = actual + [
+        d for d in extra if d not in actual and Path(d).is_dir()
+    ]
+    os.environ["PATH"] = os.pathsep.join(combinado)
+
+
 def parse_args():
     """Parsea flags ANTES del preflight para que --help funcione siempre."""
     parser = argparse.ArgumentParser(
@@ -521,6 +550,7 @@ def _imprimir_uso():
 
 def main():
     os.chdir(Path(__file__).resolve().parent)
+    augmentar_path()  # imprescindible cuando se lanza desde Finder/GUI (PATH mínimo)
     args = parse_args()
     if args.gui:
         run_gui(args)
