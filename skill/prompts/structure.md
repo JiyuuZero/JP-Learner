@@ -11,6 +11,13 @@ a validation failure).
 Output ONLY the JSON document. It will be checked by `node skill/validate.mjs <file>`
 before anything is written; if it fails, you fix it and re-emit.
 
+## 0. Consult accumulated learnings (MANDATORY)
+
+Before structuring, READ `skill/LEARNINGS.md` and apply every item in its
+"Content quality" checklist. It is the running record of corrections the user
+has already made — each entry is a mistake not to repeat. The user is the
+authority; their past feedback overrides your defaults.
+
 ## 1. Read the sources
 
 - Read ALL the transcripts of the class (a class recorded in N files has N transcript
