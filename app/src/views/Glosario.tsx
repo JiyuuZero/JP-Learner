@@ -5,7 +5,7 @@
 // detail with a per-kanji "Aprendido" golden-star toggle — the manual side of
 // D-03 (auto-marked FSRS-graduated kanji show the star pre-filled).
 import { useState } from 'react'
-import { Heart, Search, Star, X } from 'lucide-react'
+import { ChevronDown, Heart, Search, Star, X } from 'lucide-react'
 import Card from '../components/Card'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
@@ -161,6 +161,15 @@ export default function Glosario() {
   const [view, setView] = useState<View>('clase')
   const [query, setQuery] = useState('')
   const [detail, setDetail] = useState<Vocab | null>(null)
+  // Foldable classes (Por clase view): a class id in this set is collapsed.
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
+  const toggleClass = (id: string) =>
+    setCollapsed((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
 
   const q = query.trim().toLowerCase()
   const matchesVocab = (v: Vocab) =>
@@ -262,10 +271,26 @@ export default function Glosario() {
               {store?.classes.map((c) => {
                 const bucket = store.byClass.get(c.id)
                 if (!bucket) return null
+                const open = !collapsed.has(c.id)
                 return (
                   <section key={c.id}>
-                    <h2 className="text-[18px] font-bold">{c.label}</h2>
-                    <p className="text-[13px] text-muted">{c.date}</p>
+                    <button
+                      type="button"
+                      onClick={() => toggleClass(c.id)}
+                      aria-expanded={open}
+                      className="flex w-full items-center gap-2 text-left"
+                    >
+                      <ChevronDown
+                        size={20}
+                        className={`shrink-0 text-muted transition-transform ${open ? '' : '-rotate-90'}`}
+                      />
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[18px] font-bold">{c.label}</span>
+                        <span className="block text-[13px] text-muted">{c.date}</span>
+                      </span>
+                    </button>
+                    {open && (
+                      <>
                     {bucket.vocab.length > 0 && (
                       <ul className="mt-3 flex list-none flex-col gap-3 p-0">
                         {bucket.vocab.map((v) => (
@@ -297,6 +322,8 @@ export default function Glosario() {
                             </li>
                           ))}
                         </ul>
+                      </>
+                    )}
                       </>
                     )}
                   </section>

@@ -34,15 +34,18 @@ class and is the authority; every item here is a mistake already made once.
   create.
   _Trigger (2026-07-08): "No has eliminado los datos de prueba que añadiste."_
 
-## App feedback (OPEN — needs a code session, NOT the content skill)
+## App feedback
 
-These are app/code issues surfaced while reviewing generated classes. They are
-recorded here so they are not lost; they must be fixed in a dedicated code
-session (`/gsd-debug` / `/gsd-quick`), not from inside class processing.
+App/code issues surfaced while reviewing generated classes. Fixed in a dedicated
+code session (2026-07-08), NOT from inside class processing.
 
-- [ ] **"Continuar" no avanza** — the Continuar button does not advance the app.
-- [ ] **Total → Repaso SRS carga sólo los de ejemplo** — SRS review loads only
-  example items; and the difference between "Repaso periodo" and "Repaso SRS" is
-  unclear to the user (labelling/UX + likely an SRS query bug).
-- [ ] **Glosario: clases plegables** — classes in the Glosario view should be
-  foldable/collapsible.
+- [x] **"Continuar" no avanza** — the dark "Continuar" card only opened the
+  session picker. Now it links to `/session?...&auto=1` and Session auto-starts
+  the automatic hybrid session (Home.tsx / Session.tsx).
+- [x] **Total → Repaso SRS "carga sólo los de ejemplo"** — the "de ejemplo"
+  items were the 2026-04-14 **seed/demo class**, now deleted. The SRS-vs-periodo
+  distinction (SRS = only due today + ≤10 new; periodo = whole block) is now
+  spelled out in the launcher and the Home hints. NOTE: how many SRS cards load
+  is state-dependent (the user's IndexedDB SRS records) — confirm on device.
+- [x] **Glosario: clases plegables** — each class in "Por clase" is now a
+  collapsible section with a chevron toggle (Glosario.tsx).

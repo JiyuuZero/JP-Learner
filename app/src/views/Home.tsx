@@ -21,7 +21,7 @@ const SCOPES: { id: ReviewScope; label: string }[] = [
 ]
 
 const SUB_MODES: { id: SubMode; label: string; hint: string }[] = [
-  { id: 'srs', label: 'Repaso SRS', hint: 'lo que toca' },
+  { id: 'srs', label: 'Repaso SRS', hint: 'solo lo que toca hoy' },
   { id: 'periodo', label: 'Repasar periodo', hint: 'todo el bloque' },
 ]
 
@@ -131,7 +131,7 @@ export default function Home() {
               </div>
               <button
                 type="button"
-                onClick={() => void navigate('/session')}
+                onClick={() => void navigate('/session?scope=total&subMode=srs&auto=1')}
                 className="mt-4 h-12 w-full rounded-full bg-white text-[16px] font-bold text-ink transition active:scale-[0.98]"
               >
                 Continuar

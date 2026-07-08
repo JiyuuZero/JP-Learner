@@ -11,7 +11,7 @@
 // the same queue. Launch params (scope + subMode) arrive via the route query
 // (?scope=hoy|semana|total&subMode=srs|periodo — Plan 06's dashboard wires
 // them); sensible defaults make Session fully testable standalone.
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import Button from '../components/Button'
@@ -130,16 +130,30 @@ export default function Session() {
   }, [])
   const onReadyChange = useCallback((r: boolean) => setCanCheck(r), [])
 
-  const start = (kind: ExerciseKind | null) => {
-    if (!store) return
-    setManualKind(kind)
-    // Reviews-before-new ordering + the SRS-05 daily new-card cap live in buildSession.
-    setQueue(buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined))
-    setIndex(0)
-    setStep(0)
-    setPhase('answer')
-    setCanCheck(false)
-  }
+  const start = useCallback(
+    (kind: ExerciseKind | null) => {
+      if (!store) return
+      setManualKind(kind)
+      // Reviews-before-new ordering + the SRS-05 daily new-card cap live in buildSession.
+      setQueue(buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined))
+      setIndex(0)
+      setStep(0)
+      setPhase('answer')
+      setCanCheck(false)
+    },
+    [store, srsByItem, scope, subMode, meta],
+  )
+
+  // "Continuar donde lo dejaste" (Home) links here with ?auto=1 to resume the
+  // automatic hybrid session directly, skipping the picker (D-01). Fire once.
+  const autoStartedRef = useRef(false)
+  useEffect(() => {
+    if (autoStartedRef.current || queue !== null || !store || !ready) return
+    if (params.get('auto') === '1') {
+      autoStartedRef.current = true
+      start(null)
+    }
+  }, [store, ready, params, queue, start])
 
   // The exercise instance is built ONCE per index (memo) — generators shuffle,
   // so building in render would reshuffle options mid-exercise.
@@ -264,6 +278,11 @@ export default function Session() {
               </button>
             ))}
           </div>
+          <p className="mt-2 text-[13px] leading-normal text-muted">
+            {subMode === 'srs'
+              ? 'Repaso SRS: solo las tarjetas que la repetición espaciada marca para hoy (más las nuevas del día, hasta 10). Puede ser un puñado o ninguna si vas al día.'
+              : 'Repasar periodo: todas las tarjetas del bloque elegido, tocaran hoy o no. Repaso intensivo.'}
+          </p>
         </section>
 
         <section className="mt-8 flex flex-col gap-3">

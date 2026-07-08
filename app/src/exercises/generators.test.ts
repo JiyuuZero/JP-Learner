@@ -1,7 +1,6 @@
 // Exercise generator tests (EXER-01..06) — pure transforms over the frozen
 // content schema. The word-bank test runs against the REAL pre-skill sample
 // class (the norikomu example carries authored tokens[] from Plan 01).
-import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import {
   checkWordBankOrder,
@@ -12,12 +11,99 @@ import {
   typing,
   wordBank,
 } from './generators'
-import type { JPLearnerClassContent, Vocab } from '../content/content'
+import type { Vocab } from '../content/content'
 
-const cls = JSON.parse(
-  readFileSync(new URL('../../../content/classes/2026-04-14.json', import.meta.url), 'utf8'),
-) as JPLearnerClassContent
-const pool: Vocab[] = cls.vocab ?? []
+// Self-contained fixture (formerly the 2026-04-14 sample class, since removed
+// from content/). Kept inline so exercise-generator tests never depend on
+// shipped class content: norikomu's example carries authored tokens[] (the
+// word-bank case), tabemasu's example has none (the skip case), and the pool
+// holds 5 same-class vocab for the distractor/matching-cap assertions.
+const pool: Vocab[] = [
+  {
+    id: '2026-04-14:vocab:tabemasu',
+    type: 'vocab',
+    kanji: '食べます',
+    kana: 'たべます',
+    romaji: 'tabemasu',
+    es: 'comer (cortés)',
+    pos: 'verbo',
+    tokens: [
+      { surface: '食', reading: 'た', isKanji: true, kanji: ['食'] },
+      { surface: 'べます', reading: 'べます', isKanji: false },
+    ],
+    example: {
+      kanji: '毎日ご飯を食べます。',
+      kana: 'まいにちごはんをたべます。',
+      romaji: 'Mainichi gohan o tabemasu.',
+      es: 'Como arroz todos los días.',
+    },
+    tags: ['2026-04-14', 'verbo', '-masu'],
+  },
+  {
+    id: '2026-04-14:vocab:norikomu',
+    type: 'vocab',
+    kanji: '乗り込む',
+    kana: 'のりこむ',
+    romaji: 'norikomu',
+    es: 'subir a bordo / abordar',
+    pos: 'verbo',
+    tokens: [
+      { surface: '乗', reading: 'の', isKanji: true, kanji: ['乗'] },
+      { surface: 'り', reading: 'り', isKanji: false },
+      { surface: '込', reading: 'こ', isKanji: true, kanji: ['込'] },
+      { surface: 'む', reading: 'む', isKanji: false },
+    ],
+    example: {
+      kanji: '電車に乗り込む。',
+      kana: 'でんしゃにのりこむ。',
+      romaji: 'Densha ni norikomu.',
+      es: 'Subir al tren.',
+      tokens: [
+        { surface: '電車', reading: 'でんしゃ', isKanji: true, kanji: ['電', '車'] },
+        { surface: 'に', reading: 'に', isKanji: false },
+        { surface: '乗', reading: 'の', isKanji: true, kanji: ['乗'] },
+        { surface: 'り', reading: 'り', isKanji: false },
+        { surface: '込', reading: 'こ', isKanji: true, kanji: ['込'] },
+        { surface: 'む', reading: 'む', isKanji: false },
+        { surface: '。', reading: '。', isKanji: false },
+      ],
+    },
+    tags: ['2026-04-14', 'verbo'],
+  },
+  {
+    id: '2026-04-14:vocab:mainichi',
+    type: 'vocab',
+    kanji: '毎日',
+    kana: 'まいにち',
+    romaji: 'mainichi',
+    es: 'todos los días',
+    pos: 'sustantivo',
+    tokens: [{ surface: '毎日', reading: 'まいにち', isKanji: true, kanji: ['毎', '日'] }],
+    tags: ['2026-04-14', 'tiempo'],
+  },
+  {
+    id: '2026-04-14:vocab:hon',
+    type: 'vocab',
+    kanji: '本',
+    kana: 'ほん',
+    romaji: 'hon',
+    es: 'libro',
+    pos: 'sustantivo',
+    tokens: [{ surface: '本', reading: 'ほん', isKanji: true, kanji: ['本'] }],
+    tags: ['2026-04-14', 'sustantivo'],
+  },
+  {
+    id: '2026-04-14:vocab:arigatou',
+    type: 'vocab',
+    kanji: 'ありがとう',
+    kana: 'ありがとう',
+    romaji: 'arigatou',
+    es: 'gracias',
+    pos: 'expresión',
+    tokens: [{ surface: 'ありがとう', reading: 'ありがとう', isKanji: false }],
+    tags: ['2026-04-14', 'expresión'],
+  },
+]
 const norikomu = pool.find((v) => v.id === '2026-04-14:vocab:norikomu')!
 const tabemasu = pool.find((v) => v.id === '2026-04-14:vocab:tabemasu')!
 
