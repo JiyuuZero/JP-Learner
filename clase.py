@@ -343,6 +343,41 @@ def abrir_claude_en_terminal(modelo, prompt):
     return resultado.returncode == 0
 
 
+def _asegurar_tkinterdnd2():
+    """Garantiza `tkinterdnd2` para el drag & drop de la GUI; lo instala si falta.
+
+    El Tk que trae Python (9.x aqua en macOS) NO tiene drag & drop nativo, así que
+    el D&D de la ventana depende de `tkinterdnd2` (trae su propia librería tkdnd,
+    compatible con Tk 9). Se auto-instala una sola vez con el mismo intérprete;
+    prueba primero pip normal y luego `--break-system-packages` (Homebrew/PEP 668).
+    Devuelve True si el módulo queda importable.
+    """
+    import importlib
+
+    try:
+        importlib.import_module("tkinterdnd2")
+        return True
+    except ModuleNotFoundError:
+        pass
+    print("Instalando tkinterdnd2 (drag & drop, una sola vez)…")
+    for extra in ([], ["--break-system-packages"]):
+        try:
+            subprocess.run(
+                [sys.executable, "-m", "pip", "install", "--quiet", *extra, "tkinterdnd2"],
+                check=True,
+            )
+        except Exception:
+            continue
+        importlib.invalidate_caches()
+        try:
+            importlib.import_module("tkinterdnd2")
+            return True
+        except ModuleNotFoundError:
+            continue
+    print("  (no se pudo instalar; la GUI seguirá con «Añadir ficheros…»)")
+    return False
+
+
 def run_gui(args):
     """Interfaz gráfica (tkinter, stdlib): añadir/arrastrar ficheros, apuntes,
     fecha y modelo; procesa en un hilo (la UI no se congela) y abre la sesión
@@ -359,8 +394,9 @@ def run_gui(args):
     staged = []  # rutas elegidas/arrastradas; se copian a audio-src/ al Procesar
 
     dnd_activo = False
+    _asegurar_tkinterdnd2()  # instala tkinterdnd2 si falta (D&D de la ventana)
     try:
-        from tkinterdnd2 import DND_FILES, TkinterDnD  # opcional, si está instalado
+        from tkinterdnd2 import DND_FILES, TkinterDnD  # trae tkdnd (compat. Tk 9)
         root = TkinterDnD.Tk()
         dnd_activo = True
     except Exception:
@@ -517,8 +553,10 @@ def run_gui(args):
             dnd_activo = False
     if not dnd_activo:
         try:
-            tk_mayor = int(str(root.tk.call("info", "patchlevel")).split(".")[0])
-            if tk_mayor >= 9:
+            # Algunos builds de Tk 9 exponen drop nativo; SÓLO fiarse si el comando
+            # de registro existe de verdad (el Tk 9 aqua de stock NO lo trae, y sin
+            # esta comprobación el hint prometía un D&D que nunca disparaba).
+            if root.tk.eval("info commands tk_dropTarget"):
                 lista.bind("<<Drop:File>>", lambda e: _al_soltar(e.data))
                 dnd_activo = True
         except Exception:
