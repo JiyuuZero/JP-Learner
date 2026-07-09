@@ -1,0 +1,1461 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-08",
+  "date": "2026-07-08",
+  "label": "Clase presencial — escritura hiragana (な・は・ま・や), autopresentación, países/nacionalidad (〜じん・〜ご), negativo de です y objetos",
+  "vocab": [
+    {
+      "id": "2026-07-08:vocab:zero",
+      "type": "vocab",
+      "kanji": "ゼロ",
+      "kana": "ゼロ",
+      "romaji": "zero",
+      "es": "cero (0)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "ゼロ",
+          "reading": "ゼロ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:ichi",
+      "type": "vocab",
+      "kanji": "いち",
+      "kana": "いち",
+      "romaji": "ichi",
+      "es": "uno (1)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "いち",
+          "reading": "いち",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:ni",
+      "type": "vocab",
+      "kanji": "に",
+      "kana": "に",
+      "romaji": "ni",
+      "es": "dos (2)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "に",
+          "reading": "に",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:san",
+      "type": "vocab",
+      "kanji": "さん",
+      "kana": "さん",
+      "romaji": "san",
+      "es": "tres (3)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "さん",
+          "reading": "さん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:yon",
+      "type": "vocab",
+      "kanji": "よん",
+      "kana": "よん",
+      "romaji": "yon",
+      "es": "cuatro (4)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "よん",
+          "reading": "よん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:go",
+      "type": "vocab",
+      "kanji": "ご",
+      "kana": "ご",
+      "romaji": "go",
+      "es": "cinco (5)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "ご",
+          "reading": "ご",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:roku",
+      "type": "vocab",
+      "kanji": "ろく",
+      "kana": "ろく",
+      "romaji": "roku",
+      "es": "seis (6)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "ろく",
+          "reading": "ろく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:nana",
+      "type": "vocab",
+      "kanji": "なな",
+      "kana": "なな",
+      "romaji": "nana",
+      "es": "siete (7)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "なな",
+          "reading": "なな",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hachi",
+      "type": "vocab",
+      "kanji": "はち",
+      "kana": "はち",
+      "romaji": "hachi",
+      "es": "ocho (8)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "はち",
+          "reading": "はち",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:kyuu",
+      "type": "vocab",
+      "kanji": "きゅう",
+      "kana": "きゅう",
+      "romaji": "kyū",
+      "es": "nueve (9)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "きゅう",
+          "reading": "きゅう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:juu",
+      "type": "vocab",
+      "kanji": "じゅう",
+      "kana": "じゅう",
+      "romaji": "jū",
+      "es": "diez (10)",
+      "pos": "número",
+      "tokens": [
+        {
+          "surface": "じゅう",
+          "reading": "じゅう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:kare",
+      "type": "vocab",
+      "kanji": "かれ",
+      "kana": "かれ",
+      "romaji": "kare",
+      "es": "él",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "かれ",
+          "reading": "かれ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "personas",
+        "pronombres"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:kanojo",
+      "type": "vocab",
+      "kanji": "かのじょ",
+      "kana": "かのじょ",
+      "romaji": "kanojo",
+      "es": "ella",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "かのじょ",
+          "reading": "かのじょ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "personas",
+        "pronombres"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:me",
+      "type": "vocab",
+      "kanji": "め",
+      "kana": "め",
+      "romaji": "me",
+      "es": "ojo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "め",
+          "reading": "め",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "cuerpo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hajimemashite",
+      "type": "vocab",
+      "kanji": "はじめまして",
+      "kana": "はじめまして",
+      "romaji": "hajimemashite",
+      "es": "encantado/a de conocerte (al presentarse por primera vez)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "はじめまして",
+          "reading": "はじめまして",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "saludos",
+        "presentación"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:yoroshikuonegaishimasu",
+      "type": "vocab",
+      "kanji": "よろしくおねがいします",
+      "kana": "よろしくおねがいします",
+      "romaji": "yoroshiku onegaishimasu",
+      "es": "encantado de conocerte; un placer (fórmula de cortesía al presentarse)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "よろしくおねがいします",
+          "reading": "よろしくおねがいします",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "saludos",
+        "presentación"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hai",
+      "type": "vocab",
+      "kanji": "はい",
+      "kana": "はい",
+      "romaji": "hai",
+      "es": "sí",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "はい",
+          "reading": "はい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "respuestas"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:iie",
+      "type": "vocab",
+      "kanji": "いいえ",
+      "kana": "いいえ",
+      "romaji": "iie",
+      "es": "no",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "いいえ",
+          "reading": "いいえ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "respuestas"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:sore",
+      "type": "vocab",
+      "kanji": "それ",
+      "kana": "それ",
+      "romaji": "sore",
+      "es": "eso (cerca de ti)",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "それ",
+          "reading": "それ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "demostrativos"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:are",
+      "type": "vocab",
+      "kanji": "あれ",
+      "kana": "あれ",
+      "romaji": "are",
+      "es": "aquello (lejos de los dos)",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "あれ",
+          "reading": "あれ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "demostrativos"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:nani",
+      "type": "vocab",
+      "kanji": "なに",
+      "kana": "なに",
+      "romaji": "nani",
+      "es": "qué",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "なに",
+          "reading": "なに",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "preguntas"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:nihon",
+      "type": "vocab",
+      "kanji": "にほん",
+      "kana": "にほん",
+      "romaji": "nihon",
+      "es": "Japón",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "にほん",
+          "reading": "にほん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:supein",
+      "type": "vocab",
+      "kanji": "スペイン",
+      "kana": "スペイン",
+      "romaji": "supein",
+      "es": "España",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "スペイン",
+          "reading": "スペイン",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:furansu",
+      "type": "vocab",
+      "kanji": "フランス",
+      "kana": "フランス",
+      "romaji": "furansu",
+      "es": "Francia",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "フランス",
+          "reading": "フランス",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:itaria",
+      "type": "vocab",
+      "kanji": "イタリア",
+      "kana": "イタリア",
+      "romaji": "itaria",
+      "es": "Italia",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "イタリア",
+          "reading": "イタリア",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:doitsu",
+      "type": "vocab",
+      "kanji": "ドイツ",
+      "kana": "ドイツ",
+      "romaji": "doitsu",
+      "es": "Alemania",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ドイツ",
+          "reading": "ドイツ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:chuugoku",
+      "type": "vocab",
+      "kanji": "ちゅうごく",
+      "kana": "ちゅうごく",
+      "romaji": "chūgoku",
+      "es": "China",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ちゅうごく",
+          "reading": "ちゅうごく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:kankoku",
+      "type": "vocab",
+      "kanji": "かんこく",
+      "kana": "かんこく",
+      "romaji": "kankoku",
+      "es": "Corea del Sur",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かんこく",
+          "reading": "かんこく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "países"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:eigo",
+      "type": "vocab",
+      "kanji": "えいご",
+      "kana": "えいご",
+      "romaji": "eigo",
+      "es": "inglés (idioma)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "えいご",
+          "reading": "えいご",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "idiomas"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hon",
+      "type": "vocab",
+      "kanji": "ほん",
+      "kana": "ほん",
+      "romaji": "hon",
+      "es": "libro",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ほん",
+          "reading": "ほん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:fudebako",
+      "type": "vocab",
+      "kanji": "ふでばこ",
+      "kana": "ふでばこ",
+      "romaji": "fudebako",
+      "es": "estuche (de lápices)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ふでばこ",
+          "reading": "ふでばこ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:boorupen",
+      "type": "vocab",
+      "kanji": "ボールペン",
+      "kana": "ボールペン",
+      "romaji": "bōrupen",
+      "es": "bolígrafo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ボールペン",
+          "reading": "ボールペン",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:denwa",
+      "type": "vocab",
+      "kanji": "でんわ",
+      "kana": "でんわ",
+      "romaji": "denwa",
+      "es": "teléfono",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "でんわ",
+          "reading": "でんわ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:keitai",
+      "type": "vocab",
+      "kanji": "けいたい",
+      "kana": "けいたい",
+      "romaji": "keitai",
+      "es": "móvil (teléfono móvil)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "けいたい",
+          "reading": "けいたい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:sumaho",
+      "type": "vocab",
+      "kanji": "スマホ",
+      "kana": "スマホ",
+      "romaji": "sumaho",
+      "es": "smartphone",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "スマホ",
+          "reading": "スマホ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはスマホです。",
+        "kana": "これはスマホです。",
+        "romaji": "kore wa sumaho desu.",
+        "es": "Esto es un smartphone."
+      }
+    },
+    {
+      "id": "2026-07-08:vocab:suitou",
+      "type": "vocab",
+      "kanji": "すいとう",
+      "kana": "すいとう",
+      "romaji": "suitō",
+      "es": "cantimplora, botella de agua",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "すいとう",
+          "reading": "すいとう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:keshigomu",
+      "type": "vocab",
+      "kanji": "けしゴム",
+      "kana": "けしゴム",
+      "romaji": "keshigomu",
+      "es": "goma de borrar",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "けしゴム",
+          "reading": "けしゴム",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:kokuban",
+      "type": "vocab",
+      "kanji": "こくばん",
+      "kana": "こくばん",
+      "romaji": "kokuban",
+      "es": "pizarra",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "こくばん",
+          "reading": "こくばん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:maiku",
+      "type": "vocab",
+      "kanji": "マイク",
+      "kana": "マイク",
+      "romaji": "maiku",
+      "es": "micrófono",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "マイク",
+          "reading": "マイク",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:iyahon",
+      "type": "vocab",
+      "kanji": "イヤホン",
+      "kana": "イヤホン",
+      "romaji": "iyahon",
+      "es": "auriculares",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "イヤホン",
+          "reading": "イヤホン",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:booru",
+      "type": "vocab",
+      "kanji": "ボール",
+      "kana": "ボール",
+      "romaji": "bōru",
+      "es": "pelota",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ボール",
+          "reading": "ボール",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:tamago",
+      "type": "vocab",
+      "kanji": "たまご",
+      "kana": "たまご",
+      "romaji": "tamago",
+      "es": "huevo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "たまご",
+          "reading": "たまご",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:sandoicchi",
+      "type": "vocab",
+      "kanji": "サンドイッチ",
+      "kana": "サンドイッチ",
+      "romaji": "sandoicchi",
+      "es": "sándwich",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "サンドイッチ",
+          "reading": "サンドイッチ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:tonkatsu",
+      "type": "vocab",
+      "kanji": "とんかつ",
+      "kana": "とんかつ",
+      "romaji": "tonkatsu",
+      "es": "tonkatsu (chuleta de cerdo empanada)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "とんかつ",
+          "reading": "とんかつ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:oishii",
+      "type": "vocab",
+      "kanji": "おいしい",
+      "kana": "おいしい",
+      "romaji": "oishii",
+      "es": "delicioso, rico",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "おいしい",
+          "reading": "おいしい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "adjetivos"
+      ],
+      "example": {
+        "kanji": "たまごサンドはおいしいです。",
+        "kana": "たまごサンドはおいしいです。",
+        "romaji": "tamago sando wa oishii desu.",
+        "es": "El sándwich de huevo está rico."
+      }
+    },
+    {
+      "id": "2026-07-08:vocab:fuwafuwa",
+      "type": "vocab",
+      "kanji": "ふわふわ",
+      "kana": "ふわふわ",
+      "romaji": "fuwafuwa",
+      "es": "esponjoso, mullido",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "ふわふわ",
+          "reading": "ふわふわ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "adjetivos"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hana",
+      "type": "vocab",
+      "kanji": "はな",
+      "kana": "はな",
+      "romaji": "hana",
+      "es": "flor",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "はな",
+          "reading": "はな",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "naturaleza",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hanami",
+      "type": "vocab",
+      "kanji": "はなみ",
+      "kana": "はなみ",
+      "romaji": "hanami",
+      "es": "hanami (contemplar los cerezos en flor)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "はなみ",
+          "reading": "はなみ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "cultura",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:suika",
+      "type": "vocab",
+      "kanji": "すいか",
+      "kana": "すいか",
+      "romaji": "suika",
+      "es": "sandía",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "すいか",
+          "reading": "すいか",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:anko",
+      "type": "vocab",
+      "kanji": "あんこ",
+      "kana": "あんこ",
+      "romaji": "anko",
+      "es": "anko (pasta dulce de judía roja)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "あんこ",
+          "reading": "あんこ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:azuki",
+      "type": "vocab",
+      "kanji": "あずき",
+      "kana": "あずき",
+      "romaji": "azuki",
+      "es": "judía roja (azuki)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "あずき",
+          "reading": "あずき",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "comida",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:sakura",
+      "type": "vocab",
+      "kanji": "さくら",
+      "kana": "さくら",
+      "romaji": "sakura",
+      "es": "cerezo (en flor)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "さくら",
+          "reading": "さくら",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "naturaleza",
+        "cultura",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:mama",
+      "type": "vocab",
+      "kanji": "まま",
+      "kana": "まま",
+      "romaji": "mama",
+      "es": "mamá, madre",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "まま",
+          "reading": "まま",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "personas",
+        "familia",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:jouzu",
+      "type": "vocab",
+      "kanji": "じょうず",
+      "kana": "じょうず",
+      "romaji": "jōzu",
+      "es": "hábil, que se te da bien",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "じょうず",
+          "reading": "じょうず",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "adjetivos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:hontou",
+      "type": "vocab",
+      "kanji": "ほんとう",
+      "kana": "ほんとう",
+      "romaji": "hontō",
+      "es": "de verdad, ¿en serio?",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "ほんとう",
+          "reading": "ほんとう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "expresiones",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-08:vocab:tama",
+      "type": "vocab",
+      "kanji": "たま",
+      "kana": "たま",
+      "romaji": "tama",
+      "es": "bola, pelota",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "たま",
+          "reading": "たま",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "objetos",
+        "vocabulario"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-08:grammar:numeros-11-99",
+      "type": "grammar",
+      "pattern": "decena + unidad",
+      "es": "Del 11 al 99 se juntan decena y unidad: じゅう(10)+いち(1)=じゅういち (11); にじゅう=20; きゅうじゅうきゅう=99.",
+      "examples": [
+        {
+          "kanji": "じゅういち",
+          "kana": "じゅういち",
+          "romaji": "jū ichi",
+          "es": "once (11)"
+        },
+        {
+          "kanji": "にじゅう",
+          "kana": "にじゅう",
+          "romaji": "ni jū",
+          "es": "veinte (20)"
+        },
+        {
+          "kanji": "きゅうじゅうきゅう",
+          "kana": "きゅうじゅうきゅう",
+          "romaji": "kyū jū kyū",
+          "es": "noventa y nueve (99)"
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:sai-edad",
+      "type": "grammar",
+      "pattern": "número + さい + です",
+      "es": "Para decir la edad se pone el número + さい. Ej.: わたしは35さいです = «tengo 35 años».",
+      "examples": [
+        {
+          "kanji": "わたしは35さいです。",
+          "kana": "わたしは さんじゅうご さいです。",
+          "romaji": "watashi wa sanjū go sai desu.",
+          "es": "Tengo 35 años."
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "números",
+        "edad"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:jin-nacionalidad",
+      "type": "grammar",
+      "pattern": "país + じん",
+      "es": "Añadir じん a un país significa «persona de ese país» (nacionalidad). Ej.: にほん (Japón) + じん = にほんじん (japonés/a).",
+      "examples": [
+        {
+          "kanji": "わたしはにほんじんです。",
+          "kana": "わたしはにほんじんです。",
+          "romaji": "watashi wa nihonjin desu.",
+          "es": "Soy japonés/a."
+        },
+        {
+          "kanji": "わたしはスペインじんです。",
+          "kana": "わたしはスペインじんです。",
+          "romaji": "watashi wa supein jin desu.",
+          "es": "Soy español/a."
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "países",
+        "nacionalidad"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:go-idioma",
+      "type": "grammar",
+      "pattern": "país + ご",
+      "es": "Añadir ご a un país significa «el idioma de ese país». Ej.: にほん + ご = にほんご (japonés). OJO: «inglés» es irregular, えいご (no イギリスご).",
+      "examples": [
+        {
+          "kanji": "にほんご",
+          "kana": "にほんご",
+          "romaji": "nihongo",
+          "es": "japonés (idioma)"
+        },
+        {
+          "kanji": "えいご",
+          "kana": "えいご",
+          "romaji": "eigo",
+          "es": "inglés (idioma)"
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "idiomas"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:desu-negativo",
+      "type": "grammar",
+      "pattern": "… + じゃないです / ではありません",
+      "es": "El negativo de です no se hace con un «no»: se cambia です por じゃないです (coloquial) o ではありません (formal). Ej.: にほんじんです → にほんじんじゃないです = «no soy japonés».",
+      "examples": [
+        {
+          "kanji": "わたしはにほんじんじゃないです。",
+          "kana": "わたしはにほんじんじゃないです。",
+          "romaji": "watashi wa nihonjin janai desu.",
+          "es": "No soy japonés/a. (coloquial)"
+        },
+        {
+          "kanji": "わたしはにほんじんではありません。",
+          "kana": "わたしはにほんじんではありません。",
+          "romaji": "watashi wa nihonjin dewa arimasen.",
+          "es": "No soy japonés/a. (formal)"
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "negación",
+        "です"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:respuesta-si-no",
+      "type": "grammar",
+      "pattern": "はい、そうです。／ いいえ、ちがいます。",
+      "es": "Para responder a una pregunta de sí/no: はい (sí) → そうです («así es»); いいえ (no) → ちがいます («no es correcto»). そう sustituye al contenido para no repetirlo.",
+      "examples": [
+        {
+          "kanji": "はい、そうです。",
+          "kana": "はい、そうです。",
+          "romaji": "hai, sō desu.",
+          "es": "Sí, así es."
+        },
+        {
+          "kanji": "いいえ、ちがいます。",
+          "kana": "いいえ、ちがいます。",
+          "romaji": "iie, chigaimasu.",
+          "es": "No, no es correcto."
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "respuestas",
+        "preguntas"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:kosoado",
+      "type": "grammar",
+      "pattern": "これ・それ・あれ・どれ",
+      "es": "Demostrativos según la distancia: これ = esto (cerca de mí), それ = eso (cerca de ti), あれ = aquello (lejos de los dos), どれ = cuál.",
+      "examples": [
+        {
+          "kanji": "これはほんです。",
+          "kana": "これはほんです。",
+          "romaji": "kore wa hon desu.",
+          "es": "Esto es un libro."
+        },
+        {
+          "kanji": "それはなんですか。",
+          "kana": "それはなんですか。",
+          "romaji": "sore wa nan desu ka.",
+          "es": "¿Qué es eso?"
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "demostrativos"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:nan-desu-ka",
+      "type": "grammar",
+      "pattern": "… は なん ですか",
+      "es": "Para preguntar «¿qué es X?» se usa なん + ですか. Ej.: これはなんですか = «¿qué es esto?». Se responde sin はい/いいえ, directamente: これは〜です.",
+      "examples": [
+        {
+          "kanji": "これはなんですか。",
+          "kana": "これはなんですか。",
+          "romaji": "kore wa nan desu ka.",
+          "es": "¿Qué es esto?"
+        },
+        {
+          "kanji": "これはすいとうです。",
+          "kana": "これはすいとうです。",
+          "romaji": "kore wa suitō desu.",
+          "es": "Esto es una cantimplora."
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "preguntas"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:ne-particula",
+      "type": "grammar",
+      "pattern": "… ね",
+      "es": "La partícula ね al final busca confirmación o acuerdo, como «¿verdad?/¿eh?» en español. Ej.: あついですね = «hace calor, ¿eh?».",
+      "examples": [
+        {
+          "kanji": "そうですね。",
+          "kana": "そうですね。",
+          "romaji": "sō desu ne.",
+          "es": "Sí, así es, ¿verdad?"
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-08:grammar:autopresentacion",
+      "type": "grammar",
+      "pattern": "はじめまして。わたしは〜です。…。よろしくおねがいします。",
+      "es": "Estructura para presentarse: はじめまして → わたしは[nombre]です → [edad]さいです → [país]じんです → [profesión]です → よろしくおねがいします.",
+      "examples": [
+        {
+          "kanji": "はじめまして。わたしはパウルです。27さいです。スペインじんです。よろしくおねがいします。",
+          "kana": "はじめまして。わたしはパウルです。にじゅうななさいです。スペインじんです。よろしくおねがいします。",
+          "romaji": "hajimemashite. watashi wa Pauru desu. nijū nana sai desu. supein jin desu. yoroshiku onegaishimasu.",
+          "es": "Encantado. Me llamo Paul. Tengo 27 años. Soy español. Un placer."
+        }
+      ],
+      "tags": [
+        "2026-07-08",
+        "gramática",
+        "presentación"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-08:note:1",
+      "type": "note",
+      "es": "La clase presencial se centró en aprender a ESCRIBIR el silabario hiragana: hoy las filas な・は・ま・や (hasta やゆよ). Quedan 8 letras para el viernes.",
+      "tags": [
+        "2026-07-08",
+        "nota",
+        "hiragana"
+      ]
+    },
+    {
+      "id": "2026-07-08:note:2",
+      "type": "note",
+      "es": "Orden de la frase japonesa: primero el TEMA (marcado con は) y el verbo o です SIEMPRE al final. Hay que escuchar la frase entera para saber si es afirmativa, negativa o pregunta.",
+      "tags": [
+        "2026-07-08",
+        "nota",
+        "gramática"
+      ]
+    },
+    {
+      "id": "2026-07-08:note:3",
+      "type": "note",
+      "es": "Formal vs. informal: si la frase acaba en です es formal (sirve con cualquiera); si se quita です es informal (familia y amigos). En clase se usa siempre la forma formal con です.",
+      "tags": [
+        "2026-07-08",
+        "nota",
+        "gramática"
+      ]
+    },
+    {
+      "id": "2026-07-08:note:4",
+      "type": "note",
+      "es": "En japonés NO se usa el signo «?»: la partícula か al final ya indica que es una pregunta. La frase termina con un pequeño círculo 。(maru), que hace de punto.",
+      "tags": [
+        "2026-07-08",
+        "nota",
+        "gramática",
+        "puntuación"
+      ]
+    }
+  ]
+}
