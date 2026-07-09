@@ -28,6 +28,12 @@ fi
 ffmpeg -y -i "audio-src/$1" -ar 16000 -ac 1 -c:a pcm_s16le "audio-src/$1.wav"
 
 # 2. Transcribe with auto language detection + JSON output (per-segment detected_language).
-whisper-cli -m models/ggml-large-v3.bin -f "audio-src/$1.wav" -l auto -oj -of "audio-src/$1"
+#    Anti-loop flags for poor-quality audio (large classes on a bad mic):
+#      -mc 0   : max-context 0 — do NOT condition on previous text, the key fix that
+#                stops whisper.cpp getting stuck repeating one phrase for minutes and
+#                silently dropping the rest of the class (seen on the 2026-07-08 class:
+#                default flags looped "…Madrid?" x3054 and lost ~88% of the audio).
+#      -et/-lpt: entropy / log-prob thresholds that trigger temperature fallback.
+whisper-cli -m models/ggml-large-v3.bin -f "audio-src/$1.wav" -l auto -oj -mc 0 -et 2.4 -lpt -1.0 -of "audio-src/$1"
 
 echo "transcript written: audio-src/$1.json"
