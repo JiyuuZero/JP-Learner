@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-09T05:48:08Z",
+  "generatedAt": "2026-07-12T21:51:31Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -37,6 +37,19 @@
       "counts": {
         "vocab": 56,
         "grammar": 10,
+        "kanji": 0,
+        "notes": 4
+      }
+    },
+    {
+      "id": "2026-07-10",
+      "date": "2026-07-10",
+      "label": "Clase presencial — demostrativos (この・その・あの / ここ・そこ・あそこ), objetos, ¿de qué?/¿de quién? (なんの・だれの) y ser vs estar",
+      "file": "classes/2026-07-10.json",
+      "contentHash": "sha256-f119367a6e634026bc9a3a833b7e55b521acbdea8b381b863135f1facf37b195",
+      "counts": {
+        "vocab": 14,
+        "grammar": 5,
         "kanji": 0,
         "notes": 4
       }

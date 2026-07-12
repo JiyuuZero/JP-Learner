@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-10",
+  "date": "2026-07-10",
+  "label": "Clase presencial — demostrativos (この・その・あの / ここ・そこ・あそこ), objetos, ¿de qué?/¿de quién? (なんの・だれの) y ser vs estar",
+  "vocab": [
+    {
+      "id": "2026-07-10:vocab:dare",
+      "type": "vocab",
+      "kanji": "だれ",
+      "kana": "だれ",
+      "romaji": "dare",
+      "es": "quién",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "だれ",
+          "reading": "だれ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはだれのほんですか。",
+        "kana": "これはだれのほんですか。",
+        "romaji": "kore wa dare no hon desu ka.",
+        "es": "¿De quién es este libro?"
+      },
+      "tags": [
+        "2026-07-10",
+        "preguntas",
+        "demostrativos"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:donata",
+      "type": "vocab",
+      "kanji": "どなた",
+      "kana": "どなた",
+      "romaji": "donata",
+      "es": "quién (forma educada/formal)",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "どなた",
+          "reading": "どなた",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "あのかたはどなたですか。",
+        "kana": "あのかたはどなたですか。",
+        "romaji": "ano kata wa donata desu ka.",
+        "es": "¿Quién es aquella persona? (educado)"
+      },
+      "tags": [
+        "2026-07-10",
+        "preguntas",
+        "cortesía"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:meishi",
+      "type": "vocab",
+      "kanji": "めいし",
+      "kana": "めいし",
+      "romaji": "meishi",
+      "es": "tarjeta de visita",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "めいし",
+          "reading": "めいし",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはめいしです。",
+        "kana": "これはめいしです。",
+        "romaji": "kore wa meishi desu.",
+        "es": "Esto es una tarjeta de visita."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:zasshi",
+      "type": "vocab",
+      "kanji": "ざっし",
+      "kana": "ざっし",
+      "romaji": "zasshi",
+      "es": "revista",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ざっし",
+          "reading": "ざっし",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "それはにほんごのざっしです。",
+        "kana": "それはにほんごのざっしです。",
+        "romaji": "sore wa nihongo no zasshi desu.",
+        "es": "Eso es una revista en japonés."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:kuruma",
+      "type": "vocab",
+      "kanji": "くるま",
+      "kana": "くるま",
+      "romaji": "kuruma",
+      "es": "coche",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "くるま",
+          "reading": "くるま",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはくるまのざっしです。",
+        "kana": "これはくるまのざっしです。",
+        "romaji": "kore wa kuruma no zasshi desu.",
+        "es": "Esto es una revista de coches."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:sensu",
+      "type": "vocab",
+      "kanji": "せんす",
+      "kana": "せんす",
+      "romaji": "sensu",
+      "es": "abanico (japonés)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "せんす",
+          "reading": "せんす",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはせんすです。",
+        "kana": "これはせんすです。",
+        "romaji": "kore wa sensu desu.",
+        "es": "Esto es un abanico."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:toire",
+      "type": "vocab",
+      "kanji": "トイレ",
+      "kana": "トイレ",
+      "romaji": "toire",
+      "es": "baño / servicio (WC)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "トイレはあそこです。",
+        "kana": "トイレはあそこです。",
+        "romaji": "toire wa asoko desu.",
+        "es": "El baño está allí."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "lugares"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:otearai",
+      "type": "vocab",
+      "kanji": "おてあらい",
+      "kana": "おてあらい",
+      "romaji": "otearai",
+      "es": "baño / servicio (forma más educada que トイレ)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "おてあらい",
+          "reading": "おてあらい",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おてあらいはどこですか。",
+        "kana": "おてあらいはどこですか。",
+        "romaji": "otearai wa doko desu ka.",
+        "es": "¿Dónde está el baño? (educado)"
+      },
+      "tags": [
+        "2026-07-10",
+        "lugares",
+        "cortesía"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:densha",
+      "type": "vocab",
+      "kanji": "でんしゃ",
+      "kana": "でんしゃ",
+      "romaji": "densha",
+      "es": "tren (tren normal)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "でんしゃ",
+          "reading": "でんしゃ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "あれはでんしゃです。",
+        "kana": "あれはでんしゃです。",
+        "romaji": "are wa densha desu.",
+        "es": "Aquello es un tren."
+      },
+      "tags": [
+        "2026-07-10",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:hito",
+      "type": "vocab",
+      "kanji": "ひと",
+      "kana": "ひと",
+      "romaji": "hito",
+      "es": "persona",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ひと",
+          "reading": "ひと",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "あのひとはともだちです。",
+        "kana": "あのひとはともだちです。",
+        "romaji": "ano hito wa tomodachi desu.",
+        "es": "Aquella persona es mi amigo/a."
+      },
+      "tags": [
+        "2026-07-10",
+        "personas",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:kata",
+      "type": "vocab",
+      "kanji": "かた",
+      "kana": "かた",
+      "romaji": "kata",
+      "es": "persona (forma educada/formal de ひと)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かた",
+          "reading": "かた",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "このかたはせんせいです。",
+        "kana": "このかたはせんせいです。",
+        "romaji": "kono kata wa sensei desu.",
+        "es": "Esta persona es el profesor. (educado)"
+      },
+      "tags": [
+        "2026-07-10",
+        "personas",
+        "cortesía"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:omedetougozaimasu",
+      "type": "vocab",
+      "kanji": "おめでとうございます",
+      "kana": "おめでとうございます",
+      "romaji": "omedetō gozaimasu",
+      "es": "¡Felicidades! (cumpleaños, graduación, cualquier logro)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "おめでとうございます",
+          "reading": "おめでとうございます",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おめでとうございます。",
+        "kana": "おめでとうございます。",
+        "romaji": "omedetō gozaimasu.",
+        "es": "¡Felicidades!"
+      },
+      "tags": [
+        "2026-07-10",
+        "saludos",
+        "expresiones"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:mataraishuu",
+      "type": "vocab",
+      "kanji": "またらいしゅう",
+      "kana": "またらいしゅう",
+      "romaji": "mata raishū",
+      "es": "hasta la semana que viene",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "またらいしゅう",
+          "reading": "またらいしゅう",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "またらいしゅう。",
+        "kana": "またらいしゅう。",
+        "romaji": "mata raishū.",
+        "es": "Hasta la semana que viene."
+      },
+      "tags": [
+        "2026-07-10",
+        "despedidas",
+        "expresiones"
+      ]
+    },
+    {
+      "id": "2026-07-10:vocab:matane",
+      "type": "vocab",
+      "kanji": "またね",
+      "kana": "またね",
+      "romaji": "mata ne",
+      "es": "hasta luego / nos vemos (informal)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "またね",
+          "reading": "またね",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "またね。",
+        "kana": "またね。",
+        "romaji": "mata ne.",
+        "es": "Hasta luego."
+      },
+      "tags": [
+        "2026-07-10",
+        "despedidas",
+        "expresiones"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-10:grammar:kono-sono-ano",
+      "type": "grammar",
+      "pattern": "この・その・あの + sustantivo",
+      "es": "«este/ese/aquel + sustantivo». これ・それ・あれ van solos y llevan は directamente (これは…); この・その・あの SIEMPRE necesitan un sustantivo detrás. Ej.: これ → このほん (este libro), そのくるま (ese coche), あのひと (aquella persona).",
+      "examples": [
+        {
+          "kanji": "このほんはわたしのです。",
+          "kana": "このほんはわたしのです。",
+          "romaji": "kono hon wa watashi no desu.",
+          "es": "Este libro es mío."
+        },
+        {
+          "kanji": "あのひとはだれですか。",
+          "kana": "あのひとはだれですか。",
+          "romaji": "ano hito wa dare desu ka.",
+          "es": "¿Quién es aquella persona?"
+        }
+      ],
+      "tags": [
+        "2026-07-10",
+        "gramática",
+        "demostrativos"
+      ]
+    },
+    {
+      "id": "2026-07-10:grammar:koko-soko-asoko",
+      "type": "grammar",
+      "pattern": "ここ・そこ・あそこ",
+      "es": "Demostrativos de LUGAR: ここ = aquí (donde estoy), そこ = ahí (cerca de ti), あそこ = allí (lejos de los dos). Para preguntar «¿dónde?» se usa どこ.",
+      "examples": [
+        {
+          "kanji": "トイレはあそこです。",
+          "kana": "トイレはあそこです。",
+          "romaji": "toire wa asoko desu.",
+          "es": "El baño está allí."
+        },
+        {
+          "kanji": "おてあらいはどこですか。",
+          "kana": "おてあらいはどこですか。",
+          "romaji": "otearai wa doko desu ka.",
+          "es": "¿Dónde está el baño?"
+        }
+      ],
+      "tags": [
+        "2026-07-10",
+        "gramática",
+        "demostrativos",
+        "lugares"
+      ]
+    },
+    {
+      "id": "2026-07-10:grammar:nanno-desuka",
+      "type": "grammar",
+      "pattern": "… は なんの … ですか",
+      "es": "Para preguntar «¿de qué es X?» (de qué trata) se usa なんの + sustantivo + ですか. Se responde con «A の B». Ej.: なんのほんですか → にほんごのほんです («¿de qué es el libro?» → «es un libro de japonés»).",
+      "examples": [
+        {
+          "kanji": "これはなんのほんですか。",
+          "kana": "これはなんのほんですか。",
+          "romaji": "kore wa nan no hon desu ka.",
+          "es": "¿De qué es este libro? (¿de qué trata?)"
+        },
+        {
+          "kanji": "にほんごのほんです。",
+          "kana": "にほんごのほんです。",
+          "romaji": "nihongo no hon desu.",
+          "es": "Es un libro de japonés."
+        }
+      ],
+      "tags": [
+        "2026-07-10",
+        "gramática",
+        "preguntas"
+      ]
+    },
+    {
+      "id": "2026-07-10:grammar:dareno-desuka",
+      "type": "grammar",
+      "pattern": "… は だれの … ですか",
+      "es": "Para preguntar «¿de quién es X?» se usa だれの + sustantivo + ですか. Se responde con «(persona) の です». Ej.: だれのほんですか → わたしのです («¿de quién es el libro?» → «es mío»).",
+      "examples": [
+        {
+          "kanji": "これはだれのほんですか。",
+          "kana": "これはだれのほんですか。",
+          "romaji": "kore wa dare no hon desu ka.",
+          "es": "¿De quién es este libro?"
+        },
+        {
+          "kanji": "わたしのです。",
+          "kana": "わたしのです。",
+          "romaji": "watashi no desu.",
+          "es": "Es mío."
+        }
+      ],
+      "tags": [
+        "2026-07-10",
+        "gramática",
+        "preguntas"
+      ]
+    },
+    {
+      "id": "2026-07-10:grammar:basho-wa-desu",
+      "type": "grammar",
+      "pattern": "ここは〜です ／ 〜はここです",
+      "es": "El orden cambia el sentido (ser vs estar): «ここはトイレです» dice QUÉ es este sitio = «aquí es el baño»; «トイレはここです» dice DÓNDE está algo = «el baño está aquí».",
+      "examples": [
+        {
+          "kanji": "ここはトイレです。",
+          "kana": "ここはトイレです。",
+          "romaji": "koko wa toire desu.",
+          "es": "Aquí es el baño. (qué es este sitio)"
+        },
+        {
+          "kanji": "トイレはここです。",
+          "kana": "トイレはここです。",
+          "romaji": "toire wa koko desu.",
+          "es": "El baño está aquí. (dónde está)"
+        }
+      ],
+      "tags": [
+        "2026-07-10",
+        "gramática",
+        "partículas"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-10:note:1",
+      "type": "note",
+      "es": "En la clase presencial se terminó la PRIMERA RONDA del hiragana: las últimas letras fueron ら・り・る・れ・ろ, わ, を y ん. ¡Ya se puede leer todo el hiragana! (おめでとうございます).",
+      "tags": [
+        "2026-07-10",
+        "nota",
+        "hiragana"
+      ]
+    },
+    {
+      "id": "2026-07-10:note:2",
+      "type": "note",
+      "es": "を es una letra propia pero se pronuncia «o». Hoy en día solo aparece como PARTÍCULA (nunca dentro de una palabra); antiguamente se decía «wo».",
+      "tags": [
+        "2026-07-10",
+        "nota",
+        "hiragana",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-10:note:3",
+      "type": "note",
+      "es": "«Persona»: ひと es la palabra normal y かた es la forma educada (このかた = «esta persona», con respeto). El mismo kanji 人 se lee ひと o じん según el caso (recuerda país + じん = nacionalidad).",
+      "tags": [
+        "2026-07-10",
+        "nota",
+        "vocabulario",
+        "cortesía"
+      ]
+    },
+    {
+      "id": "2026-07-10:note:4",
+      "type": "note",
+      "es": "Formalidad: toda frase que acaba en です ya es lenguaje formal (keigo). El japonés cambia bastante según con quién hablas; más adelante se verán los niveles honorífico y humilde.",
+      "tags": [
+        "2026-07-10",
+        "nota",
+        "cultura",
+        "cortesía"
+      ]
+    }
+  ]
+}
