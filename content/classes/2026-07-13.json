@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-13",
+  "date": "2026-07-13",
+  "label": "Clase presencial — partes de la casa (だいどころ・おふろ・しんしつ…), país/trabajo (くに・かいしゃいん) y forma diccionario vs ます",
+  "vocab": [
+    {
+      "id": "2026-07-13:vocab:daidokoro",
+      "type": "vocab",
+      "kanji": "だいどころ",
+      "kana": "だいどころ",
+      "romaji": "daidokoro",
+      "es": "cocina",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "だいどころ",
+          "reading": "だいどころ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはだいどころです。",
+        "kana": "ここはだいどころです。",
+        "romaji": "koko wa daidokoro desu.",
+        "es": "Aquí es la cocina."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:ofuro",
+      "type": "vocab",
+      "kanji": "おふろ",
+      "kana": "おふろ",
+      "romaji": "ofuro",
+      "es": "baño (la bañera / el cuarto de baño para bañarse)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "おふろ",
+          "reading": "おふろ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おふろはあそこです。",
+        "kana": "おふろはあそこです。",
+        "romaji": "ofuro wa asoko desu.",
+        "es": "El baño (la bañera) está allí."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:shinshitsu",
+      "type": "vocab",
+      "kanji": "しんしつ",
+      "kana": "しんしつ",
+      "romaji": "shinshitsu",
+      "es": "dormitorio",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しんしつ",
+          "reading": "しんしつ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはしんしつです。",
+        "kana": "ここはしんしつです。",
+        "romaji": "koko wa shinshitsu desu.",
+        "es": "Aquí es el dormitorio."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:shigotonoheya",
+      "type": "vocab",
+      "kanji": "しごとのへや",
+      "kana": "しごとのへや",
+      "romaji": "shigoto no heya",
+      "es": "despacho / habitación de trabajo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しごとのへや",
+          "reading": "しごとのへや",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはしごとのへやです。",
+        "kana": "ここはしごとのへやです。",
+        "romaji": "koko wa shigoto no heya desu.",
+        "es": "Aquí es el despacho."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:kodomotachinoheya",
+      "type": "vocab",
+      "kanji": "こどもたちのへや",
+      "kana": "こどもたちのへや",
+      "romaji": "kodomotachi no heya",
+      "es": "habitación de los niños",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "こどもたちのへや",
+          "reading": "こどもたちのへや",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはこどもたちのへやです。",
+        "kana": "ここはこどもたちのへやです。",
+        "romaji": "koko wa kodomotachi no heya desu.",
+        "es": "Aquí es la habitación de los niños."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:heya",
+      "type": "vocab",
+      "kanji": "へや",
+      "kana": "へや",
+      "romaji": "heya",
+      "es": "habitación / cuarto",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "へや",
+          "reading": "へや",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはちいさなへやです。",
+        "kana": "これはちいさなへやです。",
+        "romaji": "kore wa chiisana heya desu.",
+        "es": "Esta es una habitación pequeña."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:rouka",
+      "type": "vocab",
+      "kanji": "ろうか",
+      "kana": "ろうか",
+      "romaji": "rōka",
+      "es": "pasillo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ろうか",
+          "reading": "ろうか",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ろうかはあそこです。",
+        "kana": "ろうかはあそこです。",
+        "romaji": "rōka wa asoko desu.",
+        "es": "El pasillo está allí."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:genkan",
+      "type": "vocab",
+      "kanji": "げんかん",
+      "kana": "げんかん",
+      "romaji": "genkan",
+      "es": "recibidor / entrada (de la casa, donde se dejan los zapatos)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "げんかん",
+          "reading": "げんかん",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "げんかんはここです。",
+        "kana": "げんかんはここです。",
+        "romaji": "genkan wa koko desu.",
+        "es": "La entrada está aquí."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:beranda",
+      "type": "vocab",
+      "kanji": "ベランダ",
+      "kana": "ベランダ",
+      "romaji": "beranda",
+      "es": "terraza cubierta / balcón (con techo)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ベランダ",
+          "reading": "ベランダ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはベランダです。",
+        "kana": "ここはベランダです。",
+        "romaji": "koko wa beranda desu.",
+        "es": "Aquí es la terraza (cubierta)."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:barukonii",
+      "type": "vocab",
+      "kanji": "バルコニー",
+      "kana": "バルコニー",
+      "romaji": "barukonī",
+      "es": "balcón (sin techo)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "バルコニー",
+          "reading": "バルコニー",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはバルコニーです。",
+        "kana": "ここはバルコニーです。",
+        "romaji": "koko wa barukonī desu.",
+        "es": "Aquí es el balcón."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:terasu",
+      "type": "vocab",
+      "kanji": "テラス",
+      "kana": "テラス",
+      "romaji": "terasu",
+      "es": "terraza (de café, de la ciudad)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "テラス",
+          "reading": "テラス",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはテラスです。",
+        "kana": "ここはテラスです。",
+        "romaji": "koko wa terasu desu.",
+        "es": "Aquí es la terraza."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:dainingu",
+      "type": "vocab",
+      "kanji": "ダイニング",
+      "kana": "ダイニング",
+      "romaji": "dainingu",
+      "es": "comedor (de casa)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ダイニング",
+          "reading": "ダイニング",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはダイニングです。",
+        "kana": "ここはダイニングです。",
+        "romaji": "koko wa dainingu desu.",
+        "es": "Aquí es el comedor."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:shokudou",
+      "type": "vocab",
+      "kanji": "しょくどう",
+      "kana": "しょくどう",
+      "romaji": "shokudō",
+      "es": "comedor / cantina (de empresa, universidad; un sitio grande)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しょくどう",
+          "reading": "しょくどう",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "しょくどうはあそこです。",
+        "kana": "しょくどうはあそこです。",
+        "romaji": "shokudō wa asoko desu.",
+        "es": "La cantina está allí."
+      },
+      "tags": [
+        "2026-07-13",
+        "lugares",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:uchi",
+      "type": "vocab",
+      "kanji": "うち",
+      "kana": "うち",
+      "romaji": "uchi",
+      "es": "casa / hogar (mi casa)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "うち",
+          "reading": "うち",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "ここはうちです。",
+        "kana": "ここはうちです。",
+        "romaji": "koko wa uchi desu.",
+        "es": "Esta es mi casa."
+      },
+      "tags": [
+        "2026-07-13",
+        "casa",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:kuni",
+      "type": "vocab",
+      "kanji": "くに",
+      "kana": "くに",
+      "romaji": "kuni",
+      "es": "país",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "くに",
+          "reading": "くに",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おくにはどこですか。",
+        "kana": "おくにはどこですか。",
+        "romaji": "okuni wa doko desu ka.",
+        "es": "¿De qué país es usted?"
+      },
+      "tags": [
+        "2026-07-13",
+        "país",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:kaisha",
+      "type": "vocab",
+      "kanji": "かいしゃ",
+      "kana": "かいしゃ",
+      "romaji": "kaisha",
+      "es": "empresa / compañía",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かいしゃ",
+          "reading": "かいしゃ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "かいしゃはどこですか。",
+        "kana": "かいしゃはどこですか。",
+        "romaji": "kaisha wa doko desu ka.",
+        "es": "¿Dónde está tu empresa?"
+      },
+      "tags": [
+        "2026-07-13",
+        "trabajo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:kaishain",
+      "type": "vocab",
+      "kanji": "かいしゃいん",
+      "kana": "かいしゃいん",
+      "romaji": "kaishain",
+      "es": "empleado de empresa / oficinista",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かいしゃいん",
+          "reading": "かいしゃいん",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "わたしはかいしゃいんです。",
+        "kana": "わたしはかいしゃいんです。",
+        "romaji": "watashi wa kaishain desu.",
+        "es": "Soy oficinista."
+      },
+      "tags": [
+        "2026-07-13",
+        "trabajo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:shigoto",
+      "type": "vocab",
+      "kanji": "しごと",
+      "kana": "しごと",
+      "romaji": "shigoto",
+      "es": "trabajo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しごと",
+          "reading": "しごと",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おしごとはなんですか。",
+        "kana": "おしごとはなんですか。",
+        "romaji": "oshigoto wa nan desu ka.",
+        "es": "¿A qué te dedicas? (¿cuál es tu trabajo?)"
+      },
+      "tags": [
+        "2026-07-13",
+        "trabajo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:puroguramaa",
+      "type": "vocab",
+      "kanji": "プログラマー",
+      "kana": "プログラマー",
+      "romaji": "puroguramā",
+      "es": "programador/a",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "プログラマー",
+          "reading": "プログラマー",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "わたしはプログラマーです。",
+        "kana": "わたしはプログラマーです。",
+        "romaji": "watashi wa puroguramā desu.",
+        "es": "Soy programador."
+      },
+      "tags": [
+        "2026-07-13",
+        "trabajo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:enjinia",
+      "type": "vocab",
+      "kanji": "エンジニア",
+      "kana": "エンジニア",
+      "romaji": "enjinia",
+      "es": "ingeniero/a",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "エンジニア",
+          "reading": "エンジニア",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "わたしはエンジニアです。",
+        "kana": "わたしはエンジニアです。",
+        "romaji": "watashi wa enjinia desu.",
+        "es": "Soy ingeniero."
+      },
+      "tags": [
+        "2026-07-13",
+        "trabajo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:shitsumon",
+      "type": "vocab",
+      "kanji": "しつもん",
+      "kana": "しつもん",
+      "romaji": "shitsumon",
+      "es": "pregunta",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しつもん",
+          "reading": "しつもん",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "しつもんはありますか。",
+        "kana": "しつもんはありますか。",
+        "romaji": "shitsumon wa arimasu ka.",
+        "es": "¿Hay preguntas?"
+      },
+      "tags": [
+        "2026-07-13",
+        "clase",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:hon",
+      "type": "vocab",
+      "kanji": "ほん",
+      "kana": "ほん",
+      "romaji": "hon",
+      "es": "libro",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ほん",
+          "reading": "ほん",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはにほんごのほんです。",
+        "kana": "これはにほんごのほんです。",
+        "romaji": "kore wa nihongo no hon desu.",
+        "es": "Este es un libro de japonés."
+      },
+      "tags": [
+        "2026-07-13",
+        "objetos",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:taiyou",
+      "type": "vocab",
+      "kanji": "たいよう",
+      "kana": "たいよう",
+      "romaji": "taiyō",
+      "es": "sol",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "たいよう",
+          "reading": "たいよう",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはたいようです。",
+        "kana": "これはたいようです。",
+        "romaji": "kore wa taiyō desu.",
+        "es": "Esto es el sol."
+      },
+      "tags": [
+        "2026-07-13",
+        "naturaleza",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:tori",
+      "type": "vocab",
+      "kanji": "とり",
+      "kana": "とり",
+      "romaji": "tori",
+      "es": "pájaro / ave",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "とり",
+          "reading": "とり",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはとりです。",
+        "kana": "これはとりです。",
+        "romaji": "kore wa tori desu.",
+        "es": "Esto es un pájaro."
+      },
+      "tags": [
+        "2026-07-13",
+        "naturaleza",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:kaminari",
+      "type": "vocab",
+      "kanji": "かみなり",
+      "kana": "かみなり",
+      "romaji": "kaminari",
+      "es": "trueno / rayo (abarca las dos cosas)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かみなり",
+          "reading": "かみなり",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これはかみなりです。",
+        "kana": "これはかみなりです。",
+        "romaji": "kore wa kaminari desu.",
+        "es": "Esto es un rayo (trueno)."
+      },
+      "tags": [
+        "2026-07-13",
+        "naturaleza",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:ha",
+      "type": "vocab",
+      "kanji": "は",
+      "kana": "は",
+      "romaji": "ha",
+      "es": "diente",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "は",
+          "reading": "は",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "これははです。",
+        "kana": "これははです。",
+        "romaji": "kore wa ha desu.",
+        "es": "Esto es un diente."
+      },
+      "tags": [
+        "2026-07-13",
+        "cuerpo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:haisha",
+      "type": "vocab",
+      "kanji": "はいしゃ",
+      "kana": "はいしゃ",
+      "romaji": "haisha",
+      "es": "dentista",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "はいしゃ",
+          "reading": "はいしゃ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "はいしゃはあそこです。",
+        "kana": "はいしゃはあそこです。",
+        "romaji": "haisha wa asoko desu.",
+        "es": "El dentista está allí."
+      },
+      "tags": [
+        "2026-07-13",
+        "profesiones",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:isha",
+      "type": "vocab",
+      "kanji": "いしゃ",
+      "kana": "いしゃ",
+      "romaji": "isha",
+      "es": "médico",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "いしゃ",
+          "reading": "いしゃ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "いしゃはあそこです。",
+        "kana": "いしゃはあそこです。",
+        "romaji": "isha wa asoko desu.",
+        "es": "El médico está allí."
+      },
+      "tags": [
+        "2026-07-13",
+        "profesiones",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:okiru",
+      "type": "vocab",
+      "kanji": "おきる",
+      "kana": "おきる",
+      "romaji": "okiru",
+      "es": "levantarse / despertarse",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "おきる",
+          "reading": "おきる",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "わたしはおきます。",
+        "kana": "わたしはおきます。",
+        "romaji": "watashi wa okimasu.",
+        "es": "Me levanto. (forma ます de おきる)"
+      },
+      "tags": [
+        "2026-07-13",
+        "verbo",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:nodogakarakara",
+      "type": "vocab",
+      "kanji": "のどがカラカラ",
+      "kana": "のどがカラカラ",
+      "romaji": "nodo ga karakara",
+      "es": "tener mucha sed (literalmente «la garganta seca»)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "のどがカラカラ",
+          "reading": "のどがカラカラ",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "のどがカラカラです。",
+        "kana": "のどがカラカラです。",
+        "romaji": "nodo ga karakara desu.",
+        "es": "Tengo mucha sed."
+      },
+      "tags": [
+        "2026-07-13",
+        "expresiones",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:vocab:onakagasuita",
+      "type": "vocab",
+      "kanji": "おなかがすいた",
+      "kana": "おなかがすいた",
+      "romaji": "onaka ga suita",
+      "es": "tener hambre (literalmente «el estómago se ha vaciado»)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "おなかがすいた",
+          "reading": "おなかがすいた",
+          "isKanji": false
+        }
+      ],
+      "example": {
+        "kanji": "おなかがすいた。",
+        "kana": "おなかがすいた。",
+        "romaji": "onaka ga suita.",
+        "es": "Tengo hambre."
+      },
+      "tags": [
+        "2026-07-13",
+        "expresiones",
+        "vocabulario"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-13:grammar:jishokei-masukei",
+      "type": "grammar",
+      "pattern": "forma diccionario (おきる) ／ forma ます (おきます)",
+      "es": "Cada verbo tiene dos formas con el MISMO significado: la forma de diccionario (おきる = «levantarse», la que aparece en el diccionario, informal) y la forma ます (おきます, educada). En clase se empieza por la forma ます porque es la formal. Ej.: おきる → おきます (ambas = «me levanto»).",
+      "examples": [
+        {
+          "kanji": "わたしはおきます。",
+          "kana": "わたしはおきます。",
+          "romaji": "watashi wa okimasu.",
+          "es": "Me levanto. (forma ます, educada)"
+        },
+        {
+          "kanji": "わたしはおきる。",
+          "kana": "わたしはおきる。",
+          "romaji": "watashi wa okiru.",
+          "es": "Me levanto. (forma diccionario, informal)"
+        }
+      ],
+      "tags": [
+        "2026-07-13",
+        "gramática",
+        "verbos"
+      ]
+    },
+    {
+      "id": "2026-07-13:grammar:masu-negativo-pasado",
+      "type": "grammar",
+      "pattern": "おきます ／ おきません ／ おきました ／ おきませんでした",
+      "es": "Con la forma ます solo hay presente/futuro y pasado, y su negativo. おきます = me levanto; おきません = no me levanto; おきました = me levanté; おきませんでした = no me levanté. Solo cambia la terminación después de おき-.",
+      "examples": [
+        {
+          "kanji": "わたしはおきます。",
+          "kana": "わたしはおきます。",
+          "romaji": "watashi wa okimasu.",
+          "es": "Me levanto. (presente/futuro)"
+        },
+        {
+          "kanji": "わたしはおきませんでした。",
+          "kana": "わたしはおきませんでした。",
+          "romaji": "watashi wa okimasen deshita.",
+          "es": "No me levanté. (pasado negativo)"
+        }
+      ],
+      "tags": [
+        "2026-07-13",
+        "gramática",
+        "verbos"
+      ]
+    },
+    {
+      "id": "2026-07-13:grammar:no-encadenado",
+      "type": "grammar",
+      "pattern": "A の B の C (encadenar の, máximo 3)",
+      "es": "La partícula の une sustantivos («de»): わたしのほん = mi libro; にほんごのほん = libro de japonés. Se pueden encadenar hasta 3: わたしのにほんごのほん = «mi libro de japonés». OJO: los adjetivos (あかい = rojo) NO llevan の delante del sustantivo: あかいほん, no «あかいのほん».",
+      "examples": [
+        {
+          "kanji": "これはわたしのにほんごのほんです。",
+          "kana": "これはわたしのにほんごのほんです。",
+          "romaji": "kore wa watashi no nihongo no hon desu.",
+          "es": "Este es mi libro de japonés."
+        },
+        {
+          "kanji": "これはあかいほんです。",
+          "kana": "これはあかいほんです。",
+          "romaji": "kore wa akai hon desu.",
+          "es": "Este es un libro rojo. (adjetivo: sin の)"
+        }
+      ],
+      "tags": [
+        "2026-07-13",
+        "gramática",
+        "partículas"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-13:note:1",
+      "type": "note",
+      "es": "La partícula de tema se ESCRIBE con la letra は pero se PRONUNCIA «wa». Solo pasa cuando は es partícula (va detrás de una palabra, marcando el tema): わたしは… se lee «watashi wa». Dentro de una palabra normal, は se lee «ha».",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "partículas",
+        "hiragana"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:2",
+      "type": "note",
+      "es": "El prefijo お delante de algunas palabras las hace más educadas o suaves: おくに (tu país), おふろ (baño), おしごと (tu trabajo), おなまえ (tu nombre), おとし (la edad). Es opcional, pero suena más cortés.",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "cortesía"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:3",
+      "type": "note",
+      "es": "Palabras que suenan igual pero se escriben con kanji distintos (homófonos): はな = flor y también nariz; は = diente (y también la partícula «wa»); くも = nube y también araña. El contexto (o el kanji) las distingue.",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "vocabulario"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:4",
+      "type": "note",
+      "es": "Dos palabras para «comedor»: ダイニング es el comedor de una CASA; しょくどう es un comedor/cantina grande (de una empresa, universidad o restaurante). No se mezclan.",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "vocabulario",
+        "casa"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:5",
+      "type": "note",
+      "es": "げんかん es el recibidor/entrada de la casa (donde te quitas los zapatos). También se usa en sentido figurado: un aeropuerto es el «げんかん» (la puerta de entrada) de un país.",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "casa",
+        "cultura"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:6",
+      "type": "note",
+      "es": "En Japón el 4 y el 9 se consideran de mala suerte por cómo suenan: し (4) suena como 死 «muerte» y く (9) como 苦 «sufrimiento»; por eso a veces se evitan (p. ej. en hospitales). El 7, en cambio, se considera número de la suerte.",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "cultura",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-13:note:7",
+      "type": "note",
+      "es": "Preguntar la edad es delicado en Japón (sobre todo a mujeres). Aun así, con adultos el profesor recomienda preguntarla. Se dice de forma más educada con el prefijo お: おとし (la edad).",
+      "tags": [
+        "2026-07-13",
+        "nota",
+        "cultura"
+      ]
+    }
+  ]
+}
