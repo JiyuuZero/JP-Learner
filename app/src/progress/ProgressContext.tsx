@@ -54,6 +54,8 @@ export interface ProgressContextValue {
   unmarkLearned: (char: string) => Promise<void>
   setDisplayMode: (mode: ProgressMeta['displayMode']) => Promise<void>
   setRomajiVisible: (visible: boolean) => Promise<void>
+  // Shared+persisted class-ordering preference (Glosario + Gramática).
+  setClassSortDir: (dir: 'asc' | 'desc') => Promise<void>
   // Favorites (UI-02): item ids only (PROG-04), persisted in meta.favorites.
   favoriteSet: Set<string>
   toggleFavorite: (itemId: string) => Promise<void>
@@ -237,6 +239,15 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     [meta, putMeta],
   )
 
+  const setClassSortDir = useCallback(
+    async (dir: 'asc' | 'desc') => {
+      const db = dbRef.current
+      const m = (await db?.get('meta', 'singleton')) ?? meta ?? createDefaultMeta()
+      await putMeta({ ...m, classSortDir: dir })
+    },
+    [meta, putMeta],
+  )
+
   // Favorites (UI-02): derived from the persisted meta.favorites id array.
   // A pre-favorites meta record reads the field as undefined -> empty set.
   const favoriteSet = useMemo(() => new Set(meta?.favorites ?? []), [meta])
@@ -271,6 +282,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         unmarkLearned,
         setDisplayMode,
         setRomajiVisible,
+        setClassSortDir,
         favoriteSet,
         toggleFavorite,
       }}

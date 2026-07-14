@@ -9,8 +9,9 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
-import ClassSort, { orderClasses, type SortDir } from '../components/ClassSort'
+import ClassSort, { orderClasses } from '../components/ClassSort'
 import { useContent } from '../content/context'
+import { useProgress } from '../progress/ProgressContext'
 import type { Grammar } from '../content/content'
 
 // Practice all grammar (period scope so it's not gated by SRS due-dates).
@@ -92,8 +93,9 @@ function GrammarDetail({
 export default function Gramatica() {
   const { store, loading } = useContent()
   const navigate = useNavigate()
+  const { meta, setClassSortDir } = useProgress()
   const [detail, setDetail] = useState<Grammar | null>(null)
-  const [sortDir, setSortDir] = useState<SortDir>('asc')
+  const sortDir = meta?.classSortDir ?? 'asc'
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
   const toggleClass = (id: string) =>
     setCollapsed((prev) => {
@@ -128,7 +130,7 @@ export default function Gramatica() {
             <div className="flex-1">
               <Button onClick={() => void navigate(GRAMMAR_SESSION)}>Practicar toda la gramática</Button>
             </div>
-            <ClassSort dir={sortDir} onChange={setSortDir} />
+            <ClassSort dir={sortDir} onChange={(d) => void setClassSortDir(d)} />
           </div>
 
           <div className="mt-6 flex flex-col gap-8">

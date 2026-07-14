@@ -43,6 +43,9 @@ export interface ProgressMeta {
   // Favorited item ids (UI-02) — content referenced BY ID ONLY (PROG-04).
   // Additive field: pre-existing meta records read it as undefined -> [].
   favorites?: string[]
+  // Shared class-ordering preference for the Glosario + Gramática lists.
+  // Additive+optional: pre-existing meta reads it as undefined -> 'asc'.
+  classSortDir?: 'asc' | 'desc'
 }
 
 export interface JPDB extends DBSchema {
@@ -96,5 +99,6 @@ export function createDefaultMeta(now = new Date()): ProgressMeta {
     newCardsDay: today,
     appVersion: APP_VERSION,
     favorites: [],
+    classSortDir: 'asc',
   }
 }

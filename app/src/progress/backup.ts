@@ -113,7 +113,9 @@ function isProgressMeta(v: unknown): v is ProgressMeta {
     isStr(v.newCardsDay) &&
     isNum(v.appVersion) &&
     // favorites is additive+optional (item-id strings only, PROG-04)
-    (v.favorites === undefined || (Array.isArray(v.favorites) && v.favorites.every(isStr)))
+    (v.favorites === undefined || (Array.isArray(v.favorites) && v.favorites.every(isStr))) &&
+    // classSortDir is additive+optional
+    (v.classSortDir === undefined || v.classSortDir === 'asc' || v.classSortDir === 'desc')
   )
 }
 
