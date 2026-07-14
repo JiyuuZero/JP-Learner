@@ -588,13 +588,39 @@
           "kanji": "わたしたち",
           "kana": "わたしたち",
           "romaji": "watashitachi",
-          "es": "nosotros"
+          "es": "nosotros",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "たち",
+              "reading": "たち",
+              "isKanji": false,
+              "blank": true
+            }
+          ]
         },
         {
           "kanji": "あなたたち",
           "kana": "あなたたち",
           "romaji": "anatatachi",
-          "es": "vosotros / ustedes"
+          "es": "vosotros / ustedes",
+          "tokens": [
+            {
+              "surface": "あなた",
+              "reading": "あなた",
+              "isKanji": false
+            },
+            {
+              "surface": "たち",
+              "reading": "たち",
+              "isKanji": false,
+              "blank": true
+            }
+          ]
         }
       ],
       "tags": [
