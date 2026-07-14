@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-14T08:51:52Z",
+  "generatedAt": "2026-07-14T08:51:53Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -18,9 +18,9 @@
     {
       "id": "2026-07-06",
       "date": "2026-07-06",
-      "label": "Clase presencial — vocabulario (colores, objetos, comida) y plural たち",
+      "label": "Clase 1: colores, objetos y comida",
       "file": "classes/2026-07-06.json",
-      "contentHash": "sha256-a8325b729caad9f31396749c783184c452f1ae6f5be56139780145af2e926910",
+      "contentHash": "sha256-c7ed6f0651a4f60e0561b9325a6d58b71ddd3c8e80a1e75272b1b623ff596a50",
       "counts": {
         "vocab": 22,
         "grammar": 1,
