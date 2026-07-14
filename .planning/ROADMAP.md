@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: JP-Learner v1 (complete PWA + content skill)** - Ship the full offline PWA (schema, persistence/SRS, 3 display modes, 5 exercises, TTS, gamification, GitHub Pages) plus the local-Whisper Claude content skill, in one pass.
 - [x] **Phase 2: TTS por audio pre-generado en la skill** - La skill genera audio japonés local por ítem; la app lo reproduce offline con Web Speech de fallback; contrato de skill extendido a entrada flexible.
-- [ ] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
+- [x] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
 - [ ] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
 
 ## Phase Details
@@ -75,7 +75,7 @@ Single phase — Phase 1 only.
 |-------|----------------|--------|-----------|
 | 1. JP-Learner v1 (complete PWA + content skill) | 6/6 | Complete | 2026-07-07 |
 | 2. TTS por audio pre-generado en la skill | 3/3 | Complete | 2026-07-07 |
-| 3. Gramática — contenido y schema | 1/2 | In Progress | - |
+| 3. Gramática — contenido y schema | 2/2 | Complete | 2026-07-14 |
 | 4. Gramática — sección y ejercicios en la app | 0/? | Planned | - |
 
 ### Phase 2: TTS por audio pre-generado en la skill
@@ -104,7 +104,7 @@ Plans:
 **Requirements**: CONT-01, CONT-02, SKILL-02, SKILL-05 (reforzados — sin IDs nuevos)
 **Plans:** 2 plans en 2 waves
 - [x] 03-01-PLAN.md — Schema (token.blank aditivo) + validate.mjs (invariantes en ejemplos de gramática) + structure.md (emitir tokens+blank) + regenerar tipos TS [Wave 1]
-- [ ] 03-02-PLAN.md — Backfill de la gramática de las 5 clases (tokens+blank por ejemplo) vía contrato de skill con revisión humana por clase [Wave 2]
+- [x] 03-02-PLAN.md — Backfill de la gramática de las 5 clases (tokens+blank por ejemplo) vía contrato de skill con revisión humana por clase [Wave 2]
 
 ### Phase 4: Gramática — sección y ejercicios en la app
 

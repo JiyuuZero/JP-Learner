@@ -8,10 +8,10 @@ last_updated: "2026-07-07T10:14:03.415Z"
 last_activity: 2026-07-07
 progress:
   total_phases: 4
-  completed_phases: 2
-  total_plans: 9
-  completed_plans: 9
-  percent: 50
+  completed_phases: 3
+  total_plans: 11
+  completed_plans: 11
+  percent: 75
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-06)
 
 **Core value:** Practicar de forma efectiva (repetición espaciada + recuerdo activo) exactamente el contenido dado en clase, con la mínima fricción para expandirlo clase a clase.
-**Current focus:** Phase 03 — Gramática: contenido y schema (rediseño de gramática, parte 1/2)
+**Current focus:** Phase 04 — Gramática: sección y ejercicios en la app (rediseño de gramática, parte 2/2)
 
 ## Current Position
 
-Phase: 02
-Plan: Not started
-Status: Executing Phase 02
-Last activity: 2026-07-14 — Quick task 260714-dmb (clase.py scoping fix)
+Phase: 03 (complete) — next: 04
+Plan: Phase 3 done (03-01, 03-02)
+Status: Phase 3 complete; Phase 4 planned-not-started
+Last activity: 2026-07-14 — Phase 3 complete (grammar tokens+blank backfilled)
 
 Progress: [░░░░░░░░░░] 0%
 
