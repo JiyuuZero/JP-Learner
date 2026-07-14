@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: JP-Learner v1 (complete PWA + content skill)** - Ship the full offline PWA (schema, persistence/SRS, 3 display modes, 5 exercises, TTS, gamification, GitHub Pages) plus the local-Whisper Claude content skill, in one pass.
 - [x] **Phase 2: TTS por audio pre-generado en la skill** - La skill genera audio japonés local por ítem; la app lo reproduce offline con Web Speech de fallback; contrato de skill extendido a entrada flexible.
 - [x] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
-- [ ] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
+- [x] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
 
 ## Phase Details
 
@@ -76,7 +76,7 @@ Single phase — Phase 1 only.
 | 1. JP-Learner v1 (complete PWA + content skill) | 6/6 | Complete | 2026-07-07 |
 | 2. TTS por audio pre-generado en la skill | 3/3 | Complete | 2026-07-07 |
 | 3. Gramática — contenido y schema | 2/2 | Complete | 2026-07-14 |
-| 4. Gramática — sección y ejercicios en la app | 0/? | Planned | - |
+| 4. Gramática — sección y ejercicios en la app | 1/1 | Complete | 2026-07-14 |
 
 ### Phase 2: TTS por audio pre-generado en la skill
 

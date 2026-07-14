@@ -8,10 +8,10 @@ last_updated: "2026-07-07T10:14:03.415Z"
 last_activity: 2026-07-07
 progress:
   total_phases: 4
-  completed_phases: 3
-  total_plans: 11
-  completed_plans: 11
-  percent: 75
+  completed_phases: 4
+  total_plans: 12
+  completed_plans: 12
+  percent: 100
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-06)
 
 **Core value:** Practicar de forma efectiva (repetición espaciada + recuerdo activo) exactamente el contenido dado en clase, con la mínima fricción para expandirlo clase a clase.
-**Current focus:** Phase 04 — Gramática: sección y ejercicios en la app (rediseño de gramática, parte 2/2)
+**Current focus:** Rediseño de gramática (Phases 3+4) COMPLETO. Sin fase activa.
 
 ## Current Position
 
 Phase: 03 (complete) — next: 04
 Plan: Phase 3 done (03-01, 03-02)
 Status: Phase 3 complete; Phase 4 planned-not-started
-Last activity: 2026-07-14 — Phase 3 complete (grammar tokens+blank backfilled)
+Last activity: 2026-07-14 — Phase 4 complete (grammar section + exercises + interstitials)
 
 Progress: [░░░░░░░░░░] 0%
 
