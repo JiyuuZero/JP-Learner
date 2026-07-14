@@ -9,6 +9,7 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
+import ClassSort, { orderClasses, type SortDir } from '../components/ClassSort'
 import { useContent } from '../content/context'
 import type { Grammar } from '../content/content'
 
@@ -92,6 +93,7 @@ export default function Gramatica() {
   const { store, loading } = useContent()
   const navigate = useNavigate()
   const [detail, setDetail] = useState<Grammar | null>(null)
+  const [sortDir, setSortDir] = useState<SortDir>('asc')
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
   const toggleClass = (id: string) =>
     setCollapsed((prev) => {
@@ -126,9 +128,13 @@ export default function Gramatica() {
             <Button onClick={() => void navigate(GRAMMAR_SESSION)}>Practicar toda la gramática</Button>
           </div>
 
+          <div className="mt-4">
+            <ClassSort dir={sortDir} onChange={setSortDir} />
+          </div>
+
           <div className="mt-6 flex flex-col gap-8">
-            {store?.classes.map((c) => {
-              const bucket = store.byClass.get(c.id)
+            {orderClasses(store?.classes ?? [], sortDir).map((c) => {
+              const bucket = store?.byClass.get(c.id)
               if (!bucket || bucket.grammar.length === 0) return null
               const open = !collapsed.has(c.id)
               return (

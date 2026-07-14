@@ -9,6 +9,7 @@ import { ChevronDown, Heart, Search, Star, X } from 'lucide-react'
 import Card from '../components/Card'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
+import ClassSort, { orderClasses, type SortDir } from '../components/ClassSort'
 import { exampleKey } from '../tts/audio'
 import { useContent } from '../content/context'
 import { useProgress } from '../progress/ProgressContext'
@@ -160,6 +161,7 @@ export default function Glosario() {
   const { store, loading } = useContent()
   const [view, setView] = useState<View>('clase')
   const [query, setQuery] = useState('')
+  const [sortDir, setSortDir] = useState<SortDir>('asc')
   const [detail, setDetail] = useState<Vocab | null>(null)
   // Foldable classes (Por clase view): a class id in this set is collapsed.
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
@@ -267,9 +269,13 @@ export default function Glosario() {
           </div>
 
           {view === 'clase' ? (
+            <>
+            <div className="mt-4">
+              <ClassSort dir={sortDir} onChange={setSortDir} />
+            </div>
             <div className="mt-6 flex flex-col gap-8">
-              {store?.classes.map((c) => {
-                const bucket = store.byClass.get(c.id)
+              {orderClasses(store?.classes ?? [], sortDir).map((c) => {
+                const bucket = store?.byClass.get(c.id)
                 if (!bucket) return null
                 const open = !collapsed.has(c.id)
                 return (
@@ -330,6 +336,7 @@ export default function Glosario() {
                 )
               })}
             </div>
+            </>
           ) : (
             <div className="mt-6 flex flex-col gap-8">
               <section>
