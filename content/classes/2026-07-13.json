@@ -864,13 +864,59 @@
           "kanji": "わたしはおきます。",
           "kana": "わたしはおきます。",
           "romaji": "watashi wa okimasu.",
-          "es": "Me levanto. (forma ます, educada)"
+          "es": "Me levanto. (forma ます, educada)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "おきます",
+              "reading": "おきます",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしはおきる。",
           "kana": "わたしはおきる。",
           "romaji": "watashi wa okiru.",
-          "es": "Me levanto. (forma diccionario, informal)"
+          "es": "Me levanto. (forma diccionario, informal)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "おきる",
+              "reading": "おきる",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -889,13 +935,59 @@
           "kanji": "わたしはおきます。",
           "kana": "わたしはおきます。",
           "romaji": "watashi wa okimasu.",
-          "es": "Me levanto. (presente/futuro)"
+          "es": "Me levanto. (presente/futuro)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "おきます",
+              "reading": "おきます",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしはおきませんでした。",
           "kana": "わたしはおきませんでした。",
           "romaji": "watashi wa okimasen deshita.",
-          "es": "No me levanté. (pasado negativo)"
+          "es": "No me levanté. (pasado negativo)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "おきませんでした",
+              "reading": "おきませんでした",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -914,13 +1006,94 @@
           "kanji": "これはわたしのにほんごのほんです。",
           "kana": "これはわたしのにほんごのほんです。",
           "romaji": "kore wa watashi no nihongo no hon desu.",
-          "es": "Este es mi libro de japonés."
+          "es": "Este es mi libro de japonés.",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "にほんご",
+              "reading": "にほんご",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "これはあかいほんです。",
           "kana": "これはあかいほんです。",
           "romaji": "kore wa akai hon desu.",
-          "es": "Este es un libro rojo. (adjetivo: sin の)"
+          "es": "Este es un libro rojo. (adjetivo: sin の)",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "あかい",
+              "reading": "あかい",
+              "isKanji": false
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
