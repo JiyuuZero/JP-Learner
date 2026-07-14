@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-14T08:51:53Z",
+  "generatedAt": "2026-07-14T08:51:54Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -57,9 +57,9 @@
     {
       "id": "2026-07-13",
       "date": "2026-07-13",
-      "label": "Clase presencial — partes de la casa (だいどころ・おふろ・しんしつ…), país/trabajo (くに・かいしゃいん) y forma diccionario vs ます",
+      "label": "Clase 4: partes de la casa",
       "file": "classes/2026-07-13.json",
-      "contentHash": "sha256-b82d4757ad90347173a57ebdbacfca7501ba3bea9c061e06c71f5f01528ee133",
+      "contentHash": "sha256-516d1529a035fc65d6b4204dbba96eca55353f1d6ea494d6df8ee5b6a71c5bb0",
       "counts": {
         "vocab": 31,
         "grammar": 3,
