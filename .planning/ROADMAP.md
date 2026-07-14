@@ -75,7 +75,7 @@ Single phase — Phase 1 only.
 |-------|----------------|--------|-----------|
 | 1. JP-Learner v1 (complete PWA + content skill) | 6/6 | Complete | 2026-07-07 |
 | 2. TTS por audio pre-generado en la skill | 3/3 | Complete | 2026-07-07 |
-| 3. Gramática — contenido y schema | 0/? | Planned | - |
+| 3. Gramática — contenido y schema | 0/2 | Planned | - |
 | 4. Gramática — sección y ejercicios en la app | 0/? | Planned | - |
 
 ### Phase 2: TTS por audio pre-generado en la skill
@@ -102,7 +102,9 @@ Plans:
   4. Tipos de contenido de la app regenerados desde el schema.
 
 **Requirements**: CONT-01, CONT-02, SKILL-02, SKILL-05 (reforzados — sin IDs nuevos)
-**Plans:** TBD (pendiente de `/gsd-plan-phase`)
+**Plans:** 2 plans en 2 waves
+- [ ] 03-01-PLAN.md — Schema (token.blank aditivo) + validate.mjs (invariantes en ejemplos de gramática) + structure.md (emitir tokens+blank) + regenerar tipos TS [Wave 1]
+- [ ] 03-02-PLAN.md — Backfill de la gramática de las 5 clases (tokens+blank por ejemplo) vía contrato de skill con revisión humana por clase [Wave 2]
 
 ### Phase 4: Gramática — sección y ejercicios en la app
 
