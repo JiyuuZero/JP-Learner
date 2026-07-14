@@ -4,14 +4,19 @@
 import { describe, expect, it } from 'vitest'
 import {
   checkWordBankOrder,
+  clozeGapText,
   flashcard,
+  grammarChoice,
+  grammarCloze,
+  grammarExerciseFor,
+  grammarReorder,
   matching,
   multipleChoice,
   pickDistractors,
   typing,
   wordBank,
 } from './generators'
-import type { Vocab } from '../content/content'
+import type { Grammar, Vocab } from '../content/content'
 
 // Self-contained fixture (formerly the 2026-04-14 sample class, since removed
 // from content/). Kept inline so exercise-generator tests never depend on
@@ -196,5 +201,128 @@ describe('matching (EXER-05)', () => {
   it('caps a larger input at 5 pairs', () => {
     const six = [...pool, tabemasu] // 6 entries
     expect(matching(six, 'JA_ES').pairs.length).toBeLessThanOrEqual(5)
+  })
+})
+
+// ---- Grammar exercises (Phase 4) --------------------------------------------
+const grammarPool: Grammar[] = [
+  {
+    id: '2026-07-13:grammar:wa-desu',
+    type: 'grammar',
+    pattern: '… は … です',
+    es: 'X es Y (frase afirmativa con la partícula は y です).',
+    examples: [
+      {
+        kanji: 'これはほんです。',
+        kana: 'これはほんです。',
+        romaji: 'kore wa hon desu.',
+        es: 'Esto es un libro.',
+        tokens: [
+          { surface: 'これ', reading: 'これ', isKanji: false },
+          { surface: 'は', reading: 'は', isKanji: false, blank: true },
+          { surface: 'ほん', reading: 'ほん', isKanji: false },
+          { surface: 'です', reading: 'です', isKanji: false },
+          { surface: '。', reading: '。', isKanji: false },
+        ],
+      },
+    ],
+    tags: ['2026-07-13'],
+  },
+  {
+    id: '2026-07-13:grammar:no-encadenado',
+    type: 'grammar',
+    pattern: 'A の B の C (encadenar の)',
+    es: 'La partícula の une sustantivos («de»); se encadena hasta 3.',
+    examples: [
+      {
+        kanji: 'わたしのにほんごのほんです。',
+        kana: 'わたしのにほんごのほんです。',
+        romaji: 'watashi no nihongo no hon desu.',
+        es: 'Es mi libro de japonés.',
+        tokens: [
+          { surface: 'わたし', reading: 'わたし', isKanji: false },
+          { surface: 'の', reading: 'の', isKanji: false, blank: true },
+          { surface: 'にほんご', reading: 'にほんご', isKanji: false },
+          { surface: 'の', reading: 'の', isKanji: false, blank: true },
+          { surface: 'ほん', reading: 'ほん', isKanji: false },
+          { surface: 'です', reading: 'です', isKanji: false },
+          { surface: '。', reading: '。', isKanji: false },
+        ],
+      },
+    ],
+    tags: ['2026-07-13'],
+  },
+  {
+    id: '2026-07-13:grammar:no-tokens',
+    type: 'grammar',
+    pattern: 'patrón sin tokens',
+    es: 'Un patrón cuyos ejemplos no llevan tokens (solo sirve para elección múltiple).',
+    examples: [{ kanji: 'テスト', kana: 'テスト', romaji: 'tesuto', es: 'test' }],
+    tags: ['2026-07-13'],
+  },
+]
+const waDesu = grammarPool[0]
+const noEnc = grammarPool[1]
+const noTokens = grammarPool[2]
+
+describe('grammarReorder (Phase 4)', () => {
+  it('chips reconstruct the authored sentence in order', () => {
+    const ex = grammarReorder(waDesu)!
+    expect(ex).not.toBeNull()
+    expect(ex.correctOrder.join('')).toBe('これはほんです。')
+    expect(ex.chips.filter((c) => !c.distractor).map((c) => c.surface).sort()).toEqual(
+      [...ex.correctOrder].sort(),
+    )
+    expect(checkWordBankOrder(ex.correctOrder, ex.correctOrder)).toBe(true)
+    expect(checkWordBankOrder([...ex.correctOrder].reverse(), ex.correctOrder)).toBe(false)
+  })
+
+  it('returns null when no example carries tokens', () => {
+    expect(grammarReorder(noTokens)).toBeNull()
+  })
+})
+
+describe('grammarCloze (Phase 4)', () => {
+  it('answer is the blank token; single-blank example', () => {
+    const ex = grammarCloze(waDesu)!
+    expect(ex.answer).toBe('は')
+    expect(ex.gapIndices).toEqual([1])
+    expect(ex.options).toContain('は')
+    expect(clozeGapText(ex)).toBe('これ＿＿ほんです。')
+  })
+
+  it('marks EVERY blank sharing the answer as a gap (both の)', () => {
+    const ex = grammarCloze(noEnc)!
+    expect(ex.answer).toBe('の')
+    expect(ex.gapIndices).toEqual([1, 3])
+    expect(clozeGapText(ex)).toBe('わたし＿＿にほんご＿＿ほんです。')
+  })
+
+  it('returns null when no example has a blank', () => {
+    expect(grammarCloze(noTokens)).toBeNull()
+  })
+})
+
+describe('grammarChoice (Phase 4)', () => {
+  it('includes the correct es and 3 distractors from other grammar', () => {
+    const ex = grammarChoice(waDesu, grammarPool)
+    expect(ex.correctId).toBe(waDesu.id)
+    expect(ex.options.map((o) => o.id)).toContain(waDesu.id)
+    expect(ex.options.length).toBeGreaterThanOrEqual(2)
+    expect(ex.options.length).toBeLessThanOrEqual(4)
+    expect(ex.options.find((o) => o.id === waDesu.id)!.es).toBe(waDesu.es)
+  })
+})
+
+describe('grammarExerciseFor (rotation + fallback)', () => {
+  it('honors the preferred kind when the data supports it', () => {
+    expect(grammarExerciseFor(waDesu, grammarPool, 'grammarReorder').kind).toBe('grammarReorder')
+    expect(grammarExerciseFor(waDesu, grammarPool, 'grammarCloze').kind).toBe('grammarCloze')
+    expect(grammarExerciseFor(waDesu, grammarPool, 'grammarChoice').kind).toBe('grammarChoice')
+  })
+
+  it('falls back to choice for an untokenized item, whatever the preference', () => {
+    expect(grammarExerciseFor(noTokens, grammarPool, 'grammarReorder').kind).toBe('grammarChoice')
+    expect(grammarExerciseFor(noTokens, grammarPool, 'grammarCloze').kind).toBe('grammarChoice')
   })
 })

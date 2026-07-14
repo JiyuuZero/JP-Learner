@@ -148,3 +148,107 @@ export function matching(items: Vocab[], direction: Direction): MatchingExercise
   const pairs = items.slice(0, 5).map((item): MatchingPair => ({ id: item.id, item }))
   return { kind: 'matching', direction, pairs, left: shuffle(pairs), right: shuffle(pairs) }
 }
+
+// ---- Grammar exercises (Phase 4) --------------------------------------------
+// Grammar is practised with its OWN exercises (never as a vocab flashcard).
+// All chips/blanks come from the AUTHORED grammar example tokens[] (Phase 3);
+// the app never splits Japanese itself. A grammar Grammar has: pattern, es,
+// examples[] (each Sentence may carry tokens[], some tokens marked blank:true).
+
+export type GrammarExerciseKind = 'grammarReorder' | 'grammarCloze' | 'grammarChoice'
+
+// Common single-mora particles — the cloze distractor pool when the blank is a particle.
+const PARTICLE_POOL = ['は', 'が', 'を', 'の', 'に', 'へ', 'で', 'と', 'か', 'も', 'ね', 'よ']
+
+const firstTokenized = (g: Grammar): Sentence | undefined =>
+  g.examples.find((ex) => ex.tokens && ex.tokens.length > 1)
+const firstWithBlank = (g: Grammar): Sentence | undefined =>
+  g.examples.find((ex) => ex.tokens?.some((t) => t.blank))
+
+// -- Reorder the sentence (word-bank over a grammar example) --
+export interface GrammarReorderExercise {
+  kind: 'grammarReorder'
+  item: Grammar
+  sentence: Sentence
+  correctOrder: string[]
+  chips: WordBankChip[]
+}
+export function grammarReorder(item: Grammar): GrammarReorderExercise | null {
+  const sentence = firstTokenized(item)
+  if (!sentence?.tokens) return null
+  const correctOrder = sentence.tokens.map((t) => t.surface)
+  const chips = shuffle(
+    correctOrder.map((surface, i): WordBankChip => ({ id: `c${i}`, surface, distractor: false })),
+  )
+  return { kind: 'grammarReorder', item, sentence, correctOrder, chips }
+}
+
+// -- Cloze: fill the blank particle/form (uses the Phase 3 blank marker) --
+export interface GrammarClozeExercise {
+  kind: 'grammarCloze'
+  item: Grammar
+  sentence: Sentence
+  answer: string // the blank token surface
+  options: string[] // shuffled, includes answer
+  gapIndices: number[] // token indices rendered as gaps (all blanks sharing `answer`)
+}
+export function grammarCloze(item: Grammar): GrammarClozeExercise | null {
+  const sentence = firstWithBlank(item)
+  const tokens = sentence?.tokens
+  if (!sentence || !tokens) return null
+  const firstBlank = tokens.findIndex((t) => t.blank)
+  if (firstBlank < 0) return null
+  const answer = tokens[firstBlank].surface
+  const gapIndices = tokens
+    .map((t, i) => (t.blank && t.surface === answer ? i : -1))
+    .filter((i) => i >= 0)
+  const others = tokens.filter((t) => !t.blank).map((t) => t.surface)
+  const pool = [...new Set([...PARTICLE_POOL, ...others])].filter((s) => s !== answer)
+  const options = shuffle([answer, ...shuffle(pool).slice(0, 3)])
+  return { kind: 'grammarCloze', item, sentence, answer, options, gapIndices }
+}
+
+// Render the example with the gap positions blanked (for the cloze prompt).
+export function clozeGapText(ex: GrammarClozeExercise): string {
+  const tokens = ex.sentence.tokens ?? []
+  const gaps = new Set(ex.gapIndices)
+  return tokens.map((t, i) => (gaps.has(i) ? '＿＿' : t.surface)).join('')
+}
+
+// -- Multiple choice: "¿qué expresa este patrón?" (es distractors) --
+export interface GrammarChoiceOption {
+  id: string
+  es: string
+}
+export interface GrammarChoiceExercise {
+  kind: 'grammarChoice'
+  item: Grammar
+  options: GrammarChoiceOption[] // shuffled, includes the correct es
+  correctId: string
+}
+export function grammarChoice(item: Grammar, pool: Grammar[]): GrammarChoiceExercise {
+  const distractors = shuffle(pool.filter((g) => g.id !== item.id && g.es !== item.es)).slice(0, 3)
+  const options = shuffle([
+    { id: item.id, es: item.es },
+    ...distractors.map((g): GrammarChoiceOption => ({ id: g.id, es: g.es })),
+  ])
+  return { kind: 'grammarChoice', item, options, correctId: item.id }
+}
+
+export type GrammarExercise = GrammarReorderExercise | GrammarClozeExercise | GrammarChoiceExercise
+
+// Build a grammar exercise for `item`, honoring a preferred kind and falling
+// back through the others when the authored data can't support it. `grammarChoice`
+// is always available, so this never returns null. Wave-2 Session rotates
+// `preferred` so reorder / cloze / choice all surface.
+export const GRAMMAR_ROTATION: GrammarExerciseKind[] = ['grammarReorder', 'grammarCloze', 'grammarChoice']
+
+export function grammarExerciseFor(
+  item: Grammar,
+  pool: Grammar[],
+  preferred: GrammarExerciseKind = 'grammarReorder',
+): GrammarExercise {
+  if (preferred === 'grammarCloze') return grammarCloze(item) ?? grammarReorder(item) ?? grammarChoice(item, pool)
+  if (preferred === 'grammarChoice') return grammarChoice(item, pool)
+  return grammarReorder(item) ?? grammarCloze(item) ?? grammarChoice(item, pool)
+}
