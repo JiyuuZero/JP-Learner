@@ -103,6 +103,41 @@ ALWAYS prefer this fallback over guessing per-kanji readings. Never wrong readin
 - `grammar`: one item per pattern taught — `pattern` (e.g. "Verbo + ます"), `es`
   (the teacher's explanation in Spanish), `examples` (≥1 sentence objects with
   `kanji`/`kana`/`romaji`/`es`, from class where possible).
+  - **Grammar example `tokens[]` (for practice exercises) — emit them.** Split EACH
+    grammar example into WORD / bunsetsu-level tokens (the chips the learner will
+    reorder), NOT per-kanji. Same renderability invariants as vocab (checked by
+    validate.mjs): concat of `surface` === the example `kanji`; concat of `reading`
+    === the example `kana`; any `isKanji:true` token carries its `kanji[]`. Kana-only
+    chunks (particles, okurigana, kana words) are `isKanji:false` with
+    `surface === reading`.
+  - **Mark the taught token with `"blank": true`.** On each grammar example, set
+    `blank: true` on the ONE token the pattern is teaching — the particle (は・を・の・が
+    …) or the verb form — so the app can build a fill-in-the-blank (cloze) exercise
+    with it as the answer. Usually exactly one token; mark more only if the pattern
+    genuinely teaches several. If a sentence teaches no single focal token, emit
+    tokens without any `blank` (reorder still works).
+  - Fallback: if word-splitting a sentence with certainty is not possible, emit a
+    single whole-sentence token (`isKanji` per its content, whole reading) — never
+    guess readings. Example `tokens[]` remain OPTIONAL, but SHOULD be emitted.
+
+  **Worked example** — pattern «… は … です», example これはほんです。 ("esto es un libro"),
+  teaching the topic particle は:
+
+  ```json
+  "examples": [{
+    "kanji": "これはほんです。", "kana": "これはほんです。",
+    "romaji": "kore wa hon desu.", "es": "Esto es un libro.",
+    "tokens": [
+      { "surface": "これ", "reading": "これ", "isKanji": false },
+      { "surface": "は",   "reading": "は",   "isKanji": false, "blank": true },
+      { "surface": "ほん", "reading": "ほん", "isKanji": false },
+      { "surface": "です", "reading": "です", "isKanji": false },
+      { "surface": "。",   "reading": "。",   "isKanji": false }
+    ]
+  }]
+  ```
+
+  Surfaces concat to これはほんです。 ✓, readings likewise ✓, は marked as the cloze answer ✓.
 - `kanji`: one item per kanji explicitly presented in class — `char` (the single
   character), `readings` (`on`/`kun` arrays as given), `es` meaning, `seenIn` (IDs of the
   vocab items where it appears).

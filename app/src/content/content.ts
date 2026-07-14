@@ -38,6 +38,7 @@ export interface Token {
   reading: string;
   isKanji: boolean;
   kanji?: string[];
+  blank?: boolean;
 }
 export interface Sentence {
   kanji: string;

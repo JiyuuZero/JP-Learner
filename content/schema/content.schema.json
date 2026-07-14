@@ -24,7 +24,8 @@
         "surface": { "type": "string", "minLength": 1 },
         "reading": { "type": "string", "minLength": 1 },
         "isKanji": { "type": "boolean" },
-        "kanji":   { "type": "array", "items": { "type": "string", "minLength": 1, "maxLength": 1 } }
+        "kanji":   { "type": "array", "items": { "type": "string", "minLength": 1, "maxLength": 1 } },
+        "blank":   { "type": "boolean" }
       }
     },
     "sentence": {
