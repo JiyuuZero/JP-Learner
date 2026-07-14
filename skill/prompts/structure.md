@@ -47,7 +47,14 @@ authority; their past feedback overrides your defaults.
 - `schemaVersion`: 1 (const).
 - `classId`: the class date `YYYY-MM-DD` (append `-2`, `-3`… only if two classes share a day).
 - `date`: same date, ISO `YYYY-MM-DD`.
-- `label`: short Spanish label for the class (e.g. "Clase 3 — partículas は y を").
+- `label`: SHORT Spanish label, in one of exactly two forms:
+  - **Duolingo self-study class** → the label is exactly `Duolingo` (nothing else).
+  - **In-person class** → `Clase N: <tema>`, where `N` is the sequential number of
+    the in-person class (ordered by date; Duolingo classes do NOT count toward N —
+    look at `content/index.json` to find the next number) and `<tema>` is the topic
+    in **at most 4 words**. E.g. `Clase 4: partes de la casa`.
+  Do NOT pack the whole syllabus into the label — keep it terse; the glossary/grammar
+  lists rely on short labels.
 
 ## 4. Vocab items — fields and tokens[]
 

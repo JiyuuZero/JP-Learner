@@ -34,6 +34,26 @@ class and is the authority; every item here is a mistake already made once.
   create.
   _Trigger (2026-07-08): "No has eliminado los datos de prueba que añadiste."_
 
+- **Class labels must be SHORT, in exactly two forms.** Duolingo self-study →
+  label is exactly `Duolingo` (nothing more). In-person class → `Clase N: <tema>`
+  where N is the sequential in-person-class number (by date; Duolingo doesn't
+  count — check `content/index.json` for the next N) and `<tema>` is ≤ 4 words.
+  Never dump the whole syllabus into the label. Applies going forward AND the
+  existing classes were relabelled to match.
+  _Trigger (2026-07-14): "acorta mucho más los nombres… Duolingo solo Duolingo;
+  para las clases Clase N: tema en máximo 4 palabras."_ See [[jp-class-labels]].
+
+- **The user is the LEARNER — never ask them Japanese-grammar / pedagogy
+  decisions; research and decide yourself.** Do NOT ask things like "which token
+  is the cloze blank", "how should this be tokenized", "which reading is right".
+  When unsure about grammar or how best to teach something, do a web search to
+  find the correct/standard approach and decide. The mandatory human review is
+  for COVERAGE and what-was-actually-taught-in-class (readings/translations that
+  the user heard), NOT for resolving grammar you should know or look up.
+  _Trigger (2026-07-14): asked the user which の to mark as the cloze answer and
+  to approve a tokenization convention. User: "yo soy el que aprende… si tienes
+  dudas de gramática haz una búsqueda en internet."_ See [[jp-user-is-learner]].
+
 - **Process ONLY the new class; use committed content as reference, never
   reprocess the old.** The user hands me only the NEW audio each session;
   `audio-src/` merely CACHES all past audio. Do NOT treat cached transcripts as
