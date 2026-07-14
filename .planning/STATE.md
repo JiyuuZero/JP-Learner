@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-07-06)
 Phase: 02
 Plan: Not started
 Status: Executing Phase 02
-Last activity: 2026-07-07
+Last activity: 2026-07-14 — Quick task 260714-dmb (clase.py scoping fix)
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -98,6 +98,7 @@ Items acknowledged and carried forward from previous milestone close:
 | Date | Task | Directory | Commits |
 |------|------|-----------|---------|
 | 2026-07-07 | clase.py launcher (CLI drag & drop + GUI tkinter + Procesar Clase.app) | .planning/quick/260707-hnz-crear-clase-py-launcher-para-procesar-cl/ | 77708f1, b70f3c1, e7e707a, eefefb2, 0e660d8 |
+| 2026-07-14 | Scope clase.py structuring prompt + re-ingest warning to the current run's files | .planning/quick/260714-dmb-fix-clase-py-scope-prompt-reingest-warni/ | ec24513 |
 
 ## Session Continuity
 
