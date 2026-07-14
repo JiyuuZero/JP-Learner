@@ -25,17 +25,14 @@ export default function ClassSort({
   const label = dir === 'asc' ? 'Antiguas primero' : 'Nuevas primero'
   const Icon = dir === 'asc' ? ArrowUpNarrowWide : ArrowDownWideNarrow
   return (
-    <div className="flex justify-end">
-      <button
-        type="button"
-        onClick={() => onChange(dir === 'asc' ? 'desc' : 'asc')}
-        aria-label={`Ordenar clases por fecha: ${label}. Toca para cambiar.`}
-        title={label}
-        className="flex min-h-9 items-center gap-1.5 rounded-full bg-white px-3 text-[13px] font-bold text-ink shadow-card transition active:scale-[0.97]"
-      >
-        <Icon size={16} strokeWidth={2} aria-hidden="true" />
-        {label}
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={() => onChange(dir === 'asc' ? 'desc' : 'asc')}
+      aria-label={`Ordenar clases por fecha: ${label}. Toca para cambiar.`}
+      title={label}
+      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-ink shadow-card transition active:scale-[0.95]"
+    >
+      <Icon size={20} strokeWidth={2} aria-hidden="true" />
+    </button>
   )
 }

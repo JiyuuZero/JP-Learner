@@ -128,7 +128,7 @@ export default function Gramatica() {
             <Button onClick={() => void navigate(GRAMMAR_SESSION)}>Practicar toda la gramática</Button>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 flex justify-end">
             <ClassSort dir={sortDir} onChange={setSortDir} />
           </div>
 

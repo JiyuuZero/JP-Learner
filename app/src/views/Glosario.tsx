@@ -266,13 +266,10 @@ export default function Glosario() {
                 {t.label}
               </button>
             ))}
+            {view === 'clase' && <ClassSort dir={sortDir} onChange={setSortDir} />}
           </div>
 
           {view === 'clase' ? (
-            <>
-            <div className="mt-4">
-              <ClassSort dir={sortDir} onChange={setSortDir} />
-            </div>
             <div className="mt-6 flex flex-col gap-8">
               {orderClasses(store?.classes ?? [], sortDir).map((c) => {
                 const bucket = store?.byClass.get(c.id)
@@ -336,7 +333,6 @@ export default function Glosario() {
                 )
               })}
             </div>
-            </>
           ) : (
             <div className="mt-6 flex flex-col gap-8">
               <section>
