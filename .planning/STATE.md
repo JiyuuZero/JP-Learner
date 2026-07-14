@@ -7,11 +7,11 @@ stopped_at: Phase 1 UI-SPEC approved
 last_updated: "2026-07-07T10:14:03.415Z"
 last_activity: 2026-07-07
 progress:
-  total_phases: 2
+  total_phases: 4
   completed_phases: 2
   total_plans: 9
   completed_plans: 9
-  percent: 100
+  percent: 50
 ---
 
 # Project State
@@ -21,7 +21,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-06)
 
 **Core value:** Practicar de forma efectiva (repetición espaciada + recuerdo activo) exactamente el contenido dado en clase, con la mínima fricción para expandirlo clase a clase.
-**Current focus:** Phase 02 — tts-por-audio-pre-generado-en-la-skill
+**Current focus:** Phase 03 — Gramática: contenido y schema (rediseño de gramática, parte 1/2)
 
 ## Current Position
 

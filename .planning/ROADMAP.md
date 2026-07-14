@@ -12,7 +12,10 @@ JP-Learner ships as a **single comprehensive implementation phase** (hard constr
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: JP-Learner v1 (complete PWA + content skill)** - Ship the full offline PWA (schema, persistence/SRS, 3 display modes, 5 exercises, TTS, gamification, GitHub Pages) plus the local-Whisper Claude content skill, in one pass.
+- [x] **Phase 1: JP-Learner v1 (complete PWA + content skill)** - Ship the full offline PWA (schema, persistence/SRS, 3 display modes, 5 exercises, TTS, gamification, GitHub Pages) plus the local-Whisper Claude content skill, in one pass.
+- [x] **Phase 2: TTS por audio pre-generado en la skill** - La skill genera audio japonés local por ítem; la app lo reproduce offline con Web Speech de fallback; contrato de skill extendido a entrada flexible.
+- [ ] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
+- [ ] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
 
 ## Phase Details
 
@@ -70,7 +73,10 @@ Single phase — Phase 1 only.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. JP-Learner v1 (complete PWA + content skill) | 0/6 | Planned | - |
+| 1. JP-Learner v1 (complete PWA + content skill) | 6/6 | Complete | 2026-07-07 |
+| 2. TTS por audio pre-generado en la skill | 3/3 | Complete | 2026-07-07 |
+| 3. Gramática — contenido y schema | 0/? | Planned | - |
+| 4. Gramática — sección y ejercicios en la app | 0/? | Planned | - |
 
 ### Phase 2: TTS por audio pre-generado en la skill
 
@@ -83,3 +89,35 @@ Plans:
 - [x] 02-01-PLAN.md — Skill: generate-audio.mjs (say -v Kyoko → ffmpeg M4A), manifiesto sidecar, commit con pathspec de audio, audio de la clase 2026-04-14, contrato 6 pasos + entrada flexible (multi-audio/texto) [Wave 1]
 - [x] 02-02-PLAN.md — App: cadena de fallback audio → Web Speech → oculto (audio.ts + tests, TtsContext con manifiesto en boot, SpeakerButton audioKey, callsites Flashcard/Glosario, Perfil combinado) [Wave 2]
 - [x] 02-03-PLAN.md — Build/cache: sync-content copia audio, CacheFirst .m4a antes de NetworkFirst /content/, build verificado + checkpoint humano de reproducción [Wave 3]
+
+### Phase 3: Gramática — contenido y schema
+
+**Goal:** Habilitar ejercicios ricos de gramática haciendo que las frases de EJEMPLO de gramática lleven los datos que la app necesita, SIN romper el contrato de contenido congelado para los consumidores existentes. (a) Añadir UN campo aditivo y opcional al schema para que un ejemplo de gramática marque qué token(s) son la respuesta/hueco (ejercicios "cloze" de rellenar la partícula/forma) — el tipo `Sentence` YA admite `tokens[]` opcionales, así que reordenar-la-frase a nivel palabra NO requiere cambio de schema, solo emisión; (b) actualizar `skill/prompts/structure.md` para que el paso de estructuración emita `tokens[]` a nivel palabra en los ejemplos de gramática más el nuevo marcador de foco; (c) actualizar `skill/validate.mjs` para validar el nuevo campo y (como hoy) los invariantes de renderizabilidad de tokens en los ejemplos de gramática; (d) rehacer la gramática de las 5 clases ya commiteadas (2026-07-03, 2026-07-06, 2026-07-08, 2026-07-10, 2026-07-13) para que sus ejemplos lleven tokens+foco — cada re-emisión pasa por el contrato de la skill (validar → revisión humana obligatoria → commit-class.mjs → regenerar audio si hace falta). Regenerar los tipos TS de la app (derivados del schema).
+**Depends on:** Phase 2
+
+**Success Criteria** (what must be TRUE):
+  1. El cambio de schema es aditivo/retrocompatible: las clases existentes siguen validando sin cambios.
+  2. `structure.md` + `validate.mjs` emiten/exigen `tokens[]` + foco en los ejemplos de gramática.
+  3. Las 5 clases anteriores re-emitidas con tokens+foco en su gramática, validadas y commiteadas con IDs deterministas idénticos (SRS preservado).
+  4. Tipos de contenido de la app regenerados desde el schema.
+
+**Requirements**: CONT-01, CONT-02, SKILL-02, SKILL-05 (reforzados — sin IDs nuevos)
+**Plans:** TBD (pendiente de `/gsd-plan-phase`)
+
+### Phase 4: Gramática — sección y ejercicios en la app
+
+**Goal:** Dar a la gramática su propio lugar en la app y dejar de mostrarla como una tarjeta de vocabulario. (a) Nueva sección/pestaña "Gramática" (overlay de detalle: patrón + TODOS los ejemplos con furigana/audio + botón practicar); (b) generadores de ejercicios propios de gramática — reordenar-la-frase (word-bank desde los `tokens[]` del ejemplo) y rellenar-la-partícula/forma (cloze usando el marcador de foco de la Phase 3), más opción múltiple "¿qué expresa?" y emparejar ejemplo↔ES como calentamiento/fallback; quitar el atajo de `Session.tsx resolveKind` que fuerza la gramática a flashcard, y mantener la gramática en sesiones mixtas renderizada como ejercicios de gramática; (c) tarjetas "¿Sabías que?" — nuevo paso de sesión NO puntuable y auto-avanzable, mostrado cada ~4 ejercicios, con patrones de gramática Y las notas culturales (las notas hoy no se muestran nunca en práctica).
+**Depends on:** Phase 3
+
+**Success Criteria** (what must be TRUE):
+  1. La gramática tiene una sección dedicada con detalle tocable.
+  2. La gramática NUNCA se renderiza como flashcard de vocabulario.
+  3. Los ejercicios de gramática reordenar + cloze + MC + emparejar funcionan y alimentan el FSRS compartido.
+  4. Las tarjetas "¿Sabías que?" aparecen cada ~4 ejercicios mostrando gramática+notas y NO puntúan.
+
+**Requirements**: EXER-01, EXER-02, EXER-03, EXER-04, EXER-05, EXER-06, DISP-01, GAM-01 (reforzados — sin IDs nuevos)
+**Plans:** TBD (pendiente de `/gsd-plan-phase`)
+
+**Phase notes (grammar redesign — user-approved decomposition 2026-07-13/14):**
+- Decisiones de diseño y refs de arquitectura de la app en `skill/LEARNINGS.md` ("App / tooling feedback (open)" → gramática; "Design DECIDED with user 2026-07-13").
+- Phase 3 es prerequisito de Phase 4: los ejercicios ricos (reordenar/cloze) necesitan los `tokens`+foco que emite la Phase 3.
