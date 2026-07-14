@@ -22,8 +22,11 @@ hace chdir a su propio directorio, así que funciona desde cualquier cwd).
 """
 
 import argparse
+import calendar
 import datetime
 import filecmp
+import hashlib
+import json
 import os
 import re
 import shlex
@@ -182,23 +185,55 @@ def clasificar_rutas(rutas):
     return ficheros, errores
 
 
-def copiar_a_audio_src(ficheros):
-    """Copia los ficheros a audio-src/ y devuelve los destinos realmente copiados.
+def _hash_audio(p):
+    """sha256 del contenido de un fichero (para detectar el mismo audio dos veces)."""
+    h = hashlib.sha256()
+    with open(p, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
-    Mismo nombre con contenido idéntico -> se omite en silencio; con contenido
-    distinto -> se desambigua con sufijo numérico.
+
+def _audios_en_audio_src():
+    """Audios fuente ya presentes en audio-src/ (excluye intermedios .wav de ffmpeg)."""
+    for f in sorted(AUDIO_SRC.iterdir()):
+        if not f.is_file() or f.suffix.lower() not in AUDIO_EXTS:
+            continue
+        if f.suffix.lower() == ".wav" and Path(f.stem).suffix.lower() in AUDIO_EXTS:
+            continue  # intermedio de transcribe.sh (clase.m4a.wav)
+        yield f
+
+
+def copiar_a_audio_src(ficheros):
+    """Copia los ficheros a audio-src/; devuelve (copiados, duplicados).
+
+    - Mismo nombre con contenido idéntico -> se omite en silencio.
+    - Mismo CONTENIDO que un audio ya presente (aunque tenga otro nombre, p. ej.
+      el mismo audio arrastrado dos veces) -> se omite y se anota en `duplicados`
+      como (nombre_arrastrado, nombre_ya_presente).
+    - Mismo nombre con contenido distinto -> se desambigua con sufijo numérico.
     """
     AUDIO_SRC.mkdir(exist_ok=True)
-    copiados = []
+    # Huella de los audios ya presentes para cazar el mismo audio re-arrastrado.
+    vistos = {_hash_audio(f): f.name for f in _audios_en_audio_src()}
+    copiados, duplicados = [], []
     for p in ficheros:
+        es_audio = p.suffix.lower() in AUDIO_EXTS
+        if es_audio:
+            digest = _hash_audio(p)
+            if digest in vistos:
+                duplicados.append((p.name, vistos[digest]))
+                continue  # contenido idéntico a uno ya presente — omitir
         destino = AUDIO_SRC / p.name
         if destino.exists():
             if filecmp.cmp(p, destino, shallow=False):
-                continue  # contenido idéntico — omitir en silencio
+                continue  # contenido idéntico bajo el mismo nombre — omitir
             destino = _destino_libre(p.name)
         shutil.copy2(p, destino)
         copiados.append(destino)
-    return copiados
+        if es_audio:
+            vistos[digest] = destino.name
+    return copiados, duplicados
 
 
 def intake(rutas):
@@ -213,8 +248,12 @@ def intake(rutas):
         for e in errores:
             print(f"  ✗ {e}")
         sys.exit(1)
-    for destino in copiar_a_audio_src(ficheros):
+    copiados, duplicados = copiar_a_audio_src(ficheros)
+    for nombre, presente in duplicados:
+        print(f"  = {nombre} (idéntico a {presente} ya presente — omitido)")
+    for destino in copiados:
         print(f"  + {destino}")
+    return copiados
 
 
 def discover():
@@ -243,6 +282,126 @@ def discover():
         if f.is_file() and f.suffix.lower() in NOTE_EXTS
     )
     return pending, transcripts, note_files
+
+
+FECHA_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def _fechas_en_nombres(nombres):
+    """Fechas ISO válidas embebidas en una lista de nombres de fichero."""
+    fechas = set()
+    for n in nombres:
+        for m in FECHA_RE.findall(n):
+            try:
+                datetime.date.fromisoformat(m)
+            except ValueError:
+                continue  # dígitos con forma de fecha pero no una fecha real
+            fechas.add(m)
+    return fechas
+
+
+def _clases_commiteadas():
+    """classIds ya presentes en content/index.json (vacío si no existe/ilegible)."""
+    idx = Path("content/index.json")
+    if not idx.exists():
+        return set()
+    try:
+        data = json.loads(idx.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return set()
+    return {c.get("id") for c in data.get("classes", []) if c.get("id")}
+
+
+def _fecha_en_nombre(nombre):
+    """Primera fecha ISO válida embebida en un nombre de fichero, o None."""
+    for m in FECHA_RE.findall(nombre):
+        try:
+            datetime.date.fromisoformat(m)
+        except ValueError:
+            continue
+        return m
+    return None
+
+
+def fuentes_de_ejecucion(copiados, pending):
+    """Ficheros de la clase que se procesa AHORA — NO toda la caché de audio-src/.
+
+    El usuario solo aporta la clase NUEVA cada vez; `audio-src/` acumula las
+    anteriores como caché. Devuelve (audios_run, notas_run):
+
+    - audios_run: audios aportados en esta invocación (`copiados`) más los que
+      siguen SIN transcript (`pending`, = los nuevos de esta ejecución). Excluye
+      los intermedios .wav de transcribe.sh.
+    - notas_run: notas (.txt/.md) aportadas en esta invocación.
+
+    Los transcripts se derivan por nombre con `transcripts_de` tras transcribir.
+    """
+    audios, vistos = [], set()
+    for f in list(copiados) + list(pending):
+        s = f.suffix.lower()
+        if s not in AUDIO_EXTS or f.name in vistos:
+            continue
+        if s == ".wav" and Path(f.stem).suffix.lower() in AUDIO_EXTS:
+            continue  # intermedio ffmpeg (clase.m4a.wav)
+        audios.append(f)
+        vistos.add(f.name)
+    notas = [f for f in copiados if f.suffix.lower() in NOTE_EXTS]
+    return audios, notas
+
+
+def transcripts_de(audios):
+    """Transcripts .json de una lista de audios (convención skill: <audio>.json)."""
+    out = []
+    for a in audios:
+        t = AUDIO_SRC / (a.name + ".json")
+        if t.exists():
+            out.append(t)
+    return sorted(out)
+
+
+def transcripts_para_prompt(audios_run, notas_run, transcripts_all, note_files_all, fecha):
+    """(transcripts, notas) que alimentan la clase — SIN volcar toda la caché.
+
+    - Preferente: lo aportado en ESTA ejecución (audios/notas nuevos).
+    - Fallback (no se aportó nada nuevo — p. ej. re-lanzar Claude sobre una clase
+      ya transcrita): los transcripts/notas cuya fecha embebida en el nombre
+      coincide con `fecha`. Nunca devuelve todos los transcripts cacheados.
+    """
+    ts = transcripts_de(audios_run)
+    notas = list(notas_run)
+    if not ts and not notas:
+        ts = sorted(t for t in transcripts_all if _fecha_en_nombre(t.name) == fecha)
+        notas = sorted(n for n in note_files_all if _fecha_en_nombre(n.name) == fecha)
+    return sorted(ts), sorted(notas)
+
+
+def avisos_reingesta(fuentes, fecha):
+    """Avisos deterministas de posible re-procesado — sin efectos, solo texto.
+
+    `fuentes` = nombres de los ficheros AÑADIDOS EN ESTA EJECUCIÓN (audios/notas),
+    NO la caché entera. Cruza las fechas embebidas en esos nombres con las clases
+    ya commiteadas para cazar, ANTES de transcribir, el error de arrastrar audio
+    de una clase anterior (los ficheros de clase se llaman p. ej. 2026-07-08_...):
+
+    - un fichero fechado como una clase YA procesada, pero distinta a la de hoy
+      -> probablemente audio antiguo re-arrastrado;
+    - la fecha de hoy ya existe como clase -> re-procesarla la reemplaza.
+    """
+    avisos = []
+    commit = _clases_commiteadas()
+    fechas = _fechas_en_nombres(fuentes)
+    for d in sorted(d for d in fechas if d != fecha and d in commit):
+        avisos.append(
+            f"Hay ficheros fechados {d} y ya tienes una clase «{d}» procesada. "
+            f"¿Seguro que no estás reusando audio de una clase anterior? "
+            f"(esta clase es {fecha})"
+        )
+    if fecha in commit:
+        avisos.append(
+            f"Ya existe una clase «{fecha}»: procesarla otra vez la REEMPLAZA "
+            f"(mismos IDs — conserva tu progreso SRS)."
+        )
+    return avisos
 
 
 def transcribe_pending(pending):
@@ -575,16 +734,122 @@ def run_gui(args):
     )
     apuntes.pack(fill="x")
 
-    # d. Fecha + modelo
+    # d. Fecha (calendario emergente) + modelo
     fila = tk.Frame(body, bg=BG)
     fila.pack(fill="x", pady=14)
     tk.Label(fila, text="Fecha", bg=BG, fg=INK, font=(base_font, 12)).pack(side="left")
     fecha_var = tk.StringVar(value=args.fecha)
-    tk.Entry(
-        fila, textvariable=fecha_var, width=12, bg=CARD, fg=INK, relief="flat",
+
+    def _fecha_actual():
+        """La fecha elegida como date (hoy si el texto guardado no es ISO válido)."""
+        try:
+            return datetime.date.fromisoformat(fecha_var.get().strip())
+        except ValueError:
+            return datetime.date.today()
+
+    # El "campo" de fecha es una etiqueta clicable que abre el calendario
+    # (en macOS los tk.Button ignoran los colores del tema aqua; las Label no).
+    campo_fecha = tk.Label(
+        fila, textvariable=fecha_var, width=12, bg=CARD, fg=INK, anchor="w",
+        padx=8, font=(base_font, 12), cursor="hand2",
         highlightthickness=1, highlightbackground=BORDER, highlightcolor=ACCENT,
-        insertbackground=INK, font=(base_font, 12),
-    ).pack(side="left", padx=(8, 20), ipady=3)
+    )
+    campo_fecha.pack(side="left", padx=(8, 6), ipady=4)
+    icono_cal = tk.Label(
+        fila, text="📅", bg=BG, fg=ACCENT, font=(base_font, 14), cursor="hand2",
+    )
+    icono_cal.pack(side="left", padx=(0, 20))
+
+    MESES = [
+        "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+        "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+    ]
+    DIAS = ["L", "M", "X", "J", "V", "S", "D"]
+
+    def abrir_calendario(_evt=None):
+        pop = tk.Toplevel(root)
+        pop.title("Elegir fecha")
+        pop.configure(bg=CARD)
+        pop.transient(root)
+        pop.resizable(False, False)
+        pop.geometry(
+            f"+{campo_fecha.winfo_rootx()}"
+            f"+{campo_fecha.winfo_rooty() + campo_fecha.winfo_height() + 4}"
+        )
+        estado = {"ver": _fecha_actual().replace(day=1)}  # primer día del mes visible
+
+        cab = tk.Frame(pop, bg=ACCENT)
+        cab.pack(fill="x")
+        lbl_mes = tk.Label(cab, bg=ACCENT, fg="white", font=(base_font, 12, "bold"))
+        rejilla = tk.Frame(pop, bg=CARD)
+        rejilla.pack(padx=8, pady=8)
+
+        def elegir(d):
+            fecha_var.set(d.isoformat())
+            pop.destroy()
+
+        def mover(delta):
+            ver = estado["ver"]
+            m = ver.month - 1 + delta
+            estado["ver"] = datetime.date(ver.year + m // 12, m % 12 + 1, 1)
+            redibujar()
+
+        def redibujar():
+            for w in rejilla.winfo_children():
+                w.destroy()
+            ver = estado["ver"]
+            lbl_mes.config(text=f"{MESES[ver.month - 1]} {ver.year}")
+            for i, d in enumerate(DIAS):
+                tk.Label(
+                    rejilla, text=d, bg=CARD, fg=MUTED, width=3,
+                    font=(base_font, 10, "bold"),
+                ).grid(row=0, column=i, pady=(0, 2))
+            hoy = datetime.date.today()
+            sel = _fecha_actual()
+            semanas = calendar.Calendar(firstweekday=0).monthdatescalendar(
+                ver.year, ver.month
+            )
+            for r, semana in enumerate(semanas, start=1):
+                for c, dia in enumerate(semana):
+                    if dia == sel:
+                        bg, fg = ACCENT, "white"
+                    elif dia == hoy:
+                        bg, fg = "#E5E7FB", ACCENT
+                    else:
+                        bg = CARD
+                        fg = "#B9BAE6" if dia.month != ver.month else INK
+                    cel = tk.Label(
+                        rejilla, text=str(dia.day), width=3, bg=bg, fg=fg,
+                        font=(base_font, 11), cursor="hand2", padx=2, pady=2,
+                    )
+                    cel.grid(row=r, column=c, padx=1, pady=1)
+                    cel.bind("<Button-1>", lambda e, d=dia: elegir(d))
+
+        flecha = dict(
+            bg=ACCENT, fg="white", font=(base_font, 15, "bold"), cursor="hand2"
+        )
+        izq = tk.Label(cab, text="‹", **flecha)
+        izq.pack(side="left", padx=(10, 0), pady=6)
+        izq.bind("<Button-1>", lambda e: mover(-1))
+        lbl_mes.pack(side="left", expand=True, pady=6)
+        der = tk.Label(cab, text="›", **flecha)
+        der.pack(side="right", padx=(0, 10), pady=6)
+        der.bind("<Button-1>", lambda e: mover(1))
+
+        pie = tk.Label(
+            pop, text="Hoy", bg=CARD, fg=ACCENT, font=(base_font, 11, "bold"),
+            cursor="hand2",
+        )
+        pie.pack(pady=(0, 8))
+        pie.bind("<Button-1>", lambda e: elegir(datetime.date.today()))
+
+        redibujar()
+        pop.bind("<Escape>", lambda e: pop.destroy())
+        pop.focus_set()
+
+    campo_fecha.bind("<Button-1>", abrir_calendario)
+    icono_cal.bind("<Button-1>", abrir_calendario)
+
     tk.Label(fila, text="Modelo", bg=BG, fg=INK, font=(base_font, 12)).pack(side="left")
     modelo_var = tk.StringVar(value=args.modelo if args.modelo in MODELOS_GUI else "opus")
     ttk.Combobox(
@@ -620,6 +885,23 @@ def run_gui(args):
     def habilitar_boton():
         root.after(0, lambda: boton.config(state="normal"))
 
+    def preguntar_si_no(titulo, mensaje):
+        """askyesno desde el hilo de trabajo: pregunta en el hilo de UI y espera.
+
+        tkinter no es thread-safe, así que el diálogo se crea con root.after y el
+        hilo de procesado se bloquea en el Event hasta que el usuario responde.
+        """
+        caja = {}
+        listo = threading.Event()
+
+        def _preguntar():
+            caja["v"] = messagebox.askyesno(titulo, mensaje)
+            listo.set()
+
+        root.after(0, _preguntar)
+        listo.wait()
+        return caja.get("v", False)
+
     def procesar_en_hilo(datos):
         try:
             fallos = preflight_fallos()
@@ -631,14 +913,34 @@ def run_gui(args):
             if errores:
                 error_ui("Ficheros no válidos", "\n".join(errores))
                 return
+            copiados = []  # ficheros aportados en ESTA ejecución (ancla del alcance)
             if ficheros:
                 log_linea(f"Copiando {len(ficheros)} fichero(s) a audio-src/…")
-                for destino in copiar_a_audio_src(ficheros):
+                copiados, duplicados = copiar_a_audio_src(ficheros)
+                for nombre, presente in duplicados:
+                    log_linea(f"  = {nombre} idéntico a {presente} — omitido")
+                for destino in copiados:
                     log_linea(f"  + {destino}")
             pending, transcripts, note_files = discover()
             if not pending and not transcripts and not note_files and not datos["notas"]:
                 log_linea("Nada que procesar: añade audios o apuntes y vuelve a pulsar Procesar clase.")
                 return
+            # Alcance: SOLO los ficheros de esta ejecución, no la caché de audio-src/.
+            audios_run, notas_run = fuentes_de_ejecucion(copiados, pending)
+            # Guardia de re-procesado ANTES de transcribir: solo mira lo aportado
+            # AHORA, no las clases ya cacheadas (revisión humana — el usuario decide).
+            avisos = avisos_reingesta(
+                [f.name for f in audios_run] + [n.name for n in notas_run],
+                datos["fecha"],
+            )
+            if avisos:
+                cuerpo = "\n\n".join(f"• {a}" for a in avisos)
+                if not preguntar_si_no(
+                    "Posible re-procesado",
+                    cuerpo + "\n\n¿Continuar de todas formas?",
+                ):
+                    log_linea("Cancelado: revisa los ficheros de audio-src/ y vuelve a pulsar Procesar clase.")
+                    return
             total = len(pending)
             for i, f in enumerate(pending, start=1):
                 log_linea(f"=== Transcribiendo ({i}/{total}): {f.name} ===")
@@ -658,7 +960,19 @@ def run_gui(args):
                     )
                     return
             pending, transcripts, note_files = discover()
-            prompt = build_prompt(transcripts, note_files, datos["notas"], datos["fecha"])
+            # Transcripts/notas de la clase de esta ejecución (fallback por fecha para
+            # re-lanzar sobre una clase ya transcrita) — nunca toda la caché.
+            ts_run, notas_prompt = transcripts_para_prompt(
+                audios_run, notas_run, transcripts, note_files, datos["fecha"]
+            )
+            if not ts_run and not notas_prompt and not datos["notas"]:
+                log_linea(
+                    f"Nada nuevo que procesar para la clase {datos['fecha']}. "
+                    "Añade el audio/apuntes de la clase nueva (los anteriores quedan "
+                    "en caché, no se reprocesan)."
+                )
+                return
+            prompt = build_prompt(ts_run, notas_prompt, datos["notas"], datos["fecha"])
             if abrir_claude_en_terminal(datos["modelo"], prompt):
                 log_linea("Sesión de Claude abierta en Terminal — revisa allí el contenido antes de commitear.")
             else:
@@ -681,7 +995,8 @@ def run_gui(args):
     boton.config(command=al_pulsar_procesar)
 
     if os.environ.get("CLASE_GUI_SMOKE"):  # test humo: abrir y cerrar limpio
-        root.after(300, root.destroy)
+        root.after(150, abrir_calendario)  # ejercita el calendario (redibujar)
+        root.after(400, root.destroy)
     root.mainloop()
 
 
@@ -704,8 +1019,9 @@ def main():
     if args.ficheros:
         AUDIO_SRC.mkdir(exist_ok=True)  # el intake crea el directorio si falta
     preflight()
+    copiados = []  # ficheros aportados en ESTA ejecución (ancla del alcance)
     if args.ficheros:
-        intake(args.ficheros)
+        copiados += intake(args.ficheros) or []
 
     pending, transcripts, note_files = discover()
     hay_notas = bool(note_files) or bool(args.notas)
@@ -729,9 +1045,30 @@ def main():
         if not rutas:
             _imprimir_uso()
             sys.exit(0)
-        intake(rutas)
+        copiados += intake(rutas) or []
         pending, transcripts, note_files = discover()
         hay_notas = bool(note_files) or bool(args.notas)
+
+    # Alcance: SOLO los ficheros de esta ejecución, no la caché entera de audio-src/.
+    audios_run, notas_run = fuentes_de_ejecucion(copiados, pending)
+
+    # Guardia de re-procesado ANTES de transcribir: caza el arrastrar audio de una
+    # clase anterior — solo mira lo aportado AHORA, no las clases ya cacheadas.
+    avisos = avisos_reingesta(
+        [f.name for f in audios_run] + [n.name for n in notas_run],
+        args.fecha,
+    )
+    if avisos:
+        print("\n⚠️  Aviso antes de estructurar:")
+        for a in avisos:
+            print(f"  - {a}")
+        try:
+            respuesta = input("¿Continuar de todas formas? [s/N] ")
+        except EOFError:
+            respuesta = "n"  # sin stdin interactivo, no seguimos a ciegas
+        if not respuesta.strip().lower().startswith("s"):
+            print("Cancelado. Revisa los ficheros de audio-src/ y vuelve a intentarlo.")
+            sys.exit(0)
 
     if pending:
         print(f"Audios pendientes de transcribir: {len(pending)}")
@@ -739,19 +1076,27 @@ def main():
             print(f"  - {f.name}")
         transcribe_pending(pending)
         pending, transcripts, note_files = discover()  # refresca los transcripts nuevos
-    elif transcripts:
-        print("No hay audios nuevos que transcribir. Transcripts existentes:")
-        for t in transcripts:
-            print(f"  - {t}")
-        try:
-            respuesta = input("¿Lanzar Claude con estos transcripts? [S/n] ")
-        except EOFError:
-            respuesta = "n"  # sin stdin interactivo no se lanza una sesión interactiva
-        if respuesta.strip().lower().startswith("n"):
-            print("De acuerdo, no lanzo nada. ¡Hasta la próxima clase!")
-            sys.exit(0)
 
-    prompt = build_prompt(transcripts, note_files, args.notas, args.fecha)
+    # Transcripts/notas que alimentan la clase de esta ejecución (con fallback por
+    # fecha para re-lanzar sobre una clase ya transcrita) — nunca toda la caché.
+    ts_run, notas_prompt = transcripts_para_prompt(
+        audios_run, notas_run, transcripts, note_files, args.fecha
+    )
+    if not ts_run and not notas_prompt and not args.notas:
+        print(
+            f"\nNada nuevo que procesar para la clase {args.fecha}.\n"
+            "Arrastra el audio/apuntes de la clase nueva (audio-src/ conserva los "
+            "anteriores como caché, no se reprocesan)."
+        )
+        sys.exit(0)
+
+    print("\nTranscripts de esta clase:")
+    for t in ts_run:
+        print(f"  - {t}")
+    if not ts_run:
+        print("  (ninguno — clase solo de texto)")
+
+    prompt = build_prompt(ts_run, notas_prompt, args.notas, args.fecha)
     launch_claude(prompt, args.modelo)
 
 
