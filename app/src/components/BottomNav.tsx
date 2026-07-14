@@ -1,9 +1,10 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { Home, BookOpen, Bookmark, User } from 'lucide-react'
+import { Home, BookOpen, Languages, Bookmark, User } from 'lucide-react'
 
 const ITEMS = [
   { to: '/', label: 'Inicio', Icon: Home, end: true },
   { to: '/glosario', label: 'Glosario', Icon: BookOpen, end: false },
+  { to: '/gramatica', label: 'Gramática', Icon: Languages, end: false },
   { to: '/guardados', label: 'Guardados', Icon: Bookmark, end: false },
   { to: '/perfil', label: 'Perfil', Icon: User, end: false },
 ]

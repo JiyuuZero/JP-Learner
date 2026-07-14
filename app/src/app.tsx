@@ -10,6 +10,7 @@ import Button from './components/Button'
 import Card from './components/Card'
 import Home from './views/Home'
 import Glosario from './views/Glosario'
+import Gramatica from './views/Gramatica'
 import Guardados from './views/Guardados'
 import Perfil from './views/Perfil'
 import Session from './views/Session'
@@ -58,6 +59,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/glosario" element={<Glosario />} />
+              <Route path="/gramatica" element={<Gramatica />} />
               <Route path="/guardados" element={<Guardados />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/session" element={<Session />} />

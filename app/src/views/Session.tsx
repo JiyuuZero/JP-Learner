@@ -167,14 +167,17 @@ export default function Session() {
       if (!store) return
       setManualKind(kind)
       // Reviews-before-new ordering + the SRS-05 daily new-card cap live in buildSession.
-      setQueue(buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined))
+      let q = buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined)
+      // Grammar-only practice (from the Gramática section): ?only=grammar
+      if (params.get('only') === 'grammar') q = q.filter((si) => si.item.type === 'grammar')
+      setQueue(q)
       setIndex(0)
       setStep(0)
       setInterstitialStep(-1)
       setPhase('answer')
       setCanCheck(false)
     },
-    [store, srsByItem, scope, subMode, meta],
+    [store, srsByItem, scope, subMode, meta, params],
   )
 
   // "Continuar donde lo dejaste" (Home) links here with ?auto=1 to resume the
