@@ -486,13 +486,59 @@
           "kanji": "みずです。",
           "kana": "みずです。",
           "romaji": "Mizu desu.",
-          "es": "Es agua."
+          "es": "Es agua.",
+          "tokens": [
+            {
+              "surface": "みず",
+              "reading": "みず",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "これはコートです。",
           "kana": "これはコートです。",
           "romaji": "Kore wa kooto desu.",
-          "es": "Esto es un abrigo."
+          "es": "Esto es un abrigo.",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "コート",
+              "reading": "コート",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -511,13 +557,69 @@
           "kanji": "わたしのコート",
           "kana": "わたしのコート",
           "romaji": "watashi no kooto",
-          "es": "mi abrigo"
+          "es": "mi abrigo",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "コート",
+              "reading": "コート",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしのコートはあかいです。",
           "kana": "わたしのコートはあかいです。",
           "romaji": "Watashi no kooto wa akai desu.",
-          "es": "Mi abrigo es rojo."
+          "es": "Mi abrigo es rojo.",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "コート",
+              "reading": "コート",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "あかい",
+              "reading": "あかい",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -536,13 +638,69 @@
           "kanji": "かばんはここです。",
           "kana": "かばんはここです。",
           "romaji": "Kaban wa koko desu.",
-          "es": "El bolso está aquí."
+          "es": "El bolso está aquí.",
+          "tokens": [
+            {
+              "surface": "かばん",
+              "reading": "かばん",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ここ",
+              "reading": "ここ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "ともだちはかっこいいです。",
           "kana": "ともだちはかっこいいです。",
           "romaji": "Tomodachi wa kakkoii desu.",
-          "es": "El amigo es guay."
+          "es": "El amigo es guay.",
+          "tokens": [
+            {
+              "surface": "ともだち",
+              "reading": "ともだち",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "かっこいい",
+              "reading": "かっこいい",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -561,7 +719,45 @@
           "kanji": "しろいてぶくろはどこですか。",
           "kana": "しろいてぶくろはどこですか。",
           "romaji": "Shiroi tebukuro wa doko desu ka.",
-          "es": "¿Dónde está el guante blanco?"
+          "es": "¿Dónde está el guante blanco?",
+          "tokens": [
+            {
+              "surface": "しろい",
+              "reading": "しろい",
+              "isKanji": false
+            },
+            {
+              "surface": "てぶくろ",
+              "reading": "てぶくろ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "どこ",
+              "reading": "どこ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
