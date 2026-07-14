@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-14T08:20:38Z",
+  "generatedAt": "2026-07-14T08:20:39Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -33,7 +33,7 @@
       "date": "2026-07-08",
       "label": "Clase presencial — escritura hiragana (な・は・ま・や), autopresentación, países/nacionalidad (〜じん・〜ご), negativo de です y objetos",
       "file": "classes/2026-07-08.json",
-      "contentHash": "sha256-9d974886dadd1786e29b4a2fc1e86c840e756b52c6e70d94861a5df56d36b864",
+      "contentHash": "sha256-0690453ab5b97ce45c0a30a30b331c9ca080c4881434b5ce4ded956a6225e587",
       "counts": {
         "vocab": 56,
         "grammar": 10,

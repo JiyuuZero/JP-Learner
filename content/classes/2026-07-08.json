@@ -1181,19 +1181,60 @@
           "kanji": "じゅういち",
           "kana": "じゅういち",
           "romaji": "jū ichi",
-          "es": "once (11)"
+          "es": "once (11)",
+          "tokens": [
+            {
+              "surface": "じゅう",
+              "reading": "じゅう",
+              "isKanji": false
+            },
+            {
+              "surface": "いち",
+              "reading": "いち",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "にじゅう",
           "kana": "にじゅう",
           "romaji": "ni jū",
-          "es": "veinte (20)"
+          "es": "veinte (20)",
+          "tokens": [
+            {
+              "surface": "に",
+              "reading": "に",
+              "isKanji": false
+            },
+            {
+              "surface": "じゅう",
+              "reading": "じゅう",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "きゅうじゅうきゅう",
           "kana": "きゅうじゅうきゅう",
           "romaji": "kyū jū kyū",
-          "es": "noventa y nueve (99)"
+          "es": "noventa y nueve (99)",
+          "tokens": [
+            {
+              "surface": "きゅう",
+              "reading": "きゅう",
+              "isKanji": false
+            },
+            {
+              "surface": "じゅう",
+              "reading": "じゅう",
+              "isKanji": false
+            },
+            {
+              "surface": "きゅう",
+              "reading": "きゅう",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1232,13 +1273,79 @@
           "kanji": "わたしはにほんじんです。",
           "kana": "わたしはにほんじんです。",
           "romaji": "watashi wa nihonjin desu.",
-          "es": "Soy japonés/a."
+          "es": "Soy japonés/a.",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "にほん",
+              "reading": "にほん",
+              "isKanji": false
+            },
+            {
+              "surface": "じん",
+              "reading": "じん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしはスペインじんです。",
           "kana": "わたしはスペインじんです。",
           "romaji": "watashi wa supein jin desu.",
-          "es": "Soy español/a."
+          "es": "Soy español/a.",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "スペイン",
+              "reading": "スペイン",
+              "isKanji": false
+            },
+            {
+              "surface": "じん",
+              "reading": "じん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1258,13 +1365,39 @@
           "kanji": "にほんご",
           "kana": "にほんご",
           "romaji": "nihongo",
-          "es": "japonés (idioma)"
+          "es": "japonés (idioma)",
+          "tokens": [
+            {
+              "surface": "にほん",
+              "reading": "にほん",
+              "isKanji": false
+            },
+            {
+              "surface": "ご",
+              "reading": "ご",
+              "isKanji": false,
+              "blank": true
+            }
+          ]
         },
         {
           "kanji": "えいご",
           "kana": "えいご",
           "romaji": "eigo",
-          "es": "inglés (idioma)"
+          "es": "inglés (idioma)",
+          "tokens": [
+            {
+              "surface": "えい",
+              "reading": "えい",
+              "isKanji": false
+            },
+            {
+              "surface": "ご",
+              "reading": "ご",
+              "isKanji": false,
+              "blank": true
+            }
+          ]
         }
       ],
       "tags": [
@@ -1283,13 +1416,69 @@
           "kanji": "わたしはにほんじんじゃないです。",
           "kana": "わたしはにほんじんじゃないです。",
           "romaji": "watashi wa nihonjin janai desu.",
-          "es": "No soy japonés/a. (coloquial)"
+          "es": "No soy japonés/a. (coloquial)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "にほんじん",
+              "reading": "にほんじん",
+              "isKanji": false
+            },
+            {
+              "surface": "じゃないです",
+              "reading": "じゃないです",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしはにほんじんではありません。",
           "kana": "わたしはにほんじんではありません。",
           "romaji": "watashi wa nihonjin dewa arimasen.",
-          "es": "No soy japonés/a. (formal)"
+          "es": "No soy japonés/a. (formal)",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "にほんじん",
+              "reading": "にほんじん",
+              "isKanji": false
+            },
+            {
+              "surface": "ではありません",
+              "reading": "ではありません",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1309,13 +1498,59 @@
           "kanji": "はい、そうです。",
           "kana": "はい、そうです。",
           "romaji": "hai, sō desu.",
-          "es": "Sí, así es."
+          "es": "Sí, así es.",
+          "tokens": [
+            {
+              "surface": "はい",
+              "reading": "はい",
+              "isKanji": false
+            },
+            {
+              "surface": "、",
+              "reading": "、",
+              "isKanji": false
+            },
+            {
+              "surface": "そうです",
+              "reading": "そうです",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "いいえ、ちがいます。",
           "kana": "いいえ、ちがいます。",
           "romaji": "iie, chigaimasu.",
-          "es": "No, no es correcto."
+          "es": "No, no es correcto.",
+          "tokens": [
+            {
+              "surface": "いいえ",
+              "reading": "いいえ",
+              "isKanji": false
+            },
+            {
+              "surface": "、",
+              "reading": "、",
+              "isKanji": false
+            },
+            {
+              "surface": "ちがいます",
+              "reading": "ちがいます",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1335,13 +1570,74 @@
           "kanji": "これはほんです。",
           "kana": "これはほんです。",
           "romaji": "kore wa hon desu.",
-          "es": "Esto es un libro."
+          "es": "Esto es un libro.",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "それはなんですか。",
           "kana": "それはなんですか。",
           "romaji": "sore wa nan desu ka.",
-          "es": "¿Qué es eso?"
+          "es": "¿Qué es eso?",
+          "tokens": [
+            {
+              "surface": "それ",
+              "reading": "それ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "なん",
+              "reading": "なん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1360,13 +1656,73 @@
           "kanji": "これはなんですか。",
           "kana": "これはなんですか。",
           "romaji": "kore wa nan desu ka.",
-          "es": "¿Qué es esto?"
+          "es": "¿Qué es esto?",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "なん",
+              "reading": "なん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "これはすいとうです。",
           "kana": "これはすいとうです。",
           "romaji": "kore wa suitō desu.",
-          "es": "Esto es una cantimplora."
+          "es": "Esto es una cantimplora.",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "すいとう",
+              "reading": "すいとう",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -1385,7 +1741,30 @@
           "kanji": "そうですね。",
           "kana": "そうですね。",
           "romaji": "sō desu ne.",
-          "es": "Sí, así es, ¿verdad?"
+          "es": "Sí, así es, ¿verdad?",
+          "tokens": [
+            {
+              "surface": "そう",
+              "reading": "そう",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "ね",
+              "reading": "ね",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
