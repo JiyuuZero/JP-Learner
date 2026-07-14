@@ -394,13 +394,89 @@
           "kanji": "このほんはわたしのです。",
           "kana": "このほんはわたしのです。",
           "romaji": "kono hon wa watashi no desu.",
-          "es": "Este libro es mío."
+          "es": "Este libro es mío.",
+          "tokens": [
+            {
+              "surface": "この",
+              "reading": "この",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "あのひとはだれですか。",
           "kana": "あのひとはだれですか。",
           "romaji": "ano hito wa dare desu ka.",
-          "es": "¿Quién es aquella persona?"
+          "es": "¿Quién es aquella persona?",
+          "tokens": [
+            {
+              "surface": "あの",
+              "reading": "あの",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ひと",
+              "reading": "ひと",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "だれ",
+              "reading": "だれ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -419,13 +495,74 @@
           "kanji": "トイレはあそこです。",
           "kana": "トイレはあそこです。",
           "romaji": "toire wa asoko desu.",
-          "es": "El baño está allí."
+          "es": "El baño está allí.",
+          "tokens": [
+            {
+              "surface": "トイレ",
+              "reading": "トイレ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "あそこ",
+              "reading": "あそこ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "おてあらいはどこですか。",
           "kana": "おてあらいはどこですか。",
           "romaji": "otearai wa doko desu ka.",
-          "es": "¿Dónde está el baño?"
+          "es": "¿Dónde está el baño?",
+          "tokens": [
+            {
+              "surface": "おてあらい",
+              "reading": "おてあらい",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "どこ",
+              "reading": "どこ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -445,13 +582,78 @@
           "kanji": "これはなんのほんですか。",
           "kana": "これはなんのほんですか。",
           "romaji": "kore wa nan no hon desu ka.",
-          "es": "¿De qué es este libro? (¿de qué trata?)"
+          "es": "¿De qué es este libro? (¿de qué trata?)",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "なんの",
+              "reading": "なんの",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "にほんごのほんです。",
           "kana": "にほんごのほんです。",
           "romaji": "nihongo no hon desu.",
-          "es": "Es un libro de japonés."
+          "es": "Es un libro de japonés.",
+          "tokens": [
+            {
+              "surface": "にほんご",
+              "reading": "にほんご",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -470,13 +672,73 @@
           "kanji": "これはだれのほんですか。",
           "kana": "これはだれのほんですか。",
           "romaji": "kore wa dare no hon desu ka.",
-          "es": "¿De quién es este libro?"
+          "es": "¿De quién es este libro?",
+          "tokens": [
+            {
+              "surface": "これ",
+              "reading": "これ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "だれの",
+              "reading": "だれの",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ほん",
+              "reading": "ほん",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "わたしのです。",
           "kana": "わたしのです。",
           "romaji": "watashi no desu.",
-          "es": "Es mío."
+          "es": "Es mío.",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
@@ -495,13 +757,67 @@
           "kanji": "ここはトイレです。",
           "kana": "ここはトイレです。",
           "romaji": "koko wa toire desu.",
-          "es": "Aquí es el baño. (qué es este sitio)"
+          "es": "Aquí es el baño. (qué es este sitio)",
+          "tokens": [
+            {
+              "surface": "ここ",
+              "reading": "ここ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "トイレ",
+              "reading": "トイレ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         },
         {
           "kanji": "トイレはここです。",
           "kana": "トイレはここです。",
           "romaji": "toire wa koko desu.",
-          "es": "El baño está aquí. (dónde está)"
+          "es": "El baño está aquí. (dónde está)",
+          "tokens": [
+            {
+              "surface": "トイレ",
+              "reading": "トイレ",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "ここ",
+              "reading": "ここ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
         }
       ],
       "tags": [
