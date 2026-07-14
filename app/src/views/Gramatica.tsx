@@ -124,11 +124,10 @@ export default function Gramatica() {
         </div>
       ) : (
         <>
-          <div className="mt-4">
-            <Button onClick={() => void navigate(GRAMMAR_SESSION)}>Practicar toda la gramática</Button>
-          </div>
-
-          <div className="mt-4 flex justify-end">
+          <div className="mt-4 flex items-center gap-2">
+            <div className="flex-1">
+              <Button onClick={() => void navigate(GRAMMAR_SESSION)}>Practicar toda la gramática</Button>
+            </div>
             <ClassSort dir={sortDir} onChange={setSortDir} />
           </div>
 
