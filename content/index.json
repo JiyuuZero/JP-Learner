@@ -1,13 +1,13 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-14T08:20:39Z",
+  "generatedAt": "2026-07-14T08:51:52Z",
   "classes": [
     {
       "id": "2026-07-03",
       "date": "2026-07-03",
-      "label": "Duolingo — colores, pertenencias y partículas は・の・か・です",
+      "label": "Duolingo",
       "file": "classes/2026-07-03.json",
-      "contentHash": "sha256-655f9b5005bb096763923181835495b0d8079ec38036ea13d9565dc83cedb151",
+      "contentHash": "sha256-85d08859c84fee896157e72309736c1cceeab9530768a58b32b2290a27cab142",
       "counts": {
         "vocab": 18,
         "grammar": 4,
