@@ -22,13 +22,18 @@ import { buildSession } from '../progress/srs'
 import type { ReviewScope, SessionItem, SubMode } from '../progress/session'
 import {
   flashcard,
+  grammarExerciseFor,
   matching,
   multipleChoice,
   typing,
   wordBank,
+  GRAMMAR_ROTATION,
   type Direction,
   type ExerciseKind,
   type FlashcardExercise,
+  type GrammarChoiceExercise,
+  type GrammarClozeExercise,
+  type GrammarReorderExercise,
   type MatchingExercise,
   type MultipleChoiceExercise,
   type TypingExercise,
@@ -39,7 +44,14 @@ import MultipleChoice from '../exercises/MultipleChoice'
 import Typing from '../exercises/Typing'
 import WordBank from '../exercises/WordBank'
 import Matching from '../exercises/Matching'
-import type { Vocab } from '../content/content'
+import GrammarReorder from '../exercises/GrammarReorder'
+import GrammarCloze from '../exercises/GrammarCloze'
+import GrammarChoice from '../exercises/GrammarChoice'
+import SabiasQue from '../exercises/SabiasQue'
+import type { Grammar, Note, Vocab } from '../content/content'
+
+// Show a "¿Sabías que?" interstitial after every N exercises.
+const INTERSTITIAL_EVERY = 4
 
 const ROTATION: ExerciseKind[] = ['flashcard', 'multipleChoice', 'typing', 'wordBank', 'matching']
 
@@ -68,6 +80,23 @@ type Exercise =
   | TypingExercise
   | WordBankExercise
   | MatchingExercise
+  | GrammarReorderExercise
+  | GrammarClozeExercise
+  | GrammarChoiceExercise
+
+// Human label per exercise kind (header title), incl. the grammar kinds.
+function labelForKind(kind: Exercise['kind']): string {
+  switch (kind) {
+    case 'grammarReorder':
+      return 'Gramática · ordenar'
+    case 'grammarCloze':
+      return 'Gramática · completar'
+    case 'grammarChoice':
+      return 'Gramática · significado'
+    default:
+      return KIND_LABELS.find((k) => k.kind === kind)?.label ?? 'Práctica'
+  }
+}
 
 interface CurrentExercise {
   exercise: Exercise
@@ -121,6 +150,9 @@ export default function Session() {
   // a 5-item matching round advances the index by 5 ≡ 0 (mod ROTATION.length),
   // landing on 'matching' again (WR-02).
   const [step, setStep] = useState(0)
+  // The step value at which the current "¿Sabías que?" interstitial was dismissed
+  // (-1 = none). Prevents re-showing the same interstitial for the same step.
+  const [interstitialStep, setInterstitialStep] = useState(-1)
   const [phase, setPhase] = useState<'answer' | 'feedback'>('answer')
   const [canCheck, setCanCheck] = useState(false)
   const checkFnRef = useRef<(() => boolean) | null>(null)
@@ -138,6 +170,7 @@ export default function Session() {
       setQueue(buildSession(store, srsByItem, scope, subMode, new Date(), meta ?? undefined))
       setIndex(0)
       setStep(0)
+      setInterstitialStep(-1)
       setPhase('answer')
       setCanCheck(false)
     },
@@ -162,6 +195,13 @@ export default function Session() {
     const si = queue[index]
     const pool = store.byClass.get(si.classId)?.vocab ?? []
     const direction: Direction = index % 2 === 0 ? 'JA_ES' : 'ES_JA'
+    // Grammar items get their OWN exercises (reorder/cloze/choice, rotated) —
+    // never the vocab flashcard shortcut. Kanji still falls through to flashcard.
+    if (si.item.type === 'grammar') {
+      const gk = GRAMMAR_ROTATION[step % GRAMMAR_ROTATION.length]
+      const exercise = grammarExerciseFor(si.item as Grammar, [...store.grammarById.values()], gk)
+      return { exercise, si, run: [si], direction }
+    }
     // consecutive vocab run from here (candidate matching batch)
     const run: SessionItem[] = []
     for (let i = index; i < queue.length && run.length < 5; i++) {
@@ -194,6 +234,20 @@ export default function Session() {
     }
     return { exercise, si, run: exercise.kind === 'matching' ? run : [si], direction }
   }, [store, queue, index, step, manualKind])
+
+  // "¿Sabías que?" pool: grammar patterns + cultural notes from the classes in
+  // this session's queue (notes are otherwise never surfaced during practice).
+  const interstitialPool = useMemo(() => {
+    if (!store || !queue) return [] as ({ grammar: Grammar } | { note: Note })[]
+    const out: ({ grammar: Grammar } | { note: Note })[] = []
+    for (const cid of [...new Set(queue.map((q) => q.classId))]) {
+      const b = store.byClass.get(cid)
+      if (!b) continue
+      b.grammar.forEach((g) => out.push({ grammar: g }))
+      b.notes.forEach((n) => out.push({ note: n }))
+    }
+    return out
+  }, [store, queue])
 
   const advance = useCallback(
     (by: number) => {
@@ -344,7 +398,20 @@ export default function Session() {
 
   const { exercise, si, run, direction } = current
   const kind = exercise.kind
-  const frameless = kind === 'flashcard' || kind === 'matching' // self-advancing bodies
+
+  // Interstitial "¿Sabías que?" between exercises, every INTERSTITIAL_EVERY steps.
+  // It does NOT consume the queue item at `index` — dismissing it just marks this
+  // step as seen, then the real exercise for (index, step) renders.
+  const interstitial =
+    step > 0 &&
+    step % INTERSTITIAL_EVERY === 0 &&
+    interstitialStep !== step &&
+    interstitialPool.length > 0
+      ? interstitialPool[(step / INTERSTITIAL_EVERY - 1) % interstitialPool.length]
+      : null
+
+  // self-advancing bodies (own button, no Comprobar/Seguir bar)
+  const frameless = kind === 'flashcard' || kind === 'matching' || interstitial !== null
 
   return (
     <main className="pb-28">
@@ -358,7 +425,7 @@ export default function Session() {
           <ArrowLeft size={22} />
         </button>
         <h1 className="flex-1 text-center text-[20px] font-bold">
-          {KIND_LABELS.find((k) => k.kind === kind)?.label ?? 'Práctica'}
+          {interstitial ? 'Repaso' : labelForKind(kind)}
         </h1>
         <span className="rounded-full bg-gold px-3 py-1 text-[14px] font-bold text-ink">
           {meta?.points ?? 0} pts
@@ -383,13 +450,24 @@ export default function Session() {
         ))}
       </div>
 
-      {/* direction indicator (EXER-06) — sides swap, no separate screen */}
-      <p className="mt-2 text-center text-[12px] font-bold text-muted">
-        {direction === 'JA_ES' ? 'JA → ES' : 'ES → JA'}
-      </p>
+      {/* direction indicator (EXER-06) — sides swap, no separate screen.
+          Hidden for grammar exercises and interstitials (direction n/a). */}
+      {!interstitial && !kind.startsWith('grammar') && (
+        <p className="mt-2 text-center text-[12px] font-bold text-muted">
+          {direction === 'JA_ES' ? 'JA → ES' : 'ES → JA'}
+        </p>
+      )}
 
       <div className="mt-4">
-        {exercise.kind === 'flashcard' && (
+        {interstitial && (
+          <SabiasQue
+            key={`int-${step}`}
+            grammar={'grammar' in interstitial ? interstitial.grammar : undefined}
+            note={'note' in interstitial ? interstitial.note : undefined}
+            onNext={() => setInterstitialStep(step)}
+          />
+        )}
+        {!interstitial && exercise.kind === 'flashcard' && (
           <Flashcard
             key={index}
             exercise={exercise}
@@ -397,7 +475,7 @@ export default function Session() {
             onNext={() => advance(1)}
           />
         )}
-        {exercise.kind === 'multipleChoice' && (
+        {!interstitial && exercise.kind === 'multipleChoice' && (
           <MultipleChoice
             key={index}
             exercise={exercise}
@@ -407,7 +485,7 @@ export default function Session() {
             registerCheck={registerCheck}
           />
         )}
-        {exercise.kind === 'typing' && (
+        {!interstitial && exercise.kind === 'typing' && (
           <Typing
             key={index}
             exercise={exercise}
@@ -417,7 +495,7 @@ export default function Session() {
             registerCheck={registerCheck}
           />
         )}
-        {exercise.kind === 'wordBank' && (
+        {!interstitial && exercise.kind === 'wordBank' && (
           <WordBank
             key={index}
             exercise={exercise}
@@ -427,12 +505,42 @@ export default function Session() {
             registerCheck={registerCheck}
           />
         )}
-        {exercise.kind === 'matching' && (
+        {!interstitial && exercise.kind === 'matching' && (
           <Matching
             key={index}
             exercise={exercise}
             classIdByItem={new Map(run.map((r) => [r.item.id, r.classId]))}
             onFinish={() => advance(run.length)}
+          />
+        )}
+        {!interstitial && exercise.kind === 'grammarReorder' && (
+          <GrammarReorder
+            key={index}
+            exercise={exercise}
+            classId={si.classId}
+            phase={phase}
+            onReadyChange={onReadyChange}
+            registerCheck={registerCheck}
+          />
+        )}
+        {!interstitial && exercise.kind === 'grammarCloze' && (
+          <GrammarCloze
+            key={index}
+            exercise={exercise}
+            classId={si.classId}
+            phase={phase}
+            onReadyChange={onReadyChange}
+            registerCheck={registerCheck}
+          />
+        )}
+        {!interstitial && exercise.kind === 'grammarChoice' && (
+          <GrammarChoice
+            key={index}
+            exercise={exercise}
+            classId={si.classId}
+            phase={phase}
+            onReadyChange={onReadyChange}
+            registerCheck={registerCheck}
           />
         )}
       </div>
