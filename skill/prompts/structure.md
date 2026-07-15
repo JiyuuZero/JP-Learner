@@ -105,6 +105,50 @@ whole-word kana, `kanji` = ALL kanji characters appearing in the word, in order.
 Same schema, coarser display (Mode B substitutes the whole word instead of half of it) —
 ALWAYS prefer this fallback over guessing per-kanji readings. Never wrong readings.
 
+## 4b. Verbos — tabla de conjugación (`conjugation`) — OBLIGATORIO
+
+Para CADA vocab con `pos` **"verbo"** DEBES emitir el objeto `conjugation` con su paradigma
+ます completo. El validador RECHAZA un verbo sin `conjugation` (obligatorio a partir de ahora).
+Cada verbo lleva:
+
+- `group`: uno de `ichidan` | `godan` | `irregular`.
+- `irregular`: `true` SOLO para する / くる y compuestos con する (p.ej. べんきょうする).
+  Para ichidan/godan omítelo (o `false`). El validador exige que `irregular` sea coherente
+  con `group` (irregular ⇔ `group === "irregular"`).
+- las 5 formas — `dictionary`, `masu` (presente afirmativo), `masen` (presente negativo),
+  `mashita` (pasado afirmativo), `masendeshita` (pasado negativo) — cada una con `kana` +
+  `romaji` (Hepburn). El `kanji` por forma es OPCIONAL (solo si el verbo se escribe con kanji).
+
+### Reglas de conjugación por grupo
+
+- **ichidan** (verbos en る tipo -eru / -iru): quita る y añade ます／ません／ました／ませんでした.
+  Ej.: たべる→たべます; ねる→ねます; おきる→おきます.
+- **godan** (verbos en -u): la kana final de la columna -u pasa a la columna -i y se añade
+  ます; el resto sobre esa raíz -i. Ej.: のむ→のみます／のみません／のみました／のみませんでした;
+  はたらく→はたらきます.
+- **irregular**: する→します／しません／しました／しませんでした; くる→きます／きません／きました／きませんでした;
+  compuestos con する (べんきょうする→べんきょうします…).
+
+**Regla dura (de `LEARNINGS.md`): NUNCA inventes formas ni lecturas.** Si dudas del grupo de
+un verbo, búscalo antes de conjugar; ante la duda, no adivines. La revisión humana es solo de
+cobertura y lecturas, no de decisiones de gramática.
+
+### Ejemplo trabajado — たべる (ichidan)
+
+```json
+"pos": "verbo",
+"conjugation": {
+  "group": "ichidan",
+  "dictionary":   { "kana": "たべる",           "romaji": "taberu" },
+  "masu":         { "kana": "たべます",         "romaji": "tabemasu" },
+  "masen":        { "kana": "たべません",       "romaji": "tabemasen" },
+  "mashita":      { "kana": "たべました",       "romaji": "tabemashita" },
+  "masendeshita": { "kana": "たべませんでした", "romaji": "tabemasen deshita" }
+}
+```
+
+Para un irregular añade además `"irregular": true` junto a `"group": "irregular"`.
+
 ## 5. Grammar, kanji, notes
 
 - `grammar`: one item per pattern taught — `pattern` (e.g. "Verbo + ます"), `es`

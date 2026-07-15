@@ -31,6 +31,17 @@ function checkSentence(sentence, where) {
   checkTokens(sentence.tokens, sentence.kanji, sentence.kana, where);
 }
 
+/** A verb's conjugation table (Phase 5): 5 forms each with kana+romaji, and a valid group. */
+function checkConjugation(c, where) {
+  const forms = ['dictionary', 'masu', 'masen', 'mashita', 'masendeshita'];
+  for (const f of forms) {
+    if (!c[f] || !c[f].kana || !c[f].romaji) throw new Error(`conjugation.${f} incomplete: ${where}`);
+  }
+  if (!['ichidan', 'godan', 'irregular'].includes(c.group)) throw new Error(`conjugation.group invalid: ${where}`);
+  if (c.irregular !== undefined && c.irregular !== (c.group === 'irregular'))
+    throw new Error(`conjugation.irregular inconsistent with group: ${where}`);
+}
+
 export function validateClass(doc) {
   if (!validate(doc)) throw new Error('schema: ' + ajv.errorsText(validate.errors));
   const seen = new Set();
@@ -42,6 +53,8 @@ export function validateClass(doc) {
       if (type === 'vocab') {
         checkTokens(it.tokens, it.kanji, it.kana, it.id);
         checkSentence(it.example, `${it.id} example`);
+        if (it.pos === 'verbo' && !it.conjugation) throw new Error(`verb missing conjugation: ${it.id}`);
+        if (it.conjugation) checkConjugation(it.conjugation, it.id);
       }
       if (type === 'grammar') {
         it.examples.forEach((ex, i) => checkSentence(ex, `${it.id} examples[${i}]`));

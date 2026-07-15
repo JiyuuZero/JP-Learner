@@ -28,6 +28,7 @@ export interface Vocab {
    */
   tokens: [Token, ...Token[]];
   example?: Sentence;
+  conjugation?: Conjugation;
   /**
    * @minItems 1
    */
@@ -46,6 +47,20 @@ export interface Sentence {
   romaji: string;
   es: string;
   tokens?: Token[];
+}
+export interface Conjugation {
+  group: "ichidan" | "godan" | "irregular";
+  irregular?: boolean;
+  dictionary: ConjForm;
+  masu: ConjForm;
+  masen: ConjForm;
+  mashita: ConjForm;
+  masendeshita: ConjForm;
+}
+export interface ConjForm {
+  kanji?: string;
+  kana: string;
+  romaji: string;
 }
 export interface Grammar {
   id: string;
