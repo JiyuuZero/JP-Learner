@@ -9,6 +9,7 @@ import { ChevronDown, Heart, Search, Star, X } from 'lucide-react'
 import Card from '../components/Card'
 import JapaneseText from '../display/JapaneseText'
 import SpeakerButton from '../components/SpeakerButton'
+import ConjugationTable from '../components/ConjugationTable'
 import ClassSort, { orderClasses } from '../components/ClassSort'
 import { exampleKey } from '../tts/audio'
 import { useContent } from '../content/context'
@@ -30,6 +31,11 @@ function VocabRow({ item, onOpen }: { item: Vocab; onOpen: (v: Vocab) => void })
           </p>
           <p className="text-[14px] text-muted">{item.romaji}</p>
           <p className="text-[16px] leading-normal">{item.es}</p>
+          {item.conjugation && (
+            <span className="mt-1 inline-block rounded-full bg-lavender/60 px-2 py-0.5 text-[11px] font-bold text-indigo">
+              verbo
+            </span>
+          )}
         </button>
         <button
           type="button"
@@ -117,6 +123,8 @@ function VocabDetail({ item, onClose }: { item: Vocab; onClose: () => void }) {
             <SpeakerButton text={item.example.kana} audioKey={exampleKey(item.id)} />
           </div>
         )}
+
+        {item.conjugation && <ConjugationTable conjugation={item.conjugation} />}
 
         {chars.length > 0 && (
           <div className="mt-5">
