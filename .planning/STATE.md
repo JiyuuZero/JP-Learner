@@ -25,10 +25,10 @@ See: .planning/PROJECT.md (updated 2026-07-06)
 
 ## Current Position
 
-Phase: 03 (complete) — next: 04
-Plan: Phase 3 done (03-01, 03-02)
-Status: Phase 3 complete; Phase 4 planned-not-started
-Last activity: 2026-07-14 — Phase 4 complete (grammar section + exercises + interstitials)
+Phase: 05 (complete) — next: 06
+Plan: Phase 5 done (05-01 schema+validators+structure.md, 05-02 backfill 6 verbos)
+Status: Phase 5 complete; Phase 6 (tabla de conjugación en la app) planned-not-started
+Last activity: 2026-07-15 — Phase 5 complete (campo `conjugation` aditivo + backfill おきる/ねる/たべる/のむ/はたらく/べんきょうする)
 
 Progress: [░░░░░░░░░░] 0%
 
