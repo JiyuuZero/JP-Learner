@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-15T20:57:30Z",
+  "generatedAt": "2026-07-15T21:22:50Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -59,7 +59,7 @@
       "date": "2026-07-13",
       "label": "Clase 4: partes de la casa",
       "file": "classes/2026-07-13.json",
-      "contentHash": "sha256-516d1529a035fc65d6b4204dbba96eca55353f1d6ea494d6df8ee5b6a71c5bb0",
+      "contentHash": "sha256-b58629211e0b10ab4ba19f6c0b0c1a5e538f14242e36e43b5789e48dff6897d0",
       "counts": {
         "vocab": 31,
         "grammar": 3,

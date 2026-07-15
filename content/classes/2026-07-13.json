@@ -792,6 +792,29 @@
         "romaji": "watashi wa okimasu.",
         "es": "Me levanto. (forma ます de おきる)"
       },
+      "conjugation": {
+        "group": "ichidan",
+        "dictionary": {
+          "kana": "おきる",
+          "romaji": "okiru"
+        },
+        "masu": {
+          "kana": "おきます",
+          "romaji": "okimasu"
+        },
+        "masen": {
+          "kana": "おきません",
+          "romaji": "okimasen"
+        },
+        "mashita": {
+          "kana": "おきました",
+          "romaji": "okimashita"
+        },
+        "masendeshita": {
+          "kana": "おきませんでした",
+          "romaji": "okimasen deshita"
+        }
+      },
       "tags": [
         "2026-07-13",
         "verbo",
