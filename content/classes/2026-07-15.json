@@ -186,6 +186,29 @@
           "isKanji": false
         }
       ],
+      "conjugation": {
+        "group": "ichidan",
+        "dictionary": {
+          "kana": "ねる",
+          "romaji": "neru"
+        },
+        "masu": {
+          "kana": "ねます",
+          "romaji": "nemasu"
+        },
+        "masen": {
+          "kana": "ねません",
+          "romaji": "nemasen"
+        },
+        "mashita": {
+          "kana": "ねました",
+          "romaji": "nemashita"
+        },
+        "masendeshita": {
+          "kana": "ねませんでした",
+          "romaji": "nemasen deshita"
+        }
+      },
       "tags": [
         "2026-07-15",
         "vocabulario"
@@ -234,6 +257,29 @@
           "isKanji": false
         }
       ],
+      "conjugation": {
+        "group": "godan",
+        "dictionary": {
+          "kana": "はたらく",
+          "romaji": "hataraku"
+        },
+        "masu": {
+          "kana": "はたらきます",
+          "romaji": "hatarakimasu"
+        },
+        "masen": {
+          "kana": "はたらきません",
+          "romaji": "hatarakimasen"
+        },
+        "mashita": {
+          "kana": "はたらきました",
+          "romaji": "hatarakimashita"
+        },
+        "masendeshita": {
+          "kana": "はたらきませんでした",
+          "romaji": "hatarakimasen deshita"
+        }
+      },
       "tags": [
         "2026-07-15",
         "vocabulario"
@@ -282,6 +328,30 @@
           "isKanji": false
         }
       ],
+      "conjugation": {
+        "group": "irregular",
+        "irregular": true,
+        "dictionary": {
+          "kana": "べんきょうする",
+          "romaji": "benkyō suru"
+        },
+        "masu": {
+          "kana": "べんきょうします",
+          "romaji": "benkyō shimasu"
+        },
+        "masen": {
+          "kana": "べんきょうしません",
+          "romaji": "benkyō shimasen"
+        },
+        "mashita": {
+          "kana": "べんきょうしました",
+          "romaji": "benkyō shimashita"
+        },
+        "masendeshita": {
+          "kana": "べんきょうしませんでした",
+          "romaji": "benkyō shimasen deshita"
+        }
+      },
       "tags": [
         "2026-07-15",
         "vocabulario"
@@ -330,6 +400,29 @@
           "isKanji": false
         }
       ],
+      "conjugation": {
+        "group": "godan",
+        "dictionary": {
+          "kana": "のむ",
+          "romaji": "nomu"
+        },
+        "masu": {
+          "kana": "のみます",
+          "romaji": "nomimasu"
+        },
+        "masen": {
+          "kana": "のみません",
+          "romaji": "nomimasen"
+        },
+        "mashita": {
+          "kana": "のみました",
+          "romaji": "nomimashita"
+        },
+        "masendeshita": {
+          "kana": "のみませんでした",
+          "romaji": "nomimasen deshita"
+        }
+      },
       "tags": [
         "2026-07-15",
         "vocabulario"
@@ -378,6 +471,29 @@
           "isKanji": false
         }
       ],
+      "conjugation": {
+        "group": "ichidan",
+        "dictionary": {
+          "kana": "たべる",
+          "romaji": "taberu"
+        },
+        "masu": {
+          "kana": "たべます",
+          "romaji": "tabemasu"
+        },
+        "masen": {
+          "kana": "たべません",
+          "romaji": "tabemasen"
+        },
+        "mashita": {
+          "kana": "たべました",
+          "romaji": "tabemashita"
+        },
+        "masendeshita": {
+          "kana": "たべませんでした",
+          "romaji": "tabemasen deshita"
+        }
+      },
       "tags": [
         "2026-07-15",
         "vocabulario"
