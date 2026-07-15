@@ -60,6 +60,8 @@ Progress: [░░░░░░░░░░] 0%
 ### Roadmap Evolution
 
 - Phase 2 added: TTS por audio pre-generado en la skill (2026-07-07)
+- Phase 5 added: Verbos — conjugación (contenido y schema) (2026-07-15)
+- Phase 6 added: Verbos — tabla en la app (2026-07-15)
 
 ### Decisions
 

@@ -68,6 +68,24 @@ class and is the authority; every item here is a mistake already made once.
   pasado el nuevo, solo quiero que proceses el nuevo." Root cause below (clase.py
   feeds all cached transcripts)._
 
+- **Verbos: tabla de conjugación completa, no solo la forma diccionario.** En
+  clase cada verbo se practica en TODAS sus formas, así que un ítem `vocab` de
+  tipo verbo debe llevar su paradigma ます, no solo el infinitivo: forma
+  diccionario + ます (presente afirmativo) / ません (presente negativo) / ました
+  (pasado afirmativo) / ませんでした (pasado negativo), conjugado correctamente
+  según el grupo del verbo — ichidan (る: たべる→たべます, ねる→ねます,
+  おきる→おきます); godan (う: のむ→のみます, はたらく→はたらきます); irregular
+  (する→します, くる→きます; べんきょうする→べんきょうします) — y marcando cuáles
+  son irregulares. La app los muestra como TABLA, no como un único infinitivo.
+  Aplica a las clases nuevas Y retroactivamente a los verbos ya publicados.
+  Requiere una extensión ADITIVA del esquema (un campo de conjugaciones en
+  `vocab`) + render en la app + backfill — es un trabajo de código; ver el ítem
+  abierto abajo. No inventes formas que no sepas con certeza: si dudas del grupo
+  de un verbo, búscalo antes de conjugar (nunca lecturas/formas inventadas).
+  _Trigger (2026-07-15): "los verbos solo los muestras con el infinitivo, pero
+  en clase tratamos todas las formas… quiero que aparezcan con su tabla, con las
+  formas regulares e irregulares."_ Ver [[jp-verb-conjugation-tables]].
+
 ## App feedback
 
 App/code issues surfaced while reviewing generated classes. Fixed in a dedicated
@@ -140,3 +158,24 @@ Recorded 2026-07-13. Route these through `/gsd-quick` (bug) or a planned phase
     shown statically in `app/src/views/Glosario.tsx` (`GrammarRow`, not tappable);
     no interstitial/info-card mechanism exists yet; SRS keyed by item id incl.
     `itemType:'grammar'` (`app/src/progress/srs.ts`).
+
+- [ ] **Verbos con tabla de conjugación (esquema + app + backfill).** Hoy un
+  verbo solo se muestra con su forma diccionario; la app debe enseñar la TABLA
+  de conjugación (ver la regla de contenido arriba). Tres partes:
+  1. **Esquema (cambio ADITIVO, mi job):** añadir a `vocab` un campo opcional
+     para las conjugaciones — p.ej. `conjugation` con `{ dictionary, masu,
+     masen, mashita, masendeshita, group: 'ichidan'|'godan'|'irregular',
+     irregular?: bool }` (readings en kana + romaji por forma; furigana/audio
+     reutilizando el patrón actual). Opcional para no romper no-verbos.
+     Actualizar `content/schema/content.schema.json` y `skill/validate.mjs`
+     (+ el espejo `app/src/content/validate.mjs`).
+  2. **Skill (structure.md):** emitir el paradigma para cada verbo a partir de
+     ahora, conjugando por grupo y marcando irregulares.
+  3. **App:** renderizar la tabla en el detalle de vocab (y decidir si genera
+     ejercicios por-forma; de momento basta con mostrarla). Refs: vocab card /
+     detalle en `app/src/views/Glosario.tsx` + `app/src/exercises/generators.ts`.
+  4. **Backfill:** regenerar los verbos ya publicados con conjugaciones. Verbos
+     actuales: `2026-07-13` おきる; `2026-07-15` ねる・はたらく・べんきょうする・
+     のむ・たべる. (Confirmar con grep `"pos": "verbo"` en `content/classes/`.)
+  Trabajo de código con cambio de esquema → NO editar desde un run de clase;
+  planificar fase GSD. _Trigger (2026-07-15): ver regla de contenido arriba._
