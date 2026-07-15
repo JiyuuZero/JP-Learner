@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
 - [x] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
 - [x] **Phase 5: Verbos — conjugación (contenido y schema)** - Campo aditivo/opcional en `vocab` para el paradigma ます (dic + ます/ません/ました/ませんでした) con grupo e irregulares; la skill lo emite en cada verbo; backfill de los verbos ya publicados. (Prerequisito de Phase 6.)
-- [ ] **Phase 6: Verbos — tabla en la app** - Render de la tabla de conjugación en el detalle de vocab de verbos, reutilizando furigana/audio; irregulares distinguidos.
+- [x] **Phase 6: Verbos — tabla en la app** - Render de la tabla de conjugación en el detalle de vocab de verbos, reutilizando furigana/audio; irregulares distinguidos.
 
 ## Phase Details
 
@@ -161,7 +161,7 @@ Plans:
 **Plans:** 1 plan en 1 wave
 
 Plans:
-- [ ] 06-01-PLAN.md — ConjugationTable (5 formas ます + grupo + marca irregular) cableado en VocabDetail bajo guard item.conjugation + marca "verbo" en VocabRow [Wave 1]
+- [x] 06-01-PLAN.md — ConjugationTable (5 formas ます + grupo + marca irregular) cableado en VocabDetail bajo guard item.conjugation + marca "verbo" en VocabRow [Wave 1]
 
 **Phase notes:**
 - Depende de la Phase 5: la tabla necesita el campo de conjugaciones en el contenido.
