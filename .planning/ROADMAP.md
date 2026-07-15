@@ -16,6 +16,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: TTS por audio pre-generado en la skill** - La skill genera audio japonés local por ítem; la app lo reproduce offline con Web Speech de fallback; contrato de skill extendido a entrada flexible.
 - [x] **Phase 3: Gramática — contenido y schema** - Campo aditivo de "foco" para cloze; la skill emite tokens+foco en ejemplos de gramática; backfill de la gramática de las 5 clases anteriores. (Prerequisito de Phase 4.)
 - [x] **Phase 4: Gramática — sección y ejercicios en la app** - Sección propia de gramática, ejercicios ricos (reordenar/cloze/MC/emparejar) y tarjetas "¿Sabías que?" intercaladas.
+- [ ] **Phase 5: Verbos — conjugación (contenido y schema)** - Campo aditivo/opcional en `vocab` para el paradigma ます (dic + ます/ません/ました/ませんでした) con grupo e irregulares; la skill lo emite en cada verbo; backfill de los verbos ya publicados. (Prerequisito de Phase 6.)
+- [ ] **Phase 6: Verbos — tabla en la app** - Render de la tabla de conjugación en el detalle de vocab de verbos, reutilizando furigana/audio; irregulares distinguidos.
 
 ## Phase Details
 
@@ -123,3 +125,41 @@ Plans:
 **Phase notes (grammar redesign — user-approved decomposition 2026-07-13/14):**
 - Decisiones de diseño y refs de arquitectura de la app en `skill/LEARNINGS.md` ("App / tooling feedback (open)" → gramática; "Design DECIDED with user 2026-07-13").
 - Phase 3 es prerequisito de Phase 4: los ejercicios ricos (reordenar/cloze) necesitan los `tokens`+foco que emite la Phase 3.
+
+### Phase 5: Verbos — conjugación (contenido y schema)
+
+**Goal:** Que un verbo deje de representarse solo con su forma diccionario y pase a llevar su paradigma ます completo como dato estructurado, listo para que la app lo muestre como tabla. (a) Campo ADITIVO y OPCIONAL en `vocab` (p.ej. `conjugation`) con: forma diccionario + ます (presente afirmativo) / ません (presente negativo) / ました (pasado afirmativo) / ませんでした (pasado negativo), cada forma con lectura en kana + romaji; `group` del verbo (`ichidan`|`godan`|`irregular`) y flag de irregular. Opcional para no romper los no-verbos. (b) Actualizar `content/schema/content.schema.json`, `skill/validate.mjs` y su espejo `app/src/content/validate.mjs` (deben seguir sin divergir). (c) Actualizar `skill/prompts/structure.md` para emitir el paradigma en CADA verbo a partir de ahora, conjugando por grupo y marcando irregulares (nunca inventar formas; si hay duda del grupo, buscar). (d) Backfill de los verbos ya publicados con sus conjugaciones. Prerequisito de Phase 6.
+**Depends on:** Phase 4
+
+**Success Criteria** (what must be TRUE):
+  1. El esquema admite conjugaciones en `vocab` de forma aditiva y opcional; validate.mjs (y su espejo en la app) las valida sin romper el contenido existente.
+  2. `skill/prompts/structure.md` obliga a emitir el paradigma ます (dic + 4 formas) por verbo, con grupo e irregulares marcados.
+  3. Todos los verbos ya publicados quedan con sus conjugaciones (backfill): `2026-07-13` おきる; `2026-07-15` ねる・はたらく・べんきょうする・のむ・たべる — validados y re-commiteados por el flujo de la skill.
+  4. Las conjugaciones son correctas por grupo (ichidan / godan / irregular する・くる) — verificación humana de lecturas.
+
+**Requirements**: DISP-01 (reforzado — sin IDs nuevos)
+**Plans:** 2 plans en 2 waves
+- [ ] 05-01-PLAN.md — Schema aditivo `conjugation` (defs conjForm/conjugation, vocab opcional) + validadores en espejo (obligatorio para pos verbo) + structure.md (emitir paradigma masu por grupo) + regenerar tipos TS [Wave 1]
+- [ ] 05-02-PLAN.md — Backfill de los 6 verbos publicados (2026-07-13 おきる; 2026-07-15 ねる・たべる・のむ・はたらく・べんきょうする) con revision humana de lecturas, re-commit por el gate de la skill (IDs/SRS preservados) [Wave 2]
+
+**Phase notes (verb tables — user-approved 2026-07-15):**
+- Contexto y refs completas en `skill/LEARNINGS.md`: regla de contenido "Verbos: tabla de conjugación completa" + ítem abierto "Verbos con tabla de conjugación (esquema + app + backfill)" con las 4 partes y refs de ficheros. Memoria: [[jp-verb-conjugation-tables]].
+- Mismo molde que la feature de gramática: Phase 3 (contenido/schema, aditivo) fue prerequisito de Phase 4 (app). Aquí Phase 5 (contenido/schema) es prerequisito de Phase 6 (app).
+- Regla dura del proyecto: NUNCA lecturas/formas inventadas; el humano revisa solo cobertura/lecturas, no decisiones de gramática.
+
+### Phase 6: Verbos — tabla en la app
+
+**Goal:** Mostrar en la app la conjugación de cada verbo como una TABLA legible (no un único infinitivo), consumiendo el campo aditivo que emite la Phase 5. Renderizar la tabla en el detalle/tarjeta de vocab de verbos (`app/src/views/Glosario.tsx`) reutilizando el patrón de furigana y de audio pre-generado ya existente; distinguir visualmente las formas y marcar los verbos irregulares. (Decidir en el plan si además se generan ejercicios por-forma; para este objetivo basta con mostrar la tabla correctamente.)
+**Depends on:** Phase 5
+
+**Success Criteria** (what must be TRUE):
+  1. El detalle de un verbo muestra su tabla de conjugación (dic + 4 formas ます) con furigana/lectura.
+  2. Los verbos irregulares se distinguen de los regulares en la tabla.
+  3. Un no-verbo (o un verbo sin datos de conjugación) no rompe: la tarjeta degrada con elegancia.
+
+**Requirements**: DISP-01 (reforzado — sin IDs nuevos)
+**Plans:** TBD (pendiente de `/gsd-plan-phase 6`)
+
+**Phase notes:**
+- Depende de la Phase 5: la tabla necesita el campo de conjugaciones en el contenido.
+- Refs de arquitectura de la app en `skill/LEARNINGS.md` ("App feedback (open)"): tarjeta/detalle de vocab en `app/src/views/Glosario.tsx`; generadores en `app/src/exercises/generators.ts`.
