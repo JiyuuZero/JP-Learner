@@ -1,0 +1,1858 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-15",
+  "date": "2026-07-15",
+  "label": "Clase 5: la hora",
+  "vocab": [
+    {
+      "id": "2026-07-15:vocab:ima",
+      "type": "vocab",
+      "kanji": "いま",
+      "kana": "いま",
+      "romaji": "ima",
+      "es": "ahora",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "いま",
+          "reading": "いま",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまなんじですか。",
+        "kana": "いまなんじですか。",
+        "romaji": "ima nanji desu ka.",
+        "es": "¿Qué hora es ahora?",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "なんじ",
+            "reading": "なんじ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "か",
+            "reading": "か",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:aruzenchin",
+      "type": "vocab",
+      "kanji": "アルゼンチン",
+      "kana": "アルゼンチン",
+      "romaji": "aruzenchin",
+      "es": "Argentina",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "アルゼンチン",
+          "reading": "アルゼンチン",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "países",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "アルゼンチンじんです。",
+        "kana": "アルゼンチンじんです。",
+        "romaji": "aruzenchin jin desu.",
+        "es": "Es argentino/a.",
+        "tokens": [
+          {
+            "surface": "アルゼンチン",
+            "reading": "アルゼンチン",
+            "isKanji": false
+          },
+          {
+            "surface": "じん",
+            "reading": "じん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:airurando",
+      "type": "vocab",
+      "kanji": "アイルランド",
+      "kana": "アイルランド",
+      "romaji": "airurando",
+      "es": "Irlanda",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "アイルランド",
+          "reading": "アイルランド",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "países",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "アイルランドはいまなんじですか。",
+        "kana": "アイルランドはいまなんじですか。",
+        "romaji": "airurando wa ima nanji desu ka.",
+        "es": "¿Qué hora es ahora en Irlanda?",
+        "tokens": [
+          {
+            "surface": "アイルランド",
+            "reading": "アイルランド",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "なんじ",
+            "reading": "なんじ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "か",
+            "reading": "か",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:neru",
+      "type": "vocab",
+      "kanji": "ねる",
+      "kana": "ねる",
+      "romaji": "neru",
+      "es": "dormir / acostarse",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "ねる",
+          "reading": "ねる",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはねます。",
+        "kana": "わたしはねます。",
+        "romaji": "watashi wa nemasu.",
+        "es": "Duermo / me acuesto. (forma ます de ねる)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ねます",
+            "reading": "ねます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:hataraku",
+      "type": "vocab",
+      "kanji": "はたらく",
+      "kana": "はたらく",
+      "romaji": "hataraku",
+      "es": "trabajar",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "はたらく",
+          "reading": "はたらく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしははたらきます。",
+        "kana": "わたしははたらきます。",
+        "romaji": "watashi wa hatarakimasu.",
+        "es": "Trabajo. (forma ます de はたらく)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "はたらきます",
+            "reading": "はたらきます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:benkyousuru",
+      "type": "vocab",
+      "kanji": "べんきょうする",
+      "kana": "べんきょうする",
+      "romaji": "benkyō suru",
+      "es": "estudiar",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "べんきょうする",
+          "reading": "べんきょうする",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはべんきょうします。",
+        "kana": "わたしはべんきょうします。",
+        "romaji": "watashi wa benkyō shimasu.",
+        "es": "Estudio. (forma ます de べんきょうする)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "べんきょうします",
+            "reading": "べんきょうします",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:nomu",
+      "type": "vocab",
+      "kanji": "のむ",
+      "kana": "のむ",
+      "romaji": "nomu",
+      "es": "beber",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "のむ",
+          "reading": "のむ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはのみます。",
+        "kana": "わたしはのみます。",
+        "romaji": "watashi wa nomimasu.",
+        "es": "Bebo. (forma ます de のむ)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "のみます",
+            "reading": "のみます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:taberu",
+      "type": "vocab",
+      "kanji": "たべる",
+      "kana": "たべる",
+      "romaji": "taberu",
+      "es": "comer",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "たべる",
+          "reading": "たべる",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはたべます。",
+        "kana": "わたしはたべます。",
+        "romaji": "watashi wa tabemasu.",
+        "es": "Como. (forma ます de たべる)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "たべます",
+            "reading": "たべます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:shiai",
+      "type": "vocab",
+      "kanji": "しあい",
+      "kana": "しあい",
+      "romaji": "shiai",
+      "es": "partido (de cualquier deporte)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "しあい",
+          "reading": "しあい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "deporte",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "サッカーのしあいです。",
+        "kana": "サッカーのしあいです。",
+        "romaji": "sakkā no shiai desu.",
+        "es": "Es un partido de fútbol.",
+        "tokens": [
+          {
+            "surface": "サッカー",
+            "reading": "サッカー",
+            "isKanji": false
+          },
+          {
+            "surface": "の",
+            "reading": "の",
+            "isKanji": false
+          },
+          {
+            "surface": "しあい",
+            "reading": "しあい",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:sakkaa",
+      "type": "vocab",
+      "kanji": "サッカー",
+      "kana": "サッカー",
+      "romaji": "sakkā",
+      "es": "fútbol",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "サッカー",
+          "reading": "サッカー",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "deporte",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "サッカーのしあいです。",
+        "kana": "サッカーのしあいです。",
+        "romaji": "sakkā no shiai desu.",
+        "es": "Es un partido de fútbol.",
+        "tokens": [
+          {
+            "surface": "サッカー",
+            "reading": "サッカー",
+            "isKanji": false
+          },
+          {
+            "surface": "の",
+            "reading": "の",
+            "isKanji": false
+          },
+          {
+            "surface": "しあい",
+            "reading": "しあい",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:futtobooru",
+      "type": "vocab",
+      "kanji": "フットボール",
+      "kana": "フットボール",
+      "romaji": "futtobōru",
+      "es": "fútbol americano",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "フットボール",
+          "reading": "フットボール",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "deporte",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはフットボールです。",
+        "kana": "これはフットボールです。",
+        "romaji": "kore wa futtobōru desu.",
+        "es": "Esto es fútbol americano.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "フットボール",
+            "reading": "フットボール",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:kaze",
+      "type": "vocab",
+      "kanji": "かぜ",
+      "kana": "かぜ",
+      "romaji": "kaze",
+      "es": "resfriado (かぜ también significa «viento», con otro kanji)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かぜ",
+          "reading": "かぜ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "salud",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはかぜです。",
+        "kana": "わたしはかぜです。",
+        "romaji": "watashi wa kaze desu.",
+        "es": "Estoy resfriado/a.",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "かぜ",
+            "reading": "かぜ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:ganbatte",
+      "type": "vocab",
+      "kanji": "がんばって",
+      "kana": "がんばって",
+      "romaji": "ganbatte",
+      "es": "¡ánimo!, ¡tú puedes! (para animar a alguien; variante: がんばれ)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "がんばって",
+          "reading": "がんばって",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "がんばって！",
+        "kana": "がんばって！",
+        "romaji": "ganbatte!",
+        "es": "¡Ánimo!"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:odaijini",
+      "type": "vocab",
+      "kanji": "おだいじに",
+      "kana": "おだいじに",
+      "romaji": "odaiji ni",
+      "es": "cuídate / que te mejores (a alguien enfermo o herido)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "おだいじに",
+          "reading": "おだいじに",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "おだいじに。",
+        "kana": "おだいじに。",
+        "romaji": "odaiji ni.",
+        "es": "Que te mejores."
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:ittekimasu",
+      "type": "vocab",
+      "kanji": "いってきます",
+      "kana": "いってきます",
+      "romaji": "ittekimasu",
+      "es": "«¡me voy!» (lo dice quien sale de casa)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "いってきます",
+          "reading": "いってきます",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いってきます。",
+        "kana": "いってきます。",
+        "romaji": "ittekimasu.",
+        "es": "¡Me voy! (al salir de casa)"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:itterasshai",
+      "type": "vocab",
+      "kanji": "いってらっしゃい",
+      "kana": "いってらっしゃい",
+      "romaji": "itterasshai",
+      "es": "«¡que te vaya bien!» (lo dice quien se queda cuando alguien sale)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "いってらっしゃい",
+          "reading": "いってらっしゃい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いってらっしゃい。",
+        "kana": "いってらっしゃい。",
+        "romaji": "itterasshai.",
+        "es": "¡Que te vaya bien!"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:tadaima",
+      "type": "vocab",
+      "kanji": "ただいま",
+      "kana": "ただいま",
+      "romaji": "tadaima",
+      "es": "«¡ya estoy en casa!» (al volver a casa)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "ただいま",
+          "reading": "ただいま",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "ただいま。",
+        "kana": "ただいま。",
+        "romaji": "tadaima.",
+        "es": "¡Ya estoy en casa!"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:okaeri",
+      "type": "vocab",
+      "kanji": "おかえり",
+      "kana": "おかえり",
+      "romaji": "okaeri",
+      "es": "«¡bienvenido/a!» (respuesta a ただいま; formal: おかえりなさい)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "おかえり",
+          "reading": "おかえり",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "おかえり。",
+        "kana": "おかえり。",
+        "romaji": "okaeri.",
+        "es": "¡Bienvenido/a!"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:itadakimasu",
+      "type": "vocab",
+      "kanji": "いただきます",
+      "kana": "いただきます",
+      "romaji": "itadakimasu",
+      "es": "se dice antes de comer (lit. «recibo [esta comida]», agradecimiento)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "いただきます",
+          "reading": "いただきます",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いただきます。",
+        "kana": "いただきます。",
+        "romaji": "itadakimasu.",
+        "es": "¡Que aproveche! (antes de comer)"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:gochisousama",
+      "type": "vocab",
+      "kanji": "ごちそうさま",
+      "kana": "ごちそうさま",
+      "romaji": "gochisōsama",
+      "es": "se dice al terminar de comer («gracias, ha sido un festín»; con pasado: ごちそうさまでした)",
+      "pos": "expresión",
+      "tokens": [
+        {
+          "surface": "ごちそうさま",
+          "reading": "ごちそうさま",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "saludos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "ごちそうさまでした。",
+        "kana": "ごちそうさまでした。",
+        "romaji": "gochisōsama deshita.",
+        "es": "Gracias, ha sido una buena comida. (al terminar)"
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:yoru",
+      "type": "vocab",
+      "kanji": "よる",
+      "kana": "よる",
+      "romaji": "yoru",
+      "es": "noche",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "よる",
+          "reading": "よる",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまはよるです。",
+        "kana": "いまはよるです。",
+        "romaji": "ima wa yoru desu.",
+        "es": "Ahora es de noche.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "よる",
+            "reading": "よる",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:asa",
+      "type": "vocab",
+      "kanji": "あさ",
+      "kana": "あさ",
+      "romaji": "asa",
+      "es": "mañana (primera parte del día)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "あさ",
+          "reading": "あさ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまはあさです。",
+        "kana": "いまはあさです。",
+        "romaji": "ima wa asa desu.",
+        "es": "Ahora es por la mañana.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "あさ",
+            "reading": "あさ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:ame",
+      "type": "vocab",
+      "kanji": "あめ",
+      "kana": "あめ",
+      "romaji": "ame",
+      "es": "lluvia (la misma palabra あめ también significa «caramelo», con otro kanji)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "あめ",
+          "reading": "あめ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "あめです。",
+        "kana": "あめです。",
+        "romaji": "ame desu.",
+        "es": "Está lloviendo.",
+        "tokens": [
+          {
+            "surface": "あめ",
+            "reading": "あめ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:okashi",
+      "type": "vocab",
+      "kanji": "おかし",
+      "kana": "おかし",
+      "romaji": "okashi",
+      "es": "dulces / snacks (dulce o salado; aperitivos que no son una comida principal)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "おかし",
+          "reading": "おかし",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはおかしです。",
+        "kana": "これはおかしです。",
+        "romaji": "kore wa okashi desu.",
+        "es": "Esto es un dulce/snack.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "おかし",
+            "reading": "おかし",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:okane",
+      "type": "vocab",
+      "kanji": "おかね",
+      "kana": "おかね",
+      "romaji": "okane",
+      "es": "dinero (en efectivo)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "おかね",
+          "reading": "おかね",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはおかねです。",
+        "kana": "これはおかねです。",
+        "romaji": "kore wa okane desu.",
+        "es": "Esto es dinero.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "おかね",
+            "reading": "おかね",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:chikatetsu",
+      "type": "vocab",
+      "kanji": "ちかてつ",
+      "kana": "ちかてつ",
+      "romaji": "chikatetsu",
+      "es": "metro (transporte)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ちかてつ",
+          "reading": "ちかてつ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはちかてつです。",
+        "kana": "これはちかてつです。",
+        "romaji": "kore wa chikatetsu desu.",
+        "es": "Esto es el metro.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ちかてつ",
+            "reading": "ちかてつ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:tokei",
+      "type": "vocab",
+      "kanji": "とけい",
+      "kana": "とけい",
+      "romaji": "tokei",
+      "es": "reloj",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "とけい",
+          "reading": "とけい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはにほんのとけいです。",
+        "kana": "これはにほんのとけいです。",
+        "romaji": "kore wa nihon no tokei desu.",
+        "es": "Este es un reloj japonés.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "にほん",
+            "reading": "にほん",
+            "isKanji": false
+          },
+          {
+            "surface": "の",
+            "reading": "の",
+            "isKanji": false
+          },
+          {
+            "surface": "とけい",
+            "reading": "とけい",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:kamera",
+      "type": "vocab",
+      "kanji": "カメラ",
+      "kana": "カメラ",
+      "romaji": "kamera",
+      "es": "cámara",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "カメラ",
+          "reading": "カメラ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "このカメラはにほんのです。",
+        "kana": "このカメラはにほんのです。",
+        "romaji": "kono kamera wa nihon no desu.",
+        "es": "Esta cámara es de Japón.",
+        "tokens": [
+          {
+            "surface": "この",
+            "reading": "この",
+            "isKanji": false
+          },
+          {
+            "surface": "カメラ",
+            "reading": "カメラ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "にほん",
+            "reading": "にほん",
+            "isKanji": false
+          },
+          {
+            "surface": "の",
+            "reading": "の",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:dochira",
+      "type": "vocab",
+      "kanji": "どちら",
+      "kana": "どちら",
+      "romaji": "dochira",
+      "es": "¿dónde? / ¿cuál? (versión formal de どこ / どれ)",
+      "pos": "pronombre",
+      "tokens": [
+        {
+          "surface": "どちら",
+          "reading": "どちら",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "おくにはどちらですか。",
+        "kana": "おくにはどちらですか。",
+        "romaji": "o-kuni wa dochira desu ka.",
+        "es": "¿De dónde eres? (¿cuál es su país?)",
+        "tokens": [
+          {
+            "surface": "おくに",
+            "reading": "おくに",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "どちら",
+            "reading": "どちら",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "か",
+            "reading": "か",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:momo",
+      "type": "vocab",
+      "kanji": "もも",
+      "kana": "もも",
+      "romaji": "momo",
+      "es": "melocotón",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "もも",
+          "reading": "もも",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはももです。",
+        "kana": "これはももです。",
+        "romaji": "kore wa momo desu.",
+        "es": "Esto es un melocotón.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "もも",
+            "reading": "もも",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-15:vocab:sumomo",
+      "type": "vocab",
+      "kanji": "すもも",
+      "kana": "すもも",
+      "romaji": "sumomo",
+      "es": "ciruela",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "すもも",
+          "reading": "すもも",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはすももです。",
+        "kana": "これはすももです。",
+        "romaji": "kore wa sumomo desu.",
+        "es": "Esto es una ciruela.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "すもも",
+            "reading": "すもも",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-15:grammar:ima-ji-desu",
+      "type": "grammar",
+      "pattern": "いま 〜じ です",
+      "es": "Para decir la hora actual: いま (ahora) + la hora + です. Ej.: いま しちじ です = «ahora son las 7». No hace falta poner は después de いま.",
+      "examples": [
+        {
+          "kanji": "いましちじです。",
+          "kana": "いましちじです。",
+          "romaji": "ima shichi ji desu.",
+          "es": "Ahora son las 7.",
+          "tokens": [
+            {
+              "surface": "いま",
+              "reading": "いま",
+              "isKanji": false
+            },
+            {
+              "surface": "しちじ",
+              "reading": "しちじ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:nanji-desuka",
+      "type": "grammar",
+      "pattern": "〜は いま なんじ ですか",
+      "es": "Para preguntar la hora: [tema]は いま なんじ ですか. なんじ = «qué hora». Ej.: にほんは いま なんじ ですか = «¿qué hora es ahora en Japón?».",
+      "examples": [
+        {
+          "kanji": "にほんはいまなんじですか。",
+          "kana": "にほんはいまなんじですか。",
+          "romaji": "nihon wa ima nanji desu ka.",
+          "es": "¿Qué hora es ahora en Japón?",
+          "tokens": [
+            {
+              "surface": "にほん",
+              "reading": "にほん",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "いま",
+              "reading": "いま",
+              "isKanji": false
+            },
+            {
+              "surface": "なんじ",
+              "reading": "なんじ",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:gozen-gogo",
+      "type": "grammar",
+      "pattern": "ごぜん ／ ごご + 〜じ",
+      "es": "ごぜん = de la madrugada/mañana (AM), ごご = de la tarde/noche (PM). Van DELANTE de la hora, al revés que en castellano. Ej.: ごご しちじ = «las 7 de la tarde» (19:00).",
+      "examples": [
+        {
+          "kanji": "いまごぜんにじです。",
+          "kana": "いまごぜんにじです。",
+          "romaji": "ima gozen ni ji desu.",
+          "es": "Ahora son las 2 de la madrugada.",
+          "tokens": [
+            {
+              "surface": "いま",
+              "reading": "いま",
+              "isKanji": false
+            },
+            {
+              "surface": "ごぜん",
+              "reading": "ごぜん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "にじ",
+              "reading": "にじ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:ni-hora",
+      "type": "grammar",
+      "pattern": "〜じに + verbo (forma ます)",
+      "es": "La partícula に marca la hora a la que ocurre una acción («a las…»). Va después de la hora. Ej.: ごじに おきます = «me levanto a las 5».",
+      "examples": [
+        {
+          "kanji": "ごじにおきます。",
+          "kana": "ごじにおきます。",
+          "romaji": "go ji ni okimasu.",
+          "es": "Me levanto a las 5.",
+          "tokens": [
+            {
+              "surface": "ごじ",
+              "reading": "ごじ",
+              "isKanji": false
+            },
+            {
+              "surface": "に",
+              "reading": "に",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "おきます",
+              "reading": "おきます",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:mo-tambien",
+      "type": "grammar",
+      "pattern": "〜も (también)",
+      "es": "も significa «también» y SUSTITUYE a は. Ej.: アイルランドも しちじ です = «en Irlanda también son las 7». Sirve igual en afirmativo y en negativo.",
+      "examples": [
+        {
+          "kanji": "アイルランドもしちじです。",
+          "kana": "アイルランドもしちじです。",
+          "romaji": "airurando mo shichi ji desu.",
+          "es": "En Irlanda también son las 7.",
+          "tokens": [
+            {
+              "surface": "アイルランド",
+              "reading": "アイルランド",
+              "isKanji": false
+            },
+            {
+              "surface": "も",
+              "reading": "も",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "しちじ",
+              "reading": "しちじ",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:to-y",
+      "type": "grammar",
+      "pattern": "A と B (A y B)",
+      "es": "と une dos sustantivos: «A y B». Ej.: アルゼンチンと イギリス = «Argentina e Inglaterra». En un partido se lee además como «contra».",
+      "examples": [
+        {
+          "kanji": "アルゼンチンとイギリスのしあいです。",
+          "kana": "アルゼンチンとイギリスのしあいです。",
+          "romaji": "aruzenchin to igirisu no shiai desu.",
+          "es": "Es el partido Argentina-Inglaterra.",
+          "tokens": [
+            {
+              "surface": "アルゼンチン",
+              "reading": "アルゼンチン",
+              "isKanji": false
+            },
+            {
+              "surface": "と",
+              "reading": "と",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "イギリス",
+              "reading": "イギリス",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false
+            },
+            {
+              "surface": "しあい",
+              "reading": "しあい",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-15:grammar:kara-made",
+      "type": "grammar",
+      "pattern": "〜から〜まで (desde…hasta)",
+      "es": "から = «desde», まで = «hasta». Se ponen después de la hora. Ej.: ごじから ろくじまで = «de 5 a 6». Se pueden usar por separado (solo から, o solo まで).",
+      "examples": [
+        {
+          "kanji": "わたしはごじからろくじまではたらきます。",
+          "kana": "わたしはごじからろくじまではたらきます。",
+          "romaji": "watashi wa go ji kara roku ji made hatarakimasu.",
+          "es": "Trabajo de 5 a 6.",
+          "tokens": [
+            {
+              "surface": "わたし",
+              "reading": "わたし",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "ごじ",
+              "reading": "ごじ",
+              "isKanji": false
+            },
+            {
+              "surface": "から",
+              "reading": "から",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "ろくじ",
+              "reading": "ろくじ",
+              "isKanji": false
+            },
+            {
+              "surface": "まで",
+              "reading": "まで",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "はたらきます",
+              "reading": "はたらきます",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-15",
+        "gramática",
+        "partículas"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-15:note:1",
+      "type": "note",
+      "es": "Saludos de entrar y salir de casa: quien SALE dice «いってきます», y quien se queda responde «いってらっしゃい». Al VOLVER, quien llega dice «ただいま» y quien está en casa responde «おかえり(なさい)».",
+      "tags": [
+        "2026-07-15",
+        "nota",
+        "saludos"
+      ]
+    },
+    {
+      "id": "2026-07-15:note:2",
+      "type": "note",
+      "es": "A una persona enferma o herida se le dice «おだいじに» (cuídate/reposa), NUNCA «がんばれ» (¡ánimo, esfuérzate!): a quien debe descansar no se le pide que se esfuerce.",
+      "tags": [
+        "2026-07-15",
+        "nota",
+        "saludos",
+        "cultura"
+      ]
+    },
+    {
+      "id": "2026-07-15:note:3",
+      "type": "note",
+      "es": "Horas irregulares al leer 〜じ: 4→よじ (no «よんじ» ni «しじ»), 9→くじ (no «きゅうじ»), 7→しちじ. Por teléfono se prefiere «ななじ» para las 7, porque «しちじ» se confunde con «いちじ» (la 1).",
+      "tags": [
+        "2026-07-15",
+        "nota",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-15:note:4",
+      "type": "note",
+      "es": "No intentes memorizar «todas las partículas» de una lista: una misma partícula tiene varios usos. Es más manejable aprender cada partícula dentro de la frase concreta donde aparece.",
+      "tags": [
+        "2026-07-15",
+        "nota",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-15:note:5",
+      "type": "note",
+      "es": "Trabalenguas visto en clase: «すもももももももものうち» (sumomo mo momo mo momo no uchi) = «tanto la ciruela (すもも) como el melocotón (もも) son de la familia del melocotón». Juega con las partículas も (también) y の (de).",
+      "tags": [
+        "2026-07-15",
+        "nota",
+        "cultura"
+      ]
+    }
+  ]
+}

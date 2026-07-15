@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-14T08:51:54Z",
+  "generatedAt": "2026-07-15T20:57:30Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -65,6 +65,19 @@
         "grammar": 3,
         "kanji": 0,
         "notes": 7
+      }
+    },
+    {
+      "id": "2026-07-15",
+      "date": "2026-07-15",
+      "label": "Clase 5: la hora",
+      "file": "classes/2026-07-15.json",
+      "contentHash": "sha256-a37fcdd88b3531f4470f54fc431a42b6b22009e88ce2bb06a69d6df3f809cf3e",
+      "counts": {
+        "vocab": 31,
+        "grammar": 7,
+        "kanji": 0,
+        "notes": 5
       }
     }
   ]
