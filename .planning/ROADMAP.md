@@ -158,7 +158,10 @@ Plans:
   3. Un no-verbo (o un verbo sin datos de conjugación) no rompe: la tarjeta degrada con elegancia.
 
 **Requirements**: DISP-01 (reforzado — sin IDs nuevos)
-**Plans:** TBD (pendiente de `/gsd-plan-phase 6`)
+**Plans:** 1 plan en 1 wave
+
+Plans:
+- [ ] 06-01-PLAN.md — ConjugationTable (5 formas ます + grupo + marca irregular) cableado en VocabDetail bajo guard item.conjugation + marca "verbo" en VocabRow [Wave 1]
 
 **Phase notes:**
 - Depende de la Phase 5: la tabla necesita el campo de conjugaciones en el contenido.
