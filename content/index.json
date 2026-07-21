@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-21T19:28:53Z",
+  "generatedAt": "2026-07-21T19:29:32Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -91,6 +91,19 @@
         "grammar": 5,
         "kanji": 0,
         "notes": 7
+      }
+    },
+    {
+      "id": "2026-07-20",
+      "date": "2026-07-20",
+      "label": "Clase 7: katakana y minutos",
+      "file": "classes/2026-07-20.json",
+      "contentHash": "sha256-7e5fa4f13c3a094ab9550030c7eeb445ccfdf374bf7a078a8503fe2e1e822e96",
+      "counts": {
+        "vocab": 41,
+        "grammar": 2,
+        "kanji": 0,
+        "notes": 8
       }
     }
   ]

@@ -1,0 +1,2462 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-20",
+  "date": "2026-07-20",
+  "label": "Clase 7: katakana y minutos",
+  "vocab": [
+    {
+      "id": "2026-07-20:vocab:neko",
+      "type": "vocab",
+      "kanji": "ねこ",
+      "kana": "ねこ",
+      "romaji": "neko",
+      "es": "gato",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ねこ",
+          "reading": "ねこ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "animales",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはねこです。",
+        "kana": "これはねこです。",
+        "romaji": "kore wa neko desu.",
+        "es": "Esto es un gato.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ねこ",
+            "reading": "ねこ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ka",
+      "type": "vocab",
+      "kanji": "か",
+      "kana": "か",
+      "romaji": "ka",
+      "es": "mosquito",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "か",
+          "reading": "か",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "animales",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはかです。",
+        "kana": "これはかです。",
+        "romaji": "kore wa ka desu.",
+        "es": "Esto es un mosquito.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "か",
+            "reading": "か",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:inu",
+      "type": "vocab",
+      "kanji": "いぬ",
+      "kana": "いぬ",
+      "romaji": "inu",
+      "es": "perro",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "いぬ",
+          "reading": "いぬ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "animales",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはいぬです。",
+        "kana": "これはいぬです。",
+        "romaji": "kore wa inu desu.",
+        "es": "Esto es un perro.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "いぬ",
+            "reading": "いぬ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:fuku",
+      "type": "vocab",
+      "kanji": "ふく",
+      "kana": "ふく",
+      "romaji": "fuku",
+      "es": "ropa",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ふく",
+          "reading": "ふく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはふくです。",
+        "kana": "これはふくです。",
+        "romaji": "kore wa fuku desu.",
+        "es": "Esto es ropa.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ふく",
+            "reading": "ふく",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:niwa",
+      "type": "vocab",
+      "kanji": "にわ",
+      "kana": "にわ",
+      "romaji": "niwa",
+      "es": "jardín",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "にわ",
+          "reading": "にわ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "casa",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはにわです。",
+        "kana": "これはにわです。",
+        "romaji": "kore wa niwa desu.",
+        "es": "Esto es un jardín.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "にわ",
+            "reading": "にわ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:e",
+      "type": "vocab",
+      "kanji": "え",
+      "kana": "え",
+      "romaji": "e",
+      "es": "dibujo / cuadro",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "え",
+          "reading": "え",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはえです。",
+        "kana": "これはえです。",
+        "romaji": "kore wa e desu.",
+        "es": "Esto es un dibujo.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "え",
+            "reading": "え",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:matsuge",
+      "type": "vocab",
+      "kanji": "まつげ",
+      "kana": "まつげ",
+      "romaji": "matsuge",
+      "es": "pestañas",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "まつげ",
+          "reading": "まつげ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "cuerpo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはまつげです。",
+        "kana": "これはまつげです。",
+        "romaji": "kore wa matsuge desu.",
+        "es": "Esto son pestañas.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "まつげ",
+            "reading": "まつげ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:chi",
+      "type": "vocab",
+      "kanji": "ち",
+      "kana": "ち",
+      "romaji": "chi",
+      "es": "sangre",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ち",
+          "reading": "ち",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "cuerpo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはちです。",
+        "kana": "これはちです。",
+        "romaji": "kore wa chi desu.",
+        "es": "Esto es sangre.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ち",
+            "reading": "ち",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ki",
+      "type": "vocab",
+      "kanji": "き",
+      "kana": "き",
+      "romaji": "ki",
+      "es": "árbol",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "き",
+          "reading": "き",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはきです。",
+        "kana": "これはきです。",
+        "romaji": "kore wa ki desu.",
+        "es": "Esto es un árbol.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "き",
+            "reading": "き",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:biyouin",
+      "type": "vocab",
+      "kanji": "びよういん",
+      "kana": "びよういん",
+      "romaji": "biyōin",
+      "es": "peluquería / salón de belleza (≠ びょういん hospital)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "びよういん",
+          "reading": "びよういん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "lugares",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはびよういんです。",
+        "kana": "これはびよういんです。",
+        "romaji": "kore wa biyōin desu.",
+        "es": "Esto es una peluquería.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "びよういん",
+            "reading": "びよういん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:sekai",
+      "type": "vocab",
+      "kanji": "せかい",
+      "kana": "せかい",
+      "romaji": "sekai",
+      "es": "mundo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "せかい",
+          "reading": "せかい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "せかいはせまいです。",
+        "kana": "せかいはせまいです。",
+        "romaji": "sekai wa semai desu.",
+        "es": "El mundo es pequeño. (= «el mundo es un pañuelo»)",
+        "tokens": [
+          {
+            "surface": "せかい",
+            "reading": "せかい",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "せまい",
+            "reading": "せまい",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:semai",
+      "type": "vocab",
+      "kanji": "せまい",
+      "kana": "せまい",
+      "romaji": "semai",
+      "es": "estrecho / pequeño (de espacio)",
+      "pos": "adjetivo",
+      "tokens": [
+        {
+          "surface": "せまい",
+          "reading": "せまい",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "descripción",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "にわはせまいです。",
+        "kana": "にわはせまいです。",
+        "romaji": "niwa wa semai desu.",
+        "es": "El jardín es pequeño.",
+        "tokens": [
+          {
+            "surface": "にわ",
+            "reading": "にわ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "せまい",
+            "reading": "せまい",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:sekken",
+      "type": "vocab",
+      "kanji": "せっけん",
+      "kana": "せっけん",
+      "romaji": "sekken",
+      "es": "jabón",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "せっけん",
+          "reading": "せっけん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはせっけんです。",
+        "kana": "これはせっけんです。",
+        "romaji": "kore wa sekken desu.",
+        "es": "Esto es jabón.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "せっけん",
+            "reading": "せっけん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:fun",
+      "type": "vocab",
+      "kanji": "ふん",
+      "kana": "ふん",
+      "romaji": "fun",
+      "es": "minuto(s) (contador 〜ふん／〜ぷん)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ふん",
+          "reading": "ふん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "la hora",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまにじごふんです。",
+        "kana": "いまにじごふんです。",
+        "romaji": "ima ni ji go fun desu.",
+        "es": "Ahora son las 2:05.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "にじ",
+            "reading": "にじ",
+            "isKanji": false
+          },
+          {
+            "surface": "ごふん",
+            "reading": "ごふん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:han",
+      "type": "vocab",
+      "kanji": "はん",
+      "kana": "はん",
+      "romaji": "han",
+      "es": "y media (media hora)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "はん",
+          "reading": "はん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "la hora",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまはちじはんです。",
+        "kana": "いまはちじはんです。",
+        "romaji": "ima hachi ji han desu.",
+        "es": "Ahora son las 8 y media.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "はちじ",
+            "reading": "はちじ",
+            "isKanji": false
+          },
+          {
+            "surface": "はん",
+            "reading": "はん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:hiru",
+      "type": "vocab",
+      "kanji": "ひる",
+      "kana": "ひる",
+      "romaji": "hiru",
+      "es": "mediodía",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ひる",
+          "reading": "ひる",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまはひるです。",
+        "kana": "いまはひるです。",
+        "romaji": "ima wa hiru desu.",
+        "es": "Ahora es mediodía.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ひる",
+            "reading": "ひる",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ban",
+      "type": "vocab",
+      "kanji": "ばん",
+      "kana": "ばん",
+      "romaji": "ban",
+      "es": "noche (tarde-noche)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ばん",
+          "reading": "ばん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いまはばんです。",
+        "kana": "いまはばんです。",
+        "romaji": "ima wa ban desu.",
+        "es": "Ahora es de noche.",
+        "tokens": [
+          {
+            "surface": "いま",
+            "reading": "いま",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ばん",
+            "reading": "ばん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:yasumi",
+      "type": "vocab",
+      "kanji": "やすみ",
+      "kana": "やすみ",
+      "romaji": "yasumi",
+      "es": "descanso / día libre / vacaciones",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "やすみ",
+          "reading": "やすみ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "やすみはどようびとにちようびです。",
+        "kana": "やすみはどようびとにちようびです。",
+        "romaji": "yasumi wa doyōbi to nichiyōbi desu.",
+        "es": "Mis días libres son sábado y domingo.",
+        "tokens": [
+          {
+            "surface": "やすみ",
+            "reading": "やすみ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "どようび",
+            "reading": "どようび",
+            "isKanji": false
+          },
+          {
+            "surface": "と",
+            "reading": "と",
+            "isKanji": false
+          },
+          {
+            "surface": "にちようび",
+            "reading": "にちようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:hiruyasumi",
+      "type": "vocab",
+      "kanji": "ひるやすみ",
+      "kana": "ひるやすみ",
+      "romaji": "hiruyasumi",
+      "es": "pausa del mediodía (para comer)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ひるやすみ",
+          "reading": "ひるやすみ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "ひるやすみはじゅうにじからいちじまでです。",
+        "kana": "ひるやすみはじゅうにじからいちじまでです。",
+        "romaji": "hiruyasumi wa jūni ji kara ichi ji made desu.",
+        "es": "La pausa del mediodía es de 12 a 1.",
+        "tokens": [
+          {
+            "surface": "ひるやすみ",
+            "reading": "ひるやすみ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "じゅうにじ",
+            "reading": "じゅうにじ",
+            "isKanji": false
+          },
+          {
+            "surface": "から",
+            "reading": "から",
+            "isKanji": false
+          },
+          {
+            "surface": "いちじ",
+            "reading": "いちじ",
+            "isKanji": false
+          },
+          {
+            "surface": "まで",
+            "reading": "まで",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:natsuyasumi",
+      "type": "vocab",
+      "kanji": "なつやすみ",
+      "kana": "なつやすみ",
+      "romaji": "natsuyasumi",
+      "es": "vacaciones de verano",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "なつやすみ",
+          "reading": "なつやすみ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "なつやすみです。",
+        "kana": "なつやすみです。",
+        "romaji": "natsuyasumi desu.",
+        "es": "Son las vacaciones de verano.",
+        "tokens": [
+          {
+            "surface": "なつやすみ",
+            "reading": "なつやすみ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:iku",
+      "type": "vocab",
+      "kanji": "いく",
+      "kana": "いく",
+      "romaji": "iku",
+      "es": "ir",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "いく",
+          "reading": "いく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "verbo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはいきます。",
+        "kana": "わたしはいきます。",
+        "romaji": "watashi wa ikimasu.",
+        "es": "Voy. (forma ます de いく)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "いきます",
+            "reading": "いきます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      },
+      "conjugation": {
+        "group": "godan",
+        "dictionary": {
+          "kana": "いく",
+          "romaji": "iku"
+        },
+        "masu": {
+          "kana": "いきます",
+          "romaji": "ikimasu"
+        },
+        "masen": {
+          "kana": "いきません",
+          "romaji": "ikimasen"
+        },
+        "mashita": {
+          "kana": "いきました",
+          "romaji": "ikimashita"
+        },
+        "masendeshita": {
+          "kana": "いきませんでした",
+          "romaji": "ikimasen deshita"
+        }
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:haiiro",
+      "type": "vocab",
+      "kanji": "はいいろ",
+      "kana": "はいいろ",
+      "romaji": "haiiro",
+      "es": "gris",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "はいいろ",
+          "reading": "はいいろ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "colores",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これははいいろです。",
+        "kana": "これははいいろです。",
+        "romaji": "kore wa haiiro desu.",
+        "es": "Esto es gris.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "はいいろ",
+            "reading": "はいいろ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:murasaki",
+      "type": "vocab",
+      "kanji": "むらさき",
+      "kana": "むらさき",
+      "romaji": "murasaki",
+      "es": "morado / violeta",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "むらさき",
+          "reading": "むらさき",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "colores",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはむらさきです。",
+        "kana": "これはむらさきです。",
+        "romaji": "kore wa murasaki desu.",
+        "es": "Esto es morado.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "むらさき",
+            "reading": "むらさき",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:chairo",
+      "type": "vocab",
+      "kanji": "ちゃいろ",
+      "kana": "ちゃいろ",
+      "romaji": "chairo",
+      "es": "marrón",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ちゃいろ",
+          "reading": "ちゃいろ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "colores",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはちゃいろです。",
+        "kana": "これはちゃいろです。",
+        "romaji": "kore wa chairo desu.",
+        "es": "Esto es marrón.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ちゃいろ",
+            "reading": "ちゃいろ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:kuro",
+      "type": "vocab",
+      "kanji": "くろ",
+      "kana": "くろ",
+      "romaji": "kuro",
+      "es": "negro",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "くろ",
+          "reading": "くろ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "colores",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはくろです。",
+        "kana": "これはくろです。",
+        "romaji": "kore wa kuro desu.",
+        "es": "Esto es negro.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "くろ",
+            "reading": "くろ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:hi",
+      "type": "vocab",
+      "kanji": "ひ",
+      "kana": "ひ",
+      "romaji": "hi",
+      "es": "fuego",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ひ",
+          "reading": "ひ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはひです。",
+        "kana": "これはひです。",
+        "romaji": "kore wa hi desu.",
+        "es": "Esto es fuego.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ひ",
+            "reading": "ひ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:fune",
+      "type": "vocab",
+      "kanji": "ふね",
+      "kana": "ふね",
+      "romaji": "fune",
+      "es": "barco",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ふね",
+          "reading": "ふね",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "transporte",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはふねです。",
+        "kana": "これはふねです。",
+        "romaji": "kore wa fune desu.",
+        "es": "Esto es un barco.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ふね",
+            "reading": "ふね",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:heso",
+      "type": "vocab",
+      "kanji": "へそ",
+      "kana": "へそ",
+      "romaji": "heso",
+      "es": "ombligo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "へそ",
+          "reading": "へそ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "cuerpo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはへそです。",
+        "kana": "これはへそです。",
+        "romaji": "kore wa heso desu.",
+        "es": "Esto es un ombligo.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "へそ",
+            "reading": "へそ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:hoshi",
+      "type": "vocab",
+      "kanji": "ほし",
+      "kana": "ほし",
+      "romaji": "hoshi",
+      "es": "estrella",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ほし",
+          "reading": "ほし",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはほしです。",
+        "kana": "これはほしです。",
+        "romaji": "kore wa hoshi desu.",
+        "es": "Esto es una estrella.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ほし",
+            "reading": "ほし",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:michi",
+      "type": "vocab",
+      "kanji": "みち",
+      "kana": "みち",
+      "romaji": "michi",
+      "es": "camino / calle",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "みち",
+          "reading": "みち",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "lugares",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはみちです。",
+        "kana": "これはみちです。",
+        "romaji": "kore wa michi desu.",
+        "es": "Esto es un camino.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "みち",
+            "reading": "みち",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:yuki",
+      "type": "vocab",
+      "kanji": "ゆき",
+      "kana": "ゆき",
+      "romaji": "yuki",
+      "es": "nieve",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ゆき",
+          "reading": "ゆき",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはゆきです。",
+        "kana": "これはゆきです。",
+        "romaji": "kore wa yuki desu.",
+        "es": "Esto es nieve.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ゆき",
+            "reading": "ゆき",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:rappa",
+      "type": "vocab",
+      "kanji": "らっぱ",
+      "kana": "らっぱ",
+      "romaji": "rappa",
+      "es": "trompeta",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "らっぱ",
+          "reading": "らっぱ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはらっぱです。",
+        "kana": "これはらっぱです。",
+        "romaji": "kore wa rappa desu.",
+        "es": "Esto es una trompeta.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "らっぱ",
+            "reading": "らっぱ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ringo",
+      "type": "vocab",
+      "kanji": "りんご",
+      "kana": "りんご",
+      "romaji": "ringo",
+      "es": "manzana",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "りんご",
+          "reading": "りんご",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "comida",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはりんごです。",
+        "kana": "これはりんごです。",
+        "romaji": "kore wa ringo desu.",
+        "es": "Esto es una manzana.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "りんご",
+            "reading": "りんご",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:kumo",
+      "type": "vocab",
+      "kanji": "くも",
+      "kana": "くも",
+      "romaji": "kumo",
+      "es": "nube",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "くも",
+          "reading": "くも",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはくもです。",
+        "kana": "これはくもです。",
+        "romaji": "kore wa kumo desu.",
+        "es": "Esto es una nube.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "くも",
+            "reading": "くも",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ryuu",
+      "type": "vocab",
+      "kanji": "りゅう",
+      "kana": "りゅう",
+      "romaji": "ryū",
+      "es": "dragón",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "りゅう",
+          "reading": "りゅう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "naturaleza",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはりゅうです。",
+        "kana": "これはりゅうです。",
+        "romaji": "kore wa ryū desu.",
+        "es": "Esto es un dragón.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "りゅう",
+            "reading": "りゅう",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:genkin",
+      "type": "vocab",
+      "kanji": "げんきん",
+      "kana": "げんきん",
+      "romaji": "genkin",
+      "es": "dinero en efectivo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "げんきん",
+          "reading": "げんきん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "objetos",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはげんきんです。",
+        "kana": "これはげんきんです。",
+        "romaji": "kore wa genkin desu.",
+        "es": "Esto es dinero en efectivo.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "げんきん",
+            "reading": "げんきん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:washoku",
+      "type": "vocab",
+      "kanji": "わしょく",
+      "kana": "わしょく",
+      "romaji": "washoku",
+      "es": "comida japonesa",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "わしょく",
+          "reading": "わしょく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "comida",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはわしょくです。",
+        "kana": "これはわしょくです。",
+        "romaji": "kore wa washoku desu.",
+        "es": "Esto es comida japonesa.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "わしょく",
+            "reading": "わしょく",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:tsukare",
+      "type": "vocab",
+      "kanji": "つかれ",
+      "kana": "つかれ",
+      "romaji": "tsukare",
+      "es": "fatiga / cansancio",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "つかれ",
+          "reading": "つかれ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "salud",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはつかれです。",
+        "kana": "わたしはつかれです。",
+        "romaji": "watashi wa tsukare desu.",
+        "es": "Estoy cansado/a.",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "つかれ",
+            "reading": "つかれ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:ryokou",
+      "type": "vocab",
+      "kanji": "りょこう",
+      "kana": "りょこう",
+      "romaji": "ryokō",
+      "es": "viaje",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "りょこう",
+          "reading": "りょこう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "viajes",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "りょこうです。",
+        "kana": "りょこうです。",
+        "romaji": "ryokō desu.",
+        "es": "Es un viaje.",
+        "tokens": [
+          {
+            "surface": "りょこう",
+            "reading": "りょこう",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:yomu",
+      "type": "vocab",
+      "kanji": "よむ",
+      "kana": "よむ",
+      "romaji": "yomu",
+      "es": "leer",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "よむ",
+          "reading": "よむ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "verbo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはよみます。",
+        "kana": "わたしはよみます。",
+        "romaji": "watashi wa yomimasu.",
+        "es": "Leo. (forma ます de よむ)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "よみます",
+            "reading": "よみます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      },
+      "conjugation": {
+        "group": "godan",
+        "dictionary": {
+          "kana": "よむ",
+          "romaji": "yomu"
+        },
+        "masu": {
+          "kana": "よみます",
+          "romaji": "yomimasu"
+        },
+        "masen": {
+          "kana": "よみません",
+          "romaji": "yomimasen"
+        },
+        "mashita": {
+          "kana": "よみました",
+          "romaji": "yomimashita"
+        },
+        "masendeshita": {
+          "kana": "よみませんでした",
+          "romaji": "yomimasen deshita"
+        }
+      }
+    },
+    {
+      "id": "2026-07-20:vocab:miru",
+      "type": "vocab",
+      "kanji": "みる",
+      "kana": "みる",
+      "romaji": "miru",
+      "es": "mirar / ver",
+      "pos": "verbo",
+      "tokens": [
+        {
+          "surface": "みる",
+          "reading": "みる",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "verbo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "わたしはみます。",
+        "kana": "わたしはみます。",
+        "romaji": "watashi wa mimasu.",
+        "es": "Miro / veo. (forma ます de みる)",
+        "tokens": [
+          {
+            "surface": "わたし",
+            "reading": "わたし",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "みます",
+            "reading": "みます",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      },
+      "conjugation": {
+        "group": "ichidan",
+        "dictionary": {
+          "kana": "みる",
+          "romaji": "miru"
+        },
+        "masu": {
+          "kana": "みます",
+          "romaji": "mimasu"
+        },
+        "masen": {
+          "kana": "みません",
+          "romaji": "mimasen"
+        },
+        "mashita": {
+          "kana": "みました",
+          "romaji": "mimashita"
+        },
+        "masendeshita": {
+          "kana": "みませんでした",
+          "romaji": "mimasen deshita"
+        }
+      }
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-20:grammar:ji-fun",
+      "type": "grammar",
+      "pattern": "〜じ 〜ふん (la hora con minutos)",
+      "es": "Para dar la hora con minutos: [hora]じ + [minutos]ふん. Ej.: にじ ごふん = «2:05». La lectura ふん cambia a ぷん con algunos números (ver notas).",
+      "examples": [
+        {
+          "kanji": "いまにじごふんです。",
+          "kana": "いまにじごふんです。",
+          "romaji": "ima ni ji go fun desu.",
+          "es": "Ahora son las 2:05.",
+          "tokens": [
+            {
+              "surface": "いま",
+              "reading": "いま",
+              "isKanji": false
+            },
+            {
+              "surface": "にじ",
+              "reading": "にじ",
+              "isKanji": false
+            },
+            {
+              "surface": "ごふん",
+              "reading": "ごふん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "gramática",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-20:grammar:ji-han",
+      "type": "grammar",
+      "pattern": "〜じはん (y media)",
+      "es": "はん = «y media» (30 minutos). Va justo después de la hora: はちじはん = «las 8 y media» (8:30). Es lo normal en vez de decir はちじさんじゅっぷん.",
+      "examples": [
+        {
+          "kanji": "いまはちじはんです。",
+          "kana": "いまはちじはんです。",
+          "romaji": "ima hachi ji han desu.",
+          "es": "Ahora son las 8 y media.",
+          "tokens": [
+            {
+              "surface": "いま",
+              "reading": "いま",
+              "isKanji": false
+            },
+            {
+              "surface": "はちじ",
+              "reading": "はちじ",
+              "isKanji": false
+            },
+            {
+              "surface": "はん",
+              "reading": "はん",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-20",
+        "gramática",
+        "la hora"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-20:note:1",
+      "type": "note",
+      "es": "Katakana: es el mismo silabario que el hiragana (mismos sonidos) pero se usa para palabras extranjeras y énfasis, y se escribe más «cuadrado». Las vocales largas se marcan con ー (guion), no duplicando la vocal. Ojo con parejas que se parecen muchísimo: シ／ツ, ソ／ン, ク／タ.",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "katakana",
+        "escritura"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:2",
+      "type": "note",
+      "es": "Truco de clase para distinguir シ y ツ (y ソ／ン): fíjate en si los trazos «miran» hacia arriba (シ／ツ) o cambia el ángulo; el orden de trazos es lo que las diferencia. Practica siempre el orden correcto.",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "katakana",
+        "escritura"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:3",
+      "type": "note",
+      "es": "Contador de minutos 〜ふん: con 2, 5, 7, 9 se dice ふん (にふん, ごふん, ななふん／しちふん, きゅうふん). Con 1, 6, 8, 10 se usa っ + ぷん (いっぷん, ろっぷん, はっぷん, じゅっぷん). 3 y 4 admiten las dos formas (さんぷん／さんふん, よんぷん／よんふん).",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:4",
+      "type": "note",
+      "es": "はん = «y media» (30 min): はちじはん = 8:30. En japonés NO existe «y cuarto» ni «tres cuartos»: se dicen los minutos (15ふん, 45ふん).",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "la hora"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:5",
+      "type": "note",
+      "es": "El prefijo お delante de ciertas palabras (おすし, おかね, おかし…) las hace sonar más educadas o suaves. Es opcional y se ha ido fijando por costumbre.",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "cultura"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:6",
+      "type": "note",
+      "es": "Partes del día: あさ (mañana, hasta ~las 12), ひる (mediodía, ~12–17), ばん / よる (tarde-noche / noche). ばん y よる no siempre son intercambiables.",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "tiempo"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:7",
+      "type": "note",
+      "es": "Días relativos en el eje pasado↔futuro: きょう (hoy) en el centro, きのう (ayer) hacia el pasado y あした (mañana) hacia el futuro. El libro los coloca así en columnas (día / semana / mes / año).",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "tiempo"
+      ]
+    },
+    {
+      "id": "2026-07-20:note:8",
+      "type": "note",
+      "es": "Expresión: せかいはせまい (lit. «el mundo es estrecho») = «¡el mundo es un pañuelo!».",
+      "tags": [
+        "2026-07-20",
+        "nota",
+        "cultura"
+      ]
+    }
+  ]
+}
