@@ -11,10 +11,11 @@ const ITEMS = [
 
 // Fixed bottom bar, 64px + safe-area (UI-02).
 // Active item: filled indigo pill, white icon + visible label. Inactive: thin line icon, muted, no label.
-// Hidden during a practice session — the session frame's bottom action button replaces it.
+// Hidden during a practice session and inside an exercise mode — their own
+// frames (bottom action button / self-advancing bodies) replace it.
 export default function BottomNav() {
   const { pathname } = useLocation()
-  if (pathname.startsWith('/session')) return null
+  if (pathname.startsWith('/session') || pathname.startsWith('/ejercicios')) return null
   return (
     <nav className="fixed inset-x-0 bottom-0 z-10 bg-surface pb-[env(safe-area-inset-bottom)] shadow-soft">
       <div className="mx-auto flex h-16 max-w-[480px] items-center justify-around px-4">

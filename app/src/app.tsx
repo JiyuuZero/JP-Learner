@@ -14,6 +14,7 @@ import Gramatica from './views/Gramatica'
 import Guardados from './views/Guardados'
 import Perfil from './views/Perfil'
 import Session from './views/Session'
+import Ejercicio from './views/Ejercicio'
 
 function ErrorState({ onRetry }: { onRetry: () => void }) {
   return (
@@ -63,6 +64,7 @@ export default function App() {
               <Route path="/guardados" element={<Guardados />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/session" element={<Session />} />
+              <Route path="/ejercicios/:modeId" element={<Ejercicio />} />
             </Routes>
           )}
         </div>

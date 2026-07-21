@@ -12,6 +12,7 @@ import Card from '../components/Card'
 import { useContent } from '../content/context'
 import { useProgress } from '../progress/ProgressContext'
 import { progressPercent } from '../progress/gamification'
+import { EXERCISE_MODES } from '../modes/registry'
 import type { ReviewScope, SubMode } from '../progress/session'
 
 const SCOPES: { id: ReviewScope; label: string }[] = [
@@ -61,6 +62,9 @@ export default function Home() {
   const streak = meta?.streakCount ?? 0
   const pct = store ? progressPercent(store, srsByItem) : 0
   const hasContent = store !== null && (store.vocabById.size > 0 || store.grammarById.size > 0)
+  // Exercise modes (skill step 7): dedicated practice-only drills, shown once
+  // the class that taught their topic is committed. Extra to the cards.
+  const modes = store ? EXERCISE_MODES.filter((m) => m.isAvailable(store)) : []
 
   const launch = (subMode: SubMode) => {
     // D-01/D-02 launch contract (Plan 05): Session reads ?scope=&subMode=.
@@ -193,6 +197,29 @@ export default function Home() {
               </button>
             </div>
           </section>
+
+          {/* Ejercicios — dedicated modes (registry-driven, practice-only) */}
+          {modes.length > 0 && (
+            <section className="mt-8">
+              <h2 className="mb-2 text-[18px] font-bold">Ejercicios</h2>
+              <div className="grid grid-cols-2 gap-3">
+                {modes.map((m) => (
+                  <button
+                    key={m.id}
+                    type="button"
+                    onClick={() => void navigate(`/ejercicios/${m.id}`)}
+                    className="text-left"
+                  >
+                    <Card tint={m.tint} padding="compact">
+                      <m.Icon size={20} strokeWidth={2} className="text-indigo" aria-hidden="true" />
+                      <p className="mt-1 text-[16px] font-bold">{m.title}</p>
+                      <p className="mt-1 text-[13px] text-muted">{m.tagline}</p>
+                    </Card>
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
         </>
       )}
     </main>
