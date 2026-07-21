@@ -9,8 +9,10 @@
 // Availability derives from committed content (a mode only appears once the
 // class that taught its topic has been processed) — never hardcode class ids.
 import type { ComponentType } from 'react'
+import { Hash } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ContentStore } from '../content/store'
+import NumerosMode from './numeros/NumerosMode'
 
 export interface ExerciseMode {
   id: string // route: /ejercicios/<id>
@@ -28,7 +30,18 @@ export function hasVocabKana(store: ContentStore, ...kanas: string[]): boolean {
   return kanas.every((k) => all.has(k))
 }
 
-export const EXERCISE_MODES: ExerciseMode[] = []
+export const EXERCISE_MODES: ExerciseMode[] = [
+  {
+    id: 'numeros',
+    title: 'Números',
+    tagline: 'Del 0 al 99 999, en voz alta',
+    tint: 'softblue',
+    Icon: Hash,
+    // Needs 百/千/万 taught (2026-07-17); digits 0-10 came earlier (2026-07-08).
+    isAvailable: (store) => hasVocabKana(store, 'ひゃく', 'せん', 'まん'),
+    Component: NumerosMode,
+  },
+]
 
 export const modeById = (id: string): ExerciseMode | undefined =>
   EXERCISE_MODES.find((m) => m.id === id)
