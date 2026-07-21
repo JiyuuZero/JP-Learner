@@ -2,7 +2,7 @@
 
 This skill is the ONLY supported way to add classes to JP-Learner. It converts one or more
 class audio recordings (mixed Spanish/Japanese) and/or user-provided class notes into
-schema-valid content JSON that the app consumes unchanged. It always runs the SAME six
+schema-valid content JSON that the app consumes unchanged. It always runs the SAME seven
 steps, in the SAME order, against the SAME frozen schema — never skip, reorder, or
 improvise steps.
 
@@ -37,7 +37,7 @@ el .app está gitignorado) → se abre la GUI (`python3 clase.py --gui`) → arr
 ficheros, escribe apuntes si quieres y pulsa "Procesar clase" → la sesión interactiva de
 Claude se abre sola en Terminal para la revisión humana.
 
-## The 6 steps (invariant sequence)
+## The 7 steps (invariant sequence)
 
 ### 1. Capture
 
@@ -120,3 +120,39 @@ Re-validates (fail-closed), then:
 
 Re-running the whole skill on the same class is idempotent: identical deterministic IDs
 (SRS history survives re-processing) and a single index entry per class.
+
+### 7. Assess dedicated exercise modes (after every commit)
+
+After the class is committed, ALWAYS run this assessment — it is part of every run, not
+optional. Considering the class just processed COMBINED WITH all previously processed
+classes (`content/index.json` + `content/classes/*.json`), decide whether some topic now
+deserves its OWN dedicated exercise mode in the app (like the existing Números / Días de
+la semana / Horas modes). This NEVER removes anything from the flashcards: every item
+stays in the cards exactly as committed — a dedicated mode is EXTRA practice on top of
+the cards, never a replacement.
+
+Run the 4 sub-steps in order:
+
+1. **IDENTIFY** candidate exercise-worthy topics: closed systems with internal rules
+   (numbers, hours, days, counters, conjugation paradigms, particles, kana sets), topics
+   that keep recurring across classes, or anything the teacher drilled repeatedly.
+   Check `skill/NEXT-EXERCISES.md` (the standing backlog) — a new class often completes
+   a previously deferred candidate.
+2. **ANALYZE** what makes the topic hard and what needs drilling: irregular readings,
+   contrasts/minimal pairs, recall speed, recognition vs production direction. Two or
+   three written lines are enough.
+3. **RESEARCH** online how other teachers and Japanese-learning apps (Duolingo, Renshuu,
+   WaniKani, Bunpo, Tofugu articles, teacher blogs…) drill that topic; gather 2-3
+   concrete exercise ideas and keep the sources (cite them in the commit message).
+4. **BUILD & COMMIT** the mode in the app when a candidate qualifies: a self-contained
+   component under `app/src/modes/<id>/`, registered in `app/src/modes/registry.tsx`
+   (availability derived from committed content — use the existing modes as templates),
+   with tests; `npm run build` + `npm run test` must pass; commit it as its own
+   `feat(exercises): …` commit, separate from the content commit. If a candidate is
+   valuable but not worth building NOW, record it in `skill/NEXT-EXERCISES.md` instead
+   of dropping it.
+
+Modes are PRACTICE-ONLY (no SRS writes), and they must respect the app's script-display
+config by rendering readings through `JapaneseText`/authored-style tokens — never emit a
+reading the generator cannot derive with certainty (the no-invented-readings rule from
+`LEARNINGS.md` applies to generated exercises too).

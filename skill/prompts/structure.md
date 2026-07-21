@@ -224,3 +224,13 @@ readings, translations and items — the user attended the class and is the auth
 what was taught. Apply their corrections, then run, in order: `node skill/validate.mjs
 <file>` (must print `VALID <classId>`), then `node skill/generate-audio.mjs <file>`, and
 only then `node skill/commit-class.mjs <file>`.
+
+## 8. After commit — exercise-mode assessment (MANDATORY)
+
+Structuring does not end the run. Once `commit-class.mjs` has committed the class, apply
+step 7 of `skill/SKILL.md`: assess — IDENTIFY → ANALYZE → RESEARCH → BUILD/COMMIT —
+whether this class, combined with ALL previously processed classes, surfaces a topic that
+deserves its own dedicated exercise mode in the app (registry:
+`app/src/modes/registry.tsx`; backlog: `skill/NEXT-EXERCISES.md`). Building a mode NEVER
+removes items from the flashcards — they stay in the cards too; the mode is extra
+practice on top.

@@ -86,6 +86,23 @@ class and is the authority; every item here is a mistake already made once.
   en clase tratamos todas las formas… quiero que aparezcan con su tabla, con las
   formas regulares e irregulares."_ Ver [[jp-verb-conjugation-tables]].
 
+## Proceso de la skill
+
+- **Cada clase procesada evalúa modos de ejercicio dedicados (paso 7 de
+  `SKILL.md`).** Tras commitear una clase, SIEMPRE ejecuta la evaluación
+  IDENTIFY → ANALYZE → RESEARCH → BUILD/COMMIT: ¿esta clase, combinada con
+  TODAS las anteriores, hace emerger un tema que merece su propio modo de
+  ejercicio en la app (como Números / Días de la semana / Horas)? Si sí,
+  constrúyelo en `app/src/modes/<id>/`, regístralo en
+  `app/src/modes/registry.tsx` y commitéalo como `feat(exercises): …`; si es
+  valioso pero no da para construirlo ahora, apúntalo en
+  `skill/NEXT-EXERCISES.md`. Los ítems implicados siguen SIEMPRE en las
+  tarjetas — el modo dedicado es práctica EXTRA, nunca las sustituye. Los modos
+  son práctica libre (sin escrituras SRS) y muestran las lecturas vía
+  `JapaneseText` respetando la config de escritura del usuario.
+  _Trigger (2026-07-21): petición del usuario — modos dedicados (números 0–99 999,
+  días de la semana, horas) + que la skill haga esta evaluación en cada clase._
+
 ## App feedback
 
 App/code issues surfaced while reviewing generated classes. Fixed in a dedicated
