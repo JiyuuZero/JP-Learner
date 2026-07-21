@@ -1,0 +1,1263 @@
+{
+  "schemaVersion": 1,
+  "classId": "2026-07-17",
+  "date": "2026-07-17",
+  "label": "Clase 6: días y números",
+  "vocab": [
+    {
+      "id": "2026-07-17:vocab:getsuyoubi",
+      "type": "vocab",
+      "kanji": "げつようび",
+      "kana": "げつようび",
+      "romaji": "getsuyōbi",
+      "es": "lunes",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "げつようび",
+          "reading": "げつようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはげつようびです。",
+        "kana": "きょうはげつようびです。",
+        "romaji": "kyō wa getsuyōbi desu.",
+        "es": "Hoy es lunes.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "げつようび",
+            "reading": "げつようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:kayoubi",
+      "type": "vocab",
+      "kanji": "かようび",
+      "kana": "かようび",
+      "romaji": "kayōbi",
+      "es": "martes",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "かようび",
+          "reading": "かようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはかようびです。",
+        "kana": "きょうはかようびです。",
+        "romaji": "kyō wa kayōbi desu.",
+        "es": "Hoy es martes.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "かようび",
+            "reading": "かようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:suiyoubi",
+      "type": "vocab",
+      "kanji": "すいようび",
+      "kana": "すいようび",
+      "romaji": "suiyōbi",
+      "es": "miércoles",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "すいようび",
+          "reading": "すいようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはすいようびです。",
+        "kana": "きょうはすいようびです。",
+        "romaji": "kyō wa suiyōbi desu.",
+        "es": "Hoy es miércoles.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "すいようび",
+            "reading": "すいようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:mokuyoubi",
+      "type": "vocab",
+      "kanji": "もくようび",
+      "kana": "もくようび",
+      "romaji": "mokuyōbi",
+      "es": "jueves",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "もくようび",
+          "reading": "もくようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはもくようびです。",
+        "kana": "きょうはもくようびです。",
+        "romaji": "kyō wa mokuyōbi desu.",
+        "es": "Hoy es jueves.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "もくようび",
+            "reading": "もくようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:kinyoubi",
+      "type": "vocab",
+      "kanji": "きんようび",
+      "kana": "きんようび",
+      "romaji": "kinyōbi",
+      "es": "viernes",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "きんようび",
+          "reading": "きんようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはきんようびです。",
+        "kana": "きょうはきんようびです。",
+        "romaji": "kyō wa kinyōbi desu.",
+        "es": "Hoy es viernes.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "きんようび",
+            "reading": "きんようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:doyoubi",
+      "type": "vocab",
+      "kanji": "どようび",
+      "kana": "どようび",
+      "romaji": "doyōbi",
+      "es": "sábado",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "どようび",
+          "reading": "どようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはどようびです。",
+        "kana": "きょうはどようびです。",
+        "romaji": "kyō wa doyōbi desu.",
+        "es": "Hoy es sábado.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "どようび",
+            "reading": "どようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:nichiyoubi",
+      "type": "vocab",
+      "kanji": "にちようび",
+      "kana": "にちようび",
+      "romaji": "nichiyōbi",
+      "es": "domingo",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "にちようび",
+          "reading": "にちようび",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "días de la semana",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはにちようびです。",
+        "kana": "きょうはにちようびです。",
+        "romaji": "kyō wa nichiyōbi desu.",
+        "es": "Hoy es domingo.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "にちようび",
+            "reading": "にちようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:kyou",
+      "type": "vocab",
+      "kanji": "きょう",
+      "kana": "きょう",
+      "romaji": "kyō",
+      "es": "hoy",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "きょう",
+          "reading": "きょう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きょうはきんようびです。",
+        "kana": "きょうはきんようびです。",
+        "romaji": "kyō wa kinyōbi desu.",
+        "es": "Hoy es viernes.",
+        "tokens": [
+          {
+            "surface": "きょう",
+            "reading": "きょう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "きんようび",
+            "reading": "きんようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:ashita",
+      "type": "vocab",
+      "kanji": "あした",
+      "kana": "あした",
+      "romaji": "ashita",
+      "es": "mañana (el día siguiente)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "あした",
+          "reading": "あした",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "あしたはどようびです。",
+        "kana": "あしたはどようびです。",
+        "romaji": "ashita wa doyōbi desu.",
+        "es": "Mañana es sábado.",
+        "tokens": [
+          {
+            "surface": "あした",
+            "reading": "あした",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "どようび",
+            "reading": "どようび",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:kinou",
+      "type": "vocab",
+      "kanji": "きのう",
+      "kana": "きのう",
+      "romaji": "kinō",
+      "es": "ayer",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "きのう",
+          "reading": "きのう",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "tiempo",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "きのうはもくようびでした。",
+        "kana": "きのうはもくようびでした。",
+        "romaji": "kinō wa mokuyōbi deshita.",
+        "es": "Ayer fue jueves.",
+        "tokens": [
+          {
+            "surface": "きのう",
+            "reading": "きのう",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "もくようび",
+            "reading": "もくようび",
+            "isKanji": false
+          },
+          {
+            "surface": "でした",
+            "reading": "でした",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:hyaku",
+      "type": "vocab",
+      "kanji": "ひゃく",
+      "kana": "ひゃく",
+      "romaji": "hyaku",
+      "es": "cien (100)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ひゃく",
+          "reading": "ひゃく",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "números",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "ひゃくえんです。",
+        "kana": "ひゃくえんです。",
+        "romaji": "hyaku en desu.",
+        "es": "Son 100 yenes.",
+        "tokens": [
+          {
+            "surface": "ひゃく",
+            "reading": "ひゃく",
+            "isKanji": false
+          },
+          {
+            "surface": "えん",
+            "reading": "えん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:sen",
+      "type": "vocab",
+      "kanji": "せん",
+      "kana": "せん",
+      "romaji": "sen",
+      "es": "mil (1000)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "せん",
+          "reading": "せん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "números",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "せんえんです。",
+        "kana": "せんえんです。",
+        "romaji": "sen en desu.",
+        "es": "Son 1000 yenes.",
+        "tokens": [
+          {
+            "surface": "せん",
+            "reading": "せん",
+            "isKanji": false
+          },
+          {
+            "surface": "えん",
+            "reading": "えん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:man",
+      "type": "vocab",
+      "kanji": "まん",
+      "kana": "まん",
+      "romaji": "man",
+      "es": "diez mil (10 000)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "まん",
+          "reading": "まん",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "números",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "いちまんえんです。",
+        "kana": "いちまんえんです。",
+        "romaji": "ichiman en desu.",
+        "es": "Son 10 000 yenes.",
+        "tokens": [
+          {
+            "surface": "いちまん",
+            "reading": "いちまん",
+            "isKanji": false
+          },
+          {
+            "surface": "えん",
+            "reading": "えん",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:kurasu",
+      "type": "vocab",
+      "kanji": "クラス",
+      "kana": "クラス",
+      "romaji": "kurasu",
+      "es": "clase (curso, lección)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "クラス",
+          "reading": "クラス",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "escuela",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "にほんごのクラスです。",
+        "kana": "にほんごのクラスです。",
+        "romaji": "nihongo no kurasu desu.",
+        "es": "Es la clase de japonés.",
+        "tokens": [
+          {
+            "surface": "にほんご",
+            "reading": "にほんご",
+            "isKanji": false
+          },
+          {
+            "surface": "の",
+            "reading": "の",
+            "isKanji": false
+          },
+          {
+            "surface": "クラス",
+            "reading": "クラス",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:nihongo",
+      "type": "vocab",
+      "kanji": "にほんご",
+      "kana": "にほんご",
+      "romaji": "nihongo",
+      "es": "japonés (el idioma)",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "にほんご",
+          "reading": "にほんご",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "idiomas",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "にほんごをべんきょうします。",
+        "kana": "にほんごをべんきょうします。",
+        "romaji": "nihongo o benkyō shimasu.",
+        "es": "Estudio japonés.",
+        "tokens": [
+          {
+            "surface": "にほんご",
+            "reading": "にほんご",
+            "isKanji": false
+          },
+          {
+            "surface": "を",
+            "reading": "を",
+            "isKanji": false
+          },
+          {
+            "surface": "べんきょうします",
+            "reading": "べんきょうします",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:arerugii",
+      "type": "vocab",
+      "kanji": "アレルギー",
+      "kana": "アレルギー",
+      "romaji": "arerugī",
+      "es": "alergia",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "アレルギー",
+          "reading": "アレルギー",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "salud",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "たまごアレルギーです。",
+        "kana": "たまごアレルギーです。",
+        "romaji": "tamago arerugī desu.",
+        "es": "Soy alérgico/a al huevo.",
+        "tokens": [
+          {
+            "surface": "たまご",
+            "reading": "たまご",
+            "isKanji": false
+          },
+          {
+            "surface": "アレルギー",
+            "reading": "アレルギー",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:doraifuruutsu",
+      "type": "vocab",
+      "kanji": "ドライフルーツ",
+      "kana": "ドライフルーツ",
+      "romaji": "doraifurūtsu",
+      "es": "fruta deshidratada",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ドライフルーツ",
+          "reading": "ドライフルーツ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "comida",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはドライフルーツです。",
+        "kana": "これはドライフルーツです。",
+        "romaji": "kore wa doraifurūtsu desu.",
+        "es": "Esto es fruta deshidratada.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ドライフルーツ",
+            "reading": "ドライフルーツ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-07-17:vocab:piinattsu",
+      "type": "vocab",
+      "kanji": "ピーナッツ",
+      "kana": "ピーナッツ",
+      "romaji": "pīnattsu",
+      "es": "cacahuete",
+      "pos": "sustantivo",
+      "tokens": [
+        {
+          "surface": "ピーナッツ",
+          "reading": "ピーナッツ",
+          "isKanji": false
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "comida",
+        "vocabulario"
+      ],
+      "example": {
+        "kanji": "これはピーナッツです。",
+        "kana": "これはピーナッツです。",
+        "romaji": "kore wa pīnattsu desu.",
+        "es": "Esto es un cacahuete.",
+        "tokens": [
+          {
+            "surface": "これ",
+            "reading": "これ",
+            "isKanji": false
+          },
+          {
+            "surface": "は",
+            "reading": "は",
+            "isKanji": false
+          },
+          {
+            "surface": "ピーナッツ",
+            "reading": "ピーナッツ",
+            "isKanji": false
+          },
+          {
+            "surface": "です",
+            "reading": "です",
+            "isKanji": false
+          },
+          {
+            "surface": "。",
+            "reading": "。",
+            "isKanji": false
+          }
+        ]
+      }
+    }
+  ],
+  "grammar": [
+    {
+      "id": "2026-07-17:grammar:deshita",
+      "type": "grammar",
+      "pattern": "きのうは 〜でした",
+      "es": "でした es el pasado de です («fue / era»). Para decir qué día fue ayer: きのうは + [día] + でした. Ej.: きのうは きんようび でした = «ayer fue viernes».",
+      "examples": [
+        {
+          "kanji": "きのうはきんようびでした。",
+          "kana": "きのうはきんようびでした。",
+          "romaji": "kinō wa kinyōbi deshita.",
+          "es": "Ayer fue viernes.",
+          "tokens": [
+            {
+              "surface": "きのう",
+              "reading": "きのう",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "きんようび",
+              "reading": "きんようび",
+              "isKanji": false
+            },
+            {
+              "surface": "でした",
+              "reading": "でした",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "gramática",
+        "tiempo",
+        "です"
+      ]
+    },
+    {
+      "id": "2026-07-17:grammar:wo-objeto",
+      "type": "grammar",
+      "pattern": "〜を + verbo",
+      "es": "La partícula を marca el complemento directo (el «qué» de la acción). Se escribe con el carácter を pero se pronuncia «o». Ej.: にほんごを べんきょうします = «estudio japonés».",
+      "examples": [
+        {
+          "kanji": "にほんごをべんきょうします。",
+          "kana": "にほんごをべんきょうします。",
+          "romaji": "nihongo o benkyō shimasu.",
+          "es": "Estudio japonés.",
+          "tokens": [
+            {
+              "surface": "にほんご",
+              "reading": "にほんご",
+              "isKanji": false
+            },
+            {
+              "surface": "を",
+              "reading": "を",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "べんきょうします",
+              "reading": "べんきょうします",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-17:grammar:no-de",
+      "type": "grammar",
+      "pattern": "AのB (B de A)",
+      "es": "の une dos sustantivos indicando relación o pertenencia: AのB = «B de A». Ojo: el orden es al revés que en castellano. Ej.: にほんごの クラス = «clase de japonés» (lit. «de-japonés clase»).",
+      "examples": [
+        {
+          "kanji": "にほんごのクラスです。",
+          "kana": "にほんごのクラスです。",
+          "romaji": "nihongo no kurasu desu.",
+          "es": "Es la clase de japonés.",
+          "tokens": [
+            {
+              "surface": "にほんご",
+              "reading": "にほんご",
+              "isKanji": false
+            },
+            {
+              "surface": "の",
+              "reading": "の",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "クラス",
+              "reading": "クラス",
+              "isKanji": false
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "gramática",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-17:grammar:nan-youbi",
+      "type": "grammar",
+      "pattern": "きょうは なんようび ですか",
+      "es": "なんようび = «qué día de la semana». Para preguntar el día de hoy: きょうは なんようび ですか. Se responde con きょうは [día] です.",
+      "examples": [
+        {
+          "kanji": "きょうはなんようびですか。",
+          "kana": "きょうはなんようびですか。",
+          "romaji": "kyō wa nan'yōbi desu ka.",
+          "es": "¿Qué día de la semana es hoy?",
+          "tokens": [
+            {
+              "surface": "きょう",
+              "reading": "きょう",
+              "isKanji": false
+            },
+            {
+              "surface": "は",
+              "reading": "は",
+              "isKanji": false
+            },
+            {
+              "surface": "なんようび",
+              "reading": "なんようび",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "か",
+              "reading": "か",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "gramática",
+        "preguntas",
+        "días de la semana"
+      ]
+    },
+    {
+      "id": "2026-07-17:grammar:arerugii-pat",
+      "type": "grammar",
+      "pattern": "[comida] + アレルギー",
+      "es": "Para decir que eres alérgico a algo, juntas la comida + アレルギー directamente, SIN の. Ej.: たまごアレルギー = «alergia al huevo»; ももアレルギー = «alergia al melocotón».",
+      "examples": [
+        {
+          "kanji": "たまごアレルギーです。",
+          "kana": "たまごアレルギーです。",
+          "romaji": "tamago arerugī desu.",
+          "es": "Soy alérgico/a al huevo.",
+          "tokens": [
+            {
+              "surface": "たまご",
+              "reading": "たまご",
+              "isKanji": false
+            },
+            {
+              "surface": "アレルギー",
+              "reading": "アレルギー",
+              "isKanji": false,
+              "blank": true
+            },
+            {
+              "surface": "です",
+              "reading": "です",
+              "isKanji": false
+            },
+            {
+              "surface": "。",
+              "reading": "。",
+              "isKanji": false
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "2026-07-17",
+        "gramática",
+        "salud"
+      ]
+    }
+  ],
+  "kanji": [],
+  "notes": [
+    {
+      "id": "2026-07-17:note:1",
+      "type": "note",
+      "es": "Los días de la semana comparten la terminación 〜ようび; solo cambia el prefijo: げつ (lunes), か (martes), すい (miércoles), もく (jueves), きん (viernes), ど (sábado), にち (domingo). Los prefijos vienen de los astros (luna, Marte, Mercurio, Júpiter, Venus, Saturno, Sol).",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "días de la semana"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:2",
+      "type": "note",
+      "es": "Tradicionalmente el calendario japonés empieza en domingo, aunque hoy en día también es común empezar la semana en lunes.",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "días de la semana",
+        "cultura"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:3",
+      "type": "note",
+      "es": "Sistema de números: 11–99 se forman combinando (じゅういち = 11, にじゅう = 20…). Unidades grandes: 100 = ひゃく, 1000 = せん, 10 000 = まん. A partir de まん los japoneses agrupan de 4 en 4 ceros (no de 3 en 3 como nosotros): いちまん = 10 000, ひゃくまん = 1 000 000.",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:4",
+      "type": "note",
+      "es": "Lecturas irregulares de números que conviene recordar: 300 = さんびゃく, 600 = ろっぴゃく, 800 = はっぴゃく; 3000 = さんぜん, 8000 = はっせん.",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "números"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:5",
+      "type": "note",
+      "es": "Dos partículas se escriben con un kana pero se pronuncian con otro: を (complemento directo) se pronuncia «o», y は (marca de tema) se pronuncia «wa».",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "partículas"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:6",
+      "type": "note",
+      "es": "Para escribir nombres extranjeros se usa katakana. Para sonidos que no existen en japonés se combinan kana con letras pequeñas (ぁぃぅぇぉ, ゃゅょ) y se usa la っ pequeña para las pausas; en katakana las vocales largas se marcan con ー (guion), no duplicando la vocal.",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "escritura"
+      ]
+    },
+    {
+      "id": "2026-07-17:note:7",
+      "type": "note",
+      "es": "Acentos de escritura: el dakuten ゛(«tenten») convierte un sonido sordo en sonoro (か→が, は→ば). El handakuten ゜(«maru») solo lo llevan 5 kana (la fila は) y crea la fila ぱ (は→ぱ).",
+      "tags": [
+        "2026-07-17",
+        "nota",
+        "escritura"
+      ]
+    }
+  ]
+}

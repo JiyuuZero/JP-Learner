@@ -1,6 +1,6 @@
 {
   "contentVersion": 1,
-  "generatedAt": "2026-07-15T21:22:50Z",
+  "generatedAt": "2026-07-21T19:28:53Z",
   "classes": [
     {
       "id": "2026-07-03",
@@ -78,6 +78,19 @@
         "grammar": 7,
         "kanji": 0,
         "notes": 5
+      }
+    },
+    {
+      "id": "2026-07-17",
+      "date": "2026-07-17",
+      "label": "Clase 6: días y números",
+      "file": "classes/2026-07-17.json",
+      "contentHash": "sha256-85329e38cbe9700e17cfe4a37477f84899949234b093a5e790c6d6a05298ad2f",
+      "counts": {
+        "vocab": 18,
+        "grammar": 5,
+        "kanji": 0,
+        "notes": 7
       }
     }
   ]
