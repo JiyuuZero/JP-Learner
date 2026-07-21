@@ -9,13 +9,15 @@
 // Availability derives from committed content (a mode only appears once the
 // class that taught its topic has been processed) — never hardcode class ids.
 import type { ComponentType } from 'react'
-import { CalendarDays, Clock, Hash } from 'lucide-react'
+import { CalendarDays, Clock, Hash, Puzzle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ContentStore } from '../content/store'
 import NumerosMode from './numeros/NumerosMode'
 import DiasMode from './dias/DiasMode'
 import { DAYS } from './dias/dias'
 import HorasMode from './horas/HorasMode'
+import ParticulasMode from './particulas/ParticulasMode'
+import { buildParticleQueue } from './particulas/particulas'
 
 export interface ExerciseMode {
   id: string // route: /ejercicios/<id>
@@ -63,6 +65,16 @@ export const EXERCISE_MODES: ExerciseMode[] = [
     // Hours came in 2026-07-15; ふん + はん complete the system (2026-07-20).
     isAvailable: (store) => hasVocabKana(store, 'ふん', 'はん'),
     Component: HorasMode,
+  },
+  {
+    id: 'particulas',
+    title: 'Partículas',
+    tagline: 'は・を・の・と・も… completa la frase',
+    tint: 'peach',
+    Icon: Puzzle,
+    // Needs a few grammar examples with an authored particle blank.
+    isAvailable: (store) => buildParticleQueue(store.grammarById.values(), 3).length >= 3,
+    Component: ParticulasMode,
   },
 ]
 
