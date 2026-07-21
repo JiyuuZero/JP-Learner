@@ -1,6 +1,6 @@
 // numberReading tests — the taught 0–99 999 system with its irregular
-// readings (さんびゃく・ろっぴゃく・はっぴゃく・さんぜん・はっせん, いちまん,
-// いっせん-after-まん) plus the schema renderability invariants over tokens.
+// readings (さんびゃく・ろっぴゃく・はっぴゃく・さんぜん・はっせん, いちまん)
+// plus the schema renderability invariants over tokens.
 import { describe, expect, it } from 'vitest'
 import { numberReading } from './numberReading'
 
@@ -78,10 +78,10 @@ describe('numberReading — ten-thousands (万)', () => {
     expect(numberReading(60000).kana).toBe('ろくまん')
     expect(numberReading(80000).kana).toBe('はちまん')
   })
-  it('1000 after 万 reads いっせん (11 000 = いちまんいっせん)', () => {
-    expect(numberReading(11000).kana).toBe('いちまんいっせん')
-    expect(numberReading(11000).romaji).toBe('ichiman issen')
-    expect(numberReading(11000).kanji).toBe('一万一千')
+  it('1000 after 万 reads せん (11 000 = いちまんせん, 一万千)', () => {
+    expect(numberReading(11000).kana).toBe('いちまんせん')
+    expect(numberReading(11000).romaji).toBe('ichiman sen')
+    expect(numberReading(11000).kanji).toBe('一万千')
   })
   it('composites read component by component', () => {
     const r = numberReading(34567)

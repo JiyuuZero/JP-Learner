@@ -5,10 +5,9 @@
 // - 300 さんびゃく / 600 ろっぴゃく / 800 はっぴゃく (class note 2026-07-17:note:4)
 // - 3000 さんぜん / 8000 はっせん (same note)
 // - 10 000 always carries its digit: いちまん, never bare まん
-// - 1000 in the thousands slot AFTER まん reads いっせん (11 000 = いちまんいっせん);
-//   standalone 1000 stays せん, as taught.
-// Sources: Coto Academy / LingQ counting guides; japanese-lesson.com numbers
-// table ("1000 = sen / issen — issen only in higher units").
+// - 1000 always reads せん in this range (11 000 = いちまんせん, 一万千); the
+//   いっせん (一千) reading only turns up in higher units like 一千万, out of range.
+// Sources: Coto Academy / LingQ counting guides; japanese-lesson.com numbers table.
 // Tokens follow the schema conventions (jukugo run = one token, kanji[] chars)
 // so JapaneseText renders the reveal per the user's script-display config.
 import type { Token } from '../../content/content'
@@ -38,13 +37,9 @@ const manPart = (d: number): Part => ({
   romaji: DIGIT_ROMAJI[d] + 'man',
 })
 
-// 千: bare せん standalone, いっせん after 万; irregulars さんぜん・はっせん.
-function senPart(d: number, afterMan: boolean): Part {
-  if (d === 1) {
-    return afterMan
-      ? { kanji: '一千', kana: 'いっせん', romaji: 'issen' }
-      : { kanji: '千', kana: 'せん', romaji: 'sen' }
-  }
+// 千: 1 reads せん (千) — even after 万 (11 000 = いちまんせん); irregulars さんぜん・はっせん.
+function senPart(d: number): Part {
+  if (d === 1) return { kanji: '千', kana: 'せん', romaji: 'sen' }
   if (d === 3) return { kanji: '三千', kana: 'さんぜん', romaji: 'sanzen' }
   if (d === 8) return { kanji: '八千', kana: 'はっせん', romaji: 'hassen' }
   return { kanji: DIGIT_KANJI[d] + '千', kana: DIGIT_KANA[d] + 'せん', romaji: DIGIT_ROMAJI[d] + 'sen' }
@@ -101,7 +96,7 @@ export function numberReading(n: number): JaNumber {
 
   const parts: Part[] = []
   if (man > 0) parts.push(manPart(man))
-  if (sen > 0) parts.push(senPart(sen, man > 0))
+  if (sen > 0) parts.push(senPart(sen))
   if (hyaku > 0) parts.push(hyakuPart(hyaku))
   if (juu > 0) parts.push(juuPart(juu))
   if (one > 0) parts.push(onesPart(one))
