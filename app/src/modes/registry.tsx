@@ -9,10 +9,12 @@
 // Availability derives from committed content (a mode only appears once the
 // class that taught its topic has been processed) — never hardcode class ids.
 import type { ComponentType } from 'react'
-import { Hash } from 'lucide-react'
+import { CalendarDays, Hash } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ContentStore } from '../content/store'
 import NumerosMode from './numeros/NumerosMode'
+import DiasMode from './dias/DiasMode'
+import { DAYS } from './dias/dias'
 
 export interface ExerciseMode {
   id: string // route: /ejercicios/<id>
@@ -40,6 +42,16 @@ export const EXERCISE_MODES: ExerciseMode[] = [
     // Needs 百/千/万 taught (2026-07-17); digits 0-10 came earlier (2026-07-08).
     isAvailable: (store) => hasVocabKana(store, 'ひゃく', 'せん', 'まん'),
     Component: NumerosMode,
+  },
+  {
+    id: 'dias',
+    title: 'Días de la semana',
+    tagline: 'Los 7 〜ようび hasta dominarlos',
+    tint: 'mint',
+    Icon: CalendarDays,
+    // Needs the 7 day words taught (2026-07-17).
+    isAvailable: (store) => hasVocabKana(store, ...DAYS.map((d) => d.kana)),
+    Component: DiasMode,
   },
 ]
 
